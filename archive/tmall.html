@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Partner for China | Unlock Billions of Consumers with Tmall Global</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles for a modern, gradient-based theme */
+        body {
+            font-family: 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif';
+            background-color: #ffffff; /* Clean white background */
+            color: #1f2937; /* gray-800 */
+        }
+        
+        /* Gradient Button & Highlight Style */
+        .gradient-text {
+            background: linear-gradient(to right, #4f46e5, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to right, #4f46e5, #a855f7);
+        }
+        
+        .gradient-border-card {
+            background-color: #111827; /* bg-gray-900 */
+            border: 1px solid transparent;
+            background-clip: padding-box;
+            border-image: linear-gradient(to right, #4f46e5, #a855f7) 1;
+        }
+
+        /* Scroll-triggered fade-in animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Timeline connector styles */
+        .timeline-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            width: 2px;
+            height: 4rem; /* 64px */
+            background-color: #e5e7eb; /* gray-200 */
+        }
+
+        @media (min-width: 1024px) {
+            .timeline-step:not(:last-child)::after {
+                width: 6rem; /* 96px */
+                height: 2px;
+                top: 2rem; /* Vertically center with the icon */
+                left: 100%;
+                transform: translateY(-50%);
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                <span class="gradient-text">Global</span>Reach
+            </div>
+            <a href="#contact" class="gradient-bg text-white font-bold py-2 px-6 rounded-full hover:shadow-lg hover:shadow-indigo-500/50 transition-all duration-300">
+                立即咨询
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECTION 1: HERO -->
+        <section id="hero" class="relative bg-gray-900 text-white py-24 md:py-40 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-indigo-900/80 to-purple-900/70"></div>
+             <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    您进军中国市场的最佳伙伴
+                </h1>
+                <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    我们助您携手 <span class="gradient-text">天猫国际</span>，触达亿万消费者
+                </h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mb-10">
+                    我们提供一站式品牌入驻、店铺代运营、数字营销及数据分析服务，为您扫清进入中国市场的一切障碍。
+                </p>
+
+                <!-- Core Services Display -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12 text-left">
+                    <!-- Service Card 1 -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-indigo-500 hover:bg-gray-800 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" /></svg>
+                        <h3 class="text-xl font-bold mb-2">品牌快速入驻</h3>
+                        <p class="text-gray-400">从资质审核到店铺开设，全程专业指导，保证效率，让您无忧进入市场。</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-indigo-500 hover:bg-gray-800 transition-all duration-300">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4M4 7v10M12 21v-8M20 7v10" /></svg>
+                        <h3 class="text-xl font-bold mb-2">店铺精细化运营</h3>
+                        <p class="text-gray-400">日常运营、客户服务、商品及库存管理，我们全权负责，让您专注品牌发展。</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-indigo-500 hover:bg-gray-800 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        <h3 class="text-xl font-bold mb-2">整合数字营销</h3>
+                        <p class="text-gray-400">结合中国市场特性，提供内容营销、社交媒体推广、KOL合作等整合服务。</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-indigo-500 hover:bg-gray-800 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                        <h3 class="text-xl font-bold mb-2">数据驱动决策</h3>
+                        <p class="text-gray-400">提供深度销售数据分析，帮助品牌优化策略，提升ROI，实现持续增长。</p>
+                    </div>
+                </div>
+
+                <a href="#contact" class="gradient-bg text-white font-bold py-4 px-10 text-lg rounded-full hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
+                    获取免费入驻方案
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 2: WHY - THE OPPORTUNITY -->
+        <section id="why-china" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">一个您不容错过的 <span class="gradient-text">巨大机遇</span></h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">中国跨境电商市场正以前所未有的速度增长。我们将用数据告诉您，为何现在是进入这片蓝海的最佳时机。</p>
+                </div>
+                
+                <!-- Data Visualization from PDF -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-6xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200/80 fade-in-section">
+                        <div class="text-6xl font-extrabold mb-2 gradient-text">
+                            <span class="counter" data-target="49">0</span>%
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">跨境电商进口年均增长</h3>
+                        <p class="text-gray-500">2015-2022年CAGR，增长潜力巨大，远超其他消费渠道。</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200/80 fade-in-section" style="transition-delay: 200ms;">
+                        <div class="text-6xl font-extrabold mb-2 gradient-text">
+                           &gt; <span class="counter" data-target="100">0</span>M
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">优质进口消费者</h3>
+                        <p class="text-gray-500">天猫国际服务超1亿高购买力用户，他们积极寻求全球优质商品。</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200/80 fade-in-section" style="transition-delay: 400ms;">
+                        <div class="text-6xl font-extrabold mb-2 gradient-text">
+                           #<span class="counter" data-target="1">0</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">市场第一平台</h3>
+                        <p class="text-gray-500">天猫国际持续领跑市场份额，是海外品牌入华的首选和最信赖的渠道。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WHAT - OUR APPROACH WITH TMALL GLOBAL -->
+        <section id="what-we-do" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 fade-in-section">
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://placehold.co/500x350/E8E8E8/4A4A4A?text=Our+Strategy+with+Tmall" alt="我们如何利用天猫国际" class="rounded-lg shadow-2xl">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">我们如何利用 <span class="gradient-text">天猫国际</span> <br>为您打开成功之门</h2>
+                    <p class="text-lg text-gray-600 mb-4">
+                        我们将天猫国际视为您品牌成功的强大引擎，而非仅仅一个销售渠道。它是一个让您无需在中国设立公司，即可直接触达数亿消费者的官方平台。
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        我们的专业团队将为您驾驭这个平台，利用其成熟的保税仓、高效的物流和受消费者信赖的正品保障体系，为您打造无缝的、高效的在华业务。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: HOW IT WORKS -->
+        <section id="how-it-works" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in-section">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">我们为您铺就的 <span class="gradient-text">成功之路</span></h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">我们将复杂的流程简化为您清晰、可控的几个步骤，全程陪伴，直至成功。</p>
+                </div>
+                
+                <!-- Timeline -->
+                <div class="relative flex flex-col lg:flex-row justify-center items-start lg:items-center gap-x-24 gap-y-16">
+                    <!-- Step 1 -->
+                    <div class="timeline-step relative flex flex-col items-center text-center w-60 fade-in-section">
+                        <div class="gradient-bg text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg shadow-indigo-500/30">1</div>
+                        <h3 class="text-xl font-semibold mb-2">初步评估</h3>
+                        <p class="text-gray-500 text-sm">深入了解您的品牌定位、产品优势和商业目标。</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-step relative flex flex-col items-center text-center w-60 fade-in-section" style="transition-delay: 200ms;">
+                        <div class="gradient-bg text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg shadow-indigo-500/30">2</div>
+                        <h3 class="text-xl font-semibold mb-2">方案定制</h3>
+                        <p class="text-gray-500 text-sm">为您量身定制专属的入驻、运营及营销方案。</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-step relative flex flex-col items-center text-center w-60 fade-in-section" style="transition-delay: 400ms;">
+                        <div class="gradient-bg text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg shadow-indigo-500/30">3</div>
+                        <h3 class="text-xl font-semibold mb-2">官方入驻</h3>
+                        <p class="text-gray-500 text-sm">我们处理所有繁琐的申请材料和流程，为您节省时间。</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="timeline-step relative flex flex-col items-center text-center w-60 fade-in-section" style="transition-delay: 600ms;">
+                        <div class="gradient-bg text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg shadow-indigo-500/30">4</div>
+                        <h3 class="text-xl font-semibold mb-2">店铺上线</h3>
+                        <p class="text-gray-500 text-sm">专业设计并启动您的天猫国际店铺，打造卓越品牌形象。</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="timeline-step relative flex flex-col items-center text-center w-60 fade-in-section" style="transition-delay: 800ms;">
+                        <div class="gradient-bg text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg shadow-indigo-500/30">5</div>
+                        <h3 class="text-xl font-semibold mb-2">持续增长</h3>
+                        <p class="text-gray-500 text-sm">通过精细化运营和市场营销，实现销售和品牌影响力的双增长。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: PROOF & TRUST -->
+        <section id="proof" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in-section">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">他们通过Tmall <span class="gradient-text">获得了成功</span></h2>
+                    <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">我们已成功帮助来自不同行业的品牌在中国市场站稳脚跟并蓬勃发展。您的品牌也可以成为下一个成功故事。</p>
+                </div>
+                <!-- Logo Wall -->
+                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 items-center fade-in-section">
+                    <img src="https://placehold.co/200x100/FFFFFF/CCCCCC?text=Rakuten" alt="日本乐天 Logo" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="https://placehold.co/200x100/FFFFFF/CCCCCC?text=Narumiya" alt="Narumiya Logo" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="https://placehold.co/200x100/FFFFFF/CCCCCC?text=SPO" alt="SPO Logo" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="https://placehold.co/200x100/FFFFFF/CCCCCC?text=Vita+Green" alt="维特健灵 Logo" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="https://placehold.co/200x100/FFFFFF/CCCCCC?text=Mannings" alt="万宁 Logo" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="https://placehold.co/200x100/FFFFFF/CCCCCC?text=Coach" alt="Coach Logo" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="https://placehold.co/200x100/FFFFFF/CCCCCC?text=Brand+A" alt="合作品牌A" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="https://placehold.co/200x100/FFFFFF/CCCCCC?text=Brand+B" alt="合作品牌B" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: PRICING PLANS -->
+        <section id="pricing" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">为您的品牌量身定制的 <span class="gradient-text">合作方案</span></h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">我们提供灵活的合作模式，无论您处于哪个发展阶段，都能找到最适合您的方案。</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+                    <!-- Plan 1: Basic -->
+                    <div class="border border-gray-200 rounded-xl p-8 flex flex-col fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-2xl font-bold mb-4">基础版</h3>
+                        <p class="text-gray-500 mb-6 flex-grow">适合希望快速、低成本完成平台入驻，并自行管理运营的品牌。</p>
+                        <ul class="space-y-3 mb-8 text-gray-700">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>入驻资格评估</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>全程入驻指导</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>店铺基础设置</li>
+                        </ul>
+                        <a href="#contact" class="mt-auto w-full text-center bg-indigo-100 text-indigo-700 font-bold py-3 px-6 rounded-full hover:bg-indigo-200 transition-colors duration-300">了解方案详情</a>
+                    </div>
+                    <!-- Plan 2: Growth (Recommended) -->
+                    <div class="rounded-xl p-8 flex flex-col relative shadow-2xl fade-in-section transition-all duration-300 hover:-translate-y-2 gradient-bg text-white">
+                        <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-4 left-1/2 -translate-x-1/2">推荐方案</span>
+                        <h3 class="text-3xl font-bold mb-4">增长版</h3>
+                        <p class="opacity-80 mb-6 flex-grow">为寻求在中国市场稳定增长的品牌设计，包含核心的日常运营服务。</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>包含基础版所有服务</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>日常店铺运营与维护</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>客户服务管理</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>月度数据报告</li>
+                        </ul>
+                        <a href="#contact" class="mt-auto w-full text-center bg-white text-indigo-700 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition-colors duration-300">联系我们获取报价</a>
+                    </div>
+                    <!-- Plan 3: Flagship -->
+                    <div class="border border-gray-200 rounded-xl p-8 flex flex-col fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-2xl font-bold mb-4">旗舰版</h3>
+                        <p class="text-gray-500 mb-6 flex-grow">一站式全托管服务，旨在最大化品牌在中国市场的潜力与影响力。</p>
+                        <ul class="space-y-3 mb-8 text-gray-700">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>包含增长版所有服务</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>整合数字营销策略与执行</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>KOL与内容营销</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>深度数据分析与战略咨询</li>
+                        </ul>
+                        <a href="#contact" class="mt-auto w-full text-center bg-indigo-100 text-indigo-700 font-bold py-3 px-6 rounded-full hover:bg-indigo-200 transition-colors duration-300">了解方案详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: FOOTER & FINAL CTA -->
+        <footer id="contact" class="bg-gray-900 text-white py-20 bg-gradient-to-br from-gray-900 to-indigo-900">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Left side: Final CTA -->
+                    <div class="text-center md:text-left">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">准备好开启您的<br>中国市场之旅了吗？</h2>
+                        <p class="text-lg text-gray-400 mb-8">
+                            立即联系我们的专家团队，获取一份为您品牌量身定制的免费市场准入评估和初步方案。
+                        </p>
+                        <p class="text-gray-400">
+                            <strong>邮箱:</strong> contact@globalreach.com<br>
+                            <strong>电话:</strong> +1 (800) 123-4567
+                        </p>
+                    </div>
+                    
+                    <!-- Right side: Contact Form -->
+                    <div class="bg-white p-8 rounded-lg shadow-xl text-gray-800">
+                        <h3 class="text-2xl font-bold mb-6">免费咨询</h3>
+                        <form action="#" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition">
+                            </div>
+                            <div class="mb-4">
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">公司</label>
+                                <input type="text" id="company" name="company" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">邮箱</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">需求简述</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full gradient-bg text-white font-bold py-3 px-6 rounded-full hover:shadow-lg hover:shadow-indigo-500/50 transform hover:scale-105 transition-all duration-300">
+                                提交信息，开启旅程
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-16 pt-8 text-center text-gray-500 text-sm">
+                    <p>&copy; 2024 GlobalReach. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        /**
+         * INTERSECTION OBSERVER FOR SCROLL ANIMATIONS
+         * This function observes elements with the 'fade-in-section' class.
+         * When an element enters the viewport, it adds the 'is-visible' class,
+         * which triggers a CSS transition for a smooth fade-in effect.
+         */
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        const sections = document.querySelectorAll('.fade-in-section');
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        /**
+         * ANIMATED NUMBER COUNTER
+         * This function animates numbers from 0 to a target value when they
+         * become visible in the viewport.
+         */
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000; // 2 seconds
+                    const increment = target / (duration / 16); // Calculate increment per frame (approx 60fps)
+
+                    let current = 0;
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current).toLocaleString();
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.innerText = target.toLocaleString();
+                        }
+                    };
+                    
+                    updateCounter();
+                    observer.unobserve(counter); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the element is visible
+        });
+
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+    });
+    </script>
+
+</body>
+</html>

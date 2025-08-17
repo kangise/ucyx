@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCYX Case Study - Portable Espresso Maker Launch</title>
+    <!-- SEO Optimization -->
+    <meta name="description" content="Case study on how UCYX helped a lifestyle brand successfully launch a portable espresso maker on Amazon using our data-driven value growth methodology.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Main Site Global Styles --- */
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #3b82f6;
+            --primary-hover-color: #4338ca;
+            --dark-color: #111827;    
+            --light-gray-color: #f9fafb;
+            --medium-gray-color: #6b7280;
+            --text-color: #374151;
+            --white-color: #ffffff;
+            --border-color: #e5e7eb;
+            --border-radius: 12px;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--white-color);
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        a { text-decoration: none; color: var(--primary-color); font-weight: 700; transition: color 0.3s; }
+        a:hover { color: var(--primary-hover-color); }
+        .gradient-title {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            display: inline-block;
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1s ease-out, transform 1s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* --- Navigation Bar (Copied from main page) --- */
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); padding: 1.2rem 0; transition: all 0.3s ease; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; max-width: 1280px; }
+        .navbar .logo { font-size: 1.8rem; font-weight: 900; color: var(--dark-color); display: flex; align-items: center; }
+        .navbar .logo img { width: 36px; height: 36px; margin-right: 12px; }
+        .navbar .nav-right-cluster { display: flex; align-items: center; gap: 1rem;}
+        .navbar .nav-menu { display: flex; list-style: none; align-items: center; }
+        .navbar .nav-item { position: relative; }
+        .navbar .nav-menu li a.nav-link { padding: 0.5rem 1rem; color: var(--dark-color); font-weight: 700; transition: color 0.3s ease; font-size: 1rem; display: flex; align-items: center; gap: 0.25rem; }
+        .navbar .nav-menu li a.nav-link:hover, .navbar .nav-menu li a.active { color: var(--primary-color); }
+        .has-dropdown > a::after { content: ''; display: inline-block; width: 10px; height: 10px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23374151'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd' /%3E%3C/svg%3E"); background-size: contain; background-repeat: no-repeat; transition: transform 0.3s ease; }
+        .nav-item:hover > a::after { transform: rotate(180deg); }
+        .nav-item:hover > a { color: var(--primary-color); }
+        .mega-menu { display: block; position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(20px); opacity: 0; visibility: hidden; transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; background: var(--white-color); box-shadow: var(--shadow-lg); padding: 2rem; border-radius: var(--border-radius); margin-top: 15px; width: max-content; border: 1px solid var(--border-color); }
+        .nav-item:hover > .mega-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .mega-menu::before { content: ''; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); border-width: 8px; border-style: solid; border-color: transparent transparent var(--white-color) transparent; }
+        .mega-menu-grid { display: flex; gap: 3rem; }
+        .mega-menu-column { display: flex; flex-direction: column; gap: 1rem; }
+        .mega-menu-column h4 { font-size: 0.9rem; color: var(--medium-gray-color); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .mega-menu-column a { display: block; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; color: var(--dark-color); }
+        .mega-menu-column a:hover { background-color: var(--light-gray-color); color: var(--primary-color); }
+        .mega-menu-divider { border-left: 1px solid var(--border-color); }
+        .mega-menu-column .case-link { margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1rem; }
+        .channel-item { padding: 0.5rem 1rem; }
+        .channel-item h5 { font-size: 1.1rem; color: var(--dark-color); margin-bottom: 0.25rem; }
+        .channel-item p { font-size: 0.9rem; color: var(--medium-gray-color); margin-bottom: 0; max-width: 30ch; }
+        .channel-item-link { display: block; border-radius: 8px; }
+        .channel-item-link:hover { background-color: var(--light-gray-color); }
+        .lang-switcher { position: relative; }
+        .lang-switcher .current-lang { cursor: pointer; display: flex; align-items: center; font-weight: 700; font-size: 0.9rem; padding: 0.5rem; }
+        .lang-switcher .current-lang svg { width: 16px; height: 16px; margin-left: 5px; transition: transform 0.3s; }
+        .lang-switcher .lang-dropdown { display: none; position: absolute; top: 120%; right: 0; background-color: var(--white-color); border-radius: var(--border-radius); box-shadow: var(--shadow-lg); list-style: none; padding: 0.5rem 0; min-width: 120px; z-index: 10; opacity: 0; transform: translateY(-10px); transition: opacity 0.3s, transform 0.3s; }
+        .lang-switcher .lang-dropdown.show { display: block; opacity: 1; transform: translateY(0); }
+        .lang-switcher .current-lang.active svg { transform: rotate(180deg); }
+        .lang-switcher .lang-dropdown li a { display: block; padding: 0.5rem 1.5rem; color: var(--text-color); font-weight: 500; font-size: 0.9rem; white-space: nowrap; }
+        .lang-switcher .lang-dropdown li a:hover { background-color: var(--light-gray-color); }
+        
+        /* --- Case Study Page Specific Styles --- */
+        main { padding-top: 74px; } /* Offset for fixed navbar */
+        h1, h2, h3, h4 { font-weight: 900; line-height: 1.3; margin-bottom: 1.5rem; color: var(--dark-color); letter-spacing: -0.025em; }
+        .case-study-h1 { font-size: 3.5rem; text-align: center; }
+        .case-study-h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+        .case-study-h3 { font-size: 1.75rem; }
+        .case-study-h4 { font-size: 1.25rem; color: var(--primary-color); }
+        .case-study-p { margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--medium-gray-color); }
+
+        .hero { background-color: var(--dark-color); color: var(--white-color); padding: 8rem 0 6rem 0; text-align: center; }
+        .hero .case-study-h1, .hero .case-study-p { color: var(--white-color); }
+        .hero .lead { font-size: 1.25rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto; }
+        
+        .results-section { padding: 5rem 0; background-color: var(--light-gray-color); }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center; margin-top: 4rem; }
+        .result-item .result-metric { font-size: 4rem; font-weight: 900; color: var(--primary-color); line-height: 1; }
+        .result-item .result-label { font-size: 1.1rem; color: var(--medium-gray-color); margin-top: 0.5rem; }
+        
+        .methodology-section { padding: 5rem 0; }
+        .methodology-step { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
+        .methodology-step:nth-child(even) .step-image { order: 2; }
+        .methodology-step img { width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-lg); }
+        .methodology-step .step-content ul { list-style: none; padding-left: 0; }
+        .methodology-step .step-content ul li { padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem; }
+        .methodology-step .step-content ul li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-color); font-weight: 900; }
+        
+        .cta-section { padding: 5rem 0; background-color: var(--light-gray-color); text-align: center; }
+        .btn { display: inline-block; padding: 0.8rem 2.2rem; border-radius: var(--border-radius); font-size: 1rem; font-weight: 700; text-align: center; transition: all 0.3s ease; cursor: pointer; border: 2px solid transparent; }
+        .btn-primary { background-color: var(--primary-color); color: var(--white-color); }
+        .btn-primary:hover { background-color: var(--primary-hover-color); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--dark-color);
+            color: var(--medium-gray-color);
+            padding: 5rem 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .footer-col h4 {
+            color: var(--white-color);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+        .footer-col ul li a {
+            color: var(--medium-gray-color);
+            font-weight: 400;
+        }
+        .footer-col ul li a:hover {
+            color: var(--white-color);
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+        }
+        .footer-bottom .social-media {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .footer-bottom .social-media a {
+            color: var(--medium-gray-color);
+            transition: color 0.3s, transform 0.3s;
+        }
+        .footer-bottom .social-media a:hover {
+            color: var(--white-color);
+            transform: scale(1.1);
+        }
+        .footer-bottom .social-media svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .case-study-h1 { font-size: 2.5rem; }
+            .case-study-h2 { font-size: 2.25rem; }
+            .methodology-step { grid-template-columns: 1fr; }
+            .methodology-step:nth-child(even) .step-image { order: 0; }
+            .navbar .nav-menu { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZmlsbD0iIzFmMjkzNyIgZD0iTTc3LjUsMTAwYy0xMi45LDAtMjQuOS01LTMzLjgtMTMuOUMzNC44LDc3LjMsMjkuOCw2NS4zLDI5LjgsNTIuNFY0Ny42YzAtMTIuOSw1LTI0LjksMTMuOS0zMy44QzUyLjYsNSw2NC42LDAsNzcuNSwwSDM3LjJDMTYuNywwLDAsMTYuNywwLDM3LjJ2MjUuN0MwLDg0LjMsMTUuNywxMDAsMzUuMiwxMDBINzcuNXoiLz48cGF0aCBmaWxsPSIjNDY0NmU1IiBkPSJNNzcuNSw4Ny41SDM1LjJDNjIuMSw4Ny41LDg0LDY1LjYsODQsMzguN1YxMy4xYzEyLjksMCwyNC45LDUsMzMuOCwxMy45YzguOCw4LjgsMTMuOSwyMC44LDEzLjksMzMuOHYyNS43QzEzMS43LDg0LjMsMTE2LDExNS4xLDg4LjEsMTE1LjFINzcuNXoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMS43IC0xNS4xKSBzY2FsZSgwLjg2KSIgLz48L2c+PC9zdmc+" alt="UCYX Logo">
+                <span class="logo-text">UCYX</span>
+            </a>
+            <nav class="nav-right-cluster">
+                <ul class="nav-menu">
+                    <!-- Services Dropdown -->
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html#our-services" class="nav-link" data-lang="navOurServices">Services</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-column">
+                                    <h4 data-lang="serviceMenuCol1Title">Market Entry</h4>
+                                    <a href="#" data-lang="serviceMenuChina">Enter China Market</a>
+                                    <a href="#" data-lang="serviceMenuGlobal">Enter Global Market</a>
+                                </div>
+                                <div class="mega-menu-divider"></div>
+                                <div class="mega-menu-column">
+                                    <h4 data-lang="serviceMenuCol2Title">Value Growth Methodology</h4>
+                                    <a href="index.html#methodology" data-lang="serviceMenuStep1">Market Scanning & Opportunity Locking</a>
+                                    <a href="index.html#methodology" data-lang="serviceMenuStep2">Deep Insight & Product Definition</a>
+                                    <a href="index.html#methodology" data-lang="serviceMenuStep3">Viability & Growth Path</a>
+                                    <a href="index.html#methodology" data-lang="serviceMenuStep4">Platform Success & Continuous Optimization</a>
+                                    <a href="index.html#success-stories" class="case-link" data-lang="serviceMenuCases">Customer Case Studies</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="index.html#who-we-serve" class="nav-link" data-lang="navWhoWeServe">Who We Serve</a></li>
+                    <li class="nav-item"><a href="index.html#success-stories" class="nav-link" data-lang="navSuccessStories">Success Stories</a></li>
+                    <li class="nav-item"><a href="index.html#methodology" class="nav-link" data-lang="navMethodology">Methodology</a></li>
+                    <!-- Channels Dropdown -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link" data-lang="navChannels">Channels</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-grid">
+                                <a href="yeahtrend.html" class="channel-item-link">
+                                    <div class="channel-item">
+                                        <h5 data-lang="channelMenuYeahTrendTitle">Yeah! Trend</h5>
+                                        <p data-lang="channelMenuYeahTrendDesc">Daily, easy-to-understand trend reports.</p>
+                                    </div>
+                                </a>
+                                <div class="mega-menu-divider"></div>
+                                <a href="#" class="channel-item-link">
+                                    <div class="channel-item">
+                                        <h5 data-lang="channelMenuKnowledgeBaseTitle">E-commerce Knowledge Base</h5>
+                                        <p data-lang="channelMenuKnowledgeBaseDesc">In-depth industry analysis and strategic guides.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="lang-switcher">
+                    <div class="current-lang">
+                        <span id="current-lang-text">English</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <ul class="lang-dropdown">
+                        <li><a href="#" class="lang-option" data-lang-id="en">English</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="ja">日本語</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="zh-Hant">繁體中文</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="zh-Hans">简体中文</a></li>
+                    </ul>
+                </div>
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-menu-toggle" aria-label="Open navigation menu" data-lang-aria="ariaOpenMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <header class="hero">
+            <div class="container reveal">
+                <p class="case-study-p" data-lang="caseHeroSubtitle">UCYX Success Case</p>
+                <h1 class="case-study-h1" data-lang="caseHeroTitle">Helping a North American Lifestyle Brand Successfully Launch a "Portable Espresso Maker" on Amazon US</h1>
+                <p class="lead" data-lang="caseHeroLead">How we applied the UCYX Value Growth Methodology to transform a product concept into a successful brand that stands out in a competitive market.</p>
+            </div>
+        </header>
+
+        <section id="challenge" class="results-section">
+            <div class="container reveal">
+                <h2 class="case-study-h2" data-lang="caseChallengeTitle">The Challenge & Opportunity</h2>
+                <p class="case-study-p" style="text-align:center; max-width:800px; margin:auto;" data-lang="caseChallengeDesc">Our client, an innovative North American lifestyle brand, observed a growing demand for high-quality coffee among outdoor enthusiasts. However, they faced a common challenge for new entrants: the market appeared saturated. How could they find a true entry point? How could they define a product that would excite consumers? And how could they ensure this investment was a wise business decision?</p>
+            </div>
+        </section>
+
+        <section id="solution" class="methodology-section">
+            <div class="container">
+                <h2 class="case-study-h2 reveal" data-lang="caseSolutionTitle">Our Solution: A Systematic Blueprint for Success</h2>
+                
+                <div class="methodology-step reveal">
+                    <div class="step-content">
+                        <h4 class="case-study-h4" data-lang="caseStep1Module">Module 1: Market Scanning & Opportunity Locking</h4>
+                        <h3 class="gradient-title case-study-h3" data-lang="caseStep1Title">UCniche™ Opportunity Quadrant Model</h3>
+                        <p class="case-study-p" data-lang="caseStep1Desc">We didn't let the client choose based on gut feelings. Our AI Agent scanned 32 sub-categories under kitchen appliances, scoring them with the "Yeah! Index." The results clearly showed that the "Portable Espresso Maker" market was in a "gold mine" quadrant of high demand and medium competition, making it the optimal entry point.</p>
+                        <ul data-lang="caseStep1List">
+                            <li>Identified a high-potential "value basin"</li>
+                            <li>Avoided the vicious competition of "red ocean" markets</li>
+                            <li>Provided a solid data foundation for subsequent decisions</li>
+                        </ul>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://placehold.co/800x600/1f2937/ffffff?text=UCniche%E2%84%A2+Quadrant" alt="UCniche Opportunity Quadrant">
+                    </div>
+                </div>
+
+                <div class="methodology-step reveal">
+                    <div class="step-content">
+                        <h4 class="case-study-h4" data-lang="caseStep2Module">Module 2: Deep Insight & Product Definition</h4>
+                        <h3 class="gradient-title case-study-h3" data-lang="caseStep2Title">UCopps™ Product Value Proposition Bible</h3>
+                        <p class="case-study-p" data-lang="caseStep2Desc">We deeply analyzed over 15,000 user reviews and found that "strenuous," "leaky," and "cheap feel" were the three core pain points. Based on this, we co-defined a product prototype with a patented effort-saving structure, an integrated sealing design, and an aerospace-grade aluminum body, positioning "capsule compatibility" as its key gain creator.</p>
+                        <ul data-lang="caseStep2List">
+                            <li>Transformed user complaints into product innovations</li>
+                            <li>Created a product with a unique "X-factor"</li>
+                            <li>Established a clear value proposition before development</li>
+                        </ul>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://placehold.co/800x600/3b82f6/ffffff?text=UCopps%E2%84%A2+Canvas" alt="UCopps Value Proposition Canvas">
+                    </div>
+                </div>
+
+                <div class="methodology-step reveal">
+                    <div class="step-content">
+                        <h4 class="case-study-h4" data-lang="caseStep3Module">Module 3: Viability & Growth Path</h4>
+                        <h3 class="gradient-title case-study-h3" data-lang="caseStep3Title">UCforecast™ Business Viability Blueprint</h3>
+                        <p class="case-study-p" data-lang="caseStep3Desc">We ran multi-scenario sales and P&L simulations for this new product. The baseline scenario predicted the project would become profitable in the 9th month, with a first-year net profit of $150,000. This clear financial blueprint not only gave the client the confidence to proceed but also became a key document for their subsequent fundraising.</p>
+                        <ul data-lang="caseStep3List">
+                            <li>Quantified investment return and risks</li>
+                            <li>Provided clear inventory and cash flow planning</li>
+                            <li>Mapped out a brand expansion path from 1 to N</li>
+                        </ul>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://placehold.co/800x600/1f2937/ffffff?text=UCforecast%E2%84%A2+P%26L+Scenarios" alt="UCforecast P&L Scenarios">
+                    </div>
+                </div>
+
+                <div class="methodology-step reveal">
+                    <div class="step-content">
+                        <h4 class="case-study-h4" data-lang="caseStep4Module">Module 4: Platform Success & Continuous Optimization</h4>
+                        <h3 class="gradient-title case-study-h3" data-lang="caseStep4Title">UCcopilot™ Growth Dashboard</h3>
+                        <p class="case-study-p" data-lang="caseStep4Desc">After the product launch, our AI co-pilot monitored ad performance and user feedback 24/7. In the second month, UCcopilot™ identified a competitor price drop risk and suggested countermeasures, while automatically optimizing ad spend, resulting in an ACoS (Advertising Cost of Sales) 35% lower than the industry average.</p>
+                        <ul data-lang="caseStep4List">
+                            <li>Freed the founders from tedious operational tasks</li>
+                            <li>Achieved data-driven continuous optimization</li>
+                            <li>Provided timely risk warnings and seized fleeting opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://placehold.co/800x600/4f46e5/ffffff?text=UCcopilot%E2%84%A2+Dashboard" alt="UCcopilot Dashboard">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="results-section">
+            <div class="container">
+                <h2 class="case-study-h2 reveal" data-lang="caseResultsTitle">The Final Results: Measurable Success</h2>
+                <div class="results-grid">
+                    <div class="result-item reveal">
+                        <div class="result-metric">+215%</div>
+                        <p class="result-label" data-lang="caseResult1">First-month sales exceeded baseline forecast</p>
+                    </div>
+                    <div class="result-item reveal">
+                        <div class="result-metric">4.8 ★</div>
+                        <p class="result-label" data-lang="caseResult2">Average user rating for the new product</p>
+                    </div>
+                    <div class="result-item reveal">
+                        <div class="result-metric">-35%</div>
+                        <p class="result-label" data-lang="caseResult3">ACoS lower than industry average</p>
+                    </div>
+                    <div class="result-item reveal">
+                        <div class="result-metric">7 Months</div>
+                        <p class="result-label" data-lang="caseResult4">Payback period to achieve profitability</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container reveal">
+                <h2 class="case-study-h2" data-lang="caseCtaTitle">Ready to write the next success story for your brand?</h2>
+                <p class="case-study-p" style="max-width: 700px; margin: 0 auto 2rem auto;" data-lang="caseCtaDesc">UCYX's systematic methodology can help you find the clearest path to victory in the complex global e-commerce market.</p>
+                <a href="mailto:partnership@ucyx.com" class="btn btn-primary" data-lang="caseCtaBtn">Contact Us Now to Start Your Growth Journey</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 data-lang="footerCompany">Company</h4>
+                    <ul>
+                        <li><a href="index.html#who-we-serve" data-lang="footerAbout">About Us</a></li>
+                        <li><a href="#" data-lang="footerCareers">Careers</a></li>
+                        <li><a href="#" data-lang="footerPress">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerServices">Services</h4>
+                    <ul>
+                        <li><a href="index.html#methodology" data-lang="footerMethodology">Methodology</a></li>
+                        <li><a href="index.html#success-stories" data-lang="footerCases">Case Studies</a></li>
+                        <li><a href="index.html#our-services" data-lang="footerSolutions">Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerResources">Resources</h4>
+                    <ul>
+                        <li><a href="yeahtrend.html" target="_blank">Yeah! Trend</a></li>
+                        <li><a href="#" data-lang="footerBlog">Blog</a></li>
+                        <li><a href="#" data-lang="footerWebinars">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerLegal">Legal</h4>
+                    <ul>
+                        <li><a href="#" data-lang="footerPrivacy">Privacy Policy</a></li>
+                        <li><a href="#" data-lang="footerTerms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> UCYX Ltd. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.582 7.64s-.215-1.512-.88-2.183c-.826-.83-1.74-.834-2.16-.88C16.246 4.5 12 4.5 12 4.5s-4.246 0-6.542.077c-.42.046-1.334-.05-2.16.88-.665.671-.88 2.183-.88 2.183S2.203 9.247 2.203 10.855v2.29c0 1.608.215 3.215.215 3.215s.215 1.512.88 2.183c.826.83 1.9.82 2.375.884 1.648.06 6.327.072 6.327.072s4.246 0 6.542-.077c.42-.046 1.334-.05-2.16-.88.665-.671.88-2.183.88-2.183s.215-1.608.215-3.215v-2.29c0-1.608-.215-3.215-.215-3.215zM9.752 14.815V8.895l5.253 2.96z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Translations Object ---
+            const translations = {
+                'en': {
+                    navOurServices: 'Services', navWhoWeServe: 'Who We Serve', navSuccessStories: 'Success Stories', navMethodology: 'Methodology', navChannels: 'Channels',
+                    serviceMenuCol1Title: 'Market Entry', serviceMenuChina: 'Enter China Market', serviceMenuGlobal: 'Enter Global Market',
+                    serviceMenuCol2Title: 'Value Growth Methodology',
+                    serviceMenuStep1: 'Market Scanning & Opportunity Locking', serviceMenuStep2: 'Deep Insight & Product Definition', serviceMenuStep3: 'Viability & Growth Path', serviceMenuStep4: 'Platform Success & Continuous Optimization',
+                    serviceMenuCases: 'Customer Case Studies',
+                    channelMenuYeahTrendTitle: 'Yeah! Trend', channelMenuYeahTrendDesc: 'Daily, easy-to-understand trend reports.',
+                    channelMenuKnowledgeBaseTitle: 'E-commerce Knowledge Base', channelMenuKnowledgeBaseDesc: 'In-depth industry analysis and strategic guides.',
+                    footerCompany: 'Company', footerAbout: 'About Us', footerCareers: 'Careers', footerPress: 'Press',
+                    footerServices: 'Services', footerMethodology: 'Methodology', footerCases: 'Case Studies', footerSolutions: 'Solutions',
+                    footerResources: 'Resources', footerBlog: 'Blog', footerWebinars: 'Webinars',
+                    footerLegal: 'Legal', footerPrivacy: 'Privacy Policy', footerTerms: 'Terms of Service',
+                    // Case Study Page Content
+                    caseHeroSubtitle: 'UCYX Success Case',
+                    caseHeroTitle: 'Helping a North American Lifestyle Brand Successfully Launch a "Portable Espresso Maker" on Amazon US',
+                    caseHeroLead: 'How we applied the UCYX Value Growth Methodology to transform a product concept into a successful brand that stands out in a competitive market.',
+                    caseChallengeTitle: 'The Challenge & Opportunity',
+                    caseChallengeDesc: 'Our client, an innovative North American lifestyle brand, observed a growing demand for high-quality coffee among outdoor enthusiasts. However, they faced a common challenge for new entrants: the market appeared saturated. How could they find a true entry point? How could they define a product that would excite consumers? And how could they ensure this investment was a wise business decision?',
+                    caseSolutionTitle: 'Our Solution: A Systematic Blueprint for Success',
+                    caseStep1Module: 'Module 1: Market Scanning & Opportunity Locking',
+                    caseStep1Title: 'UCniche™ Opportunity Quadrant Model',
+                    caseStep1Desc: 'We didn\'t let the client choose based on gut feelings. Our AI Agent scanned 32 sub-categories under kitchen appliances, scoring them with the "Yeah! Index." The results clearly showed that the "Portable Espresso Maker" market was in a "gold mine" quadrant of high demand and medium competition, making it the optimal entry point.',
+                    caseStep1List: '<li>Identified a high-potential "value basin"</li><li>Avoided the vicious competition of "red ocean" markets</li><li>Provided a solid data foundation for subsequent decisions</li>',
+                    caseStep2Module: 'Module 2: Deep Insight & Product Definition',
+                    caseStep2Title: 'UCopps™ Product Value Proposition Bible',
+                    caseStep2Desc: 'We deeply analyzed over 15,000 user reviews and found that "strenuous," "leaky," and "cheap feel" were the three core pain points. Based on this, we co-defined a product prototype with a patented effort-saving structure, an integrated sealing design, and an aerospace-grade aluminum body, positioning "capsule compatibility" as its key gain creator.',
+                    caseStep2List: '<li>Transformed user complaints into product innovations</li><li>Created a product with a unique "X-factor"</li><li>Established a clear value proposition before development</li>',
+                    caseStep3Module: 'Module 3: Viability & Growth Path',
+                    caseStep3Title: 'UCforecast™ Business Viability Blueprint',
+                    caseStep3Desc: 'We ran multi-scenario sales and P&L simulations for this new product. The baseline scenario predicted the project would become profitable in the 9th month, with a first-year net profit of $150,000. This clear financial blueprint not only gave the client the confidence to proceed but also became a key document for their subsequent fundraising.',
+                    caseStep3List: '<li>Quantified investment return and risks</li><li>Provided clear inventory and cash flow planning</li><li>Mapped out a brand expansion path from 1 to N</li>',
+                    caseStep4Module: 'Module 4: Platform Success & Continuous Optimization',
+                    caseStep4Title: 'UCcopilot™ Growth Dashboard',
+                    caseStep4Desc: 'After the product launch, our AI co-pilot monitored ad performance and user feedback 24/7. In the second month, UCcopilot™ identified a competitor price drop risk and suggested countermeasures, while automatically optimizing ad spend, resulting in an ACoS (Advertising Cost of Sales) 35% lower than the industry average.',
+                    caseStep4List: '<li>Freed the founders from tedious operational tasks</li><li>Achieved data-driven continuous optimization</li><li>Provided timely risk warnings and seized fleeting opportunities</li>',
+                    caseResultsTitle: 'The Final Results: Measurable Success',
+                    caseResult1: 'First-month sales exceeded baseline forecast',
+                    caseResult2: 'Average user rating for the new product',
+                    caseResult3: 'ACoS lower than industry average',
+                    caseResult4: 'Payback period to achieve profitability',
+                    caseCtaTitle: 'Ready to write the next success story for your brand?',
+                    caseCtaDesc: 'UCYX\'s systematic methodology can help you find the clearest path to victory in the complex global e-commerce market.',
+                    caseCtaBtn: 'Contact Us Now to Start Your Growth Journey'
+                },
+                'zh-Hant': {
+                    navOurServices: '服務內容', navWhoWeServe: '服務對象', navSuccessStories: '成功案例', navMethodology: '方法論', navChannels: '資源通道',
+                    serviceMenuCol1Title: '進入市場', serviceMenuChina: '進入中國市場', serviceMenuGlobal: '進入全球市場',
+                    serviceMenuCol2Title: '價值增長方法論',
+                    serviceMenuStep1: '市場掃描與機會鎖定', serviceMenuStep2: '深度洞察與產品定義', serviceMenuStep3: '商業可行性與增長路徑', serviceMenuStep4: '平台成功與持續優化',
+                    serviceMenuCases: '實際客戶案例分享',
+                    channelMenuYeahTrendTitle: 'Yeah! Trend', channelMenuYeahTrendDesc: '每日更新的、清晰易懂的趨勢報告。',
+                    channelMenuKnowledgeBaseTitle: '電商知識庫', channelMenuKnowledgeBaseDesc: '深入的行業分析與策略指南。',
+                    footerCompany: '公司', footerAbout: '關於我們', footerCareers: '工作機會', footerPress: '媒體報導',
+                    footerServices: '服務', footerMethodology: '增長方法論', footerCases: '成功案例', footerSolutions: '解決方案',
+                    footerResources: '資源', footerBlog: '博客', footerWebinars: '線上研討會',
+                    footerLegal: '法律', footerPrivacy: '隱私政策', footerTerms: '服務條款',
+                    caseHeroSubtitle: 'UCYX 成功案例',
+                    caseHeroTitle: '幫助北美生活方式品牌，以「便攜式濃縮咖啡機」成功進入Amazon美國站',
+                    caseHeroLead: '我們如何運用UCYX價值增長方法論，將一個產品概念，轉化為一個在競爭激烈的市場中脫穎而出的成功品牌。',
+                    caseChallengeTitle: '挑戰與機遇',
+                    caseChallengeDesc: '我們的客戶是一家充滿創意的北美生活方式品牌，他們觀察到戶外活動愛好者對高品質咖啡的需求日益增長。然而，他們面臨著所有新進者共同的挑戰：市場看似飽和，如何找到真正的切入點？如何定義一個能讓消費者尖叫的產品？以及，如何確保這次投入是一次明智的商業決策？',
+                    caseSolutionTitle: '我們的解決方案：一套系統化的成功藍圖',
+                    caseStep1Module: '模塊一：市場掃描與機會鎖定',
+                    caseStep1Title: 'UCniche™ 機會象限模型',
+                    caseStep1Desc: '我們沒有讓客戶憑感覺選品。我們的AI Agent掃描了廚房用品下的32個子類目，運用「Yeah! 指數」進行評分。結果清晰地顯示，「便攜式濃縮咖啡機」市場正處於高需求、中等競爭的「金礦區」，是最佳的切入點。',
+                    caseStep1List: '<li>鎖定高潛力「價值窪地」</li><li>規避「紅海戰場」的惡性競爭</li><li>為後續決策提供堅實的數據基礎</li>',
+                    caseStep2Module: '模塊二：深度洞察與產品定義',
+                    caseStep2Title: 'UCopps™ 產品價值主張聖經',
+                    caseStep2Desc: '我們深度分析了超過15,000條用戶評論，發現「費力」、「漏水」和「廉價感」是三大核心痛點。基於此，我們與客戶共同定義了一款採用專利省力結構、一體式密封設計和航空級鋁合金機身的產品原型，並將「兼容膠囊」作為其核心增益點。',
+                    caseStep2List: '<li>將用戶抱怨轉化為產品創新點</li><li>打造具有獨特「X-factor」的產品</li><li>在開發前就確立了清晰的價值主張</li>',
+                    caseStep3Module: '模塊三：商業可行性與增長路徑',
+                    caseStep3Title: 'UCforecast™ 商業可行性藍圖',
+                    caseStep3Desc: '我們為這個新產品進行了多場景的銷量與損益模擬。基準情景預測顯示，項目將在第9個月實現盈利，第一年淨利潤可達$150,000。這份清晰的財務藍圖，不僅給予了客戶決策的信心，也成為他們後續融資的關鍵文件。',
+                    caseStep3List: '<li>量化投資回報與風險</li><li>提供清晰的庫存與現金流規劃</li><li>繪製從1到N的品牌擴張地圖</li>',
+                    caseStep4Module: '模塊四：平台成功與持續優化',
+                    caseStep4Title: 'UCcopilot™ 增長儀表板',
+                    caseStep4Desc: '產品上市後，我們的AI副駕7x24小時監控廣告表現和用戶反饋。在第二個月，UCcopilot™發現競品降價風險並提出應對建議，同時自動優化廣告投放，使ACoS（廣告銷售成本比）比行業平均水平低了35%。',
+                    caseStep4List: '<li>從繁瑣運營中解放創始人</li><li>實現數據驅動的持續優化</li><li>及時預警風險，抓住轉瞬即逝的機會</li>',
+                    caseResultsTitle: '最終成果：可被衡量的成功',
+                    caseResult1: '首月銷量超出基準預測',
+                    caseResult2: '新品平均用戶評分',
+                    caseResult3: '廣告ACoS低於行業平均',
+                    caseResult4: '實現盈利的回本週期',
+                    caseCtaTitle: '準備好為您的品牌書寫下一個成功故事了嗎？',
+                    caseCtaDesc: 'UCYX\'s systematic methodology can help you find the clearest path to victory in the complex全球電商市場中，找到最清晰的致勝路徑。',
+                    caseCtaBtn: '立即聯繫我們，開啟您的增長之旅'
+                },
+                'zh-Hans': {
+                    navOurServices: '服务内容', navWhoWeServe: '服务对象', navSuccessStories: '成功案例', navMethodology: '方法论', navChannels: '资源通道',
+                    serviceMenuCol1Title: '进入市场', serviceMenuChina: '进入中国市场', serviceMenuGlobal: '进入全球市场',
+                    serviceMenuCol2Title: '价值增长方法论',
+                    serviceMenuStep1: '市场扫描与机会锁定', serviceMenuStep2: '深度洞察与产品定义', serviceMenuStep3: '商业可行性与增长路径', serviceMenuStep4: '平台成功与持续优化',
+                    serviceMenuCases: '实际客户案例分享',
+                    channelMenuYeahTrendTitle: 'Yeah! Trend', channelMenuYeahTrendDesc: '每日更新的、清晰易懂的趋势报告。',
+                    channelMenuKnowledgeBaseTitle: '电商知识库', channelMenuKnowledgeBaseDesc: '深入的行业分析与策略指南。',
+                    footerCompany: '公司', footerAbout: '关于我们', footerCareers: '工作机会', footerPress: '媒体报道',
+                    footerServices: '服务', footerMethodology: '增长方法论', footerCases: '成功案例', footerSolutions: '解决方案',
+                    footerResources: '资源', footerBlog: '博客', footerWebinars: '线上研讨会',
+                    footerLegal: '法律', footerPrivacy: '隐私政策', footerTerms: '服务条款',
+                    caseHeroSubtitle: 'UCYX 成功案例',
+                    caseHeroTitle: '帮助北美生活方式品牌，以“便携式浓缩咖啡机”成功进入Amazon美国站',
+                    caseHeroLead: '我们如何运用UCYX价值增长方法论，将一个产品概念，转化为一个在竞争激烈的市场中脱颖而出的成功品牌。',
+                    caseChallengeTitle: '挑战与机遇',
+                    caseChallengeDesc: '我们的客户是一家充满创意的北美生活方式品牌，他们观察到户外活动爱好者对高品质咖啡的需求日益增长。然而，他们面临着所有新进者共同的挑战：市场看似饱和，如何找到真正的切入点？如何定义一个能让消费者尖叫的产品？以及，如何确保这次投入是一次明智的商业决策？',
+                    caseSolutionTitle: '我们的解决方案：一套系统化的成功蓝图',
+                    caseStep1Module: '模块一：市场扫描与机会锁定',
+                    caseStep1Title: 'UCniche™ 机会象限模型',
+                    caseStep1Desc: '我们没有让客户凭感觉选品。我们的AI Agent扫描了厨房用品下的32个子类目，运用“Yeah! 指数”进行评分。结果清晰地显示，“便携式浓缩咖啡机”市场正处于高需求、中等竞争的“金矿区”，是最佳的切入点。',
+                    caseStep1List: '<li>锁定高潜力“价值洼地”</li><li>规避“红海战场”的恶性竞争</li><li>为后续决策提供坚实的数据基础</li>',
+                    caseStep2Module: '模块二：深度洞察与产品定义',
+                    caseStep2Title: 'UCopps™ 产品价值主张圣经',
+                    caseStep2Desc: '我们深度分析了超过15,000条用户评论，发现“费力”、“漏水”和“廉价感”是三大核心痛点。基于此，我们与客户共同定义了一款采用专利省力结构、一体式密封设计和航空级铝合金机身的产品原型，并将“兼容胶囊”作为其核心增益点。',
+                    caseStep2List: '<li>将用户抱怨转化为产品创新点</li><li>打造具有独特“X-factor”的产品</li><li>在开发前就确立了清晰的价值主张</li>',
+                    caseStep3Module: '模块三：商业可行性与增长路径',
+                    caseStep3Title: 'UCforecast™ 商业可行性蓝图',
+                    caseStep3Desc: '我们为这个新产品进行了多场景的销量与损益模拟。基准情景预测显示，项目将在第9个月实现盈利，第一年净利润可达$150,000。这份清晰的财务蓝图，不仅给予了客户决策的信心，也成为他们后续融资的关键文件。',
+                    caseStep3List: '<li>量化投资回报与风险</li><li>提供清晰的库存与现金流规划</li><li>绘制从1到N的品牌扩张地图</li>',
+                    caseStep4Module: '模块四：平台成功与持续优化',
+                    caseStep4Title: 'UCcopilot™ 增长仪表板',
+                    caseStep4Desc: '产品上市后，我们的AI副驾7x24小时监控广告表现和用户反��。在第二个月，UCcopilot™发现竞品降价风险并提出应对建议，同时自动优化广告投放，使ACoS（广告销售成本比）比行业平均水平低了35%。',
+                    caseStep4List: '<li>从繁琐运营中解放创始人</li><li>实现数据驱动的持续优化</li><li>及时预警风险，抓住转瞬即逝的机会</li>',
+                    caseResultsTitle: '最终成果：可被衡量的成功',
+                    caseResult1: '首月销量超出基准预测',
+                    caseResult2: '新品平均用户评分',
+                    caseResult3: '广告ACoS低于行业平均',
+                    caseResult4: '实现盈利的回本周期',
+                    caseCtaTitle: '准备好为您的品牌书写下一个成功故事了吗？',
+                    caseCtaDesc: 'UCYX\'s systematic methodology can help you find the clearest path to victory in the complex全球电商市场中，找到最清晰的致胜路径。',
+                    caseCtaBtn: '立即联系我们，开启您的增长之旅'
+                },
+                'ja': {
+                    navOurServices: 'サービス', navWhoWeServe: 'サービス対象', navSuccessStories: '成功事例', navMethodology: '方法論', navChannels: 'チャネル',
+                    serviceMenuCol1Title: '市場参入', serviceMenuChina: '中国市場へ参入', serviceMenuGlobal: 'グローバル市場へ参入',
+                    serviceMenuCol2Title: '価値成長方法論',
+                    serviceMenuStep1: '市場スキャンと機会の特定', serviceMenuStep2: '深い洞察と製品定義', serviceMenuStep3: '事業性評価と成長経路', serviceMenuStep4: 'プラットフォームでの成功と継続的最適化',
+                    serviceMenuCases: '顧客事例',
+                    channelMenuYeahTrendTitle: 'Yeah! Trend', channelMenuYeahTrendDesc: '毎日更新、分かりやすいトレンドレポート。',
+                    channelMenuKnowledgeBaseTitle: 'ECナレッジベース', channelMenuKnowledgeBaseDesc: '詳細な業界分析と戦略ガイド。',
+                    footerCompany: '会社', footerAbout: '会社概要', footerCareers: '採用情報', footerPress: 'プレス',
+                    footerServices: 'サービス', footerMethodology: '方法論', footerCases: '成功事例', footerSolutions: 'ソリューション',
+                    footerResources: 'リソース', footerBlog: 'ブログ', footerWebinars: 'ウェビナー',
+                    footerLegal: '法務', footerPrivacy: 'プライバシーポリシー', footerTerms: '利用規約',
+                    caseHeroSubtitle: 'UCYX 成功事例',
+                    caseHeroTitle: '北米ライフスタイルブランドの「ポータブルエスプレッソメーカー」によるAmazon米国市場への成功的な参入を支援',
+                    caseHeroLead: 'UCYX価値成長方法論を適用し、製品コンセプトを競争の激しい市場で際立つ成功したブランドに変えた方法。',
+                    caseChallengeTitle: '挑戦と機会',
+                    caseChallengeDesc: '当社のクライアントである革新的な北米のライフスタイルブランドは、アウトドア愛好家の間で高品質なコーヒーへの需要が高まっていることに気づきました。しかし、新規参入者が直面する共通の課題がありました。市場は飽和しているように見え、真の参入点を見つける方法は？消費者を興奮させる製品を定義する方法は？そして、この投資が賢明なビジネス判断であることをどう確認するか？',
+                    caseSolutionTitle: '私たちのソリューション：成功への体系的な青写真',
+                    caseStep1Module: 'モジュール1：市場スキャンと機会の特定',
+                    caseStep1Title: 'UCniche™ 機会象限モデル',
+                    caseStep1Desc: '私たちはクライアントに直感で製品を選ばせませんでした。当社のAIエージェントがキッチン用品の32のサブカテゴリをスキャンし、「Yeah!指数」で評価しました。その結果、「ポータブルエスプレッソメーカー」市場が高い需要と中程度の競争がある「金鉱」領域にあることが明確になり、最適な参入点であることが示されました。',
+                    caseStep1List: '<li>ポテンシャルの高い「価値の窪地」を特定</li><li>「レッドオーシャン」市場の悪質な競争を回避</li><li>その後の意思決定のための強固なデータ基盤を提供</li>',
+                    caseStep2Module: 'モジュール2：深い洞察と製品定義',
+                    caseStep2Title: 'UCopps™ 製品価値提案バイブル',
+                    caseStep2Desc: '15,000件以上のユーザーレビューを深く分析し、「力が必要」「水漏れ」「安っぽい感じ」が3つの核心的な問題点であることを発見しました。これに基づき、特許取得済みの省力構造、一体型シーリングデザイン、航空宇宙グレードのアルミニウムボディを採用した製品プロトタイプを共同で定義し、「カプセル互換性」を主要な利点と位置づけました。',
+                    caseStep2List: '<li>ユーザーの不満を製品革新に転換</li><li>独自の「Xファクター」を持つ製品を創造</li><li>開発前に明確な価値提案を確立</li>',
+                    caseStep3Module: 'モジュール3：事業性評価と成長経路',
+                    caseStep3Title: 'UCforecast™ 事業性評価ブループリント',
+                    caseStep3Desc: 'この新製品について、複数のシナリオでの販売および損益シミュレーションを実施しました。ベースラインシナリオでは、プロジェクトは9ヶ月目に黒字化し、初年度の純利益は15万ドルに達すると予測されました。この明確な財務計画は、クライアントに実行の自信を与えただけでなく、その後の資金調達における重要な文書となりました。',
+                    caseStep3List: '<li>投資収益とリスクを定量化</li><li>明確な在庫およびキャッシュフロー計画を提供</li><li>1からNへのブランド拡大マップを作成</li>',
+                    caseStep4Module: 'モジュール4：プラットフォームでの成功と継続的最適化',
+                    caseStep4Title: 'UCcopilot™ 成長ダッシュボード',
+                    caseStep4Desc: '製品発売後、当社のAIコパイロットが広告パフォーマンスとユーザーフィードバックを24時間365日監視しました。2ヶ月目には、UCcopilot™が競合他社の値下げリスクを特定し、対策を提案すると同時に、広告費を自動的に最適化し、ACoS（広告費売上高比率）を業界平均より35%低く抑えました。',
+                    caseStep4List: '<li>創業者を煩雑な運営業務から解放</li><li>データ駆動型の継続的な最適化を達成</li><li>タイムリーなリスク警告と、一瞬の機会を捉える</li>',
+                    caseResultsTitle: '最終成果：測定可能な成功',
+                    caseResult1: '初月の売上がベースライン予測を上回る',
+                    caseResult2: '新製品の平均ユーザー評価',
+                    caseResult3: 'ACoSが業界平均より低い',
+                    caseResult4: '収益性を達成するまでの回収期間',
+                    caseCtaTitle: 'あなたのブランドの次の成功事例を書く準備はできていますか？',
+                    caseCtaDesc: 'UCYX\'s systematic methodology can help you find the clearest path to victory in the complexグローバルEC市場で勝利への最も明確な道筋を見つけるのに役立ちます。',
+                    caseCtaBtn: '今すぐお問い合わせ、成長の旅を始めましょう'
+                }
+            };
+
+            // --- Main Logic ---
+            function switchLanguage(lang) {
+                const langData = translations[lang] || translations['en'];
+                document.documentElement.setAttribute('lang', lang);
+                localStorage.setItem('ucyx-lang', lang);
+
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    const key = el.dataset.lang;
+                    const translation = langData[key];
+                    if (translation) {
+                        if (el.tagName === 'UL' && key.includes('List')) {
+                            el.innerHTML = translation;
+                        } else {
+                            el.textContent = translation;
+                        }
+                    }
+                });
+
+                const currentLangDisplay = document.querySelector(`.lang-option[data-lang-id="${lang}"]`);
+                if (currentLangDisplay) {
+                    document.getElementById('current-lang-text').textContent = currentLangDisplay.textContent;
+                }
+
+                const fontMap = {
+                    'ja': "'Noto Sans JP', 'Noto Sans TC', sans-serif",
+                    'zh-Hans': "'Noto Sans SC', 'Noto Sans TC', sans-serif",
+                    'zh-Hant': "'Noto Sans TC', -apple-system, sans-serif",
+                    'en': "'Noto Sans TC', -apple-system, sans-serif"
+                };
+                document.body.style.fontFamily = fontMap[lang] || fontMap['en'];
+
+                const langDropdown = document.querySelector('.lang-switcher .lang-dropdown');
+                if (langDropdown) langDropdown.classList.remove('show');
+                const currentLangBtn = document.querySelector('.lang-switcher .current-lang');
+                if (currentLangBtn) currentLangBtn.classList.remove('active');
+            }
+
+            function initLanguageSwitcher() {
+                const langSwitcher = document.querySelector('.lang-switcher');
+                if (!langSwitcher) return;
+                const currentLangBtn = langSwitcher.querySelector('.current-lang');
+                const langDropdown = langSwitcher.querySelector('.lang-dropdown');
+                langOptions = langSwitcher.querySelectorAll('.lang-option');
+
+                currentLangBtn.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    langDropdown.classList.toggle('show');
+                    currentLangBtn.classList.toggle('active');
+                });
+
+                document.addEventListener('click', () => {
+                    langDropdown.classList.remove('show');
+                    currentLangBtn.classList.remove('active');
+                });
+
+                langOptions.forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        switchLanguage(e.target.dataset.langId);
+                    });
+                });
+
+                const savedLang = localStorage.getItem('ucyx-lang') || 'en';
+                switchLanguage(savedLang);
+            }
+
+            function initAnimations() {
+                const revealElements = document.querySelectorAll('.reveal');
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    revealElements.forEach(el => observer.observe(el));
+                } else {
+                    revealElements.forEach(el => el.classList.add('visible'));
+                }
+            }
+            
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            initLanguageSwitcher();
+            initAnimations();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeah! Trend - Daily E-commerce Insights Powered by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f97316;
+            --primary-hover-color: #ea580c;
+            --dark-color: #111827;    
+            --light-gray-color: #f9fafb;
+            --medium-gray-color: #6b7280;
+            --text-color: #374151;
+            --white-color: #ffffff;
+            --border-color: #e5e7eb;
+            --border-radius: 16px;
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--light-gray-color);
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 5rem 0; }
+        h1, h2, h3 { font-weight: 900; line-height: 1.2; margin-bottom: 1rem; color: var(--dark-color); letter-spacing: -0.02em; }
+        h1 { font-size: 3.5rem; text-align: center; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+        p { margin-bottom: 1rem; font-size: 1.1rem; }
+        .text-center { text-align: center; }
+        .lead { font-size: 1.25rem; color: var(--medium-gray-color); max-width: 700px; margin: 0 auto 2rem auto; }
+
+        /* --- Header & Hero --- */
+        .hero {
+            background: linear-gradient(45deg, var(--dark-color), #374151);
+            color: var(--white-color);
+            padding: 8rem 0;
+            text-align: center;
+        }
+        .hero h1, .hero p { color: var(--white-color); }
+        .hero .yeah-trend-logo {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #facc15, #fb923c, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .btn { display: inline-block; padding: 0.8rem 2.5rem; border-radius: 50px; font-size: 1.1rem; font-weight: 700; text-align: center; transition: all 0.3s ease; cursor: pointer; border: 2px solid var(--primary-color); }
+        .btn-primary { background-color: var(--primary-color); color: var(--white-color); }
+        .btn-primary:hover { background-color: var(--primary-hover-color); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        
+        /* --- Daily Report Section --- */
+        .report-card {
+            background: var(--white-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
+            margin: -4rem auto 0 auto;
+            position: relative;
+            z-index: 10;
+            padding: 2.5rem;
+        }
+        .report-card .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .report-card .browse-node { font-size: 0.9rem; color: var(--medium-gray-color); }
+        .yeah-index { text-align: right; }
+        .yeah-index .score { font-size: 3rem; font-weight: 900; color: var(--primary-color); line-height: 1; }
+        .yeah-index .label { font-size: 0.9rem; font-weight: 700; color: var(--primary-color); }
+        .keywords-list { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+        .keyword-tag { background: var(--light-gray-color); color: var(--text-color); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.9rem; }
+        
+        /* --- Premium Content Teaser --- */
+        .premium-teaser {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px dashed var(--border-color);
+            position: relative;
+        }
+        .premium-teaser h4 { text-align: center; margin-bottom: 1rem; color: var(--dark-color); }
+        .premium-content-blur {
+            filter: blur(5px);
+            user-select: none;
+            pointer-events: none;
+        }
+        .unlock-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* --- Methodology Section --- */
+        #methodology { background-color: var(--white-color); }
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        .methodology-item .icon { font-size: 3rem; color: var(--primary-color); }
+
+        /* --- Pricing Section --- */
+        #pricing { background-color: var(--dark-color); }
+        #pricing h2, #pricing p { color: var(--white-color); }
+        .pricing-card {
+            background: var(--white-color);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+        .pricing-card .price { font-size: 4rem; font-weight: 900; color: var(--dark-color); margin: 1rem 0; }
+        .pricing-card .price .period { font-size: 1rem; font-weight: 400; color: var(--medium-gray-color); }
+        .pricing-card ul { list-style: none; margin: 2rem 0; }
+        .pricing-card ul li { margin-bottom: 0.75rem; }
+
+        /* --- Footer (與主站一致) --- */
+        .footer { background-color: var(--dark-color); color: var(--medium-gray-color); padding: 5rem 0; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .footer-col h4 { color: var(--white-color); font-size: 1rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { color: var(--medium-gray-color); font-weight: 400; text-decoration: none; }
+        .footer-col ul li a:hover { color: var(--white-color); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #374151; }
+        .footer-bottom .social-media { display: flex; align-items: center; gap: 1.5rem; }
+        .footer-bottom .social-media a { color: var(--medium-gray-color); }
+        .footer-bottom .social-media a:hover { color: var(--white-color); transform: scale(1.1); }
+        .footer-bottom .social-media svg { width: 24px; height: 24px; }
+
+        /* --- 導航欄 (與主站一致) --- */
+        .navbar { position: sticky; top: 0; width: 100%; z-index: 1000; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); padding: 1.2rem 0; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .navbar .logo { font-size: 1.8rem; font-weight: 900; color: var(--dark-color); display: flex; align-items: center; text-decoration: none;}
+        .navbar .logo img { width: 36px; height: 36px; margin-right: 12px; }
+        .navbar .nav-right-cluster { display: flex; align-items: center; gap: 1rem;}
+        .navbar .nav-menu { display: flex; list-style: none; align-items: center; }
+        .navbar .nav-menu li a { padding: 0.5rem 1rem; color: var(--dark-color); font-weight: 700; transition: color 0.3s ease; font-size: 1rem; text-decoration: none; }
+        .navbar .nav-menu li a:hover, .navbar .nav-menu li a.active { color: var(--primary-color); }
+        
+        @media (max-width: 768px) {
+            .methodology-grid { grid-template-columns: 1fr 1fr; }
+            .navbar .nav-menu { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導航欄 (從UCYX主站繼承) -->
+    <header class="navbar">
+        <div class="container">
+            <a href="ucyx_main_page.html" class="logo"> <!-- 這裡的連結應指向您的主站 -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZmlsbD0iIzFmMjkzNyIgZD0iTTc3LjUsMTAwYy0xMi45LDAtMjQuOS01LTMzLjgtMTMuOUMzNC44LDc3LjMsMjkuOCw2NS4zLDI5LjgsNTIuNFY0Ny42YzAtMTIuOSw1LTI0LjksMTMuOS0zMy44QzUyLjYsNSw2NC42LDAsNzcuNSwwSDM3LjJDMTYuNywwLDAsMTYuNywwLDM3LjJ2MjUuN0MwLDg0LjMsMTUuNywxMDAsMzUuMiwxMDBINzcuNXoiLz48cGF0aCBmaWxsPSIjNDY0NmU1IiBkPSJNNzcuNSw4Ny41SDM1LjJDNjIuMSw4Ny41LDg0LDY1LjYsODQsMzguN1YxMy4xYzEyLjksMCwyNC45LDUsMzMuOCwxMy45YzguOCw4LjgsMTMuOSwyMC44LDEzLjksMzMuOHYyNS43QzEzMS43LDg0LjMsMTE2LDExNS4xLDg4LjEsMTE1LjFINzcuNXoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMS43IC0xNS4xKSBzY2FsZSgwLjg2KSIgLz48L2c+PC9zdmc+" alt="UCYX Logo">
+                <span class="logo-text">UCYX</span>
+            </a>
+            <nav class="nav-right-cluster">
+                <ul class="nav-menu">
+                    <!-- 這裡的連結應指向您的主站的錨點 -->
+                    <li><a href="ucyx_main_page.html#our-services" data-lang="navOurServices">服務內容</a></li>
+                    <li><a href="ucyx_main_page.html#who-we-serve" data-lang="navWhoWeServe">服務對象</a></li>
+                    <li><a href="ucyx_main_page.html#success-stories" data-lang="navSuccessStories">成功案例</a></li>
+                    <li><a href="ucyx_main_page.html#methodology" data-lang="navMethodology">方法論</a></li>
+                    <li><a href="#" class="nav-link active" data-lang="navYeahTrend">Yeah! Trend</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <div class="current-lang">
+                        <span id="current-lang-text">繁體中文</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <ul class="lang-dropdown">
+                        <li><a href="#" class="lang-option" data-lang-id="zh-Hant">繁體中文</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="zh-Hans">简体中文</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="en">English</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="ja">日本語</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Yeah! Trend 網站主體內容 -->
+    <main>
+        <header class="hero">
+            <div class="container reveal">
+                <div class="yeah-trend-logo" data-lang="yeahTrendLogo">Yeah! Trend</div>
+                <h1 data-lang="heroTitle">不再猜測。用數據看見下一個爆款。</h1>
+                <p class="lead" data-lang="heroSubtitle">Yeah! Trend 每日為您解碼一個Amazon子類目。由AI驅動的趨勢洞察，助您在競爭激烈的電商市場中領先一步。</p>
+                <a href="#pricing" class="btn btn-primary" data-lang="heroBtn">立即以 $9.9/年 解鎖所有報告</a>
+            </div>
+        </header>
+
+        <section id="daily-report" style="padding-top:0;">
+            <div class="container">
+                <div class="report-card reveal">
+                    <div class="report-header">
+                        <div>
+                            <h4 data-lang="todayReport">今日洞察報告</h4>
+                            <p class="browse-node">Home & Kitchen > Kitchen & Dining > Glassware & Drinkware</p>
+                        </div>
+                        <div class="yeah-index">
+                            <div class="score">82</div>
+                            <div class="label" data-lang="yeahIndex">Yeah! 指數</div>
+                        </div>
+                    </div>
+                    <div class="report-content">
+                        <h3 data-lang="snapshotTitle">趨勢速覽</h3>
+                        <p data-lang="snapshotDesc">玻璃杯市場本週由「復古刻花」設計引領風潮，搜尋量上升35%。然而，價格競爭激烈，平均利潤空間正在被壓縮。主要機會點在於針對特定飲品（如威士忌、雞尾酒）的專用杯型，以及提供禮品包裝選項。</p>
+                        <h4 data-lang="keywordsTitle">熱門關鍵詞</h4>
+                        <div class="keywords-list">
+                            <span class="keyword-tag">Vintage Glassware</span>
+                            <span class="keyword-tag">Ribbed Glass Cups</span>
+                            <span class="keyword-tag">Whiskey Glasses Set for Men</span>
+                        </div>
+                    </div>
+                    <div class="premium-teaser">
+                        <div class="premium-content-blur">
+                            <h4 data-lang="premiumTitle">會員專享：深度市場分析</h4>
+                            <p data-lang="premiumDesc">競爭格局：Top 10賣家中，品牌X佔據了35%的市場份額，但其產品平均星級僅為4.2。消費者評論洞察：AI分析了8,500條評論，發現最大的痛點是「杯壁太薄，容易破損」 (佔差評的45%) 和「實際容量比描述的小」。</p>
+                        </div>
+                        <div class="unlock-overlay">
+                            <a href="#pricing" class="btn btn-primary" data-lang="unlockBtn">解鎖完整報告</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="methodology" style="background-color: var(--white-color);">
+            <div class="container">
+                <h2 class="reveal" data-lang="methodologyTitle">什麼是「Yeah! 指數」？</h2>
+                <p class="lead text-center reveal" data-lang="methodologySubtitle">這不是一個隨意的分數。它是我們獨創的、基於四大維度數據的AI評估模型，旨在科學地衡量一個利基市場的真實機會。</p>
+                <div class="methodology-grid">
+                    <div class="methodology-item reveal">
+                        <div class="icon">📈</div>
+                        <h3 data-lang="dim1Title">市場熱度</h3>
+                        <p data-lang="dim1Desc">結合搜索量增長率、社群媒體聲量和新品湧入速度，判斷市場需求是在漲潮還是退潮。</p>
+                    </div>
+                    <div class="methodology-item reveal">
+                        <div class="icon">⚔️</div>
+                        <h3 data-lang="dim2Title">競爭分析</h3>
+                        <p data-lang="dim2Desc">分析品牌壟斷率、評論壁壘和廣告成本，評估您進入這片戰場的難易程度。</p>
+                    </div>
+                    <div class="methodology-item reveal">
+                        <div class="icon">💰</div>
+                        <h3 data-lang="dim3Title">利潤空間</h3>
+                        <p data-lang="dim3Desc">透過對平均售價和預估FBA成本的計算，判斷這個市場是否有健康的「賺錢」潛力。</p>
+                    </div>
+                    <div class="methodology-item reveal">
+                        <div class="icon">❤️</div>
+                        <h3 data-lang="dim4Title">產品口碑</h3>
+                        <p data-lang="dim4Desc">深度分析現有產品的用戶評論，在消費者的「抱怨」中，找到您產品創新的黃金機會。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="container">
+                <h2 class="reveal" data-lang="pricingTitle">選擇您的計劃</h2>
+                <p class="lead text-center reveal" data-lang="pricingSubtitle">用一杯咖啡的價格，投資您一整年的商業智慧。</p>
+                <div class="pricing-card reveal">
+                    <h3 data-lang="planName">基礎會員</h3>
+                    <div class="price">$9.9 <span class="period" data-lang="planPeriod">/ 年</span></div>
+                    <p data-lang="planDesc">解鎖所有報告，抓住每一個商機。</p>
+                    <ul data-lang="planFeatures">
+                        <li>✓ 無限制訪問所有每日洞察報告</li>
+                        <li>✓ 訪問歷史報告數據庫</li>
+                        <li>✓ 會員專屬社群邀請</li>
+                        <li>✓ 未來新功能優先體驗權</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" data-lang="planBtn">立即加入，抓住趨勢</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁腳 (從UCYX主站繼承) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 data-lang="footerCompany">公司</h4>
+                    <ul>
+                        <li><a href="ucyx_main_page.html#who-we-serve" data-lang="footerAbout">關於我們</a></li>
+                        <li><a href="#" data-lang="footerCareers">工作機會</a></li>
+                        <li><a href="#" data-lang="footerPress">媒體報導</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerServices">服務</h4>
+                    <ul>
+                        <li><a href="ucyx_main_page.html#methodology" data-lang="footerMethodology">增長方法論</a></li>
+                        <li><a href="ucyx_main_page.html#success-stories" data-lang="footerCases">成功案例</a></li>
+                        <li><a href="ucyx_main_page.html#our-services" data-lang="footerSolutions">解決方案</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerResources">資源</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">Yeah! Trend</a></li>
+                        <li><a href="#" data-lang="footerBlog">博客</a></li>
+                        <li><a href="#" data-lang="footerWebinars">線上研討會</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerLegal">法律</h4>
+                    <ul>
+                        <li><a href="#" data-lang="footerPrivacy">隱私政策</a></li>
+                        <li><a href="#" data-lang="footerTerms">服務條款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UCYX Ltd. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.582 7.64s-.215-1.512-.88-2.183c-.826-.83-1.74-.834-2.16-.88C16.246 4.5 12 4.5 12 4.5s-4.246 0-6.542.077c-.42.046-1.334-.05-2.16.88-.665.671-.88 2.183-.88 2.183S2.203 9.247 2.203 10.855v2.29c0 1.608.215 3.215.215 3.215s.215 1.512.88 2.183c.826.83 1.9.82 2.375.884 1.648.06 6.327.072 6.327.072s4.246 0 6.542-.077c.42-.046 1.334-.05-2.16-.88.665-.671.88-2.183.88-2.183s.215-1.608.215-3.215v-2.29c0-1.608-.215-3.215-.215-3.215zM9.752 14.815V8.895l5.253 2.96z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const translations = {
+            'zh-Hant': {
+                navOurServices: '服務內容', navWhoWeServe: '服務對象', navSuccessStories: '成功案例', navMethodology: '方法論', navYeahTrend: 'Yeah! Trend',
+                yeahTrendLogo: 'Yeah! Trend',
+                heroTitle: '不再猜測。用數據看見下一個爆款。',
+                heroSubtitle: 'Yeah! Trend 每日為您解碼一個Amazon子類目。由AI驅動的趨勢洞察，助您在競爭激烈的電商市場中領先一步。',
+                heroBtn: '立即以 $9.9/年 解鎖所有報告',
+                todayReport: '今日洞察報告',
+                yeahIndex: 'Yeah! 指數',
+                snapshotTitle: '趨勢速覽',
+                snapshotDesc: '玻璃杯市場本週由「復古刻花」設計引領風潮，搜尋量上升35%。然而，價格競爭激烈，平均利潤空間正在被壓縮。主要機會點在於針對特定飲品（如威士忌、雞尾酒）的專用杯型，以及提供禮品包裝選項。',
+                keywordsTitle: '熱門關鍵詞',
+                premiumTitle: '會員專享：深度市場分析',
+                premiumDesc: '競爭格局：Top 10賣家中，品牌X佔據了35%的市場份額，但其產品平均星級僅為4.2。消費者評論洞察：AI分析了8,500條評論，發現最大的痛點是「杯壁太薄，容易破損」 (佔差評的45%) 和「實際容量比描述的小」。',
+                unlockBtn: '解鎖完整報告',
+                methodologyTitle: '什麼是「Yeah! 指數」？',
+                methodologySubtitle: '這不是一個隨意的分數。它是我們獨創的、基於四大維度數據的AI評估模型，旨在科學地衡量一個利基市場的真實機會。',
+                dim1Title: '市場熱度', dim1Desc: '結合搜索量增長率、社群媒體聲量和新品湧入速度，判斷市場需求是在漲潮還是退潮。',
+                dim2Title: '競爭分析', dim2Desc: '分析品牌壟斷率、評論壁壘和廣告成本，評估您進入這片戰場的難易程度。',
+                dim3Title: '利潤空間', dim3Desc: '透過對平均售價和預估FBA成本的計算，判斷這個市場是否有健康的「賺錢」潛力。',
+                dim4Title: '產品口碑', dim4Desc: '深度分析現有產品的用戶評論，在消費者的「抱怨」中，找到您產品創新的黃金機會。',
+                pricingTitle: '選擇您的計劃',
+                pricingSubtitle: '用一杯咖啡的價格，投資您一整年的商業智慧。',
+                planName: '基礎會員',
+                planPeriod: '/ 年',
+                planDesc: '解鎖所有報告，抓住每一個商機。',
+                planFeatures: '<li>✓ 無限制訪問所有每日洞察報告</li><li>✓ 訪問歷史報告數據庫</li><li>✓ 會員專屬社群邀請</li><li>✓ 未來新功能優先體驗權</li>',
+                planBtn: '立即加入，抓住趨勢',
+                footerCompany: '公司', footerAbout: '關於我們', footerCareers: '工作機會', footerPress: '媒體報導',
+                footerServices: '服務', footerMethodology: '增長方法論', footerCases: '成功案例', footerSolutions: '解決方案',
+                footerResources: '資源', footerBlog: '博客', footerWebinars: '線上研討會',
+                footerLegal: '法律', footerPrivacy: '隱私政策', footerTerms: '服務條款'
+            },
+            'zh-Hans': {
+                yeahTrendLogo: 'Yeah! Trend',
+                heroTitle: '不再猜测。用数据看见下一个爆款。',
+                heroSubtitle: 'Yeah! Trend 每日为您解码一个Amazon子类目。由AI驱动的趋势洞察，助您在竞争激烈的电商市场中领先一步。',
+                heroBtn: '立即以 $9.9/年 解锁所有报告',
+                todayReport: '今日洞察报告',
+                yeahIndex: 'Yeah! 指数',
+                snapshotTitle: '趋势速览',
+                snapshotDesc: '玻璃杯市场本周由“复古刻花”设计引领风潮，搜索量上升35%。然而，价格竞争激烈，平均利润空间正在被压缩。主要机会点在于针对特定饮品（如威士忌、鸡尾酒）的专用杯型，以及提供礼品包装选项。',
+                keywordsTitle: '热门关键词',
+                premiumTitle: '会员专享：深度市场分析',
+                premiumDesc: '竞争格局：Top 10卖家中，品牌X占据了35%的市场份额，但其产品平均星级仅为4.2。消费者评论洞察：AI分析了8,500条评论，发现最大的痛点是“杯壁太薄，容易破损” (占差评的45%) 和“实际容量比描述的小”。',
+                unlockBtn: '解锁完整报告',
+                methodologyTitle: '什么是“Yeah! 指数”？',
+                methodologySubtitle: '这不是一个随意的分数。它是我们独创的、基于四大维度数据的AI评估模型，旨在科学地衡量一个利基市场的真实机会。',
+                dim1Title: '市场热度', dim1Desc: '结合搜索量增长率、社群媒体声量和新品涌入速度，判断市场需求是在涨潮还是退潮。',
+                dim2Title: '竞争分析', dim2Desc: '分析品牌垄断率、评论壁垒和广告成本，评估您进入这片战场的难易程度。',
+                dim3Title: '利润空间', dim3Desc: '透过对平均售价和预估FBA成本的计算，判断这个市场是否有健康的“赚钱”潜力。',
+                dim4Title: '产品口碑', dim4Desc: '深度分析现有产品的用户评论，在消费者的“抱怨”中，找到您产品创新的黄金机会。',
+                pricingTitle: '选择您的计划',
+                pricingSubtitle: '用一杯咖啡的价格，投资您一整年的商业智慧。',
+                planName: '基础会员',
+                planPeriod: '/ 年',
+                planDesc: '解锁所有报告，抓住每一个商机。',
+                planFeatures: '<li>✓ 无限制访问所有每日洞察报告</li><li>✓ 访问历史报告数据库</li><li>✓ 会员专属社群邀请</li><li>✓ 未来新功能优先体验权</li>',
+                planBtn: '立即加入，抓住趋势',
+                footerCompany: '公司', footerAbout: '关于我们', footerCareers: '工作机会', footerPress: '媒体报道',
+                footerServices: '服务', footerMethodology: '增长方法论', footerCases: '成功案例', footerSolutions: '解决方案',
+                footerResources: '资源', footerBlog: '博客', footerWebinars: '线上研讨会',
+                footerLegal: '法律', footerPrivacy: '隐私政策', footerTerms: '服务条款'
+            },
+            'en': {
+                yeahTrendLogo: 'Yeah! Trend',
+                heroTitle: 'Stop Guessing. Start Seeing the Next Big Thing.',
+                heroSubtitle: 'Yeah! Trend decodes an Amazon sub-category for you daily. AI-driven insights to keep you one step ahead in the competitive e-commerce market.',
+                heroBtn: 'Unlock All Reports for $9.9/year',
+                todayReport: 'Today\'s Insight Report',
+                yeahIndex: 'Yeah! Index',
+                snapshotTitle: 'Trend Snapshot',
+                snapshotDesc: 'The glassware market is led by "vintage embossed" designs this week, with a 35% increase in search volume. However, price competition is fierce, squeezing profit margins. Key opportunities lie in specialized glasses for specific drinks (like whiskey, cocktails) and offering gift packaging options.',
+                keywordsTitle: 'Top Keywords',
+                premiumTitle: 'Member Exclusive: In-Depth Market Analysis',
+                premiumDesc: 'Competitive Landscape: Among the Top 10 sellers, Brand X holds a 35% market share, but its average product rating is only 4.2 stars. Consumer Review Insights: Our AI analyzed 8,500 reviews and found the biggest pain points are "thin glass, breaks easily" (45% of negative reviews) and "smaller capacity than described".',
+                unlockBtn: 'Unlock Full Report',
+                methodologyTitle: 'What is the "Yeah! Index"?',
+                methodologySubtitle: 'It\'s not just a random score. It\'s our proprietary AI assessment model based on four key data dimensions, designed to scientifically measure the true opportunity in any niche market.',
+                dim1Title: 'Market Heat', dim1Desc: 'Combines search volume growth, social media velocity, and new product entry rates to determine if the market demand is rising or falling.',
+                dim2Title: 'Competition Analysis', dim2Desc: 'Analyzes brand monopoly, review barriers, and ad costs to assess the difficulty of entering the battlefield.',
+                dim3Title: 'Profit Potential', dim3Desc: 'Calculates the potential for profitability by looking at average selling prices and estimated FBA costs.',
+                dim4Title: 'Product Sentiment', dim4Desc: 'Deep dives into user reviews of existing products to find golden opportunities for innovation in consumer "complaints".',
+                pricingTitle: 'Choose Your Plan',
+                pricingSubtitle: 'For the price of a coffee, invest in a full year of business intelligence.',
+                planName: 'Foundation Member',
+                planPeriod: '/ year',
+                planDesc: 'Unlock all reports and seize every opportunity.',
+                planFeatures: '<li>✓ Unlimited access to all daily insight reports</li><li>✓ Access to the historical report database</li><li>✓ Exclusive community invitation</li><li>✓ Priority access to new features</li>',
+                planBtn: 'Join Now & Catch the Trend',
+                footerCompany: 'Company', footerAbout: 'About Us', footerCareers: 'Careers', footerPress: 'Press',
+                footerServices: 'Services', footerMethodology: 'Methodology', footerCases: 'Case Studies', footerSolutions: 'Solutions',
+                footerResources: 'Resources', footerBlog: 'Blog', footerWebinars: 'Webinars',
+                footerLegal: 'Legal', footerPrivacy: 'Privacy Policy', footerTerms: 'Terms of Service'
+            },
+            'ja': {
+                yeahTrendLogo: 'Yeah! Trend',
+                heroTitle: '憶測はやめ、次のヒット商品をデータで見通す。',
+                heroSubtitle: 'Yeah! Trendは、毎日一つのAmazonサブカテゴリを解読します。AI駆動のトレンド洞察で、競争の激しいEC市場で一歩先を行きましょう。',
+                heroBtn: '年額$9.9で全レポートをアンロック',
+                todayReport: '本日の洞察レポート',
+                yeahIndex: 'Yeah! 指数',
+                snapshotTitle: 'トレンドスナップショット',
+                snapshotDesc: '今週のガラス製品市場は「ヴィンテージエンボス」デザインが牽引し、検索ボリュームが35%増加。しかし、価格競争は激しく、平均利益率は圧迫されています。主な機会は、特定の飲み物（ウイスキー、カクテルなど）専用のグラスや、ギフト包装の提供にあります。',
+                keywordsTitle: 'トップキーワード',
+                premiumTitle: '会員限定：詳細市場分析',
+                premiumDesc: '競合状況：トップ10セラーの中で、ブランドXが市場シェアの35%を占めていますが、製品の平均評価は4.2星に過ぎません。消費者レビューの洞察：AIが8,500件のレビューを分析した結果、最大の不満点は「ガラスが薄く、割れやすい」（否定的なレビューの45%）と「説明より容量が小さい」ことでした。',
+                unlockBtn: '完全版レポートをアンロック',
+                methodologyTitle: '「Yeah! 指数」とは？',
+                methodologySubtitle: 'これは単なるスコアではありません。4つの主要なデータ次元に基づく当社独自のAI評価モデルであり、ニッチ市場の真の機会を科学的に測定するために設計されています。',
+                dim1Title: '市場熱度', dim1Desc: '検索ボリュームの成長率、ソーシャルメディアでの言及量、新製品の参入率を組み合わせて、市場の需要が上昇傾向か下降傾向かを判断します。',
+                dim2Title: '競合分析', dim2Desc: 'ブランドの独占率、レビューの壁、広告コストを分析し、この戦場への参入難易度を評価します。',
+                dim3Title: '利益ポテンシャル', dim3Desc: '平均販売価格と推定FBA手数料を計算し、この市場に健全な「儲け」の可能性があるかを判断します。',
+                dim4Title: '製品センチメント', dim4Desc: '既存製品のユーザーレビューを深く分析し、消費者の「不満」の中に製品革新の絶好の機会を見つけ出します。',
+                pricingTitle: 'プランを選択',
+                pricingSubtitle: '一杯のコーヒーの価格で、一年間のビジネスインテリジェンスに投資しましょう。',
+                planName: '基礎会員',
+                planPeriod: '/ 年',
+                planDesc: 'すべてのレポートをアンロックし、あらゆる機会を掴みましょう。',
+                planFeatures: '<li>✓ 全デイリー洞察レポートへの無制限アクセス</li><li>✓ 過去のレポートデータベースへのアクセス</li><li>✓ 会員限定コミュニティへの招待</li><li>✓ 新機能への優先アクセス権</li>',
+                planBtn: '今すぐ参加してトレンドを掴む',
+                footerCompany: '会社', footerAbout: '会社概要', footerCareers: '採用情報', footerPress: 'プレス',
+                footerServices: 'サービス', footerMethodology: '方法論', footerCases: '成功事例', footerSolutions: 'ソリューション',
+                footerResources: 'リソース', footerBlog: 'ブログ', footerWebinars: 'ウェビナー',
+                footerLegal: '法務', footerPrivacy: 'プライバシーポリシー', footerTerms: '利用規約'
+            }
+        };
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSwitcher = document.querySelector('.lang-switcher');
+            if (langSwitcher) {
+                const currentLang = langSwitcher.querySelector('.current-lang');
+                const langDropdown = langSwitcher.querySelector('.lang-dropdown');
+                const langOptions = langSwitcher.querySelectorAll('.lang-option');
+                const currentLangText = document.getElementById('current-lang-text');
+                const htmlTag = document.documentElement;
+
+                currentLang.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    langDropdown.classList.toggle('show');
+                    currentLang.classList.toggle('active');
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (!langSwitcher.contains(event.target)) {
+                        langDropdown.classList.remove('show');
+                        currentLang.classList.remove('active');
+                    }
+                });
+
+                function switchLanguage(lang) {
+                    const langData = translations[lang];
+                    if (!langData) return;
+
+                    document.querySelectorAll('[data-lang]').forEach(el => {
+                        const key = el.getAttribute('data-lang');
+                        if (langData[key]) {
+                            if (key.includes('List')) {
+                                el.innerHTML = langData[key];
+                            } else {
+                                el.textContent = langData[key];
+                            }
+                        }
+                    });
+                    
+                    const currentLangDisplay = document.querySelector(`.lang-option[data-lang-id="${lang}"]`);
+                    if(currentLangDisplay) {
+                        currentLangText.textContent = currentLangDisplay.textContent;
+                    }
+                    htmlTag.setAttribute('lang', lang);
+                    localStorage.setItem('ucyx-lang', lang);
+
+                    if (lang === 'ja') {
+                        document.body.style.fontFamily = "'Noto Sans JP', 'Noto Sans TC', sans-serif";
+                    } else if (lang === 'zh-Hans') {
+                        document.body.style.fontFamily = "'Noto Sans SC', 'Noto Sans TC', sans-serif";
+                    } else {
+                        document.body.style.fontFamily = "'Noto Sans TC', -apple-system, sans-serif";
+                    }
+                    langDropdown.classList.remove('show');
+                    currentLang.classList.remove('active');
+                }
+
+                langOptions.forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const langId = e.target.getAttribute('data-lang-id');
+                        switchLanguage(langId);
+                    });
+                });
+
+                const savedLang = localStorage.getItem('ucyx-lang') || 'zh-Hant';
+                switchLanguage(savedLang);
+            }
+        });
+    </script>
+</body>
+</html>

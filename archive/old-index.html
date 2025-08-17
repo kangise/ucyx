@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCYX - AI-Driven Global E-commerce Consultancy</title>
+    <!-- SEO Optimization: Added a meta description for better search engine results. -->
+    <meta name="description" content="UCYX is a future-focused, AI-driven consultancy helping global brands achieve exponential growth in cross-border e-commerce with our data-driven methodology.">
+    
+    <!-- Font Preloading: Efficiently loads fonts for multiple languages. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Global Styles & Design System (Tech Blue Theme) --- */
+        :root {
+            --primary-color: #4f46e5; /* Authoritative indigo */
+            --secondary-color: #3b82f6; /* Techy blue */
+            --primary-hover-color: #4338ca; /* Darker indigo for hover */
+            --dark-color: #111827; /* Almost black for high contrast */
+            --light-gray-color: #f9fafb; /* Off-white for backgrounds */
+            --medium-gray-color: #6b7280; /* For secondary text */
+            --text-color: #374151; /* Main body text */
+            --white-color: #ffffff;
+            --border-color: #e5e7eb;
+            --border-radius: 12px;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--white-color);
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 6rem 0; overflow: hidden; }
+        h1, h2, h3 { font-weight: 900; line-height: 1.2; margin-bottom: 1.5rem; color: var(--dark-color); letter-spacing: -0.025em; }
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); } /* Fluid typography for h1 */
+        h2 { font-size: clamp(2rem, 4vw, 3rem); text-align: center; margin-bottom: 4rem; }
+        h3 { font-size: 1.25rem; }
+        p { margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.1rem; max-width: 65ch; } /* Improved readability with max-width */
+        p.section-subtitle, .hero-content p { max-width: 800px; margin-left: auto; margin-right: auto; }
+        a { text-decoration: none; color: var(--primary-color); font-weight: 700; transition: color 0.3s; }
+        a:hover { color: var(--primary-hover-color); }
+        sup { font-size: 0.6em; vertical-align: super; }
+        
+        /* A11y: Add focus styles for keyboard navigation */
+        :focus-visible {
+            outline: 3px solid var(--secondary-color);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .section-subtitle { text-align: center; font-size: 1.25rem; color: var(--medium-gray-color); margin: -3rem auto 4rem auto; }
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s ease-out, transform 1s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .gradient-title {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); padding: 1.2rem 0; transition: all 0.3s ease; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .navbar .logo { font-size: 1.8rem; font-weight: 900; color: var(--dark-color); display: flex; align-items: center; }
+        .navbar .logo img { width: 36px; height: 36px; margin-right: 12px; }
+        .navbar .nav-right-cluster { display: flex; align-items: center; gap: 1rem;}
+        .navbar .nav-menu { display: flex; list-style: none; align-items: center; }
+        .navbar .nav-item { position: relative; }
+        .navbar .nav-menu li a.nav-link { padding: 0.5rem 1rem; color: var(--dark-color); font-weight: 700; transition: color 0.3s ease; font-size: 1rem; display: flex; align-items: center; gap: 0.25rem; }
+        .navbar .nav-menu li a.nav-link:hover, .navbar .nav-menu li a.active { color: var(--primary-color); }
+        
+        /* --- Mega Menu Dropdown Styles --- */
+        .has-dropdown > a::after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23374151'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: transform 0.3s ease;
+        }
+        .nav-item:hover > a::after {
+            transform: rotate(180deg);
+        }
+        .nav-item:hover > a {
+            color: var(--primary-color);
+        }
+
+        .mega-menu {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+            background: var(--white-color);
+            box-shadow: var(--shadow-lg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-top: 15px; /* Space between nav and menu */
+            width: max-content;
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-item:hover > .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-menu::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent transparent var(--white-color) transparent;
+        }
+
+        .mega-menu-grid { display: flex; gap: 3rem; }
+        .mega-menu-column { display: flex; flex-direction: column; gap: 1rem; }
+        .mega-menu-column h4 { font-size: 0.9rem; color: var(--medium-gray-color); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .mega-menu-column a { display: block; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; color: var(--dark-color); }
+        .mega-menu-column a:hover { background-color: var(--light-gray-color); color: var(--primary-color); }
+        .mega-menu-divider { border-left: 1px solid var(--border-color); }
+        .mega-menu-column .case-link { margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1rem; }
+
+        .channel-item { padding: 0.5rem 1rem; }
+        .channel-item h5 { font-size: 1.1rem; color: var(--dark-color); margin-bottom: 0.25rem; }
+        .channel-item p { font-size: 0.9rem; color: var(--medium-gray-color); margin-bottom: 0; max-width: 30ch; }
+        .channel-item-link { display: block; border-radius: 8px; }
+        .channel-item-link:hover { background-color: var(--light-gray-color); }
+
+
+        /* --- Language Switcher --- */
+        .lang-switcher { position: relative; }
+        .lang-switcher .current-lang { cursor: pointer; display: flex; align-items: center; font-weight: 700; font-size: 0.9rem; padding: 0.5rem; }
+        .lang-switcher .current-lang svg { width: 16px; height: 16px; margin-left: 5px; transition: transform 0.3s; }
+        .lang-switcher .lang-dropdown { display: none; position: absolute; top: 120%; right: 0; background-color: var(--white-color); border-radius: var(--border-radius); box-shadow: var(--shadow-lg); list-style: none; padding: 0.5rem 0; min-width: 120px; z-index: 10; opacity: 0; transform: translateY(-10px); transition: opacity 0.3s, transform 0.3s; }
+        .lang-switcher .lang-dropdown.show { display: block; opacity: 1; transform: translateY(0); }
+        .lang-switcher .current-lang.active svg { transform: rotate(180deg); }
+        .lang-switcher .lang-dropdown li a { display: block; padding: 0.5rem 1.5rem; color: var(--text-color); font-weight: 500; font-size: 0.9rem; white-space: nowrap; }
+        .lang-switcher .lang-dropdown li a:hover { background-color: var(--light-gray-color); }
+
+        /* --- Mobile Navigation (Hamburger Menu) --- */
+        .mobile-menu-toggle { display: none; cursor: pointer; background: none; border: none; padding: 0.5rem; }
+        .mobile-menu-toggle .icon-bar { display: block; width: 25px; height: 3px; background-color: var(--dark-color); margin: 5px 0; transition: all 0.3s; }
+        .mobile-nav-panel { display: none; position: fixed; top: 74px; /* Height of navbar */ left: 0; width: 100%; height: calc(100vh - 74px); background: var(--white-color); z-index: 999; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
+        .mobile-nav-panel.open { display: flex; }
+        .mobile-nav-panel .nav-menu { flex-direction: column; gap: 2rem; text-align: center; }
+        .mobile-nav-panel .nav-menu li a { font-size: 1.5rem; }
+        .mobile-nav-panel .has-dropdown > a::after { display: none; } /* Hide dropdown arrows in mobile menu */
+
+
+        .btn { display: inline-block; padding: 0.8rem 2.2rem; border-radius: var(--border-radius); font-size: 1rem; font-weight: 700; text-align: center; transition: all 0.3s ease; cursor: pointer; border: 2px solid transparent; }
+        .btn-primary { background-color: var(--primary-color); color: var(--white-color); }
+        .btn-primary:hover { background-color: var(--primary-hover-color); color: var(--white-color); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .btn-secondary { background-color: var(--white-color); color: var(--primary-color); border-color: var(--primary-color); }
+        .btn-secondary:hover { background-color: var(--light-gray-color); }
+
+        /* --- Hero Section --- */
+        #home { min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white-color); }
+          #home::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('/Users/jiangkan/Downloads/bg1.jpg');
+            background-size: cover; background-position: center;
+            background-attachment: fixed; /* Changed from fixed for better mobile performance */
+            z-index: -2;
+        }
+        #home::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(31, 41, 55, 0.8), rgba(79, 70, 229, 0.7)); z-index: -1; }
+        #home .hero-content { max-width: 900px; }
+        #home h1 { color: var(--white-color); text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        #home .lead { font-size: 1.3rem; margin-bottom: 2.5rem; color: rgba(255,255,255,0.9); }
+        #home .hero-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        
+        /* --- Data Power Section --- */
+        #data-power { background-color: var(--white-color); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center; }
+        .stat-item .stat-number { font-size: 4rem; font-weight: 900; color: var(--primary-color); line-height: 1; }
+        .stat-item .stat-label { font-size: 1.1rem; color: var(--medium-gray-color); margin-top: 0.5rem; }
+
+        /* --- Services Section --- */
+        #our-services { background-color: var(--light-gray-color); }
+        .service-phase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .service-phase-card { background: var(--white-color); border-radius: var(--border-radius); padding: 2rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column; }
+        .service-phase-card ul { list-style: none; padding-left: 0; margin-top: 1.5rem; }
+        .service-phase-card ul li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
+        .service-phase-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-color); font-weight: 900; }
+        .services-cta { text-align: center; margin-top: 4rem; }
+
+        /* --- Who We Serve Section --- */
+        #who-we-serve { background-color: var(--white-color); }
+        .serve-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .serve-card { background: var(--light-gray-color); border-radius: var(--border-radius); padding: 2.5rem; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+        .serve-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .serve-card h3 { margin-top: 0; }
+        .serve-card p { margin-left: auto; margin-right: auto; }
+        .see-cases-link { text-align: center; margin-top: 4rem; font-size: 1.1rem; }
+
+        /* --- Success Stories Slider --- */
+        #success-stories { background-color: var(--light-gray-color); }
+        .case-slider-container { position: relative; max-width: 1200px; margin: 0 auto; }
+        .case-slider-wrapper { overflow: hidden; }
+        .case-grid { display: flex; }
+        .case-card { flex: 0 0 50%; max-width: 50%; padding: 1rem; box-sizing: border-box; }
+        .case-card-inner { background: var(--white-color); border-radius: var(--border-radius); padding: 2.5rem; height: 100%; box-shadow: var(--shadow-md); display: flex; flex-direction: column; }
+        .case-card .case-brand { font-size: 1rem; font-weight: 700; color: var(--medium-gray-color); margin-bottom: 0.5rem; }
+        .case-card .case-metric { font-size: 3rem; font-weight: 900; color: var(--primary-color); margin-top: auto; padding-top: 1.5rem; }
+        .case-card .metric-label { font-size: 1rem; color: var(--medium-gray-color); font-weight: 400; }
+        .slider-nav { position: absolute; top: 50%; width: calc(100% + 60px); left: -30px; transform: translateY(-50%); display: flex; justify-content: space-between; pointer-events: none; }
+        .slider-arrow { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); pointer-events: all; transition: background-color 0.3s; }
+        .slider-arrow:hover { background-color: var(--light-gray-color); }
+        .slider-arrow svg { width: 24px; height: 24px; color: var(--dark-color); }
+
+        /* --- NEW: Interactive Methodology Section --- */
+        #methodology { background-color: var(--dark-color); padding: 6rem 0;}
+        #methodology h2 { color: var(--white-color); }
+        #methodology .section-subtitle { color: #d1d5db; }
+        .methodology-component { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: flex-start; margin-top: 4rem; }
+        .methodology-tabs { display: flex; flex-direction: column; gap: 1rem; position: sticky; top: 120px; }
+        .methodology-tab-item { cursor: pointer; padding: 1.5rem; border-radius: var(--border-radius); transition: background-color 0.3s; position: relative; overflow: hidden; border: 1px solid transparent; }
+        .methodology-tab-item h4 { color: #d1d5db; transition: color 0.3s; font-size: 1.1rem; margin: 0; font-weight: 700; }
+        .methodology-tab-item p { color: var(--medium-gray-color); font-size: 0.9rem; margin: 0.5rem 0 0 0; transition: color 0.3s; max-width: 100%; }
+        .methodology-tab-item.active { background-color: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
+        .methodology-tab-item.active h4 { color: var(--white-color); }
+        .methodology-tab-item.active p { color: #d1d5db; }
+        .progress-bar { position: absolute; bottom: 0; left: 0; height: 3px; background-color: var(--primary-color); width: 0; }
+        .methodology-tab-item.active .progress-bar { animation: fill-progress 5s linear forwards; }
+        @keyframes fill-progress { from { width: 0%; } to { width: 100%; } }
+        
+        .methodology-content-panels { position: relative; }
+        .methodology-content-panel { display: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
+        .methodology-content-panel.active { display: block; opacity: 1; }
+        .methodology-content-panel h3 { color: var(--white-color); }
+        .methodology-content-panel p { color: #d1d5db; max-width: 100%; }
+        
+        /* --- Image Slider (within methodology) --- */
+        .slider-container { position: relative; width: 100%; aspect-ratio: 16 / 10; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-lg); }
+        .slider-wrapper { display: flex; height: 100%; transition: transform 0.5s ease-in-out; }
+        .slider-slide { flex: 0 0 100%; width: 100%; }
+        .slider-slide img { width: 100%; height: 100%; object-fit: cover; background-color: var(--light-gray-color); }
+        .slider-dots { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
+        .slider-dot { width: 10px; height: 10px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.5); cursor: pointer; transition: background-color 0.3s; border: none; padding: 0; }
+        .slider-dot.active { background-color: var(--white-color); }
+
+        /* --- Brands Section --- */
+        #brands { background-color: var(--light-gray-color); }
+        #brands .brand-showcase { display: grid; grid-template-columns: 1fr 1.5fr; align-items: center; gap: 4rem; background-color: var(--dark-color); color: var(--white-color); padding: 5rem; border-radius: var(--border-radius); }
+        #brands .brand-showcase h3 { color: var(--white-color); }
+        #brands .brand-showcase p { color: #d1d5db; max-width: 60ch; }
+        #brands .yeah-trend-logo { font-size: 4.5rem; font-weight: 900; background: linear-gradient(45deg, #60a5fa, #3b82f6, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; }
+        
+        /* --- Leads Form Section --- */
+        #leads-form { background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); color: var(--white-color); }
+        #leads-form h2, #leads-form .section-subtitle { color: var(--white-color); }
+        .form-container { max-width: 800px; margin: 0 auto; background: var(--white-color); padding: 3rem; border-radius: var(--border-radius); box-shadow: var(--shadow-lg); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group.full-width { grid-column: 1 / -1; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 0.5rem; color: var(--dark-color); }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border-color); border-radius: var(--border-radius); font-size: 1rem; font-family: inherit; transition: border-color 0.3s, box-shadow 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); outline: none; }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-container .btn { width: 100%; padding: 1rem; }
+
+        /* --- Contact Section --- */
+        #contact { text-align: center; }
+        #contact .contact-wrapper { display: flex; flex-direction: column; align-items: center; }
+        #contact .contact-wrapper p { margin-left: auto; margin-right: auto; }
+        
+        /* --- Footer --- */
+        .footer { background-color: var(--dark-color); color: var(--medium-gray-color); padding: 5rem 0; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .footer-col h4 { color: var(--white-color); font-size: 1rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { color: var(--medium-gray-color); font-weight: 400; }
+        .footer-col ul li a:hover { color: var(--white-color); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #374151; }
+        .footer-bottom .social-media { display: flex; align-items: center; gap: 1.5rem; }
+        .footer-bottom .social-media a { color: var(--medium-gray-color); transition: color 0.3s, transform 0.3s; }
+        .footer-bottom .social-media a:hover { color: var(--white-color); transform: scale(1.1); }
+        .footer-bottom .social-media svg { width: 24px; height: 24px; }
+        
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .case-card { flex: 0 0 100%; max-width: 100%; }
+            .slider-nav { width: calc(100% + 40px); left: -20px; }
+            .navbar .nav-menu { display: none; } /* Hide desktop menu on mobile */
+            .mobile-menu-toggle { display: block; z-index: 1001; } /* Show hamburger */
+        }
+        @media (max-width: 768px) {
+            section { padding: 4rem 0; }
+            .container { padding: 0 1rem; }
+            .navbar .nav-right-cluster { margin-left: auto; }
+            #home .hero-buttons { flex-direction: column; align-items: center; }
+            .form-grid { grid-template-columns: 1fr; }
+            .methodology-component { grid-template-columns: 1fr; }
+            .methodology-tabs { position: static; flex-direction: row; overflow-x: auto; }
+            #brands .brand-showcase { grid-template-columns: 1fr; text-align: center; padding: 2.5rem; }
+            #brands .brand-showcase p { margin-left: auto; margin-right: auto; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-bottom { flex-direction: column-reverse; gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZmlsbD0iIzFmMjkzNyIgZD0iTTc3LjUsMTAwYy0xMi45LDAtMjQuOS01LTMzLjgtMTMuOUMzNC44LDc3LjMsMjkuOCw2NS4zLDI5LjgsNTIuNFY0Ny42YzAtMTIuOSw1LTI0LjksMTMuOS0zMy44QzUyLjYsNSw2NC42LDAsNzcuNSwwSDM3LjJDMTYuNywwLDAsMTYuNywwLDM3LjJ2MjUuN0MwLDg0LjMsMTUuNywxMDAsMzUuMiwxMDBINzcuNXoiLz48cGF0aCBmaWxsPSIjNDY0NmU1IiBkPSJNNzcuNSw4Ny41SDM1LjJDNjIuMSw4Ny41LDg0LDY1LjYsODQsMzguN1YxMy4xYzEyLjksMCwyNC45LDUsMzMuOCwxMy45YzguOCw4LjgsMTMuOSwyMC44LDEzLjksMzMuOHYyNS43QzEzMS43LDg0LjMsMTE2LDExNS4xLDg4LjEsMTE1LjFINzcuNXoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMS43IC0xNS4xKSBzY2FsZSgwLjg2KSIgLz48L2c+PC9zdmc+" alt="UCYX Logo">
+                <span class="logo-text">UCYX</span>
+            </a>
+            <nav class="nav-right-cluster">
+                <ul class="nav-menu">
+                    <!-- Services Dropdown -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#our-services" class="nav-link" data-lang="navOurServices">Services</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-column">
+                                    <h4 data-lang="serviceMenuCol1Title">Market Entry</h4>
+                                    <a href="#" data-lang="serviceMenuChina">Enter China Market</a>
+                                    <a href="#" data-lang="serviceMenuGlobal">Enter Global Market</a>
+                                </div>
+                                <div class="mega-menu-divider"></div>
+                                <div class="mega-menu-column">
+                                    <h4 data-lang="serviceMenuCol2Title">Value Growth Methodology</h4>
+                                    <a href="#methodology" data-lang="serviceMenuStep1">Market Scanning & Opportunity Locking</a>
+                                    <a href="#methodology" data-lang="serviceMenuStep2">Deep Insight & Product Definition</a>
+                                    <a href="#methodology" data-lang="serviceMenuStep3">Viability & Growth Path</a>
+                                    <a href="#methodology" data-lang="serviceMenuStep4">Platform Success & Continuous Optimization</a>
+                                    <a href="#success-stories" class="case-link" data-lang="serviceMenuCases">Customer Case Studies</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#who-we-serve" class="nav-link" data-lang="navWhoWeServe">Who We Serve</a></li>
+                    <li class="nav-item"><a href="#success-stories" class="nav-link" data-lang="navSuccessStories">Success Stories</a></li>
+                    <li class="nav-item"><a href="#methodology" class="nav-link" data-lang="navMethodology">Methodology</a></li>
+                    <!-- Channels Dropdown -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link" data-lang="navChannels">Channels</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-grid">
+                                <a href="https://yeahtrend.com" target="_blank" class="channel-item-link">
+                                    <div class="channel-item">
+                                        <h5 data-lang="channelMenuYeahTrendTitle">Yeah! Trend</h5>
+                                        <p data-lang="channelMenuYeahTrendDesc">Daily, easy-to-understand trend reports.</p>
+                                    </div>
+                                </a>
+                                <div class="mega-menu-divider"></div>
+                                <a href="#" class="channel-item-link">
+                                    <div class="channel-item">
+                                        <h5 data-lang="channelMenuKnowledgeBaseTitle">E-commerce Knowledge Base</h5>
+                                        <p data-lang="channelMenuKnowledgeBaseDesc">In-depth industry analysis and strategic guides.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="lang-switcher">
+                    <div class="current-lang">
+                        <span id="current-lang-text">English</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <ul class="lang-dropdown">
+                        <li><a href="#" class="lang-option" data-lang-id="en">English</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="ja">日本語</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="zh-Hant">繁體中文</a></li>
+                        <li><a href="#" class="lang-option" data-lang-id="zh-Hans">简体中文</a></li>
+                    </ul>
+                </div>
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-menu-toggle" aria-label="Open navigation menu" data-lang-aria="ariaOpenMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel">
+        <ul class="nav-menu">
+            <!-- Links are duplicated here for mobile view -->
+            <li><a href="#our-services" class="nav-link" data-lang="navOurServices">Services</a></li>
+            <li><a href="#who-we-serve" class="nav-link" data-lang="navWhoWeServe">Who We Serve</a></li>
+            <li><a href="#success-stories" class="nav-link" data-lang="navSuccessStories">Success Stories</a></li>
+            <li><a href="#methodology" class="nav-link" data-lang="navMethodology">Methodology</a></li>
+            <li><a href="https://yeahtrend.com" target="_blank" class="nav-link" data-lang="navChannels">Channels</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h1 data-lang="heroTitle">See and Achieve the Extraordinary.</h1>
+                    <p class="lead" data-lang="heroSubtitle">UCYX is a future-focused, AI-driven consultancy dedicated to helping global brands uncover their unique "X-factor" and achieve sustainable, exponential growth in the complex cross-border e-commerce market.</p>
+                    <div class="hero-buttons">
+                        <a href="#leads-form" class="btn btn-primary" data-lang="heroBtn1">Start Your Growth Journey</a>
+                        <a href="#methodology" class="btn btn-secondary" data-lang="heroBtn2">Discover Our Methodology</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Data Power Section -->
+        <section id="data-power">
+            <div class="container">
+                <h2 class="reveal" data-lang="dataPowerTitle">Data-Driven Insight</h2>
+                <p class="section-subtitle reveal" data-lang="dataPowerSubtitle">Every strategic recommendation we make is rooted in deep learning and analysis of massive datasets.</p>
+                <div class="stats-grid">
+                    <div class="stat-item reveal">
+                        <div class="stat-number" data-target="300" data-suffix="+">0</div>
+                        <div class="stat-label" data-lang="stat1">Core E-commerce Categories Monitored</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number" data-target="5" data-suffix="M+">0</div>
+                        <div class="stat-label" data-lang="stat2">Active Products Tracked</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number" data-target="10" data-suffix="M+">0</div>
+                        <div class="stat-label" data-lang="stat3">Industry Keywords Analyzed</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number" data-target="50" data-suffix="M+">0</div>
+                        <div class="stat-label" data-lang="stat4">Consumer Reviews Processed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="our-services">
+            <div class="container">
+                <h2 class="reveal" data-lang="servicesTitle">Our Services: From Insight to Growth</h2>
+                <p class="section-subtitle reveal" data-lang="servicesSubtitle">We provide end-to-end solutions, guiding your brand through every step from opportunity discovery to market success.</p>
+                <div class="service-phase-grid">
+                    <div class="service-phase-card reveal">
+                        <h3 class="gradient-title" data-lang="phase1Title">E-commerce Market Opportunity Assessment</h3>
+                        <ul data-lang="phase1List">
+                            <li>Niche market potential analysis</li>
+                            <li>Competitive landscape & barrier evaluation</li>
+                            <li>Unmet consumer needs insight</li>
+                        </ul>
+                    </div>
+                    <div class="service-phase-card reveal">
+                        <h3 class="gradient-title" data-lang="phase2Title">E-commerce Product & Brand Strategy</h3>
+                        <ul data-lang="phase2List">
+                            <li>Product value proposition definition</li>
+                            <li>Brand story & content framework</li>
+                            <li>Business viability & sales forecast</li>
+                        </ul>
+                    </div>
+                    <div class="service-phase-card reveal">
+                        <h3 class="gradient-title" data-lang="phase3Title">Go-to-Market & Launch</h3>
+                        <ul data-lang="phase3List">
+                            <li>Launch on global platforms (Amazon, Tmall, etc.)</li>
+                            <li>Integrated marketing solution design</li>
+                            <li>Initial advertising campaign management</li>
+                        </ul>
+                    </div>
+                    <div class="service-phase-card reveal">
+                        <h3 class="gradient-title" data-lang="phase4Title">Continuous Growth & Optimization</h3>
+                        <ul data-lang="phase4List">
+                            <li>AI-driven advertising optimization</li>
+                            <li>Conversion rate & UX improvement</li>
+                            <li>Web3 loyalty program establishment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="services-cta reveal">
+                     <p><a href="#leads-form" class="btn btn-primary" data-lang="servicesBtn">Contact Us Now to Start Your Growth Journey</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Serve Section -->
+        <section id="who-we-serve">
+            <div class="container">
+                <h2 class="reveal" data-lang="serveTitle">Who We Serve</h2>
+                <p class="section-subtitle reveal" data-lang="serveSubtitle">We partner with global market pioneers, whether you are an established brand seeking expansion or a startup with a great product.</p>
+                <div class="serve-grid">
+                    <div class="serve-card reveal">
+                        <h3 class="gradient-title" data-lang="serveCard1Title">Established Brands Seeking Expansion</h3>
+                        <p data-lang="serveCard1Desc">You have successful products and a stable business but are eager to enter new countries or channels like Tmall Global to find your next growth curve. We help you mitigate risks and achieve efficient global expansion.</p>
+                    </div>
+                    <div class="serve-card reveal">
+                        <h3 class="gradient-title" data-lang="serveCard2Title">Startups with Great Products</h3>
+                        <p data-lang="serveCard2Desc">You have created an outstanding product but lack the go-to-market strategy and brand marketing experience for platforms like Amazon or Shopify. We help you go from 0 to 1, transforming a great product into a successful global brand.</p>
+                    </div>
+                    <div class="serve-card reveal">
+                        <h3 class="gradient-title" data-lang="serveCard3Title">Pioneering Brands Exploring Web3</h3>
+                        <p data-lang="serveCard3Desc">You recognize that Web3 and blockchain will reshape customer relationships and want to be a pioneer in the industry. We help you design and implement innovative NFT loyalty programs and business models.</p>
+                    </div>
+                </div>
+                <div class="see-cases-link reveal">
+                    <p><a href="#success-stories" data-lang="seeCasesLink">How do we prove our value with data? See our success stories &darr;</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Slider -->
+        <section id="success-stories">
+            <div class="container">
+                <h2 class="reveal" data-lang="storiesTitle">Our Success Stories</h2>
+                <p class="section-subtitle reveal" data-lang="storiesSubtitle">We don't just deliver strategies, we deliver measurable results.</p>
+                <div class="case-slider-container reveal">
+                    <div class="case-slider-wrapper">
+                        <div class="case-grid">
+                            <!-- Case cards will be dynamically populated by JS -->
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button class="slider-arrow prev" aria-label="Previous case study">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
+                        </button>
+                        <button class="slider-arrow next" aria-label="Next case study">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology">
+            <div class="container">
+                <h2 class="reveal" data-lang="methodologyTitle">The UCYX Value Growth Methodology™</h2>
+                <p class="section-subtitle reveal" data-lang="methodologySubtitle">We don't offer scattered advice. We deliver a systematic, verifiable blueprint for success.</p>
+                <div class="methodology-component">
+                    <div class="methodology-tabs">
+                        <!-- Tab 1 -->
+                        <div class="methodology-tab-item" data-tab="1">
+                            <h4 data-lang="step1Title">Market Scanning & Opportunity Locking</h4>
+                            <p>Using our proprietary **UCniche™** Opportunity Quadrant Model.</p>
+                            <div class="progress-bar"></div>
+                        </div>
+                        <!-- Tab 2 -->
+                        <div class="methodology-tab-item" data-tab="2">
+                            <h4 data-lang="step2Title">Deep Insight & Product Definition</h4>
+                            <p>Through the **UCopps™** Value Proposition Canvas.</p>
+                            <div class="progress-bar"></div>
+                        </div>
+                        <!-- Tab 3 -->
+                        <div class="methodology-tab-item" data-tab="3">
+                            <h4 data-lang="step3Title">Viability & Growth Path</h4>
+                            <p>Leveraging the **UCforecast™** sales prediction model.</p>
+                            <div class="progress-bar"></div>
+                        </div>
+                        <!-- Tab 4 -->
+                        <div class="methodology-tab-item" data-tab="4">
+                            <h4 data-lang="step4Title">Platform Success & Continuous Optimization</h4>
+                            <p>With the **UCcopilot™** AI assistant for operations.</p>
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                    <div class="methodology-content-panels">
+                        <!-- Panel 1 -->
+                        <div class="methodology-content-panel" data-tab="1">
+                            <h3 class="gradient-title" data-lang="step1Title">Market Scanning & Opportunity Locking</h3>
+                            <p data-lang="step1Desc">Using our proprietary **UCniche™** Opportunity Quadrant Model, combined with AI data analysis, we quickly identify high-potential "value basins" from hundreds of niche markets for you.</p>
+                            <div class="slider-container" id="slider1">
+                                <div class="slider-wrapper">
+                                    <div class="slider-slide"><img src="https://placehold.co/600x400/1f2937/3b82f6?text=UCniche%E2%84%A2+Demo+1" alt="UCniche Opportunity Quadrant Model Demo"></div>
+                                    <div class="slider-slide"><img src="https://placehold.co/600x400/6b7280/ffffff?text=UCniche%E2%84%A2+Demo+2" alt="UCniche Value Basin Analysis"></div>
+                                </div>
+                                <div class="slider-dots"></div>
+                            </div>
+                        </div>
+                        <!-- Panel 2 -->
+                        <div class="methodology-content-panel" data-tab="2">
+                            <h3 class="gradient-title" data-lang="step2Title">Deep Insight & Product Definition</h3>
+                            <p data-lang="step2Desc">Through the **UCopps™** Value Proposition Canvas, we reverse-engineer competitor reviews and user pain points to co-create a product prototype with a compelling "X-factor".</p>
+                            <div class="slider-container" id="slider2">
+                                <div class="slider-wrapper">
+                                    <div class="slider-slide"><img src="https://placehold.co/600x400/3b82f6/ffffff?text=UCopps%E2%84%A2+Demo+1" alt="UCopps Value Proposition Canvas"></div>
+                                    <div class="slider-slide"><img src="https://placehold.co/600x400/111827/f3f4f6?text=UCopps%E2%84%A2+Demo+2" alt="UCopps User Pain Point Analysis"></div>
+                                </div>
+                                <div class="slider-dots"></div>
+                            </div>
+                        </div>
+                        <!-- Panel 3 -->
+                        <div class="methodology-content-panel" data-tab="3">
+                            <h3 class="gradient-title" data-lang="step3Title">Viability & Growth Path</h3>
+                            <p data-lang="step3Desc">Leveraging the **UCforecast™** sales prediction model for P&L scenario planning, we use the "Brand Growth Path Matrix" to map out a clear 1-to-N journey for your business.</p>
+                            <div class="slider-container" id="slider3">
+                                <div class="slider-wrapper">
+                                    <div class="slider-slide"><img src="https://placehold.co/600x400/f3f4f6/111827?text=UCforecast%E2%84%A2+Demo+1" alt="UCforecast Sales Prediction Model"></div>
+                                    <div class="slider-slide"><img src="https://placehold.co/600x400/374151/3b82f6?text=UCforecast%E2%84%A2+Demo+2" alt="Brand Growth Path Matrix"></div>
+                                </div>
+                                <div class="slider-dots"></div>
+                            </div>
+                        </div>
+                        <!-- Panel 4 -->
+                        <div class="methodology-content-panel" data-tab="4">
+                            <h3 class="gradient-title" data-lang="step4Title">Platform Success & Continuous Optimization</h3>
+                            <p data-lang="step4Desc">With the **UCcopilot™** AI assistant, we continuously optimize your platform operations, advertising, and customer experience to ensure your brand not only launches successfully but thrives.</p>
+                            <div class="slider-container" id="slider4">
+                                <div class="slider-wrapper">
+                                    <div class="slider-slide"><img src="https://placehold.co/600x400/1f2937/ffffff?text=UCcopilot%E2%84%A2+Demo+1" alt="UCcopilot AI Assistant Dashboard"></div>
+                                    <div class="slider-slide"><img src="https://placehold.co/600x400/3b82f6/f3f4f6?text=UCcopilot%E2%84%A2+Demo+2" alt="Continuous Optimization Loop"></div>
+                                </div>
+                                <div class="slider-dots"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Brands Section -->
+        <section id="brands">
+            <div class="container reveal">
+                 <div class="brand-showcase">
+                    <div class="brand-logo">
+                        <div class="yeah-trend-logo" data-lang="yeahTrendLogo">Yeah! Trend</div>
+                    </div>
+                    <div class="brand-content">
+                        <h3 data-lang="brandsTitle">Trend Insights, At Your Fingertips</h3>
+                        <p data-lang="brandsDesc">Yeah! Trend is UCYX's market-facing data and insights brand. We transform complex market data into daily, easy-to-understand trend reports. Subscribe to the `Yeah! Trend Report` to make your next business decision with a confident "Yeah!".</p>
+                        <a href="https://yeahtrend.com" target="_blank" class="btn btn-primary" style="background-color: var(--white-color); color: var(--dark-color);" data-lang="brandsBtn">Visit Yeah! Trend</a>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Leads Form Section -->
+        <section id="leads-form">
+            <div class="container reveal">
+                <h2 data-lang="formTitle">Start Your Growth Journey</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);" data-lang="formSubtitle">Leave your information, and our experts will contact you within 24 hours to discuss your brand's potential.</p>
+                <div class="form-container">
+                    <form id="contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name" data-lang="formName">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-lang="formEmail">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message" data-lang="formMessage">Your Needs</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-lang="formSubmit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container reveal">
+                <div class="contact-wrapper">
+                    <h2 data-lang="contactTitle">Create the Future with Us</h2>
+                    <p class="section-subtitle" data-lang="contactSubtitle">We look forward to connecting with visionary brands, investors, and partners. If our philosophy resonates with you, feel free to reach out.</p>
+                    <p style="font-size: 1.5rem; font-weight: 700;">
+                        <a href="mailto:partnership@ucyx.com">partnership@ucyx.com</a>
+                    </p>
+                    <p style="margin-top: 3rem; color: var(--medium-gray-color);" data-lang="address">
+                        UCYX Ltd.<br>
+                        Shop S068, 2/F, Capital Building, 61-65 Chatham Road South, Tsim Sha Tsui, Hong Kong
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 data-lang="footerCompany">Company</h4>
+                    <ul>
+                        <li><a href="#who-we-serve" data-lang="footerAbout">About Us</a></li>
+                        <li><a href="#" data-lang="footerCareers">Careers</a></li>
+                        <li><a href="#" data-lang="footerPress">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerServices">Services</h4>
+                    <ul>
+                        <li><a href="#methodology" data-lang="footerMethodology">Methodology</a></li>
+                        <li><a href="#success-stories" data-lang="footerCases">Case Studies</a></li>
+                        <li><a href="#our-services" data-lang="footerSolutions">Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerResources">Resources</h4>
+                    <ul>
+                        <li><a href="https://yeahtrend.com" target="_blank">Yeah! Trend</a></li>
+                        <li><a href="#" data-lang="footerBlog">Blog</a></li>
+                        <li><a href="#" data-lang="footerWebinars">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="footerLegal">Legal</h4>
+                    <ul>
+                        <li><a href="#" data-lang="footerPrivacy">Privacy Policy</a></li>
+                        <li><a href="#" data-lang="footerTerms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> UCYX Ltd. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.582 7.64s-.215-1.512-.88-2.183c-.826-.83-1.74-.834-2.16-.88C16.246 4.5 12 4.5 12 4.5s-4.246 0-6.542.077c-.42.046-1.334-.05-2.16.88-.665.671-.88 2.183-.88 2.183S2.203 9.247 2.203 10.855v2.29c0 1.608.215 3.215.215 3.215s.215 1.512.88 2.183c.826.83 1.9.82 2.375.884 1.648.06 6.327.072 6.327.072s4.246 0 6.542-.077c.42-.046 1.334-.05-2.16-.88.665-.671.88-2.183.88-2.183s.215-1.608.215-3.215v-2.29c0-1.608-.215-3.215-.215-3.215zM9.752 14.815V8.895l5.253 2.96z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // --- Script Logic ---
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // --- Data Definitions ---
+        const translations = {
+            'zh-Hant': {
+                ariaOpenMenu: '開啟導航選單', ariaCloseMenu: '關閉導航選單',
+                navOurServices: '服務內容', navWhoWeServe: '服務對象', navSuccessStories: '成功案例', navMethodology: '方法論', navChannels: '資源通道',
+                serviceMenuCol1Title: '進入市場', serviceMenuChina: '進入中國市場', serviceMenuGlobal: '進入全球市場',
+                serviceMenuCol2Title: '價值增長方法論',
+                serviceMenuStep1: '市場掃描與機會鎖定', serviceMenuStep2: '深度洞察與產品定義', serviceMenuStep3: '商業可行性與增長路徑', serviceMenuStep4: '平台成功與持續優化',
+                serviceMenuCases: '實際客戶案例分享',
+                channelMenuYeahTrendTitle: 'Yeah! Trend', channelMenuYeahTrendDesc: '每日更新的、清晰易懂的趨勢報告。',
+                channelMenuKnowledgeBaseTitle: '電商知識庫', channelMenuKnowledgeBaseDesc: '深入的行業分析與策略指南。',
+                heroTitle: '看見並成就非凡。',
+                heroSubtitle: 'UCYX 是一家由AI驅動的未來型顧問公司，致力於幫助全球品牌發掘其獨一無二的「X-factor」，在複雜的跨境電商市場中，實現可持續的指數級增長。',
+                heroBtn1: '開啟您的增長之旅', heroBtn2: '了解我們的獨特方法論',
+                dataPowerTitle: '數據驅動的洞察力', dataPowerSubtitle: '我們的每一個策略建議，都源於對海量數據的深度學習與分析。',
+                stat1: '核心電商品類監控', stat2: '百萬級活躍產品追蹤', stat3: '百萬級行業關鍵詞分析', stat4: '千萬級消費者評論洞察',
+                servicesTitle: '我們的服務：從洞察到增長', servicesSubtitle: '我們提供端到端的解決方案，陪伴您的品牌走過從機會發現到市場成功的每一步。',
+                phase1Title: '電商平台市場機會評估', phase1List: '<li>利基市場潛力分析</li><li>競爭格局與壁壘評估</li><li>消費者未被滿足需求洞察</li>',
+                phase2Title: '電商平台產品與品牌策略', phase2List: '<li>產品價值主張定義</li><li>品牌故事與內容框架</li><li>商業可行性與銷量預測</li>',
+                phase3Title: '市場進入與啟動', phase3List: '<li>全球電商平台（Amazon, Tmall等）啟動</li><li>整合營銷方案設計</li><li>初期廣告活動管理</li>',
+                phase4Title: '持續增長與優化', phase4List: '<li>AI驅動的廣告持續優化</li><li>轉化率與用戶體驗提升</li><li>Web3忠誠度計劃建立</li>',
+                servicesBtn: '馬上聯繫我們，開啟您的增長之旅',
+                serveTitle: '我們為誰服務？',
+                serveSubtitle: '我們與全球市場的開拓者同行，無論您是尋求擴張的成熟品牌，還是擁有優質產品的初創企業。',
+                serveCard1Title: '尋求市場擴張的成熟品牌', serveCard1Desc: '您已有成功的產品和穩定的業務，但渴望進入新國家或新渠道（如天貓國際），尋求第二增長曲線。我們幫助您規避風險，實現高效的全球擴張。',
+                serveCard2Title: '擁有優質產品的初創企業', serveCard2Desc: '您創造了出色的產品，但缺乏在Amazon、Shopify等平台的市場進入策略和品牌營銷經驗。我們幫助您從0到1，將好產品轉化為成功的全球品牌。',
+                serveCard3Title: '探索Web3未來的先鋒品牌', serveCard3Desc: '您認識到Web3和區塊鏈將重塑用戶關係，並希望成為行業的先行者。我們幫助您設計並實施創新的NFT忠誠度計劃與商業模式。',
+                seeCasesLink: '數據如何證明我們的價值？查看我們的成功案例 &darr;',
+                storiesTitle: '我們的成功案例', storiesSubtitle: '我們不僅提供策略，更交付可被衡量的成果。',
+                case1Brand: '北美護膚品牌', case1Title: '從0到1進入亞洲市場', case1Desc: '透過UCniche™模型，我們為其在天貓國際鎖定了高潛力利基市場，並利用UCopps™定義了符合亞洲消費者偏好的產品價值主張，首月銷量超出預期300%。', case1Metric: '+300%', case1MetricLabel: '首月銷量達成率',
+                case2Brand: '歐洲智能家居品牌', case2Title: '利用Web3重塑用戶忠誠度', case2Desc: '我們為其設計並實施了基於NFT的會員通行證計劃，將核心用戶轉化為品牌共建者，用戶復購率在六個月內提升了50%。', case2Metric: '+50%', case2MetricLabel: '用戶復購率',
+                case3Brand: '澳洲健康食品品牌', case3Title: 'Amazon新品冷啟動優化', case3Desc: '利用UCcopilot™進行廣告活動的智能優化，在維持廣告預算不變的情況下，使其新品在Amazon美國站的點擊轉化率提升了75%，ACoS降低了40%。', case3Metric: '-40%', case3MetricLabel: '廣告投入產出比(ACoS)',
+                case4Brand: '日本設計師文具品牌', case4Title: 'Shopify獨立站銷量預測', case4Desc: '透過UCforecast™模型，我們為其面向北美市場的新品進行了精準的銷量預測，幫助其優化了庫存策略，首批庫存售罄率達到95%，遠超行業平均水平。', case4Metric: '95%', case4MetricLabel: '首批庫存售罄率',
+                case5Brand: '東南亞時尚配飾品牌', case5Title: 'TikTok Shop內容策略轉型', case5Desc: '我們為其制定了全新的短視頻內容矩陣和直播策略，使其TikTok Shop的粉絲互動率提升了200%，並成功打造了兩個百萬觀看級別的爆款視頻。', case5Metric: '+200%', case5MetricLabel: '粉絲互動率',
+                methodologyTitle: 'UCYX 價值增長方法論™',
+                methodologySubtitle: '我們不提供零散的建議，我們交付一套系統化的、可被驗證的成功藍圖。',
+                step1Title: '市場掃描與機會鎖定', step1Desc: '運用我們獨有的 **UCniche™** 機會象限模型，結合AI數據分析，從數百個利基市場中，為您快速鎖定最具潛力的「價值窪地」。',
+                step2Title: '深度洞察與產品定義', step2Desc: '透過 **UCopps™** 用戶價值主張畫布，逆向工程競品評論與用戶痛點，與您共同打造一個具有「X-factor」的產品原型。',
+                step3Title: '商業可行性與增長路徑', step3Desc: '利用 **UCforecast™** 銷售預測模型，進行P&L情景規劃，並用「品牌增長路徑矩陣」為您的事業繪製1到N的清晰藍圖。',
+                step4Title: '平台成功與持續優化', step4Desc: '透過 **UCcopilot™** AI副駕，持續優化您的平台運營、廣告投放和客戶體驗，確保您的品牌不僅成功上市，更能蓬勃發展。',
+                brandsTitle: '趨勢洞察，觸手可及',
+                brandsDesc: 'Yeah! Trend 是 UCYX 旗下面向市場的數據與洞察品牌。我們將複雜的市場數據，轉化為每日更新的、清晰易懂的趨勢報告。訂閱 `Yeah! Trend Report`，讓您在做出下一個商業決策時，總能充滿自信地喊出「Yeah!」。',
+                brandsBtn: '前往 Yeah! Trend',
+                formTitle: '開啟您的增長之旅', formSubtitle: '留下您的資訊，我們的專家將在24小時內與您聯繫，共同探討您的品牌潛力。',
+                formName: '姓名', formEmail: '電子郵箱', formMessage: '您的需求', formSubmit: '提交',
+                contactTitle: '與我們共創未來', contactSubtitle: '我們期待與有遠見的品牌、投資人和合作夥伴建立聯繫。如果我們的理念與您產生共鳴，歡迎隨時與我們溝通。',
+                address: 'UCYX Ltd.<br>香港九龍尖沙咀漆咸道南61-65號首都廣場2樓S068室',
+                footerCompany: '公司', footerAbout: '關於我們', footerCareers: '工作機會', footerPress: '媒體報導',
+                footerServices: '服務', footerMethodology: '增長方法論', footerCases: '成功案例', footerSolutions: '解決方案',
+                footerResources: '資源', footerBlog: '博客', footerWebinars: '線上研討會',
+                footerLegal: '法律', footerPrivacy: '隱私政策', footerTerms: '服務條款'
+            },
+            'zh-Hans': {
+                ariaOpenMenu: '开启导航菜单', ariaCloseMenu: '关闭导航菜单',
+                navOurServices: '服务内容', navWhoWeServe: '服务对象', navSuccessStories: '成功案例', navMethodology: '方法论', navChannels: '资源通道',
+                serviceMenuCol1Title: '进入市场', serviceMenuChina: '进入中国市场', serviceMenuGlobal: '进入全球市场',
+                serviceMenuCol2Title: '价值增长方法论',
+                serviceMenuStep1: '市场扫描与机会锁定', serviceMenuStep2: '深度洞察与产品定义', serviceMenuStep3: '商业可行性与增长路径', serviceMenuStep4: '平台成功与持续优化',
+                serviceMenuCases: '实际客户案例分享',
+                channelMenuYeahTrendTitle: 'Yeah! Trend', channelMenuYeahTrendDesc: '每日更新的、清晰易懂的趋势报告。',
+                channelMenuKnowledgeBaseTitle: '电商知识库', channelMenuKnowledgeBaseDesc: '深入的行业分析与策略指南。',
+                heroTitle: '看见并成就非凡。',
+                heroSubtitle: 'UCYX 是一家由AI驱动的未来型顾问公司，致力于帮助全球品牌发掘其独一无二的「X-factor」，在复杂的跨境电商市场中，实现可持续的指数级增长。',
+                heroBtn1: '开启您的增长之旅', heroBtn2: '了解我们的独特方法论',
+                dataPowerTitle: '数据驱动的洞察力', dataPowerSubtitle: '我们的每一个策略建议，都源于对海量数据的深度学习与分析。',
+                stat1: '核心电商品类监控', stat2: '百万级活跃产品追踪', stat3: '百万级行业关键词分析', stat4: '千万级消费者评论洞察',
+                servicesTitle: '我们的服务：从洞察到增长', servicesSubtitle: '我们提供端到端的解决方案，陪伴您的品牌走过从机会发现到市场成功的每一步。',
+                phase1Title: '电商平台市场机会评估', phase1List: '<li>利基市场潜力分析</li><li>竞争格局与壁垒评估</li><li>消费者未被满足需求洞察</li>',
+                phase2Title: '电商平台产品与品牌策略', phase2List: '<li>产品价值主张定义</li><li>品牌故事与内容框架</li><li>商业可行性与销量预测</li>',
+                phase3Title: '市场进入与启动', phase3List: '<li>全球电商平台（Amazon, Tmall等）启动</li><li>整合营销方案设计</li><li>初期广告活动管理</li>',
+                phase4Title: '持续增长与优化', phase4List: '<li>AI驱动的广告持续优化</li><li>转化率与用户体验提升</li><li>Web3忠诚度计划建立</li>',
+                servicesBtn: '马上联系我们，开启您的增长之旅',
+                serveTitle: '我们为谁服务？',
+                serveSubtitle: '我们与全球市场的开拓者同行，无论您是寻求扩张的成熟品牌，还是拥有优质产品的初创企业。',
+                serveCard1Title: '寻求市场扩张的成熟品牌', serveCard1Desc: '您已有成功的产品和稳定的业务，但渴望进入新国家或新渠道（如天猫国际），寻求第二增长曲线。我们帮助您规避风险，实现高效的全球扩张。',
+                serveCard2Title: '拥有优质产品的初创企业', serveCard2Desc: '您创造了出色的产品，但缺乏在Amazon、Shopify等平台的市场进入策略和品牌营销经验。我们帮助您从0到1，将好产品转化为成功的全球品牌。',
+                serveCard3Title: '探索Web3未来的先锋品牌', serveCard3Desc: '您认识到Web3和区块链将重塑用户关系，并希望成为行业的先行者。我们帮助您设计并实施创新的NFT忠诚度计划与商业模式。',
+                seeCasesLink: '数据如何证明我们的价值？查看我们的成功案例 &darr;',
+                storiesTitle: '我们的成功案例', storiesSubtitle: '我们不仅提供策略，更交付可被衡量的成果。',
+                case1Brand: '某北美护肤品牌', case1Title: '从0到1进入亚洲市场', case1Desc: '透过UCniche™模型，我们为其在天猫国际锁定了高潜力利基市场，并利用UCopps™定义了符合亚洲消费者偏好的产品价值主张，首月销量超出预期300%。', case1Metric: '+300%', case1MetricLabel: '首月销量达成率',
+                case2Brand: '某欧洲智能家居品牌', case2Title: '利用Web3重塑用户忠诚度', case2Desc: '我们为其设计并实施了基于NFT的会员通行证计划，将核心用户转化为品牌共建者，用户复购率在六个月内提升了50%。', case2Metric: '+50%', case2MetricLabel: '用户复购率',
+                case3Brand: '某澳洲健康食品品牌', case3Title: 'Amazon新品冷启动优化', case3Desc: '利用UCcopilot™进行广告活动的智能优化，在维持广告预算不变的情况下，使其新品在Amazon美国站的点击转化率提升了75%，ACoS降低了40%。', case3Metric: '-40%', case3MetricLabel: '广告投入产出比(ACoS)',
+                case4Brand: '某日本设计师文具品牌', case4Title: 'Shopify独立站销量预测', case4Desc: '透过UCforecast™模型，我们为其面向北美市场的新品进行了精准的销量预测，帮助其优化了库存策略，首批库存售罄率达到95%，远超行业平均水平。', case4Metric: '95%', case4MetricLabel: '首批库存售罄率',
+                case5Brand: '某东南亚时尚配饰品牌', case5Title: 'TikTok Shop内容策略转型', case5Desc: '我们为其制定了全新的短视频内容矩阵和直播策略，使其TikTok Shop的粉丝互动率提升了200%，并成功打造了两个百万观看级别的爆款视频。', case5Metric: '+200%', case5MetricLabel: '粉丝互动率',
+                methodologyTitle: 'UCYX 价值增长方法论™',
+                methodologySubtitle: '我们不提供零散的建议，我们交付一套系统化的、可被验证的成功蓝图。',
+                step1Title: '市场扫描与机会锁定', step1Desc: '运用我们独有的 **UCniche™** 机会象限模型，结合AI数据分析，从数百个利基市场中，为您快速锁定最具潜力的“价值洼地”。',
+                step2Title: '深度洞察与产品定义', step2Desc: '透过 **UCopps™** 用户价值主张画布，逆向工程竞品评论与用户痛点，与您共同打造一个具有“X-factor”的产品原型。',
+                step3Title: '商业可行性与增长路径', step3Desc: '利用 **UCforecast™** 销售预测模型，进行P&L情景规划，并用“品牌增长路径矩阵”为您的事业绘制1到N的清晰蓝图。',
+                step4Title: '平台成功与持续优化', step4Desc: '透过 **UCcopilot™** AI副驾，持续优化您的平台运营、广告投放和客户体验，确保您的品牌不仅成功上市，更能蓬勃发展。',
+                brandsTitle: '趋势洞察，触手可及',
+                brandsDesc: 'Yeah! Trend 是 UCYX 旗下面向市场的数据与洞察品牌。我们将复杂的市场数据，转化为每日更新的、清晰易懂的趋势报告。订阅 `Yeah! Trend Report`，让您在做出下一个商业决策时，总能充满自信地喊出“Yeah!”。',
+                brandsBtn: '前往 Yeah! Trend',
+                formTitle: '开启您的增长之旅', formSubtitle: '留下您的信息，我们的专家将在24小时内与您联系，共同探讨您的品牌潜力。',
+                formName: '姓名', formEmail: '电子邮箱', formMessage: '您的需求', formSubmit: '提交',
+                contactTitle: '与我们共创未来', contactSubtitle: '我们期待与有远见的品牌、投资人和合作伙伴建立联系。如果我们的理念与您产生共鸣，欢迎随时与我们沟通。',
+                address: 'UCYX Ltd.<br>香港九龙尖沙咀漆咸道南61-65号首都广场2楼S068室',
+                footerCompany: '公司', footerAbout: '关于我们', footerCareers: '工作机会', footerPress: '媒体报道',
+                footerServices: '服务', footerMethodology: '增长方法论', footerCases: '成功案例', footerSolutions: '解决方案',
+                footerResources: '资源', footerBlog: '博客', footerWebinars: '线上研讨会',
+                footerLegal: '法律', footerPrivacy: '隐私政策', footerTerms: '服务条款'
+            },
+            'en': {
+                ariaOpenMenu: 'Open navigation menu', ariaCloseMenu: 'Close navigation menu',
+                navOurServices: 'Services', navWhoWeServe: 'Who We Serve', navSuccessStories: 'Success Stories', navMethodology: 'Methodology', navChannels: 'Channels',
+                serviceMenuCol1Title: 'Market Entry', serviceMenuChina: 'Enter China Market', serviceMenuGlobal: 'Enter Global Market',
+                serviceMenuCol2Title: 'Value Growth Methodology',
+                serviceMenuStep1: 'Market Scanning & Opportunity Locking', serviceMenuStep2: 'Deep Insight & Product Definition', serviceMenuStep3: 'Viability & Growth Path', serviceMenuStep4: 'Platform Success & Continuous Optimization',
+                serviceMenuCases: 'Customer Case Studies',
+                channelMenuYeahTrendTitle: 'Yeah! Trend', channelMenuYeahTrendDesc: 'Daily, easy-to-understand trend reports.',
+                channelMenuKnowledgeBaseTitle: 'E-commerce Knowledge Base', channelMenuKnowledgeBaseDesc: 'In-depth industry analysis and strategic guides.',
+                heroTitle: 'See and Achieve the Extraordinary.',
+                heroSubtitle: 'UCYX is a future-focused, AI-driven consultancy dedicated to helping global brands uncover their unique "X-factor" and achieve sustainable, exponential growth in the complex cross-border e-commerce market.',
+                heroBtn1: 'Start Your Growth Journey', heroBtn2: 'Discover Our Methodology',
+                dataPowerTitle: 'Data-Driven Insight', dataPowerSubtitle: 'Every strategic recommendation we make is rooted in deep learning and analysis of massive datasets.',
+                stat1: 'Core E-commerce Categories Monitored', stat2: 'Active Products Tracked', stat3: 'Industry Keywords Analyzed', stat4: 'Consumer Reviews Processed',
+                servicesTitle: 'Our Services: From Insight to Growth', servicesSubtitle: 'We provide end-to-end solutions, guiding your brand through every step from opportunity discovery to market success.',
+                phase1Title: 'E-commerce Market Opportunity Assessment', phase1List: '<li>Niche market potential analysis</li><li>Competitive landscape & barrier evaluation</li><li>Unmet consumer needs insight</li>',
+                phase2Title: 'E-commerce Product & Brand Strategy', phase2List: '<li>Product value proposition definition</li><li>Brand story & content framework</li><li>Business viability & sales forecast</li>',
+                phase3Title: 'Go-to-Market & Launch', phase3List: '<li>Launch on global platforms (Amazon, Tmall, etc.)</li><li>Integrated marketing solution design</li><li>Initial advertising campaign management</li>',
+                phase4Title: 'Continuous Growth & Optimization', phase4List: '<li>AI-driven advertising optimization</li><li>Conversion rate & UX improvement</li><li>Web3 loyalty program establishment</li>',
+                servicesBtn: 'Contact Us Now to Start Your Growth Journey',
+                serveTitle: 'Who We Serve',
+                serveSubtitle: 'We partner with global market pioneers, whether you are an established brand seeking expansion or a startup with a great product.',
+                serveCard1Title: 'Established Brands Seeking Expansion', serveCard1Desc: 'You have successful products and a stable business but are eager to enter new countries or channels like Tmall Global to find your next growth curve. We help you mitigate risks and achieve efficient global expansion.',
+                serveCard2Title: 'Startups with Great Products', serveCard2Desc: 'You have created an outstanding product but lack the go-to-market strategy and brand marketing experience for platforms like Amazon or Shopify. We help you go from 0 to 1, transforming a great product into a successful global brand.',
+                serveCard3Title: 'Pioneering Brands Exploring Web3', serveCard3Desc: 'You recognize that Web3 and blockchain will reshape customer relationships and want to be a pioneer in the industry. We help you design and implement innovative NFT loyalty programs and business models.',
+                seeCasesLink: 'How do we prove our value with data? See our success stories &darr;',
+                storiesTitle: 'Our Success Stories', storiesSubtitle: 'We don\'t just deliver strategies, we deliver measurable results.',
+                case1Brand: 'North American Skincare Brand', case1Title: 'Entering the Asian Market from Scratch', case1Desc: 'Using the UCniche™ model, we identified a high-potential niche market on Tmall Global. With UCopps™, we defined a product value proposition tailored to Asian consumer preferences, exceeding sales forecasts by 300% in the first month.', case1Metric: '+300%', case1MetricLabel: 'First-Month Sales Target',
+                case2Brand: 'European Smart Home Brand', case2Title: 'Reshaping User Loyalty with Web3', case2Desc: 'We designed and implemented an NFT-based membership pass program, transforming core users into brand co-builders and increasing the repeat purchase rate by 50% within six months.', case2Metric: '+50%', case2MetricLabel: 'Repeat Purchase Rate',
+                case3Brand: 'Australian Health Food Brand', case3Title: 'Amazon New Product Launch Optimization', case3Desc: 'Leveraging UCcopilot™ for intelligent ad campaign optimization, we increased the click-through conversion rate for their new product on Amazon US by 75% and reduced ACoS by 40%, without increasing the ad budget.', case3Metric: '-40%', case3MetricLabel: 'Advertising Cost of Sales (ACoS)',
+                case4Brand: 'Japanese Designer Stationery Brand', case4Title: 'Shopify DTC Sales Forecasting', case4Desc: 'With the UCforecast™ model, we provided an accurate sales forecast for their new product line targeting the North American market. This helped optimize their inventory strategy, achieving a 95% sell-through rate for the initial stock.', case4Metric: '95%', case4MetricLabel: 'Initial Stock Sell-Through Rate',
+                case5Brand: 'Southeast Asian Fashion Accessories Brand', case5Title: 'TikTok Shop Content Strategy Pivot', case5Desc: 'We developed a new short-video content matrix and live streaming strategy, which boosted their fan engagement rate on TikTok Shop by 200% and created two viral videos with over a million views each.', case5Metric: '+200%', case5MetricLabel: 'Fan Engagement Rate',
+                methodologyTitle: 'The UCYX Value Growth Methodology™',
+                methodologySubtitle: 'We don\'t offer scattered advice. We deliver a systematic, verifiable blueprint for success.',
+                step1Title: 'Market Scanning & Opportunity Locking', step1Desc: 'Using our proprietary **UCniche™** Opportunity Quadrant Model, combined with AI data analysis, we quickly identify high-potential "value basins" from hundreds of niche markets for you.',
+                step2Title: 'Deep Insight & Product Definition', step2Desc: 'Through the **UCopps™** Value Proposition Canvas, we reverse-engineer competitor reviews and user pain points to co-create a product prototype with a compelling "X-factor".',
+                step3Title: 'Viability & Growth Path', step3Desc: 'Leveraging the **UCforecast™** sales prediction model for P&L scenario planning, we use the "Brand Growth Path Matrix" to map out a clear 1-to-N journey for your business.',
+                step4Title: 'Platform Success & Continuous Optimization', step4Desc: 'With the **UCcopilot™** AI assistant, we continuously optimize your platform operations, advertising, and customer experience to ensure your brand not only launches successfully but thrives.',
+                brandsTitle: 'Trend Insights, At Your Fingertips',
+                brandsDesc: 'Yeah! Trend is UCYX\'s market-facing data and insights brand. We transform complex market data into daily, easy-to-understand trend reports. Subscribe to the `Yeah! Trend Report` to make your next business decision with a confident "Yeah!".',
+                brandsBtn: 'Visit Yeah! Trend',
+                formTitle: 'Start Your Growth Journey', formSubtitle: 'Leave your information, and our experts will contact you within 24 hours to discuss your brand\'s potential.',
+                formName: 'Name', formEmail: 'Email', formMessage: 'Your Needs', formSubmit: 'Submit',
+                contactTitle: 'Create the Future with Us', contactSubtitle: 'We look forward to connecting with visionary brands, investors, and partners. If our philosophy resonates with you, feel free to reach out.',
+                address: 'UCYX Ltd.<br>Shop S068, 2/F, Capital Building, 61-65 Chatham Road South, Tsim Sha Tsui, Hong Kong',
+                footerCompany: 'Company', footerAbout: 'About Us', footerCareers: 'Careers', footerPress: 'Press',
+                footerServices: 'Services', footerMethodology: 'Methodology', footerCases: 'Case Studies', footerSolutions: 'Solutions',
+                footerResources: 'Resources', footerBlog: 'Blog', footerWebinars: 'Webinars',
+                footerLegal: 'Legal', footerPrivacy: 'Privacy Policy', footerTerms: 'Terms of Service'
+            },
+            'ja': {
+                ariaOpenMenu: 'ナビゲーションメニューを開く', ariaCloseMenu: 'ナビゲーションメニューを閉じる',
+                navOurServices: 'サービス', navWhoWeServe: 'サービス対象', navSuccessStories: '成功事例', navMethodology: '方法論', navChannels: 'チャネル',
+                serviceMenuCol1Title: '市場参入', serviceMenuChina: '中国市場へ参入', serviceMenuGlobal: 'グローバル市場へ参入',
+                serviceMenuCol2Title: '価値成長方法論',
+                serviceMenuStep1: '市場スキャンと機会の特定', serviceMenuStep2: '深い洞察と製品定義', serviceMenuStep3: '事業性評価と成長経路', serviceMenuStep4: 'プラットフォームでの成功と継続的最適化',
+                serviceMenuCases: '顧客事例',
+                channelMenuYeahTrendTitle: 'Yeah! Trend', channelMenuYeahTrendDesc: '毎日更新、分かりやすいトレンドレポート。',
+                channelMenuKnowledgeBaseTitle: 'ECナレッジベース', channelMenuKnowledgeBaseDesc: '詳細な業界分析と戦略ガイド。',
+                heroTitle: '非凡を見て、成し遂げる。',
+                heroSubtitle: 'UCYXは、AIを駆使した未来志向のコンサルティング会社です。グローバルブランドが独自の「Xファクター」を発見し、複雑な越境EC市場で持続可能かつ指数関数的な成長を遂げるお手伝いをします。',
+                heroBtn1: '成長の旅を始める', heroBtn2: '私たちの方法論を知る',
+                dataPowerTitle: 'データ駆動の洞察力', dataPowerSubtitle: '私たちの戦略的提言は、すべて膨大なデータセットの深層学習と分析に基づいています。',
+                stat1: '主要ECカテゴリ監視', stat2: 'アクティブ製品追跡', stat3: '業界キーワード分析', stat4: '消費者レビュー洞察',
+                servicesTitle: 'サービス内容：洞察から成長へ', servicesSubtitle: '機会発見から市場での成功まで、ブランドの歩みをエンドツーエンドのソリューションでサポートします。',
+                phase1Title: 'EC市場機会評価', phase1List: '<li>ニッチ市場のポテンシャル分析</li><li>競合状況と参入障壁の評価</li><li>未充足の消費者ニーズの洞察</li>',
+                phase2Title: 'EC製品とブランド戦略', phase2List: '<li>製品価値提案の定義</li><li>ブランドストーリーとコンテンツの枠組み</li><li>事業性評価と販売予測</li>',
+                phase3Title: '市場参入とローンチ', phase3List: '<li>グローバルECプラットフォーム（Amazon、Tmall等）での展開</li><li>統合マーケティングソリューションの設計</li><li>初期広告キャンペーンの管理</li>',
+                phase4Title: '継続的な成長と最適化', phase4List: '<li>AIによる広告の継続的最適化</li><li>コンバージョン率とUXの向上</li><li>Web3ロイヤルティプログラムの構築</li>',
+                servicesBtn: '今すぐお問い合わせ、成長の旅を始めましょう',
+                serveTitle: 'サービス対象',
+                serveSubtitle: '私たちはグローバル市場の開拓者と提携します。市場拡大を目指す成熟ブランドであれ、優れた製品を持つスタートアップであれ、私たちはあなたと共に歩みます。',
+                serveCard1Title: '市場拡大を目指す成熟ブランド', serveCard1Desc: '成功した製品と安定したビジネスをお持ちで、新たな国やチャネル（Tmall Globalなど）に進出し、次の成長曲線を求めている方。リスクを回避し、効率的なグローバル展開を実現します。',
+                serveCard2Title: '優れた製品を持つスタートアップ', serveCard2Desc: '素晴らしい製品を創造したものの、AmazonやShopifyなどのプラットフォームでの市場参入戦略やブランドマーケティングの経験が不足している方。0から1へ、優れた製品を成功したグローバルブランドへと変革させます。',
+                serveCard3Title: 'Web3の未来を探る先駆的ブランド', serveCard3Desc: 'Web3とブロックチェーンが顧客との関係を再構築すると認識し、業界のパイオニアになりたい方。革新的なNFTロイヤルティプログラムとビジネスモデルの設計・実装を支援します。',
+                seeCasesLink: 'データが私たちの価値をどう証明するか？成功事例をご覧ください &darr;',
+                storiesTitle: '私たちの成功事例', storiesSubtitle: '私たちは戦略を提供するだけでなく、測定可能な成果をもたらします。',
+                case1Brand: '北米のスキンケアブランド', case1Title: 'ゼロからアジア市場へ参入', case1Desc: 'UCniche™モデルでTmall Globalの高ポテンシャルニッチ市場を特定し、UCopps™でアジアの消費者嗜好に合わせた製品価値提案を定義。初月の売上は予測を300%上回りました。', case1Metric: '+300%', case1MetricLabel: '初月売上達成率',
+                case2Brand: '欧州のスマートホームブランド', case2Title: 'Web3でユーザーロイヤルティを再構築', case2Desc: 'NFTベースの会員パスプログラムを設計・実装し、コアユーザーをブランド共創者へと転換させ、6ヶ月でリピート購入率を50%向上させました。', case2Metric: '+50%', case2MetricLabel: 'リピート購入率',
+                case3Brand: 'オーストラリアの健康食品ブランド', case3Title: 'Amazon新製品のコールドスタート最適化', case3Desc: 'UCcopilot™による広告キャンペーンのインテリジェントな最適化を活用し、広告予算を維持したまま、Amazon米国での新製品のクリックコンバージョン率を75%向上させ、ACoSを40%削減しました。', case3Metric: '-40%', case3MetricLabel: '広告費用対効果(ACoS)',
+                case4Brand: '日本のデザイナー文具ブランド', case4Title: 'Shopify独立ストアの販売予測', case4Desc: 'UCforecast™モデルを通じて、北米市場向けの新製品ラインの正確な販売予測を提供。これにより在庫戦略を最適化し、初期在庫の完売率95%を達成しました。', case4Metric: '95%', case4MetricLabel: '初期在庫完売率',
+                case5Brand: '東南アジアのファッションアクセサリーブランド', case5Title: 'TikTok Shopコンテンツ戦略の転換', case5Desc: '新しいショートビデオコンテンツマトリックスとライブストリーミング戦略を策定し、TikTok Shopでのファンエンゲージメント率を200%向上させ、100万回再生超のバイラル動画を2本生み出しました。', case5Metric: '+200%', case5MetricLabel: 'ファンエンゲージメント率',
+                methodologyTitle: 'UCYX 価値成長方法論™',
+                methodologySubtitle: '私たちは断片的なアドバイスは提供しません。体系的で検証可能な成功への青写真をお届けします。',
+                step1Title: '市場スキャンと機会の特定', step1Desc: '独自の **UCniche™** 機会象限モデルとAIデータ分析を組み合わせ、数百のニッチ市場から最もポテンシャルの高い「価値の窪地」を迅速に特定します。',
+                step2Title: '深い洞察と製品定義', step2Desc: '**UCopps™** ユーザー価値提案キャンバスを通じて、競合レビューとユーザーのペインポイントをリバースエンジニアリングし、魅力的な「Xファクター」を持つ製品プロトタイプを共同で創造します。',
+                step3Title: '事業性評価と成長経路', step3Desc: '**UCforecast™** 販売予測モデルを活用してP&Lシナリオ計画を行い、「ブランド成長経路マトリックス」を用いて、あなたの事業の1からNへの明確な道のりを描きます。',
+                step4Title: 'プラットフォームでの成功と継続的最適化', step4Desc: '**UCcopilot™** AIアシスタントを活用し、プラットフォーム運営、広告、顧客体験を継続的に最適化し、ブランドの成功した立ち上げだけでなく、その後の繁栄も確実にします。',
+                brandsTitle: 'トレンド洞察を、指先で。',
+                brandsDesc: 'Yeah! Trendは、UCYXの市場向けデータ＆インサイトブランドです。複雑な市場データを、毎日更新される分かりやすいトレンドレポートに変換します。「Yeah! Trend Report」を購読し、自信を持って「Yeah!」と叫べる次のビジネス判断を下しましょう。',
+                brandsBtn: 'Yeah! Trendへ',
+                formTitle: '成長の旅を始める', formSubtitle: '情報を残していただければ、24時間以内に専門家が連絡し、ブランドの可能性について共に探求します。',
+                formName: 'お名前', formEmail: 'メールアドレス', formMessage: 'ご要望', formSubmit: '送信',
+                contactTitle: '私たちと共に未来を創造する', contactSubtitle: '私たちは、先見の明のあるブランド、投資家、パートナーとのつながりを求めています。私たちの理念に共感していただける方は、お気軽にご連絡ください。',
+                address: 'UCYX Ltd.<br>香港九龍尖沙咀漆咸道南61-65号首都広場2階S068室',
+                footerCompany: '会社', footerAbout: '会社概要', footerCareers: '採用情報', footerPress: 'プレス',
+                footerServices: 'サービス', footerMethodology: '方法論', footerCases: '成功事例', footerSolutions: 'ソリューション',
+                footerResources: 'リソース', footerBlog: 'ブログ', footerWebinars: 'ウェビナー',
+                footerLegal: '法務', footerPrivacy: 'プライバシーポリシー', footerTerms: '利用規約'
+            }
+        };
+
+        const caseStudiesData = [
+            { key: 'case1' }, { key: 'case2' }, { key: 'case3' }, { key: 'case4' }, { key: 'case5' }
+        ];
+
+        // --- General Functions ---
+        const getLangString = (key) => {
+            const currentLang = document.documentElement.lang || 'en';
+            const langData = translations[currentLang] || translations['en'];
+            return langData[key] || '';
+        };
+
+        // --- Initializations ---
+        function init() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            initCaseStudySliderControls();
+            initLanguageSwitcher(); 
+            initMobileMenu();
+            initScrollAnimations();
+            initNumberCounters();
+            initImageSliders();
+            initInteractiveMethodology(); // Initialize new methodology section
+            initSmoothScroll();
+            initContactForm();
+        }
+
+        // --- Component Initializers ---
+
+        function initLanguageSwitcher() {
+            const langSwitcher = document.querySelector('.lang-switcher');
+            if (!langSwitcher) return;
+            
+            const currentLangBtn = langSwitcher.querySelector('.current-lang');
+            const langDropdown = langSwitcher.querySelector('.lang-dropdown');
+            const langOptions = langSwitcher.querySelectorAll('.lang-option');
+            
+            currentLangBtn.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const isExpanded = langDropdown.classList.toggle('show');
+                currentLangBtn.classList.toggle('active');
+                currentLangBtn.setAttribute('aria-expanded', isExpanded);
+            });
+
+            document.addEventListener('click', () => {
+                langDropdown.classList.remove('show');
+                currentLangBtn.classList.remove('active');
+                currentLangBtn.setAttribute('aria-expanded', 'false');
+            });
+
+            langOptions.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    switchLanguage(e.target.dataset.langId);
+                });
+            });
+            
+            const savedLang = localStorage.getItem('ucyx-lang') || 'en';
+            switchLanguage(savedLang);
+        }
+
+        function switchLanguage(lang) {
+            const langData = translations[lang] || translations['en'];
+            if (!langData) return;
+
+            document.documentElement.setAttribute('lang', lang);
+            localStorage.setItem('ucyx-lang', lang);
+            
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.dataset.lang;
+                const translation = langData[key]; 
+                
+                if (translation !== undefined) {
+                    if (el.tagName === 'UL' && key.includes('List')) {
+                        el.innerHTML = translation;
+                    } else {
+                        el.innerHTML = translation;
+                    }
+                }
+            });
+            
+            document.querySelectorAll('[data-lang-aria]').forEach(el => {
+                const key = el.dataset.langAria;
+                if(langData[key]) el.setAttribute('aria-label', langData[key]);
+            });
+
+            const currentLangDisplay = document.querySelector(`.lang-option[data-lang-id="${lang}"]`);
+            if(currentLangDisplay) {
+                document.getElementById('current-lang-text').textContent = currentLangDisplay.textContent;
+            }
+            
+            const fontMap = {
+                'ja': "'Noto Sans JP', 'Noto Sans TC', sans-serif",
+                'zh-Hans': "'Noto Sans SC', 'Noto Sans TC', sans-serif",
+                'zh-Hant': "'Noto Sans TC', -apple-system, sans-serif",
+                'en': "'Noto Sans TC', -apple-system, sans-serif"
+            };
+            document.body.style.fontFamily = fontMap[lang] || fontMap['en'];
+
+            const langDropdown = document.querySelector('.lang-switcher .lang-dropdown');
+            const currentLangBtn = document.querySelector('.lang-switcher .current-lang');
+            if(langDropdown) langDropdown.classList.remove('show');
+            if(currentLangBtn) currentLangBtn.classList.remove('active');
+            
+            rebuildCaseStudySliderContent();
+        }
+
+
+        function initMobileMenu() {
+            const toggleBtn = document.querySelector('.mobile-menu-toggle');
+            const mobilePanel = document.querySelector('.mobile-nav-panel');
+            if (!toggleBtn || !mobilePanel) return;
+
+            toggleBtn.addEventListener('click', () => {
+                const isOpen = mobilePanel.classList.toggle('open');
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+                const newAriaLabel = getLangString(isOpen ? 'ariaCloseMenu' : 'ariaOpenMenu');
+                toggleBtn.setAttribute('aria-label', newAriaLabel);
+            });
+            
+            mobilePanel.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobilePanel.classList.remove('open');
+                    document.body.style.overflow = '';
+                    toggleBtn.setAttribute('aria-label', getLangString('ariaOpenMenu'));
+                });
+            });
+        }
+
+        function initScrollAnimations() {
+            const revealElements = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                revealElements.forEach(el => revealObserver.observe(el));
+            } else {
+                revealElements.forEach(el => el.classList.add('visible'));
+            }
+        }
+
+        function initNumberCounters() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseInt(el.dataset.target, 10);
+                        const suffix = el.dataset.suffix || '';
+                        const duration = 2000;
+                        let startTimestamp = null;
+                        const step = (timestamp) => {
+                            if (!startTimestamp) startTimestamp = timestamp;
+                            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                            let currentNum = Math.floor(progress * target);
+                            el.textContent = currentNum.toLocaleString() + suffix;
+                            if (progress < 1) {
+                                window.requestAnimationFrame(step);
+                            }
+                        };
+                        window.requestAnimationFrame(step);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+            statNumbers.forEach(el => observer.observe(el));
+        }
+
+        function initImageSliders() {
+            document.querySelectorAll('.slider-container').forEach(slider => {
+                initializeSimpleSlider(slider.id);
+            });
+        }
+
+        function initializeSimpleSlider(sliderId) {
+            const slider = document.getElementById(sliderId);
+            if (!slider) return;
+            const wrapper = slider.querySelector('.slider-wrapper');
+            const slides = slider.querySelectorAll('.slider-slide');
+            const dotsContainer = slider.querySelector('.slider-dots');
+            let currentIndex = 0;
+            let intervalId;
+
+            if (slides.length <= 1) {
+                if (dotsContainer) dotsContainer.style.display = 'none';
+                return;
+            };
+
+            if (dotsContainer) {
+                dotsContainer.innerHTML = '';
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('slider-dot');
+                    dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => {
+                        goToSlide(index);
+                        resetInterval();
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+            }
+            
+            const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
+
+            function goToSlide(index) {
+                if (!wrapper) return;
+                wrapper.style.transform = `translateX(-${index * 100}%)`;
+                if (dots.length > 0) {
+                    dots.forEach(d => d.classList.remove('active'));
+                    if(dots[index]) dots[index].classList.add('active');
+                }
+                currentIndex = index;
+            }
+
+            function nextSlide() {
+                const newIndex = (currentIndex + 1) % slides.length;
+                goToSlide(newIndex);
+            }
+
+            function startInterval() {
+                intervalId = setInterval(nextSlide, 5000);
+            }
+
+            function resetInterval() {
+                clearInterval(intervalId);
+                startInterval();
+            }
+
+            startInterval();
+        }
+        
+        let caseSliderState = {};
+
+        function rebuildCaseStudySliderContent() {
+            const slider = caseSliderState.slider;
+            if (!slider) return;
+
+            const slidesHtml = caseStudiesData.map(caseData => `
+                <div class="case-card">
+                    <div class="case-card-inner">
+                        <div class="case-brand">${getLangString(`${caseData.key}Brand`)}</div>
+                        <h3 class="gradient-title">${getLangString(`${caseData.key}Title`)}</h3>
+                        <p>${getLangString(`${caseData.key}Desc`)}</p>
+                        <div class="case-metric">${getLangString(`${caseData.key}Metric`)} <span class="metric-label">${getLangString(`${caseData.key}MetricLabel`)}</span></div>
+                    </div>
+                </div>`).join('');
+            
+            const slideCount = caseStudiesData.length;
+            slider.innerHTML = slidesHtml.repeat(3);
+
+            caseSliderState.allSlides = slider.querySelectorAll('.case-card');
+            
+            setTimeout(() => {
+                if (caseSliderState.allSlides.length > 0) {
+                    caseSliderState.slideWidth = caseSliderState.allSlides[0].getBoundingClientRect().width;
+                }
+                caseSliderState.currentIndex = slideCount;
+                updateCaseSliderPosition(false);
+            }, 0);
+        }
+
+        function updateCaseSliderPosition(withTransition = true) {
+            const { slider, currentIndex, slideWidth } = caseSliderState;
+            if (!slider || !slideWidth) return;
+            slider.style.transition = withTransition ? 'transform 0.5s ease-in-out' : 'none';
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        function initCaseStudySliderControls() {
+            const container = document.querySelector('.case-slider-container');
+            if (!container) return;
+            
+            caseSliderState = {
+                container: container,
+                slider: container.querySelector('.case-grid'),
+                prevButton: container.querySelector('.slider-arrow.prev'),
+                nextButton: container.querySelector('.slider-arrow.next'),
+                currentIndex: 0,
+                slideCount: caseStudiesData.length,
+                slideWidth: 0,
+                isTransitioning: false,
+                slideInterval: null,
+            };
+            
+            const { slider, prevButton, nextButton, slideCount } = caseSliderState;
+            
+            const shiftSlide = (dir) => {
+                if (caseSliderState.isTransitioning) return;
+                caseSliderState.isTransitioning = true;
+                caseSliderState.currentIndex += dir;
+                updateCaseSliderPosition();
+            };
+
+            slider.addEventListener('transitionend', () => {
+                caseSliderState.isTransitioning = false;
+                const { currentIndex } = caseSliderState;
+                if (currentIndex < slideCount) {
+                    caseSliderState.currentIndex = currentIndex + slideCount;
+                    updateCaseSliderPosition(false);
+                } else if (currentIndex >= slideCount * 2) {
+                    caseSliderState.currentIndex = currentIndex - slideCount;
+                    updateCaseSliderPosition(false);
+                }
+            });
+
+            const startAutoplay = () => {
+                stopAutoplay();
+                caseSliderState.slideInterval = setInterval(() => shiftSlide(1), 5000);
+            };
+
+            const stopAutoplay = () => clearInterval(caseSliderState.slideInterval);
+
+            prevButton.addEventListener('click', () => { shiftSlide(-1); stopAutoplay(); startAutoplay(); });
+            nextButton.addEventListener('click', () => { shiftSlide(1); stopAutoplay(); startAutoplay(); });
+            container.addEventListener('mouseenter', stopAutoplay);
+            container.addEventListener('mouseleave', startAutoplay);
+            
+            window.addEventListener('resize', () => {
+                if (caseSliderState.allSlides && caseSliderState.allSlides.length > 0) {
+                    caseSliderState.slideWidth = caseSliderState.allSlides[0].getBoundingClientRect().width;
+                    updateCaseSliderPosition(false);
+                }
+            });
+
+            startAutoplay();
+        }
+
+        function initInteractiveMethodology() {
+            const container = document.querySelector('.methodology-component');
+            if (!container) return;
+
+            const tabs = container.querySelectorAll('.methodology-tab-item');
+            const panels = container.querySelectorAll('.methodology-content-panel');
+            let currentTabIndex = 0;
+            let intervalId;
+
+            function showTab(index) {
+                tabs.forEach(tab => tab.classList.remove('active'));
+                panels.forEach(panel => panel.classList.remove('active'));
+
+                tabs[index].classList.add('active');
+                panels[index].classList.add('active');
+                currentTabIndex = index;
+            }
+
+            function startInterval() {
+                stopInterval(); // Ensure no multiple intervals are running
+                intervalId = setInterval(() => {
+                    const nextIndex = (currentTabIndex + 1) % tabs.length;
+                    showTab(nextIndex);
+                }, 5000); // 5 seconds, matches the CSS animation
+            }
+
+            function stopInterval() {
+                clearInterval(intervalId);
+            }
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    showTab(index);
+                    startInterval(); // Reset interval on manual click
+                });
+            });
+
+            container.addEventListener('mouseenter', stopInterval);
+            container.addEventListener('mouseleave', startInterval);
+
+            showTab(0); // Show the first tab initially
+            startInterval();
+        }
+
+
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            const sections = document.querySelectorAll('main section[id]');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        document.querySelectorAll('.nav-menu a.nav-link').forEach((link) => {
+                            link.classList.remove('active');
+                            const href = link.getAttribute('href');
+                            if (href && href.includes(entry.target.id)) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        function initContactForm() {
+            const form = document.getElementById('contact-form');
+            if(form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formContainer = document.querySelector('.form-container');
+                    const originalContent = formContainer.innerHTML;
+                    formContainer.innerHTML = `<div style="text-align:center; color: var(--dark-color); padding: 2rem;"><h3>Thank you!</h3><p>Your message has been sent. We will be in touch shortly.</p></div>`;
+                    setTimeout(() => {
+                        formContainer.innerHTML = originalContent;
+                        initContactForm(); 
+                    }, 4000);
+                });
+            }
+        }
+
+        init();
+    });
+    </script>
+
+</body>
+</html>
