@@ -1,0 +1,260 @@
+{
+  "nav": {
+    "services": "サービス",
+    "whoWeServe": "私たちが誰にサービスするか",
+    "successStories": "成功ストーリー",
+    "methodology": "方法論",
+    "channels": "チャネル",
+    "blog": "ブログ",
+    "chinaMarket": "中国市場に参入",
+    "globalMarket": "グローバル市場に参入",
+    "caseStudies": "顧客ケーススタディ",
+    "knowledgeBase": "Eコマース知識ベース",
+    "login": "ログイン"
+  },
+  "hero": {
+    "titleLine1": "あなたはあなたの",
+    "titleLine2": "非凡を見る。",
+    "subtitle": "UCYXは未来志向の、AI駆動のコンサルタンシーで、複雑な越境Eコマース市場でブランドが独特の「X-非凡」を発見することを支援することに専念しています。",
+    "cta": "あなたの成長の旅を始める",
+    "learnMore": "私たちの方法論を発見する"
+  },
+  "dataPower": {
+    "title": "データ駆動インサイト",
+    "subtitle": "私たちが行うすべての戦略的推奨は、大規模データセットの深層学習と分析に根ざしています。",
+    "stat1": {
+      "number": "300",
+      "suffix": "+",
+      "label": "監視されるコアEコマースカテゴリー"
+    },
+    "stat2": {
+      "number": "5",
+      "suffix": "M+",
+      "label": "追跡されるアクティブ製品"
+    },
+    "stat3": {
+      "number": "10",
+      "suffix": "M+",
+      "label": "分析される業界キーワード"
+    },
+    "stat4": {
+      "number": "50",
+      "suffix": "M+",
+      "label": "処理される消費者レビュー"
+    }
+  },
+  "services": {
+    "title": "非凡な成長を達成するために必要なすべて",
+    "subtitle": "私たちの包括的なAI駆動方法論は、あなたのEコマースの旅のあらゆる側面をカバーします。",
+    "feature1": {
+      "title": "Novochoice",
+      "description": "Novochoice™機会象限で高ポテンシャルニッチを発見し、大規模データセットのAI分析によって支援されます。",
+      "tag1": "Novochoice™",
+      "tag2": "AI分析"
+    },
+    "feature2": {
+      "title": "ブランドスマート",
+      "description": "UCselection™価値提案キャンバスを通じて、魅力的な「Xファクター」を持つ製品プロトタイプを共創します。",
+      "tag1": "UCselection™",
+      "tag2": "ブランド戦略"
+    },
+    "feature3": {
+      "title": "勝利へのローンチ",
+      "description": "統合マーケティングソリューションでグローバルプラットフォーム全体で成功したローンチを実行します。",
+      "tag1": "UCforecast™",
+      "tag2": "成長パス"
+    },
+    "feature4": {
+      "title": "持続的成功",
+      "description": "私たちのUCcopilot™ AI駆動最適化システムで持続的成長を達成します。",
+      "tag1": "UCcopilot™",
+      "tag2": "AI最適化"
+    }
+  },
+  "whoWeServe": {
+    "title": "私たちが誰にサービスするか",
+    "subtitle": "私たちはグローバル市場のパイオニアとパートナーシップを組みます、あなたが拡張を求める確立されたブランドであろうと、優れた製品を持つスタートアップであろうと。",
+    "card1": {
+      "title": "確立されたブランド",
+      "description": "あなたは成功した製品と安定したビジネスを持っていますが、次の成長曲線を見つけるために新しい市場に参入することを熱望しています。"
+    },
+    "card2": {
+      "title": "優れたアイデアを持つスタートアップ",
+      "description": "あなたは優れたアイデアを創造しましたが、それを製品とブランドに変えるアプローチが不足しています。"
+    },
+    "card3": {
+      "title": "従来の製造業",
+      "description": "あなたは優れた製品を持っていますが、AmazonやShopifyなどのプラットフォームでの市場参入戦略とブランドマーケティング経験が不足しています。"
+    },
+    "seeCasesLink": "私たちはデータで私たちの価値をどう証明しますか？私たちの成功ストーリーを見てください ↓"
+  },
+  "successStories": {
+    "title": "私たちの成功ストーリー",
+    "subtitle": "私たちは戦略を提供するだけではありません、私たちは測定可能な結果を提供します。",
+    "cases": [
+      {
+        "brand": "北米スキンケアブランド",
+        "title": "ゼロからアジア市場に参入",
+        "description": "Novochoice™データプラットフォームを使用して、私たちは中国Eコマースプラットフォームで高ポテンシャルニッチ市場を特定し、UCselection™サービスで、私たちはアジア消費者の好みに合わせた価値提案を定義することを支援し、最初の月に売上予測を300%上回りました。",
+        "metric": "+300%",
+        "metricLabel": "最初の月の売上目標"
+      },
+      {
+        "brand": "ヨーロッパスマートホームブランド",
+        "title": "レビューインサイトでユーザーロイヤルティを再構築",
+        "description": "私たちはトップ10のホットセリング商品の中で5000の顧客レビューを分析し、コア製品改善機会を発見し、売上材料を最適化し、6ヶ月以内にリピート購入率を50%向上させました。",
+        "metric": "+50%",
+        "metricLabel": "リピート購入率"
+      },
+      {
+        "brand": "中国ベースのネットワークストレージブランド",
+        "title": "Amazon新製品ローンチ最適化",
+        "description": "UCcopilot™をインテリジェント広告キャンペーン最適化に活用し、私たちはAmazon USでの彼らの新製品のクリックスルー転換率を75%向上させ、広告予算を増やすことなくACoSを40%削減しました。",
+        "metric": "-40%",
+        "metricLabel": "広告売上コスト(ACoS)"
+      },
+      {
+        "brand": "日本デザイナー文具ブランド",
+        "title": "Shopify DTC売上予測",
+        "description": "UCforecast™モデルで、私たちは北米市場をターゲットとした彼らの新製品ラインの正確な売上予測を提供しました。これは彼らの在庫戦略を最適化することを支援し、初期在庫の95%売上率を達成しました。",
+        "metric": "95%",
+        "metricLabel": "初期在庫売上率"
+      }
+    ]
+  },
+  "methodology": {
+    "title": "UCYX価値成長方法論™",
+    "subtitle": "私たちは散発的なアドバイスを提供しません。私たちは体系的で、検証可能な成功の青写真を提供します。",
+    "usingProprietaryModel": "私たちの独自の",
+    "model": "モデルを使用",
+    "steps": [
+      {
+        "title": "市場スキャンと機会アンロック",
+        "description": "私たちの独自のNovochoice機会象限モデルを使用し、AIデータ分析と組み合わせて、私たちは数百のニッチ市場からあなたのために高ポテンシャルの「価値盆地」を迅速に特定します。",
+        "tool": "Novochoice™"
+      },
+      {
+        "title": "深いインサイトと製品定義",
+        "description": "UCselection™価値提案キャンバスを通じて、私たちは競合他社のレビューとユーザーの痛点をリバースエンジニアリングし、魅力的な「Xファクター」を持つ製品プロトタイプを共創します。",
+        "tool": "UCopps™"
+      },
+      {
+        "title": "実現可能性と成長パス",
+        "description": "UCforecast™売上予測モデルを活用してMLでP&Lシナリオプランニングを行い、私たちは「ブランド成長パスマトリックス」を使用してあなたのビジネスの明確な1からNへの旅程をマッピングします。",
+        "tool": "UCforecast™"
+      },
+      {
+        "title": "プラットフォーム成功と継続的最適化",
+        "description": "UCcopilot™ AIアシスタントで、私たちはあなたのプラットフォーム運営、広告、顧客体験を継続的に最適化し、あなたのブランドが成功してローンチするだけでなく繁栄することを確保します。",
+        "tool": "UCcopilot™"
+      }
+    ]
+  },
+  "brands": {
+    "title": "先進市場インテリジェンスプラットフォーム",
+    "novochoiceTitle": "Novochoice",
+    "description": "NovochoiceはUCYXの先進市場インテリジェンスプラットフォームで、人工知能、ビッグデータ分析、リアルタイム監視を組み合わせて、世界中のEコマース機会への包括的なインサイトを提供します。",
+    "cta": "Novochoiceについてもっと学ぶ"
+  },
+  "form": {
+    "title": "あなたの成長の旅を始める",
+    "subtitle": "あなたの情報を残してください、私たちの専門家があなたのブランドの可能性について話し合うために24時間以内にあなたに連絡します。",
+    "name": "名前",
+    "email": "メール",
+    "message": "あなたのニーズ",
+    "submit": "送信",
+    "namePlaceholder": "あなたの名前",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "あなたのビジネス目標について教えてください..."
+  },
+  "contact": {
+    "title": "私たちと未来を創造する",
+    "subtitle": "私たちは先見性のあるブランド、投資家、パートナーとつながることを楽しみにしています。私たちの哲学があなたに響くなら、お気軽に連絡してください。",
+    "email": "partnership@ucyx.com",
+    "address": "UCYX Ltd.<br>香港尖沙咀漆咸道南61-65号首都大厦2階S068室",
+    "readyTitle": "非凡な成長を達成する準備はできていますか？",
+    "readySubtitle": "私たちの方法論でビジネスを変革した数百のブランドに参加してください。",
+    "submitting": "送信中...",
+    "successMessage": "ありがとうございます！私たちは24時間以内にあなたに連絡します。",
+    "errorMessage": "申し訳ありません、エラーがありました。もう一度試してください。"
+  },
+  "footer": {
+    "company": "会社",
+    "about": "私たちについて",
+    "careers": "キャリア",
+    "services": "サービス",
+    "methodology": "方法論",
+    "cases": "ケーススタディ",
+    "solutions": "ソリューション",
+    "resources": "リソース",
+    "blog": "ブログ",
+    "webinars": "ウェビナー",
+    "legal": "法的",
+    "privacy": "プライバシーポリシー",
+    "terms": "サービス利用規約",
+    "rights": "すべての権利を保有。"
+  },
+  "aria": {
+    "openMenu": "ナビゲーションメニューを開く",
+    "closeMenu": "ナビゲーションメニューを閉じる",
+    "languageSelector": "言語を選択"
+  },
+  "megaMenu": {
+    "start": "開始",
+    "choice": "選択",
+    "sell": "販売",
+    "manage": "管理",
+    "sellToChina": "中国に販売",
+    "sellToWorld": "世界に販売",
+    "reachConsumers": "10億人の消費者にリーチ",
+    "globalExpansion": "グローバル市場拡大",
+    "novochoice": "Novochoice",
+    "aiPoweredIntelligence": "AI駆動市場インテリジェンス",
+    "customizedSelection": "UCselectionサービス",
+    "tailoredRecommendations": "カスタマイズされた製品推奨",
+    "sellerCopilot": "UCcopilotサービス",
+    "aiDrivenOptimization": "AI駆動販売最適化",
+    "marketingMix": "UC-MMM",
+    "maximizeROI": "マーケティングROIを最大化",
+    "manageCustomer": "あなたの顧客を管理",
+    "buildRelationships": "持続的関係を構築",
+    "startConsultation": "無料相談を開始",
+    "visitBlog": "私たちのブログを訪問",
+    "learnMethodology": "方法論についてもっと学ぶ"
+  },
+  "footerExtra": {
+    "sellToChina": "中国に販売",
+    "sellToWorld": "世界に販売",
+    "sellerCopilot": "UCcopilotサービス",
+    "marketingMix": "UC-MMM",
+    "manageCustomer": "あなたの顧客を管理",
+    "aboutUCYX": "UCYXについて",
+    "partners": "パートナー",
+    "novochoicePlatform": "Novochoiceプラットフォーム",
+    "helpCenter": "ヘルプセンター",
+    "contactUs": "お問い合わせ",
+    "copyright": "© 2025 UCYX Ltd. すべての権利を保有。",
+    "support": "サポート"
+  },
+  "meta": {
+    "title": "UCYX - AI駆動グローバルEコマースコンサルタンシー",
+    "description": "UCYXは未来志向の、AI駆動のコンサルタンシーで、私たちのデータ駆動方法論でグローバルブランドが越境Eコマースで指数的成長を達成することを支援します。",
+    "keywords": "Eコマース, AI, コンサルタンシー, 越境, グローバル拡大, 市場インテリジェンス",
+    "author": "UCYX",
+    "ogTitle": "UCYX - AI駆動グローバルEコマースコンサルタンシー",
+    "ogDescription": "私たちはデータ駆動インサイトと実証された方法論を通じてグローバルブランドが越境Eコマースで指数的成長を達成することを支援します。",
+    "twitterTitle": "UCYX - AI駆動グローバルEコマースコンサルタンシー",
+    "twitterDescription": "私たちはデータ駆動インサイトと実証された方法論を通じてグローバルブランドが越境Eコマースで指数的成長を達成することを支援します。"
+  },
+  "blog": {
+    "title": "ブログ - UCYX",
+    "metaDescription": "グローバルEコマースの最新インサイトとトレンド",
+    "latestInsights": "最新インサイト",
+    "subtitle": "Eコマーストレンド、市場分析、成長戦略に関する私たちの最新の考えで先を行く。",
+    "readMore": "もっと読む"
+  },
+  "language": {
+    "current": "日本語",
+    "switch": "言語を切り替え"
+  }
+}
