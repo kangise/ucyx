@@ -172,30 +172,20 @@ class LanguageManager {
     }
 
     try {
-      // 动态导入翻译文件
-      let translations;
+      console.log(`Getting inline translations for: ${lang}`);
       
-      console.log(`Attempting to import translations for: ${lang}`);
+      // 直接从内联翻译数据获取
+      const inlineTranslations = this.getInlineTranslations();
       
-      if (lang === 'en') {
-        const module = await import('../../locales/en.json');
-        translations = module.default;
-      } else if (lang === 'zh-cn') {
-        const module = await import('../../locales/zh-cn.json');
-        translations = module.default;
-      } else if (lang === 'zh-tw') {
-        const module = await import('../../locales/zh-tw.json');
-        translations = module.default;
-      } else if (lang === 'ja') {
-        const module = await import('../../locales/ja.json');
-        translations = module.default;
+      if (inlineTranslations[lang]) {
+        const translations = inlineTranslations[lang];
+        console.log(`Successfully loaded translations for ${lang}:`, translations);
+        this.translations[lang] = translations;
+        return translations;
       } else {
         throw new Error(`Unsupported language: ${lang}`);
       }
       
-      console.log(`Successfully loaded translations for ${lang}:`, translations);
-      this.translations[lang] = translations;
-      return translations;
     } catch (error) {
       console.error(`Failed to load translations for ${lang}:`, error);
       // 如果加载失败，加载英语作为后备
