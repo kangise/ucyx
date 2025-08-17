@@ -1,5 +1,6 @@
 /* ========================================
    MOBILE & RESPONSIVE STYLES - CONSOLIDATED
+   Version: 2025-08-17-14:14 - Force Refresh
    ======================================== */
 
 /* 移动端基础重置 */
@@ -313,8 +314,10 @@
     font-size: clamp(24px, 6vw, 32px) !important; /* 与section-title一致 */
     line-height: 1.2 !important;
     margin-bottom: 8px !important;
+    margin-left: 0 !important; /* 覆盖桌面端偏移 */
     word-break: break-word !important;
     white-space: normal !important; /* 允许换行 */
+    letter-spacing: normal !important; /* 覆盖桌面端letter-spacing */
   }
 
   .hero-title-line2 {
@@ -325,6 +328,7 @@
     word-break: break-word !important;
     white-space: normal !important; /* 允许换行 */
     hyphens: auto !important;
+    letter-spacing: normal !important; /* 覆盖桌面端letter-spacing */
   }
 
   /* 修复其他可能的Hero标题类 */

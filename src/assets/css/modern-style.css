@@ -1395,50 +1395,56 @@ body {
   margin-bottom: 32px;
 }
 
-.hero-title-line1 {
-  font-size: clamp(60px, 10.5vw, 120px);
-  font-weight: 700;
-  line-height: 1.1;
-  color: white;
-  letter-spacing: -0.02em;
-  margin-left: 0;
-  margin-bottom: -10px;
-}
+/* Desktop-only Hero title styles */
+@media (min-width: 769px) {
+  .hero-title-line1 {
+    font-size: clamp(60px, 10.5vw, 120px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    letter-spacing: -0.02em;
+    margin-left: 0;
+    margin-bottom: -10px;
+  }
 
-.hero-title-line2 {
-  font-size: clamp(72px, 12.6vw, 144px); /* 20% larger than line1 */
-  font-weight: 700;
-  line-height: 1.1;
-  color: white;
-  letter-spacing: -0.02em;
-  margin-left: clamp(40px, 8vw, 80px); /* Responsive offset */
-  position: relative;
+  .hero-title-line2 {
+    font-size: clamp(72px, 12.6vw, 144px); /* 20% larger than line1 */
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    letter-spacing: -0.02em;
+    margin-left: clamp(40px, 8vw, 80px); /* Responsive offset */
+    position: relative;
+  }
 }
 
 /* Mobile optimization */
 /* 移除移动端媒体查询 - 已在mobile-all.css中处理 */
 
-.hero-title-large {
-  font-size: clamp(60px, 10.5vw, 120px);
-  font-weight: 700;
-  line-height: 1.1;
-  color: white;
-  margin-bottom: 32px;
-  letter-spacing: -0.02em;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  white-space: nowrap;
-}
+/* Desktop-only Hero large styles */
+@media (min-width: 769px) {
+  .hero-title-large {
+    font-size: clamp(60px, 10.5vw, 120px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+  }
 
-.hero-subtitle-large {
-  font-size: 24px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 48px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  .hero-subtitle-large {
+    font-size: 24px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 48px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hero-actions-center {
