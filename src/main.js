@@ -46,7 +46,7 @@ const UCYXApp = {
         <nav class="mobile-menu" :class="{ active: showMobileMenu }">
           <div class="mobile-menu-header">
             <div class="mobile-logo">UCYX</div>
-            <button class="mobile-menu-close" @click="closeMobileMenu">×</button>
+            <button class="mobile-menu-close" @click="closeMobileMenu"><span class="close-line"></span><span class="close-line"></span></button>
           </div>
           
           <div class="mobile-menu-content">
@@ -631,7 +631,10 @@ const UCYXApp = {
       },
       // 动态数据，将在语言加载后更新
       successCases: [],
-      methodologySteps: []
+      methodologySteps: [],
+      
+      // 响应式窗口大小
+      windowWidth: window.innerWidth
     }
   },
 
@@ -676,12 +679,20 @@ const UCYXApp = {
     },
 
     storySlides() {
-      // Group success cases into slides of 2
-      const slides = []
-      for (let i = 0; i < this.successCases.length; i += 2) {
-        slides.push(this.successCases.slice(i, i + 2))
+      // 使用响应式窗口宽度检查是否为移动端
+      const isMobile = this.windowWidth <= 768;
+      
+      if (isMobile) {
+        // 移动端：每个slide只包含一个案例
+        return this.successCases.map(story => [story]);
+      } else {
+        // 桌面端：每个slide包含两个案例
+        const slides = []
+        for (let i = 0; i < this.successCases.length; i += 2) {
+          slides.push(this.successCases.slice(i, i + 2))
+        }
+        return slides
       }
-      return slides
     }
   },
 
@@ -905,6 +916,9 @@ const UCYXApp = {
     
     // 监听窗口大小变化，自动关闭移动端菜单
     window.addEventListener('resize', () => {
+      // 更新窗口宽度
+      this.windowWidth = window.innerWidth;
+      
       if (window.innerWidth > 768 && this.showMobileMenu) {
         this.closeMobileMenu()
       }
