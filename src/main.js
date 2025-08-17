@@ -567,20 +567,38 @@ const UCYXApp = {
     return {
       // 多语言相关数据 - 提供默认值避免渲染错误
       t: {
-        nav: { services: '', whoWeServe: '', successStories: '', methodology: '', login: '' },
-        hero: { titleLine1: '', titleLine2: '', subtitle: '', cta: '', learnMore: '' },
-        megaMenu: {},
-        dataPower: { stat1: {}, stat2: {}, stat3: {}, stat4: {} },
-        services: { title: '', subtitle: '', feature1: {}, feature2: {}, feature3: {}, feature4: {} },
-        whoWeServe: { title: '', subtitle: '', card1: {}, card2: {}, card3: {} },
-        successStories: { title: '', subtitle: '' },
-        methodology: { title: '', subtitle: '', usingProprietaryModel: '', model: '' },
-        brands: { title: '', description: '', cta: '', novochoiceTitle: '' },
-        contact: { readyTitle: '', readySubtitle: '' },
-        form: {},
-        footer: {},
-        footerExtra: { copyright: '' },
-        language: { current: '', switch: '' }
+        nav: { services: 'Services', whoWeServe: 'Who We Serve', successStories: 'Success Stories', methodology: 'Methodology', login: 'Log in' },
+        hero: { titleLine1: 'You See Your', titleLine2: 'Extraordinary.', subtitle: 'UCYX is a future-focused, AI-driven consultancy dedicated to helping brands uncover unique "X-trodinary" in the complex cross-border e-commerce market.', cta: 'Start Your Growth Journey', learnMore: 'Discover Our Methodology' },
+        megaMenu: { novochoice: 'Novochoice', start: 'Start', choice: 'Choice', sell: 'Sell', manage: 'Manage', sellToChina: 'Sell to China', sellToWorld: 'Sell to The World', reachConsumers: 'Reach 1 billion consumers', globalExpansion: 'Global market expansion', aiPoweredIntelligence: 'AI-powered market intelligence', customizedSelection: 'UCselection Service', tailoredRecommendations: 'Tailored product recommendations', sellerCopilot: 'UCcopilot Services', aiDrivenOptimization: 'AI-driven sales optimization', marketingMix: 'UC-MMM', maximizeROI: 'Maximize marketing ROI', manageCustomer: 'Manage your Customer', buildRelationships: 'Build lasting relationships', startConsultation: 'Start Free Consultation', visitBlog: 'Visit Our Blog', learnMethodology: 'Learn More About Methodology' },
+        dataPower: { 
+          stat1: { number: '300', suffix: '+', label: 'Core E-commerce Categories Monitored' }, 
+          stat2: { number: '5', suffix: 'M+', label: 'Active Products Tracked' }, 
+          stat3: { number: '10', suffix: 'M+', label: 'Industry Keywords Analyzed' }, 
+          stat4: { number: '50', suffix: 'M+', label: 'Consumer Reviews Processed' } 
+        },
+        services: { 
+          title: 'Everything you need to achieve extraordinary growth', 
+          subtitle: 'Our comprehensive AI-driven methodology covers every aspect of your e-commerce journey.', 
+          feature1: { title: 'Novochoice', description: 'Discover high-potential niches with Novochoice™ Opportunity Quadrant, powered by AI analysis of massive datasets.', tag1: 'Novochoice™', tag2: 'AI analysis' }, 
+          feature2: { title: 'Brand Smart', description: 'Through the UCselection™ Value Proposition Canvas, co-create a product prototype with a compelling "X-factor".', tag1: 'UCselection™', tag2: 'Brand Strategy' }, 
+          feature3: { title: 'Launch to Win', description: 'Execute successful launches across global platforms with integrated marketing solutions.', tag1: 'UCforecast™', tag2: 'Growth Path' }, 
+          feature4: { title: 'Lasting Success', description: 'Achieve sustained growth with our UCcopilot™ AI-driven optimization system.', tag1: 'UCcopilot™', tag2: 'AI Optimization' } 
+        },
+        whoWeServe: { 
+          title: 'Who We Serve', 
+          subtitle: 'We partner with global market pioneers, whether you are an established brand seeking expansion or a startup with a great product.', 
+          card1: { title: 'Established Brands', description: 'You have successful products and a stable business but are eager to enter new markets to find your next growth curve.' }, 
+          card2: { title: 'Startups with Great Ideas', description: 'You have created an outstanding ideas but lack the approach to turn into product and brand.' }, 
+          card3: { title: 'Traditional Manufacture', description: 'You have a great product but lack the go-to-market strategy and brand marketing experience for platforms like Amazon or Shopify.' } 
+        },
+        successStories: { title: 'Our Success Stories', subtitle: 'We don\'t just deliver strategies, we deliver measurable results.' },
+        methodology: { title: 'The UCYX Value Growth Methodology™', subtitle: 'We don\'t offer scattered advice. We deliver a systematic, verifiable blueprint for success.', usingProprietaryModel: 'Using our proprietary', model: 'model' },
+        brands: { title: 'Advanced Market Intelligence Platform', description: 'Novochoice is UCYX\'s advanced market intelligence platform that combines artificial intelligence, big data analytics, and real-time monitoring to provide comprehensive insights into e-commerce opportunities worldwide.', cta: 'Learn More About Novochoice', novochoiceTitle: 'Novochoice' },
+        contact: { readyTitle: 'Ready to achieve extraordinary growth?', readySubtitle: 'Join hundreds of brands that have transformed their business with our methodology.', submitting: 'Submitting...', successMessage: 'Thank you! We will contact you within 24 hours.', errorMessage: 'Sorry, there was an error. Please try again.' },
+        form: { name: 'Name', email: 'Email', message: 'Your Needs', submit: 'Submit', namePlaceholder: 'Your Name', emailPlaceholder: 'your@email.com', messagePlaceholder: 'Tell us about your business goals...' },
+        footer: { company: 'Company', about: 'About Us', careers: 'Careers', services: 'Services', methodology: 'Methodology', cases: 'Case Studies', solutions: 'Solutions', resources: 'Resources', blog: 'Blog', webinars: 'Webinars', legal: 'Legal', privacy: 'Privacy Policy', terms: 'Terms of Service', rights: 'All Rights Reserved.' },
+        footerExtra: { sellToChina: 'Sell to China', sellToWorld: 'Sell to The World', sellerCopilot: 'UCcopilot Services', marketingMix: 'UC-MMM', manageCustomer: 'Manage your Customer', aboutUCYX: 'About UCYX', partners: 'Partners', novochoicePlatform: 'Novochoice Platform', helpCenter: 'Help Center', contactUs: 'Contact Us', copyright: '© 2025 UCYX Ltd. All rights reserved.', support: 'Support' },
+        language: { current: 'English', switch: 'Switch Language' }
       },
       currentLanguage: 'en',
       supportedLanguages: {},
