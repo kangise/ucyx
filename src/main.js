@@ -35,7 +35,7 @@ const UCYXApp = {
            @mouseenter="keepMegaMenu = true"
            @mouseleave="hideMegaMenu">
         <div class="mega-menu-container">
-          <!-- SVG渐变定义 -->
+          <!-- SVG Gradient Definition -->
           <svg width="0" height="0" style="position: absolute;">
             <defs>
               <linearGradient id="greenBlackGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -135,7 +135,7 @@ const UCYXApp = {
           </div>
         </div>
         
-        <!-- 下半部分：灰色底的3个横向链接 -->
+        <!-- Bottom section: gray background with 3 horizontal links -->
         <div class="mega-menu-footer">
           <div class="mega-footer-content">
             <a href="#contact" class="mega-footer-item">
@@ -153,7 +153,7 @@ const UCYXApp = {
         </div>
       </div>
 
-      <!-- Mega Menu底部延伸区块 - 独立容器 -->
+      <!-- Mega Menu Extension Block - Independent Container -->
       <div class="mega-menu-extension" 
            v-show="showMegaMenu" 
            @mouseenter="keepMegaMenu = true"
@@ -313,11 +313,11 @@ const UCYXApp = {
               <h2>{{ t.successStories.title }}</h2>
               <p class="section-subtitle">{{ t.successStories.subtitle }}</p>
             </div>
-            <!-- 第一层：外层定位容器 -->
+            <!-- First layer: outer positioning container -->
             <div class="stories-slider-dual-wide">
-              <!-- 第二层：内容显示容器 -->
+              <!-- Second layer: content display container -->
               <div class="story-content-container">
-                <!-- 第三层：内容轨道 -->
+                <!-- Third layer: content track -->
                 <div class="story-track-dual" :style="{ transform: 'translateX(' + (-currentStoryIndex * 100) + '%)' }">
                   <div class="story-slide-dual" v-for="(slide, slideIndex) in storySlides" :key="slideIndex">
                     <div class="story-card-dual" v-for="story in slide" :key="story.brand">
@@ -334,7 +334,7 @@ const UCYXApp = {
                   </div>
                 </div>
               </div>
-              <!-- 第四层：独立的控制按钮层 -->
+              <!-- Fourth layer: independent control button layer -->
               <div class="slider-controls-wide">
                 <button class="slider-btn-wide prev" @click="prevStory">‹</button>
                 <button class="slider-btn-wide next" @click="nextStory">›</button>
