@@ -15,6 +15,16 @@
   .mobile-menu-overlay {
     display: none !important;
   }
+  
+  /* 确保桌面端导航元素显示 */
+  .main-nav {
+    display: flex !important;
+  }
+  
+  .nav-actions .login-link,
+  .nav-actions .cta-button {
+    display: block !important;
+  }
 }
 
 /* 移动端和平板端样式 */
