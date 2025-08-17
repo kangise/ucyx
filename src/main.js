@@ -547,7 +547,7 @@ const UCYXApp = {
                 <span class="current-language-name">{{ safeT.language.current }}</span>
                 <span class="language-arrow">{{ showLanguageMenu ? '▲' : '▼' }}</span>
               </button>
-              <div class="language-menu" v-show="showLanguageMenu">
+              <div class="language-menu" :class="{ show: showLanguageMenu }">
                 <div v-for="(lang, code) in supportedLanguages" :key="code" 
                      class="language-option" 
                      :class="{ active: currentLanguage === code }"
