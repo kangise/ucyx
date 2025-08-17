@@ -1,255 +1,205 @@
 {
   "nav": {
-    "services": "服務",
+    "services": "解決方案",
     "whoWeServe": "服務對象",
     "successStories": "成功案例",
     "methodology": "方法論",
-    "channels": "渠道",
-    "blog": "部落格",
-    "chinaMarket": "進入中國市場",
-    "globalMarket": "進入全球市場",
-    "caseStudies": "客戶案例研究",
-    "knowledgeBase": "電商知識庫",
     "login": "登入"
   },
   "hero": {
-    "titleLine1": "發現您的",
-    "titleLine2": "非凡之處。",
-    "subtitle": "UCYX是一家面向未來、AI驅動的諮詢公司，致力於幫助品牌在複雜的跨境電商市場中發現獨特的「非凡因子」。",
-    "cta": "開始您的成長之旅",
-    "learnMore": "了解我們的方法論"
+    "titleLine1": "AI驅動的",
+    "titleLine2": "全球電商諮詢",
+    "subtitle": "透過人工智慧和數據洞察，幫助品牌在全球電商市場取得成功",
+    "cta": "開始諮詢",
+    "learnMore": "了解更多"
+  },
+  "megaMenu": {
+    "start": "開始",
+    "choice": "選擇",
+    "sell": "銷售",
+    "manage": "管理",
+    "sellToChina": "銷往中國",
+    "reachConsumers": "觸達消費者",
+    "sellToWorld": "銷往全球",
+    "globalExpansion": "全球擴張",
+    "novochoice": "NovoChoice",
+    "aiPoweredIntelligence": "AI驅動智能",
+    "customizedSelection": "客製化選品",
+    "tailoredRecommendations": "量身定製推薦",
+    "sellerCopilot": "賣家助手",
+    "aiDrivenOptimization": "AI驅動優化",
+    "marketingMix": "行銷組合",
+    "maximizeROI": "最大化投資回報",
+    "manageCustomer": "客戶管理",
+    "buildRelationships": "建立關係",
+    "startConsultation": "開始諮詢",
+    "visitBlog": "訪問部落格",
+    "learnMethodology": "了解方法論"
   },
   "dataPower": {
-    "title": "數據驅動洞察",
-    "subtitle": "我們提出的每一個戰略建議都基於對海量數據集的深度學習和分析。",
     "stat1": {
-      "number": "300",
+      "number": "500",
       "suffix": "+",
-      "label": "核心電商品類監控"
+      "label": "成功案例"
     },
     "stat2": {
-      "number": "5",
-      "suffix": "M+",
-      "label": "活躍產品追蹤"
+      "number": "98",
+      "suffix": "%",
+      "label": "客戶滿意度"
     },
     "stat3": {
-      "number": "10",
-      "suffix": "M+",
-      "label": "行業關鍵詞分析"
+      "number": "50",
+      "suffix": "+",
+      "label": "合作國家"
     },
     "stat4": {
-      "number": "50",
-      "suffix": "M+",
-      "label": "消費者評論處理"
+      "number": "24",
+      "suffix": "/7",
+      "label": "全天候支援"
     }
   },
   "services": {
-    "title": "實現非凡成長所需的一切",
-    "subtitle": "我們全面的AI驅動方法論涵蓋您電商旅程的每個方面。",
+    "title": "我們的解決方案",
+    "subtitle": "透過AI驅動的洞察和專業知識，為您的電商成功提供全方位支援",
     "feature1": {
-      "title": "Novochoice",
-      "description": "透過Novochoice™機會象限發現高潛力細分市場，由AI分析海量數據集提供支持。",
-      "tag1": "Novochoice™",
-      "tag2": "AI分析"
+      "title": "智能選品",
+      "description": "利用AI分析市場趨勢，為您推薦最具潛力的產品",
+      "tag1": "市場分析",
+      "tag2": "趨勢預測"
     },
     "feature2": {
-      "title": "品牌智慧", 
-      "description": "透過UCselection™價值主張畫布，共同創造具有引人注目「X因子」的產品原型。",
-      "tag1": "UCselection™",
-      "tag2": "品牌策略"
+      "title": "精準行銷",
+      "description": "基於數據洞察制定行銷策略，提升轉化率和ROI",
+      "tag1": "數據驅動",
+      "tag2": "ROI優化"
     },
     "feature3": {
-      "title": "成功發布",
-      "description": "透過整合行銷解決方案在全球平台上執行成功的產品發布。",
-      "tag1": "UCforecast™",
-      "tag2": "成長路徑"
+      "title": "全球擴張",
+      "description": "幫助品牌進入新市場，實現可持續的全球增長",
+      "tag1": "市場進入",
+      "tag2": "增長策略"
     },
     "feature4": {
-      "title": "持續成功",
-      "description": "透過我們的UCcopilot™ AI驅動優化系統實現持續成長。",
-      "tag1": "UCcopilot™",
-      "tag2": "AI優化"
+      "title": "客戶管理",
+      "description": "建立長期客戶關係，提升客戶生命週期價值",
+      "tag1": "關係管理",
+      "tag2": "價值提升"
     }
   },
   "whoWeServe": {
     "title": "我們的服務對象",
-    "subtitle": "我們與全球市場先鋒合作，無論您是尋求擴張的成熟品牌還是擁有優秀產品的新創企業。",
+    "subtitle": "為不同規模和階段的企業提供客製化解決方案",
     "card1": {
-      "title": "成熟品牌",
-      "description": "您擁有成功的產品和穩定的業務，但渴望進入新市場尋找下一個成長曲線。"
+      "title": "初創企業",
+      "description": "幫助新興品牌建立電商基礎，快速進入市場"
     },
     "card2": {
-      "title": "擁有優秀創意的新創企業",
-      "description": "您創造了出色的想法，但缺乏將其轉化為產品和品牌的方法。"
+      "title": "成長型企業",
+      "description": "支援快速增長的企業擴大市場份額，優化營運效率"
     },
     "card3": {
-      "title": "傳統製造商",
-      "description": "您擁有優秀的產品，但缺乏在Amazon或Shopify等平台上的市場進入策略和品牌行銷經驗。"
-    },
-    "seeCasesLink": "我們如何用數據證明價值？查看我們的成功案例 ↓"
+      "title": "大型企業",
+      "description": "為成熟企業提供創新解決方案，保持競爭優勢"
+    }
   },
   "successStories": {
-    "title": "我們的成功案例",
-    "subtitle": "我們不僅提供策略，更提供可衡量的結果。",
+    "title": "成功案例",
+    "subtitle": "看看我們如何幫助客戶實現突破性增長",
     "cases": [
       {
-        "brand": "北美護膚品牌",
-        "title": "從零開始進入亞洲市場",
-        "description": "使用Novochoice™數據平台，我們在中國電商平台上識別了一個高潛力細分市場，並透過UCselection™服務幫助定義了針對亞洲消費者偏好的價值主張，第一個月銷售預測超出300%。",
-        "metric": "+300%",
-        "metricLabel": "首月銷售目標"
+        "title": "美妝品牌全球擴張",
+        "brand": "BeautyBrand",
+        "description": "透過AI驅動的市場分析，幫助美妝品牌成功進入亞洲市場",
+        "metric": "300%",
+        "metricLabel": "銷售增長"
       },
       {
-        "brand": "歐洲智慧家居品牌",
-        "title": "透過評論洞察重塑用戶忠誠度",
-        "description": "我們分析了前10名熱銷產品中的5000條客戶評論，發現了核心產品改進機會並優化了銷售材料，在六個月內將復購率提高了50%。",
-        "metric": "+50%",
-        "metricLabel": "復購率"
+        "title": "科技產品中國市場",
+        "brand": "TechCorp",
+        "description": "為科技公司制定本土化策略，快速佔領中國市場份額",
+        "metric": "150%",
+        "metricLabel": "市場份額增長"
       },
       {
-        "brand": "中國網路儲存品牌",
-        "title": "Amazon新產品發布優化",
-        "description": "利用UCcopilot™進行智慧廣告活動優化，我們將他們在Amazon美國的新產品點擊轉化率提高了75%，並將ACoS降低了40%，無需增加廣告預算。",
-        "metric": "-40%",
-        "metricLabel": "廣告銷售成本比(ACoS)"
+        "title": "時尚品牌數位化轉型",
+        "brand": "FashionForward",
+        "description": "幫助傳統時尚品牌實現數位化轉型，提升線上銷售",
+        "metric": "250%",
+        "metricLabel": "線上銷售增長"
       },
       {
-        "brand": "日本設計師文具品牌",
-        "title": "Shopify DTC銷售預測",
-        "description": "透過UCforecast™模型，我們為他們針對北美市場的新產品線提供了準確的銷售預測。這幫助優化了庫存策略，初始庫存的銷售率達到95%。",
-        "metric": "95%",
-        "metricLabel": "初始庫存銷售率"
+        "title": "健康產品全通路佈局",
+        "brand": "HealthPlus",
+        "description": "構建全通路銷售體系，實現線上線下協同發展",
+        "metric": "180%",
+        "metricLabel": "整體收入增長"
       }
     ]
   },
   "methodology": {
-    "title": "UCYX價值成長方法論™",
-    "subtitle": "我們不提供零散的建議。我們提供系統性的、可驗證的成功藍圖。",
-    "usingProprietaryModel": "使用我們專有的",
-    "model": "模型",
+    "title": "我們的方法論",
+    "subtitle": "基於數據驅動的系統化方法，確保專案成功",
+    "usingProprietaryModel": "使用專有模型",
+    "model": "進行分析和優化",
     "steps": [
       {
-        "title": "市場掃描與機會鎖定",
-        "description": "使用我們專有的Novochoice機會象限模型，結合AI數據分析，我們快速從數百個細分市場中為您識別高潛力的「價值窪地」。",
-        "tool": "Novochoice™"
+        "title": "市場分析",
+        "tool": "MarketInsight",
+        "description": "深入分析目標市場，識別機會和挑戰。我們的AI驅動平台能夠處理海量數據，為您提供精準的市場洞察。"
       },
       {
-        "title": "深度洞察與產品定義",
-        "description": "透過UCselection™價值主張畫布，我們逆向工程競爭對手評論和用戶痛點，共同創造具有引人注目「X因子」的產品原型。",
-        "tool": "UCopps™"
+        "title": "策略制定",
+        "tool": "StrategyBuilder",
+        "description": "基於數據洞察制定個人化策略。結合行業最佳實務和您的業務特點，制定可執行的增長計劃。"
       },
       {
-        "title": "可行性與成長路徑",
-        "description": "利用UCforecast™銷售預測模型使用ML進行損益情境規劃，我們使用「品牌成長路徑矩陣」為您的業務規劃清晰的1到N旅程。",
-        "tool": "UCforecast™"
+        "title": "執行優化",
+        "tool": "ExecutionEngine",
+        "description": "實施策略並持續優化。透過即時監控和調整，確保策略執行效果最大化。"
       },
       {
-        "title": "平台成功與持續優化",
-        "description": "透過UCcopilot™ AI助手，我們持續優化您的平台營運、廣告和客戶體驗，確保您的品牌不僅成功發布，而且蓬勃發展。",
-        "tool": "UCcopilot™"
+        "title": "結果評估",
+        "tool": "ResultsAnalyzer",
+        "description": "全面評估專案成果。提供詳細的ROI分析和改進建議，為下一階段發展奠定基礎。"
       }
     ]
   },
   "brands": {
-    "title": "先進市場情報平台",
-    "novochoiceTitle": "Novochoice",
-    "description": "Novochoice是UCYX的先進市場情報平台，結合人工智慧、大數據分析和即時監控，為全球電商機會提供全面洞察。",
-    "cta": "了解更多關於Novochoice"
-  },
-  "form": {
-    "title": "開始您的成長之旅",
-    "subtitle": "留下您的資訊，我們的專家將在24小時內聯繫您，討論您品牌的潛力。",
-    "name": "姓名",
-    "email": "電子郵件",
-    "message": "您的需求",
-    "submit": "提交",
-    "namePlaceholder": "您的姓名",
-    "emailPlaceholder": "your@email.com",
-    "messagePlaceholder": "告訴我們您的業務目標..."
+    "title": "NovoChoice 平台",
+    "description": "我們的AI驅動平台，為電商決策提供智能支援",
+    "cta": "了解平台",
+    "novochoiceTitle": "NovoChoice"
   },
   "contact": {
-    "title": "與我們共創未來",
-    "subtitle": "我們期待與有遠見的品牌、投資者和合作夥伴建立聯繫。如果我們的理念與您產生共鳴，請隨時聯繫我們。",
-    "email": "partnership@ucyx.com",
-    "address": "UCYX Ltd.<br>Shop S068, 2/F, Capital Building, 61-65 Chatham Road South, Tsim Sha Tsui, Hong Kong",
-    "readyTitle": "準備實現非凡成長？",
-    "readySubtitle": "加入數百個透過我們的方法論轉變業務的品牌。",
-    "submitting": "提交中...",
-    "successMessage": "謝謝！我們將在24小時內聯繫您。",
-    "errorMessage": "抱歉，出現錯誤。請重試。"
+    "readyTitle": "準備開始了嗎？",
+    "readySubtitle": "聯繫我們，了解如何透過AI驅動的解決方案提升您的電商業務"
+  },
+  "form": {
+    "name": "姓名",
+    "namePlaceholder": "請輸入您的姓名",
+    "email": "信箱",
+    "emailPlaceholder": "請輸入您的信箱",
+    "message": "留言",
+    "messagePlaceholder": "請描述您的需求...",
+    "submit": "發送訊息"
   },
   "footer": {
     "company": "公司",
+    "resources": "資源",
     "about": "關於我們",
     "careers": "招聘",
-    "services": "服務",
-    "methodology": "方法論",
-    "cases": "案例研究",
-    "solutions": "解決方案",
-    "resources": "資源",
+    "contact": "聯繫我們",
     "blog": "部落格",
-    "webinars": "網路研討會",
-    "legal": "法律",
+    "caseStudies": "案例研究",
+    "whitepapers": "白皮書",
     "privacy": "隱私政策",
-    "terms": "服務條款",
-    "rights": "版權所有。"
-  },
-  "aria": {
-    "openMenu": "打開導航選單",
-    "closeMenu": "關閉導航選單"
-  },
-  "megaMenu": {
-    "start": "開始",
-    "choice": "選擇", 
-    "sell": "銷售",
-    "manage": "管理",
-    "sellToChina": "銷售到中國",
-    "sellToWorld": "銷售到全球",
-    "reachConsumers": "觸達10億消費者",
-    "globalExpansion": "全球市場擴張",
-    "novochoice": "Novochoice",
-    "aiPoweredIntelligence": "AI驅動的市場情報",
-    "customizedSelection": "UCselection服務",
-    "tailoredRecommendations": "客製化產品推薦",
-    "sellerCopilot": "UCcopilot服務",
-    "aiDrivenOptimization": "AI驅動的銷售優化",
-    "marketingMix": "UC-MMM",
-    "maximizeROI": "最大化行銷ROI",
-    "manageCustomer": "管理您的客戶",
-    "buildRelationships": "建立持久關係",
-    "startConsultation": "開始免費諮詢",
-    "visitBlog": "造訪我們的部落格",
-    "learnMethodology": "了解更多方法論"
+    "terms": "服務條款"
   },
   "footerExtra": {
-    "sellToChina": "銷售到中國",
-    "sellToWorld": "銷售到全球",
-    "sellerCopilot": "賣家助手服務",
-    "marketingMix": "行銷組合優化",
-    "manageCustomer": "管理您的客戶",
-    "aboutUCYX": "關於UCYX",
-    "partners": "合作夥伴",
-    "novochoicePlatform": "Novochoice平台",
-    "helpCenter": "幫助中心",
-    "contactUs": "聯繫我們",
-    "copyright": "© 2025 UCYX Ltd. 版權所有。",
-    "support": "支援"
+    "copyright": "© 2024 UCYX. 保留所有權利。"
   },
-  "meta": {
-    "title": "UCYX - AI驅動的全球電商諮詢",
-    "description": "UCYX是一家面向未來、AI驅動的諮詢公司，透過數據驅動的方法論幫助全球品牌在跨境電商中實現指數級成長。",
-    "keywords": "電商, AI, 諮詢, 跨境, 全球擴張, 市場情報",
-    "author": "UCYX",
-    "ogTitle": "UCYX - AI驅動的全球電商諮詢",
-    "ogDescription": "我們透過數據驅動的洞察和經過驗證的方法論，幫助全球品牌在跨境電商中實現指數級成長。",
-    "twitterTitle": "UCYX - AI驅動的全球電商諮詢",
-    "twitterDescription": "我們透過數據驅動的洞察和經過驗證的方法論，幫助全球品牌在跨境電商中實現指數級成長。"
-  },
-  "blog": {
-    "title": "部落格 - UCYX",
-    "metaDescription": "全球電商的最新洞察和趨勢",
-    "latestInsights": "最新洞察",
-    "subtitle": "透過我們對電商趨勢、市場分析和成長策略的最新思考保持領先。",
-    "readMore": "閱讀更多"
+  "language": {
+    "current": "中文繁體",
+    "switch": "切換語言"
   }
 }

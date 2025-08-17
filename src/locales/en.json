@@ -258,5 +258,9 @@
     "latestInsights": "Latest Insights",
     "subtitle": "Stay ahead with our latest thoughts on e-commerce trends, market analysis, and growth strategies.",
     "readMore": "Read More"
+  },
+  "language": {
+    "current": "English",
+    "switch": "Switch Language"
   }
 }

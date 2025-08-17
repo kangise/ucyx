@@ -1,8 +1,7 @@
 import { createApp } from 'vue'
 import './assets/css/modern-style.css'
-
-// 直接导入英语翻译文件
-import enTranslations from './locales/en.json'
+import './assets/css/language-selector.css'
+import './assets/js/language.js'
 
 const UCYXApp = {
   template: `
@@ -476,6 +475,22 @@ const UCYXApp = {
                 <a href="#terms">{{ t.footer.terms }}</a>
               </div>
             </div>
+            <div class="language-selector">
+              <button class="language-toggle" @click="showLanguageMenu = !showLanguageMenu">
+                <span class="current-language-flag">{{ getCurrentLanguageFlag() }}</span>
+                <span class="current-language-name">{{ t.language.current }}</span>
+                <span class="language-arrow">{{ showLanguageMenu ? '▲' : '▼' }}</span>
+              </button>
+              <div class="language-menu" v-show="showLanguageMenu">
+                <div v-for="(lang, code) in supportedLanguages" :key="code" 
+                     class="language-option" 
+                     :class="{ active: currentLanguage === code }"
+                     @click="changeLanguage(code)">
+                  <span class="language-flag">{{ lang.flag }}</span>
+                  <span class="language-name">{{ lang.name }}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
@@ -484,8 +499,12 @@ const UCYXApp = {
   
   data() {
     return {
-      // 直接使用英语翻译
-      t: enTranslations,
+      // 多语言相关数据
+      t: {},
+      currentLanguage: 'en',
+      supportedLanguages: {},
+      showLanguageMenu: false,
+      
       // 现有数据保持不变
       showMegaMenu: false,
       keepMegaMenu: false,
@@ -500,9 +519,9 @@ const UCYXApp = {
         email: '',
         message: ''
       },
-      // 使用翻译数据
-      successCases: enTranslations.successStories.cases,
-      methodologySteps: enTranslations.methodology.steps
+      // 动态数据，将在语言加载后更新
+      successCases: [],
+      methodologySteps: []
     }
   },
 
@@ -518,6 +537,66 @@ const UCYXApp = {
   },
 
   methods: {
+    // 多语言相关方法
+    async changeLanguage(langCode) {
+      if (langCode === this.currentLanguage) {
+        this.showLanguageMenu = false;
+        return;
+      }
+
+      try {
+        const translations = await window.languageManager.setLanguage(langCode);
+        this.currentLanguage = langCode;
+        this.t = translations;
+        this.updateDynamicData();
+        this.showLanguageMenu = false;
+        
+        // 更新页面标题
+        document.title = translations.meta?.title || 'UCYX - AI-Driven Global E-commerce Consultancy';
+      } catch (error) {
+        console.error('Failed to change language:', error);
+      }
+    },
+
+    getCurrentLanguageFlag() {
+      return this.supportedLanguages[this.currentLanguage]?.flag || '🇺🇸';
+    },
+
+    updateDynamicData() {
+      // 更新动态数据
+      this.successCases = this.t.successStories?.cases || [];
+      this.methodologySteps = this.t.methodology?.steps || [];
+    },
+
+    async initializeLanguage() {
+      try {
+        // 获取支持的语言列表
+        this.supportedLanguages = window.languageManager.getSupportedLanguages();
+        
+        // 初始化语言（IP检测 + 浏览器检测）
+        const detectedLanguage = await window.languageManager.initLanguage();
+        this.currentLanguage = detectedLanguage;
+        this.t = window.languageManager.getCurrentTranslations();
+        
+        // 更新动态数据
+        this.updateDynamicData();
+        
+        // 监听语言变更事件
+        window.addEventListener('languageChanged', (event) => {
+          this.currentLanguage = event.detail.language;
+          this.t = event.detail.translations;
+          this.updateDynamicData();
+        });
+        
+        console.log(`Language initialized: ${detectedLanguage}`);
+      } catch (error) {
+        console.error('Failed to initialize language:', error);
+        // 如果初始化失败，使用默认英语
+        this.currentLanguage = 'en';
+        this.t = {};
+      }
+    },
+
     // 现有方法
     clearMegaMenu() {
       setTimeout(() => {
@@ -597,6 +676,9 @@ const UCYXApp = {
 
   mounted() {
     console.log('UCYX App initialized!')
+    
+    // 初始化多语言
+    this.initializeLanguage()
     
     setTimeout(() => {
       const loading = document.getElementById('loading')
