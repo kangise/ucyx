@@ -11,9 +11,15 @@ export default defineConfig({
       }
     }
   })],
+  base: '/', // 确保使用根路径
   build: {
     outDir: 'dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   },
   resolve: {
     alias: {
