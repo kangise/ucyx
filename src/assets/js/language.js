@@ -65,35 +65,61 @@ class LanguageManager {
           "card2": { "title": "Startups with Great Ideas", "description": "You have created an outstanding ideas but lack the approach to turn into product and brand." },
           "card3": { "title": "Traditional Manufacture", "description": "You have a great product but lack the go-to-market strategy and brand marketing experience for platforms like Amazon or Shopify." }
         },
-        "successStories": {
-          "title": "Our Success Stories",
-          "subtitle": "We don't just deliver strategies, we deliver measurable results.",
-          "cases": [
-            { "brand": "North American Skincare Brand", "title": "Entering the Asian Market from Scratch", "description": "Using the Novochoice™ data platform, we identified a high-potential niche market on China e-commerce platforms and with UCselection™ service, we helped defining a value proposition tailored to Asian consumer preferences, exceeding sales forecasts by 300% in the first month.", "metric": "+300%", "metricLabel": "First-Month Sales Target" },
-            { "brand": "European Smart Home Brand", "title": "Reshaping User Loyalty with Review Insights", "description": "We analyze 5k customer reviews amongst the top 10 hot selling items, and uncovered core produce improvement opportunities and optimized selling material which increased the repeat purchase rate by 50% within six months.", "metric": "+50%", "metricLabel": "Repeat Purchase Rate" },
-            { "brand": "China-based Network Storage Brand", "title": "Amazon New Product Launch Optimization", "description": "Leveraging UCcopilot™ for intelligent ad campaign optimization, we increased the click-through conversion rate for their new product on Amazon US by 75% and reduced ACoS by 40%, without increasing the ad budget.", "metric": "-40%", "metricLabel": "Advertising Cost of Sales (ACoS)" },
-            { "brand": "Japanese Designer Stationery Brand", "title": "Shopify DTC Sales Forecasting", "description": "With the UCforecast™ model, we provided an accurate sales forecast for their new product line targeting the North American market. This helped optimize their inventory strategy, achieving a 95% sell-through rate for the initial stock.", "metric": "95%", "metricLabel": "Initial Stock Sell-Through Rate" }
-          ]
-        },
-        "methodology": {
-          "title": "The UCYX Value Growth Methodology™",
-          "subtitle": "We don't offer scattered advice. We deliver a systematic, verifiable blueprint for success.",
-          "usingProprietaryModel": "Using our proprietary",
-          "model": "model",
-          "steps": [
-            { "title": "Market Scanning & Opportunity Unlocking", "description": "Using our proprietary Novochoice Opportunity Quadrant Model, combined with AI data analysis, we quickly identify high-potential \"value basins\" from hundreds of niche markets for you.", "tool": "Novochoice™" },
-            { "title": "Deep Insight & Product Definition", "description": "Through the UCselection™ Value Proposition Canvas, we reverse-engineer competitor reviews and user pain points to co-create a product prototype with a compelling \"X-factor\".", "tool": "UCopps™" },
-            { "title": "Viability & Growth Path", "description": "Leveraging the UCforecast™ sales prediction model using ML for P&L scenario planning, we use the \"Brand Growth Path Matrix\" to map out a clear 1-to-N journey for your business.", "tool": "UCforecast™" },
-            { "title": "Platform Success & Continuous Optimization", "description": "With the UCcopilot™ AI assistant, we continuously optimize your platform operations, advertising, and customer experience to ensure your brand not only launches successfully but thrives.", "tool": "UCcopilot™" }
-          ]
-        },
-        "brands": { "title": "Advanced Market Intelligence Platform", "novochoiceTitle": "Novochoice", "description": "Novochoice is UCYX's advanced market intelligence platform that combines artificial intelligence, big data analytics, and real-time monitoring to provide comprehensive insights into e-commerce opportunities worldwide.", "cta": "Learn More About Novochoice" },
-        "contact": { "readyTitle": "Ready to achieve extraordinary growth?", "readySubtitle": "Join hundreds of brands that have transformed their business with our methodology.", "submitting": "Submitting..." },
-        "form": { "name": "Name", "email": "Email", "message": "Your Needs", "submit": "Submit", "namePlaceholder": "Your Name", "emailPlaceholder": "your@email.com", "messagePlaceholder": "Tell us about your business goals..." },
-        "footer": { "company": "Company", "resources": "Resources", "about": "About Us", "careers": "Careers", "blog": "Blog", "cases": "Case Studies", "webinars": "Webinars", "privacy": "Privacy Policy", "terms": "Terms of Service" },
+        "successStories": { "title": "Our Success Stories", "subtitle": "We don't just deliver strategies, we deliver measurable results." },
+        "methodology": { "title": "The UCYX Value Growth Methodology™", "subtitle": "We don't offer scattered advice. We deliver a systematic, verifiable blueprint for success.", "usingProprietaryModel": "Using our proprietary", "model": "model" },
+        "brands": { "title": "Advanced Market Intelligence Platform", "description": "Novochoice is UCYX's advanced market intelligence platform that combines artificial intelligence, big data analytics, and real-time monitoring to provide comprehensive insights into e-commerce opportunities worldwide.", "cta": "Learn More About Novochoice", "novochoiceTitle": "Novochoice" },
+        "contact": { "readyTitle": "Ready to achieve extraordinary growth?", "readySubtitle": "Join hundreds of brands that have transformed their business with our methodology.", "submitting": "Submitting...", "successMessage": "Thank you! We will contact you within 24 hours.", "errorMessage": "Sorry, there was an error. Please try again." },
+        "form": { "name": "Name", "namePlaceholder": "Your Name", "email": "Email", "emailPlaceholder": "your@email.com", "message": "Your Needs", "messagePlaceholder": "Tell us about your business goals...", "submit": "Submit" },
+        "footer": { "company": "Company", "resources": "Resources", "about": "About Us", "careers": "Careers", "contact": "Contact", "blog": "Blog", "cases": "Case Studies", "webinars": "Webinars", "privacy": "Privacy Policy", "terms": "Terms of Service" },
         "footerExtra": { "sellToChina": "Sell to China", "sellToWorld": "Sell to The World", "sellerCopilot": "UCcopilot Services", "marketingMix": "UC-MMM", "manageCustomer": "Manage your Customer", "aboutUCYX": "About UCYX", "partners": "Partners", "novochoicePlatform": "Novochoice Platform", "helpCenter": "Help Center", "contactUs": "Contact Us", "copyright": "© 2025 UCYX Ltd. All rights reserved.", "support": "Support" },
-        "megaMenu": { "start": "Start", "choice": "Choice", "sell": "Sell", "manage": "Manage", "sellToChina": "Sell to China", "sellToWorld": "Sell to The World", "reachConsumers": "Reach 1 billion consumers", "globalExpansion": "Global market expansion", "novochoice": "Novochoice", "aiPoweredIntelligence": "AI-powered market intelligence", "customizedSelection": "UCselection Service", "tailoredRecommendations": "Tailored product recommendations", "sellerCopilot": "UCcopilot Services", "aiDrivenOptimization": "AI-driven sales optimization", "marketingMix": "UC-MMM", "maximizeROI": "Maximize marketing ROI", "manageCustomer": "Manage your Customer", "buildRelationships": "Build lasting relationships", "startConsultation": "Start Free Consultation", "visitBlog": "Visit Our Blog", "learnMethodology": "Learn More About Methodology" },
+        "megaMenu": { "novochoice": "Novochoice", "start": "Start", "choice": "Choice", "sell": "Sell", "manage": "Manage", "sellToChina": "Sell to China", "sellToWorld": "Sell to The World", "reachConsumers": "Reach 1 billion consumers", "globalExpansion": "Global market expansion", "aiPoweredIntelligence": "AI-powered market intelligence", "customizedSelection": "UCselection Service", "tailoredRecommendations": "Tailored product recommendations", "sellerCopilot": "UCcopilot Services", "aiDrivenOptimization": "AI-driven sales optimization", "marketingMix": "UC-MMM", "maximizeROI": "Maximize marketing ROI", "manageCustomer": "Manage your Customer", "buildRelationships": "Build lasting relationships", "startConsultation": "Start Free Consultation", "visitBlog": "Visit Our Blog", "learnMethodology": "Learn More About Methodology" },
         "language": { "current": "English", "switch": "Switch Language" }
+      },
+      'zh-cn': {
+        "nav": {
+          "services": "服务",
+          "whoWeServe": "我们服务谁",
+          "successStories": "成功故事",
+          "methodology": "方法论",
+          "login": "登录"
+        },
+        "hero": {
+          "titleLine1": "你看到你的",
+          "titleLine2": "非凡。",
+          "subtitle": "UCYX是一家面向未来的、AI驱动的咨询公司，致力于帮助品牌在复杂的跨境电子商务市场中发现独特的\"X-非凡\"。",
+          "cta": "开始你的增长之旅",
+          "learnMore": "发现我们的方法论"
+        },
+        "dataPower": {
+          "stat1": { "number": "300", "suffix": "+", "label": "监控的核心电子商务类别" },
+          "stat2": { "number": "5", "suffix": "M+", "label": "跟踪的活跃产品" },
+          "stat3": { "number": "10", "suffix": "M+", "label": "分析的行业关键词" },
+          "stat4": { "number": "50", "suffix": "M+", "label": "处理的消费者评论" }
+        },
+        "services": {
+          "title": "实现非凡增长所需的一切",
+          "subtitle": "我们全面的AI驱动方法论涵盖你的电子商务旅程的每个方面。",
+          "feature1": { "title": "Novochoice", "description": "通过Novochoice™机会象限发现高潜力利基市场，由大规模数据集的AI分析提供支持。", "tag1": "Novochoice™", "tag2": "AI分析" },
+          "feature2": { "title": "品牌智能", "description": "通过UCselection™价值主张画布，共同创造一个具有引人注目的\"X因子\"的产品原型。", "tag1": "UCselection™", "tag2": "品牌策略" },
+          "feature3": { "title": "发布致胜", "description": "通过集成营销解决方案在全球平台上执行成功的发布。", "tag1": "UCforecast™", "tag2": "增长路径" },
+          "feature4": { "title": "持久成功", "description": "通过我们的UCcopilot™ AI驱动优化系统实现持续增长。", "tag1": "UCcopilot™", "tag2": "AI优化" }
+        },
+        "whoWeServe": {
+          "title": "我们服务谁",
+          "subtitle": "我们与全球市场先锋合作，无论你是寻求扩张的成熟品牌还是拥有优秀产品的初创公司。",
+          "card1": { "title": "成熟品牌", "description": "你拥有成功的产品和稳定的业务，但渴望进入新市场以找到你的下一个增长曲线。" },
+          "card2": { "title": "有好想法的初创公司", "description": "你创造了出色的想法，但缺乏将其转化为产品和品牌的方法。" },
+          "card3": { "title": "传统制造商", "description": "你拥有优秀的产品，但缺乏在Amazon或Shopify等平台上的市场进入策略和品牌营销经验。" }
+        },
+        "successStories": { "title": "我们的成功故事", "subtitle": "我们不仅提供策略，我们提供可衡量的结果。" },
+        "methodology": { "title": "UCYX价值增长方法论™", "subtitle": "我们不提供零散的建议。我们提供系统性的、可验证的成功蓝图。", "usingProprietaryModel": "使用我们专有的", "model": "模型" },
+        "brands": { "title": "先进市场情报平台", "description": "Novochoice是UCYX的先进市场情报平台，结合人工智能、大数据分析和实时监控，为全球电子商务机会提供全面洞察。", "cta": "了解更多关于Novochoice", "novochoiceTitle": "Novochoice" },
+        "contact": { "readyTitle": "准备实现非凡增长？", "readySubtitle": "加入数百个通过我们的方法论转变业务的品牌。", "submitting": "提交中...", "successMessage": "谢谢！我们将在24小时内联系你。", "errorMessage": "抱歉，出现了错误。请重试。" },
+        "form": { "name": "姓名", "namePlaceholder": "你的姓名", "email": "邮箱", "emailPlaceholder": "your@email.com", "message": "你的需求", "messagePlaceholder": "告诉我们你的业务目标...", "submit": "提交" },
+        "footer": { "company": "公司", "resources": "资源", "about": "关于我们", "careers": "招聘", "contact": "联系", "blog": "博客", "cases": "案例研究", "webinars": "网络研讨会", "privacy": "隐私政策", "terms": "服务条款" },
+        "footerExtra": { "sellToChina": "销往中国", "sellToWorld": "销往世界", "sellerCopilot": "UCcopilot服务", "marketingMix": "UC-MMM", "manageCustomer": "管理你的客户", "aboutUCYX": "关于UCYX", "partners": "合作伙伴", "novochoicePlatform": "Novochoice平台", "helpCenter": "帮助中心", "contactUs": "联系我们", "copyright": "© 2025 UCYX Ltd. 保留所有权利。", "support": "支持" },
+        "megaMenu": { "novochoice": "Novochoice", "start": "开始", "choice": "选择", "sell": "销售", "manage": "管理", "sellToChina": "销往中国", "sellToWorld": "销往世界", "reachConsumers": "触达10亿消费者", "globalExpansion": "全球市场扩张", "aiPoweredIntelligence": "AI驱动的市场情报", "customizedSelection": "UCselection服务", "tailoredRecommendations": "定制产品推荐", "sellerCopilot": "UCcopilot服务", "aiDrivenOptimization": "AI驱动的销售优化", "marketingMix": "UC-MMM", "maximizeROI": "最大化营销投资回报率", "manageCustomer": "管理你的客户", "buildRelationships": "建立持久关系", "startConsultation": "开始免费咨询", "visitBlog": "访问我们的博客", "learnMethodology": "了解更多关于方法论" },
+        "language": { "current": "中文简体", "switch": "切换语言" }
       }
     };
   }
