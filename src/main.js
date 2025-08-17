@@ -684,11 +684,7 @@ const UCYXApp = {
         
         // 更新Vue应用的状态
         this.currentLanguage = langCode;
-        const newTranslations = window.languageManager.getCurrentTranslations();
-        
-        // 清空现有翻译并重新赋值，确保响应式更新
-        Object.keys(this.t).forEach(key => delete this.t[key]);
-        Object.assign(this.t, newTranslations);
+        this.t = window.languageManager.getCurrentTranslations();
         
         // 更新动态数据
         this.updateDynamicData();
@@ -701,8 +697,6 @@ const UCYXApp = {
         
         // 更新页面标题
         document.title = this.t.meta?.title || 'UCYX - AI-Driven Global E-commerce Consultancy';
-        
-        console.log('Language changed successfully to:', langCode, this.t);
       } catch (error) {
         console.error('Failed to change language:', error);
       }
@@ -734,18 +728,14 @@ const UCYXApp = {
         // 确保获取到翻译对象
         const translations = window.languageManager.getCurrentTranslations();
         if (translations && Object.keys(translations).length > 0) {
-          // 使用Object.assign确保响应式更新
-          Object.assign(this.t, translations);
+          this.t = translations;
         } else {
           // 如果没有翻译对象，手动加载
           const loadedTranslations = await window.languageManager.loadTranslations(detectedLanguage);
-          Object.assign(this.t, loadedTranslations);
+          this.t = loadedTranslations;
         }
         
         console.log('Final translations loaded:', this.t);
-        
-        // 强制Vue重新渲染
-        this.$forceUpdate();
         
         // 更新动态数据
         this.updateDynamicData();
@@ -753,11 +743,8 @@ const UCYXApp = {
         // 监听语言变更事件
         window.addEventListener('languageChanged', (event) => {
           this.currentLanguage = event.detail.language;
-          // 清空现有翻译并重新赋值
-          Object.keys(this.t).forEach(key => delete this.t[key]);
-          Object.assign(this.t, event.detail.translations);
+          this.t = event.detail.translations;
           this.updateDynamicData();
-          this.$forceUpdate();
           console.log('Language changed to:', event.detail.language, event.detail.translations);
         });
         
@@ -766,10 +753,8 @@ const UCYXApp = {
         console.error('Failed to initialize language:', error);
         // 如果初始化失败，使用默认英语和后备翻译
         this.currentLanguage = 'en';
-        const fallbackTranslations = window.languageManager.getFallbackTranslations();
-        Object.assign(this.t, fallbackTranslations);
+        this.t = window.languageManager.getFallbackTranslations();
         this.updateDynamicData();
-        this.$forceUpdate();
       }
     },
 
