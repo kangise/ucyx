@@ -51,7 +51,7 @@ const UCYXApp = {
               <!-- Start Module -->
               <div class="modern-mega-card">
                 <div class="mega-icon-full">
-                  <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" stroke-width="2">
+                  <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" strokeWidth="2">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
                 </div>
@@ -72,7 +72,7 @@ const UCYXApp = {
               <!-- Choice Module -->
               <div class="modern-mega-card">
                 <div class="mega-icon-full">
-                  <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" stroke-width="2">
+                  <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" strokeWidth="2">
                     <circle cx="11" cy="11" r="8"/>
                     <path d="21 21l-4.35-4.35"/>
                     <circle cx="11" cy="11" r="3"/>
@@ -95,7 +95,7 @@ const UCYXApp = {
               <!-- Sell Module -->
               <div class="modern-mega-card">
                 <div class="mega-icon-full">
-                  <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" stroke-width="2">
+                  <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" strokeWidth="2">
                     <path d="M3 3v18h18"/>
                     <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
                   </svg>
@@ -117,7 +117,7 @@ const UCYXApp = {
               <!-- Manage Module -->
               <div class="modern-mega-card">
                 <div class="mega-icon-full">
-                  <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" stroke-width="2">
+                  <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" strokeWidth="2">
                     <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h4a2 2 0 0 1 2 2v1.28c.6.35 1 .98 1 1.72 0 .74-.4 1.38-1 1.72V15a2 2 0 0 1-2 2h-4v1.27c.6.35 1 .98 1 1.73a2 2 0 1 1-4 0c0-.75.4-1.38 1-1.73V17H7a2 2 0 0 1-2-2v-1.28c-.6-.35-1-.98-1-1.72 0-.74.4-1.37 1-1.72V9a2 2 0 0 1 2-2h4V5.73c-.6-.35-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
                   </svg>
                 </div>
@@ -224,7 +224,7 @@ const UCYXApp = {
             <div class="solutions-grid-large">
               <div class="solution-feature-card-large">
                 <div class="feature-icon-large">
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="11" cy="11" r="8"/>
                     <path d="21 21l-4.35-4.35"/>
                     <circle cx="11" cy="11" r="3"/>
@@ -239,7 +239,7 @@ const UCYXApp = {
               </div>
               <div class="solution-feature-card-large">
                 <div class="feature-icon-large">
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     <circle cx="12" cy="12" r="3"/>
                   </svg>
@@ -253,7 +253,7 @@ const UCYXApp = {
               </div>
               <div class="solution-feature-card-large">
                 <div class="feature-icon-large">
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M3 3v18h18"/>
                     <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
                   </svg>
@@ -267,7 +267,7 @@ const UCYXApp = {
               </div>
               <div class="solution-feature-card-large">
                 <div class="feature-icon-large">
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h4a2 2 0 0 1 2 2v1.28c.6.35 1 .98 1 1.72 0 .74-.4 1.38-1 1.72V15a2 2 0 0 1-2 2h-4v1.27c.6.35 1 .98 1 1.73a2 2 0 1 1-4 0c0-.75.4-1.38 1-1.73V17H7a2 2 0 0 1-2-2v-1.28c-.6-.35-1-.98-1-1.72 0-.74.4-1.37 1-1.72V9a2 2 0 0 1 2-2h4V5.73c-.6-.35-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
                   </svg>
                 </div>
