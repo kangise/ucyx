@@ -169,26 +169,25 @@ class LanguageManager {
     }
 
     try {
-      // 使用fetch加载翻译文件
-      let response;
+      // 动态导入翻译文件
+      let translations;
       
       if (lang === 'en') {
-        response = await fetch('/locales/en.json');
+        const module = await import('../../locales/en.json');
+        translations = module.default;
       } else if (lang === 'zh-cn') {
-        response = await fetch('/locales/zh-cn.json');
+        const module = await import('../../locales/zh-cn.json');
+        translations = module.default;
       } else if (lang === 'zh-tw') {
-        response = await fetch('/locales/zh-tw.json');
+        const module = await import('../../locales/zh-tw.json');
+        translations = module.default;
       } else if (lang === 'ja') {
-        response = await fetch('/locales/ja.json');
+        const module = await import('../../locales/ja.json');
+        translations = module.default;
       } else {
         throw new Error(`Unsupported language: ${lang}`);
       }
       
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      const translations = await response.json();
       this.translations[lang] = translations;
       return translations;
     } catch (error) {
