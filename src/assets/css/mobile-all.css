@@ -2,6 +2,26 @@
    MOBILE & RESPONSIVE STYLES - CONSOLIDATED
    ======================================== */
 
+/* 移动端基础重置 */
+@media (max-width: 768px) {
+  /* 确保移动端占满全屏 */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 移动端容器全宽 */
+  .container,
+  .section-container,
+  .nav-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 16px !important;
+  }
+}
+
 /* 桌面端确保移动端元素隐藏 */
 @media (min-width: 769px) {
   .mobile-menu-btn {
@@ -133,8 +153,8 @@
     color: var(--primary-color);
   }
 
-  /* 修复关闭按钮 - 只显示一个X */
-  .mobile-menu-close {
+  /* 修复关闭按钮 - 彻底解决重复X问题 */
+  .mobile-menu .mobile-menu-header .mobile-menu-close {
     width: 32px !important;
     height: 32px !important;
     background: none !important;
@@ -144,15 +164,22 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
-  /* 清除任何可能的子元素 */
-  .mobile-menu-close * {
+  /* 强制隐藏所有子元素和伪元素 */
+  .mobile-menu .mobile-menu-header .mobile-menu-close *,
+  .mobile-menu .mobile-menu-header .mobile-menu-close *::before,
+  .mobile-menu .mobile-menu-header .mobile-menu-close *::after {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
   }
 
-  .mobile-menu-close::before,
-  .mobile-menu-close::after {
+  /* 只显示我们定义的伪元素 */
+  .mobile-menu .mobile-menu-header .mobile-menu-close::before,
+  .mobile-menu .mobile-menu-header .mobile-menu-close::after {
     content: '' !important;
     position: absolute !important;
     width: 20px !important;
@@ -160,13 +187,16 @@
     background-color: var(--text-primary) !important;
     top: 50% !important;
     left: 50% !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
-  .mobile-menu-close::before {
+  .mobile-menu .mobile-menu-header .mobile-menu-close::before {
     transform: translate(-50%, -50%) rotate(45deg) !important;
   }
 
-  .mobile-menu-close::after {
+  .mobile-menu .mobile-menu-header .mobile-menu-close::after {
     transform: translate(-50%, -50%) rotate(-45deg) !important;
   }
 
@@ -537,9 +567,29 @@
     border: 1px solid var(--border-color) !important;
   }
 
-  /* 11. 通用容器和间距 */
+  /* 11. 通用容器和间距 - 确保全宽 */
   .section-container {
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 0 16px !important;
+    margin: 0 !important;
+  }
+
+  /* 特殊容器全宽处理 */
+  .hero-container,
+  .trust-container,
+  .methodology-content,
+  .platform-showcase,
+  .footer-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* 确保所有section占满宽度 */
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .section-header {
