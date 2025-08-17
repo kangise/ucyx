@@ -153,26 +153,6 @@ const UCYXApp = {
         </div>
       </div>
 
-      <!-- Mega Menu Extension Block - Independent Container -->
-      <div class="mega-menu-extension" 
-           v-show="showMegaMenu" 
-           @mouseenter="keepMegaMenu = true"
-           @mouseleave="hideMegaMenu">
-        <div class="mega-extension-content">
-          <a href="#contact" class="mega-footer-item">
-            <span>{{ t.megaMenu.startConsultation }}</span>
-          </a>
-          <div class="mega-footer-divider"></div>
-          <a href="#blog" class="mega-footer-item">
-            <span>{{ t.megaMenu.visitBlog }}</span>
-          </a>
-          <div class="mega-footer-divider"></div>
-          <a href="#methodology" class="mega-footer-item">
-            <span>{{ t.megaMenu.learnMethodology }}</span>
-          </a>
-        </div>
-      </div>
-
       <main>
         <!-- Full-screen Hero Section with Background -->
         <section id="hero" class="hero-section-fullscreen">
@@ -340,12 +320,11 @@ const UCYXApp = {
                 <button class="slider-btn-wide next" @click="nextStory">›</button>
               </div>
             </div>
-              <div class="slider-dots">
-                <div v-for="(slide, index) in storySlides" :key="index"
-                     class="slider-dot" 
-                     :class="{ active: index === currentStoryIndex }"
-                     @click="currentStoryIndex = index">
-                </div>
+            <div class="slider-dots">
+              <div v-for="(slide, index) in storySlides" :key="index"
+                   class="slider-dot" 
+                   :class="{ active: index === currentStoryIndex }"
+                   @click="currentStoryIndex = index">
               </div>
             </div>
           </div>
