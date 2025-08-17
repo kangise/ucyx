@@ -27,7 +27,9 @@ export default defineConfig({
       '@components': resolve(__dirname, 'src/components'),
       '@assets': resolve(__dirname, 'src/assets'),
       '@layouts': resolve(__dirname, 'src/layouts'),
-      '@locales': resolve(__dirname, 'src/locales')
+      '@locales': resolve(__dirname, 'src/locales'),
+      // 关键：添加 Vue 运行时编译支持
+      'vue': 'vue/dist/vue.esm-bundler.js'
     }
   },
   server: {
@@ -38,6 +40,6 @@ export default defineConfig({
   define: {
     __VUE_OPTIONS_API__: true,
     __VUE_PROD_DEVTOOLS__: false,
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
   }
 })
