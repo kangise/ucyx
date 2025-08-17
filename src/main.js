@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
 import './assets/css/modern-style.css'
 import './assets/css/language-selector.css'
+import './assets/css/mobile-navigation.css'
+import './assets/css/mobile-carousel.css'
+import './assets/css/mobile-responsive.css'
 import './assets/js/language.js'
 
 const UCYXApp = {
@@ -11,6 +14,7 @@ const UCYXApp = {
         <div class="nav-container">
           <a href="#home" class="logo">UCYX</a>
           
+          <!-- Desktop Navigation -->
           <nav class="main-nav">
             <div class="nav-item dropdown">
               <a href="#" class="nav-link" @mouseenter="showMegaMenu = true" @mouseleave="clearMegaMenu">{{ t.nav.services }}</a>
@@ -21,11 +25,72 @@ const UCYXApp = {
             <a href="/novochoice" class="nav-link">{{ t.megaMenu.novochoice }}</a>
           </nav>
           
+          <!-- Desktop Actions -->
           <div class="nav-actions">
             <a href="#login" class="login-link">{{ t.nav.login }}</a>
             <a href="#contact" class="cta-button">{{ t.hero.cta }}</a>
           </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" @click="toggleMobileMenu" :class="{ active: showMobileMenu }">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
         </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" v-show="showMobileMenu" @click="closeMobileMenu"></div>
+        
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu" :class="{ active: showMobileMenu }">
+          <div class="mobile-menu-header">
+            <div class="mobile-logo">UCYX</div>
+            <button class="mobile-menu-close" @click="closeMobileMenu">×</button>
+          </div>
+          
+          <div class="mobile-menu-content">
+            <!-- Services Accordion -->
+            <div class="mobile-menu-item">
+              <button class="mobile-menu-link accordion-trigger" @click="toggleMobileServices">
+                <span>{{ t.nav.services }}</span>
+                <span class="accordion-arrow" :class="{ active: showMobileServices }">▼</span>
+              </button>
+              <div class="mobile-submenu" :class="{ active: showMobileServices }">
+                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ t.megaMenu.start }}</a>
+                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ t.megaMenu.choice }}</a>
+                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ t.megaMenu.sell }}</a>
+                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ t.megaMenu.manage }}</a>
+              </div>
+            </div>
+            
+            <div class="mobile-menu-item">
+              <a href="#who-we-serve" class="mobile-menu-link" @click="closeMobileMenu">{{ t.nav.whoWeServe }}</a>
+            </div>
+            
+            <div class="mobile-menu-item">
+              <a href="#success-stories" class="mobile-menu-link" @click="closeMobileMenu">{{ t.nav.successStories }}</a>
+            </div>
+            
+            <div class="mobile-menu-item">
+              <a href="#methodology" class="mobile-menu-link" @click="closeMobileMenu">{{ t.nav.methodology }}</a>
+            </div>
+            
+            <div class="mobile-menu-item">
+              <a href="/novochoice" class="mobile-menu-link" @click="closeMobileMenu">{{ t.megaMenu.novochoice }}</a>
+            </div>
+            
+            <div class="mobile-menu-divider"></div>
+            
+            <div class="mobile-menu-item">
+              <a href="#login" class="mobile-menu-link" @click="closeMobileMenu">{{ t.nav.login }}</a>
+            </div>
+            
+            <div class="mobile-menu-item">
+              <a href="#contact" class="mobile-menu-cta" @click="closeMobileMenu">{{ t.hero.cta }}</a>
+            </div>
+          </div>
+        </nav>
       </header>
 
       <!-- Modern Solutions Mega Menu -->
@@ -295,7 +360,10 @@ const UCYXApp = {
             <!-- First layer: outer positioning container -->
             <div class="stories-slider-dual-wide">
               <!-- Second layer: content display container -->
-              <div class="story-content-container">
+              <div class="story-content-container" 
+                   @touchstart="handleTouchStart"
+                   @touchmove="handleTouchMove" 
+                   @touchend="handleTouchEnd">
                 <!-- Third layer: content track -->
                 <div class="story-track-dual" :style="{ transform: 'translateX(' + (-currentStoryIndex * 100) + '%)' }">
                   <div class="story-slide-dual" v-for="(slide, slideIndex) in storySlides" :key="slideIndex">
@@ -499,8 +567,23 @@ const UCYXApp = {
   
   data() {
     return {
-      // 多语言相关数据
-      t: {},
+      // 多语言相关数据 - 提供默认值避免渲染错误
+      t: {
+        nav: { services: '', whoWeServe: '', successStories: '', methodology: '', login: '' },
+        hero: { titleLine1: '', titleLine2: '', subtitle: '', cta: '', learnMore: '' },
+        megaMenu: {},
+        dataPower: { stat1: {}, stat2: {}, stat3: {}, stat4: {} },
+        services: { title: '', subtitle: '', feature1: {}, feature2: {}, feature3: {}, feature4: {} },
+        whoWeServe: { title: '', subtitle: '', card1: {}, card2: {}, card3: {} },
+        successStories: { title: '', subtitle: '' },
+        methodology: { title: '', subtitle: '', usingProprietaryModel: '', model: '' },
+        brands: { title: '', description: '', cta: '', novochoiceTitle: '' },
+        contact: { readyTitle: '', readySubtitle: '' },
+        form: {},
+        footer: {},
+        footerExtra: { copyright: '' },
+        language: { current: '', switch: '' }
+      },
       currentLanguage: 'en',
       supportedLanguages: {},
       showLanguageMenu: false,
@@ -508,8 +591,19 @@ const UCYXApp = {
       // 现有数据保持不变
       showMegaMenu: false,
       keepMegaMenu: false,
+      
+      // 移动端菜单状态
+      showMobileMenu: false,
+      showMobileServices: false,
+      
       currentStoryIndex: 0,
       storyTimer: null,
+      
+      // 触摸滑动状态
+      touchStartX: null,
+      touchStartY: null,
+      isSwiping: false,
+      
       currentMethodologyTab: 0,
       methodologyProgress: 0,
       methodologyTimer: null,
@@ -597,6 +691,72 @@ const UCYXApp = {
       }
     },
 
+    // 移动端菜单控制方法
+    toggleMobileMenu() {
+      this.showMobileMenu = !this.showMobileMenu;
+      if (this.showMobileMenu) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+        this.showMobileServices = false;
+      }
+    },
+
+    closeMobileMenu() {
+      this.showMobileMenu = false;
+      this.showMobileServices = false;
+      document.body.style.overflow = '';
+    },
+
+    toggleMobileServices() {
+      this.showMobileServices = !this.showMobileServices;
+    },
+
+    // 触摸滑动相关方法
+    handleTouchStart(event) {
+      this.touchStartX = event.touches[0].clientX;
+      this.touchStartY = event.touches[0].clientY;
+      this.isSwiping = false;
+    },
+
+    handleTouchMove(event) {
+      if (!this.touchStartX || !this.touchStartY) return;
+      
+      const touchX = event.touches[0].clientX;
+      const touchY = event.touches[0].clientY;
+      const diffX = this.touchStartX - touchX;
+      const diffY = this.touchStartY - touchY;
+      
+      // 判断是否为水平滑动
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+        this.isSwiping = true;
+        event.preventDefault(); // 防止页面滚动
+      }
+    },
+
+    handleTouchEnd(event) {
+      if (!this.touchStartX || !this.isSwiping) return;
+      
+      const touchEndX = event.changedTouches[0].clientX;
+      const diffX = this.touchStartX - touchEndX;
+      const threshold = 50; // 滑动阈值
+      
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) {
+          // 向左滑动，显示下一张
+          this.nextStory();
+        } else {
+          // 向右滑动，显示上一张
+          this.prevStory();
+        }
+      }
+      
+      // 重置触摸状态
+      this.touchStartX = null;
+      this.touchStartY = null;
+      this.isSwiping = false;
+    },
+
     // 现有方法
     clearMegaMenu() {
       setTimeout(() => {
@@ -679,6 +839,20 @@ const UCYXApp = {
     
     // 初始化多语言
     this.initializeLanguage()
+    
+    // 监听窗口大小变化，自动关闭移动端菜单
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && this.showMobileMenu) {
+        this.closeMobileMenu()
+      }
+    })
+    
+    // 监听ESC键关闭移动端菜单
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.showMobileMenu) {
+        this.closeMobileMenu()
+      }
+    })
     
     setTimeout(() => {
       const loading = document.getElementById('loading')

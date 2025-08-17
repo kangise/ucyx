@@ -96,7 +96,15 @@ class LanguageManager {
     }
 
     try {
-      const response = await fetch(`/src/locales/${lang}.json`);
+      // 在开发环境中使用正确的路径
+      const isDev = import.meta.env.DEV;
+      const basePath = isDev ? '/src/locales' : '/locales';
+      const response = await fetch(`${basePath}/${lang}.json`);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      
       const translations = await response.json();
       this.translations[lang] = translations;
       return translations;
@@ -106,7 +114,12 @@ class LanguageManager {
       if (lang !== 'en') {
         return await this.loadTranslations('en');
       }
-      return {};
+      // 如果英语也加载失败，返回空对象
+      return {
+        nav: { services: 'Services', whoWeServe: 'Who We Serve', successStories: 'Success Stories', methodology: 'Methodology', login: 'Login' },
+        hero: { titleLine1: 'AI-Driven', titleLine2: 'Global E-commerce Consultancy', subtitle: 'Helping brands achieve success in global e-commerce markets through artificial intelligence and data insights', cta: 'Start Consultation', learnMore: 'Learn More' },
+        language: { current: 'English', switch: 'Switch Language' }
+      };
     }
   }
 
