@@ -1231,96 +1231,11 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .hero-container,
-  .methodology-content,
-  .platform-showcase {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-  
-  .trust-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-  
-  .mega-menu {
-    min-width: 320px;
-  }
-  
-  .mega-menu-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* 移除移动端媒体查询 - 已在mobile-all.css中处理 */
 
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 0 16px;
-  }
-  
-  .main-nav {
-    display: none; /* Will implement mobile menu later */
-  }
-  
-  .hero-container {
-    padding: 0 16px;
-    text-align: center;
-  }
-  
-  .hero-title {
-    font-size: 36px;
-  }
-  
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .trust-stats {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .solutions-grid,
-  .serve-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-  
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-}
+/* 移除移动端媒体查询 - 已在mobile-all.css中处理 */
 
-@media (max-width: 480px) {
-  .section-container {
-    padding: 0 16px;
-  }
-  
-  .hero-section,
-  .solutions-section,
-  .serve-section,
-  .stories-section,
-  .methodology-section,
-  .platform-section,
-  .contact-section {
-    padding: 48px 0;
-  }
-  
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* 移除移动端媒体查询 - 已在mobile-all.css中处理 */
 /* Full-width Mega Menu - No gap, directly under navbar */
 .mega-menu-fullwidth {
   position: fixed;
@@ -1485,16 +1400,7 @@ body {
 }
 
 /* Mobile optimization */
-@media (max-width: 768px) {
-  .hero-title-line1 {
-    font-size: clamp(36px, 8vw, 60px);
-  }
-  
-  .hero-title-line2 {
-    font-size: clamp(43px, 9.6vw, 72px);
-    margin-left: clamp(20px, 5vw, 40px);
-  }
-}
+/* 移除移动端媒体查询 - 已在mobile-all.css中处理 */
 
 .hero-title-large {
   font-size: clamp(60px, 10.5vw, 120px);
@@ -1714,35 +1620,7 @@ body {
   transform: none;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-actions-center {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .btn-primary-large, .btn-secondary-large {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .form-row-wide {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .contact-form-container-wide {
-    padding: 40px 24px;
-  }
-  
-  .slider-btn-wide.prev {
-    left: -24px;
-  }
-  
-  .slider-btn-wide.next {
-    right: -24px;
-  }
-}
+/* 移除移动端媒体查询 - 已在mobile-all.css中处理 */
 /* Methodology Section Headers */
 .methodology-section .section-header h2 {
   color: white;
@@ -2045,21 +1923,5 @@ body {
   background: var(--primary-hover-color);
 }
 
-/* 移动端适配 */
-@media (max-width: 768px) {
-  .nav-actions .language-switcher {
-    margin-right: 8px;
-  }
-  
-  .nav-actions .language-switcher .current-lang {
-    min-width: 100px;
-    padding: 6px 10px;
-    font-size: 13px;
-  }
-  
-  .nav-actions .language-switcher .language-menu {
-    min-width: 140px;
-    right: -10px;
-  }
-}
+/* 移除移动端媒体查询 - 已在mobile-all.css中处理 */
 
