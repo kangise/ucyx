@@ -164,13 +164,18 @@ class LanguageManager {
 
   // 加载翻译文件
   async loadTranslations(lang) {
+    console.log(`Loading translations for: ${lang}`);
+    
     if (this.translations[lang]) {
+      console.log(`Translations for ${lang} already cached`);
       return this.translations[lang];
     }
 
     try {
       // 动态导入翻译文件
       let translations;
+      
+      console.log(`Attempting to import translations for: ${lang}`);
       
       if (lang === 'en') {
         const module = await import('../../locales/en.json');
@@ -188,15 +193,18 @@ class LanguageManager {
         throw new Error(`Unsupported language: ${lang}`);
       }
       
+      console.log(`Successfully loaded translations for ${lang}:`, translations);
       this.translations[lang] = translations;
       return translations;
     } catch (error) {
       console.error(`Failed to load translations for ${lang}:`, error);
       // 如果加载失败，加载英语作为后备
       if (lang !== 'en') {
+        console.log(`Falling back to English for ${lang}`);
         return await this.loadTranslations('en');
       }
       // 如果英语也加载失败，返回基础翻译
+      console.log('Using fallback translations');
       return this.getFallbackTranslations();
     }
   }
@@ -299,24 +307,30 @@ class LanguageManager {
 
   // 设置语言
   async setLanguage(lang) {
+    console.log(`Setting language to: ${lang}`);
+    
     if (!this.supportedLanguages[lang]) {
+      console.log(`Language ${lang} not supported, falling back to English`);
       lang = 'en';
     }
 
     this.currentLanguage = lang;
     this.setStoredLanguage(lang);
     
+    console.log(`Loading translations for: ${lang}`);
     const translations = await this.loadTranslations(lang);
     
     // 确保翻译对象被正确存储
     this.translations[lang] = translations;
+    
+    console.log(`Translations loaded and stored for ${lang}:`, translations);
     
     // 触发语言变更事件
     window.dispatchEvent(new CustomEvent('languageChanged', {
       detail: { language: lang, translations }
     }));
 
-    console.log(`Language set to: ${lang}`, translations);
+    console.log(`Language set to: ${lang}, event dispatched`);
     return translations;
   }
 
