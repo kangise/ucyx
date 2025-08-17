@@ -1,0 +1,25 @@
+{
+  "name": "ucyx-website",
+  "version": "1.0.0",
+  "description": "UCYX - AI-Driven Global E-commerce Consultancy Website",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node build/generate-pages.js",
+    "preview": "vite preview",
+    "serve": "http-server dist -p 8080"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-i18n": "^9.14.5",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "fs-extra": "^11.1.1",
+    "gray-matter": "^4.0.3",
+    "http-server": "^14.1.1",
+    "markdown-it": "^13.0.1",
+    "vite": "^4.4.5"
+  }
+}
