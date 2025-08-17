@@ -13,11 +13,11 @@
     "login": "登录"
   },
   "hero": {
-    "titleLine1": "发现你的",
-    "titleLine2": "非凡之处。",
-    "subtitle": "UCYX是一家面向未来的AI驱动咨询公司，致力于帮助品牌在复杂的跨境电商市场中发现独特的"非凡之处"。",
+    "titleLine1": "你看到你的",
+    "titleLine2": "非凡。",
+    "subtitle": "UCYX是一家面向未来的AI驱动咨询公司，致力于帮助品牌在复杂的跨境电商市场中发现独特的"X-非凡"。",
     "cta": "开始你的增长之旅",
-    "learnMore": "了解我们的方法论"
+    "learnMore": "发现我们的方法论"
   },
   "dataPower": {
     "title": "数据驱动洞察",
@@ -59,13 +59,13 @@
       "tag2": "品牌策略"
     },
     "feature3": {
-      "title": "成功发布",
-      "description": "通过集成营销解决方案在全球平台上执行成功的产品发布。",
+      "title": "发布致胜",
+      "description": "通过集成营销解决方案在全球平台上执行成功的发布。",
       "tag1": "UCforecast™",
       "tag2": "增长路径"
     },
     "feature4": {
-      "title": "持续成功",
+      "title": "持久成功",
       "description": "通过我们的UCcopilot™ AI驱动优化系统实现持续增长。",
       "tag1": "UCcopilot™",
       "tag2": "AI优化"
