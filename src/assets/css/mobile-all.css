@@ -135,34 +135,39 @@
 
   /* 修复关闭按钮 - 只显示一个X */
   .mobile-menu-close {
-    width: 32px;
-    height: 32px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 32px !important;
+    height: 32px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 清除任何可能的子元素 */
+  .mobile-menu-close * {
+    display: none !important;
   }
 
   .mobile-menu-close::before,
   .mobile-menu-close::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background-color: var(--text-primary);
-    top: 50%;
-    left: 50%;
+    content: '' !important;
+    position: absolute !important;
+    width: 20px !important;
+    height: 2px !important;
+    background-color: var(--text-primary) !important;
+    top: 50% !important;
+    left: 50% !important;
   }
 
   .mobile-menu-close::before {
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg) !important;
   }
 
   .mobile-menu-close::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg) !important;
   }
 
   .mobile-menu-content {
@@ -422,43 +427,61 @@
     margin-top: 16px;
   }
 
-  /* 7. Novochoice品牌区域修复 */
+  /* 7. Novochoice/Platform区域修复 */
+  .platform-section,
   .brands-section {
     padding: 80px 0 !important;
   }
 
+  .platform-showcase,
   .brands-container {
     text-align: center;
   }
 
-  .brands-grid {
+  .platform-showcase {
     grid-template-columns: 1fr !important;
     gap: 40px !important;
     align-items: center;
+    padding: 32px 24px !important;
   }
 
+  .platform-content,
   .brand-content {
     text-align: center;
   }
 
+  .platform-content h2,
   .brand-title {
     font-size: 32px !important;
     margin-bottom: 24px;
   }
 
+  .platform-content p,
   .brand-description {
     font-size: 16px !important;
     line-height: 1.6;
     margin-bottom: 32px;
   }
 
+  .platform-visual,
   .brand-visual {
     order: -1;
   }
 
+  .platform-logo,
   .brand-logo {
+    font-size: 28px !important;
     max-width: 200px !important;
     margin: 0 auto;
+    word-break: break-word !important;
+    hyphens: auto !important;
+    line-height: 1.2 !important;
+  }
+
+  .brands-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    align-items: center;
   }
 
   /* 8. 联系表单 */
