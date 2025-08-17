@@ -466,19 +466,19 @@ const UCYXApp = {
                 <div class="form-row-wide">
                   <div class="form-group">
                     <label>{{ safeT.form.name }}</label>
-                    <input type="text" v-model="form.name" :placeholder="t.form.namePlaceholder" required>
+                    <input type="text" v-model="form.name" :placeholder="safeT.form.namePlaceholder" required>
                   </div>
                   <div class="form-group">
                     <label>{{ safeT.form.email }}</label>
-                    <input type="email" v-model="form.email" :placeholder="t.form.emailPlaceholder" required>
+                    <input type="email" v-model="form.email" :placeholder="safeT.form.emailPlaceholder" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label>{{ safeT.form.message }}</label>
-                  <textarea v-model="form.message" :placeholder="t.form.messagePlaceholder" required></textarea>
+                  <textarea v-model="form.message" :placeholder="safeT.form.messagePlaceholder" required></textarea>
                 </div>
                 <button type="submit" class="btn-primary-wide" :disabled="isSubmitting">
-                  {{ isSubmitting ? t.contact.submitting : t.form.submit }}
+                  {{ isSubmitting ? safeT.contact.submitting : safeT.form.submit }}
                 </button>
               </form>
             </div>
@@ -642,7 +642,7 @@ const UCYXApp = {
           successStories: { title: 'Our Success Stories', subtitle: 'We don\'t just deliver strategies, we deliver measurable results.' },
           methodology: { title: 'The UCYX Value Growth Methodology™', subtitle: 'We don\'t offer scattered advice. We deliver a systematic, verifiable blueprint for success.', usingProprietaryModel: 'Using our proprietary', model: 'model' },
           brands: { title: 'Advanced Market Intelligence Platform', description: 'Novochoice is UCYX\'s advanced market intelligence platform that combines artificial intelligence, big data analytics, and real-time monitoring to provide comprehensive insights into e-commerce opportunities worldwide.', cta: 'Learn More About Novochoice', novochoiceTitle: 'Novochoice' },
-          contact: { readyTitle: 'Ready to achieve extraordinary growth?', readySubtitle: 'Join hundreds of brands that have transformed their business with our methodology.' },
+          contact: { readyTitle: 'Ready to achieve extraordinary growth?', readySubtitle: 'Join hundreds of brands that have transformed their business with our methodology.', submitting: 'Submitting...', successMessage: 'Thank you! We will contact you within 24 hours.', errorMessage: 'Sorry, there was an error. Please try again.' },
           form: { name: 'Name', namePlaceholder: 'Your Name', email: 'Email', emailPlaceholder: 'your@email.com', message: 'Your Needs', messagePlaceholder: 'Tell us about your business goals...', submit: 'Submit' },
           footer: { company: 'Company', resources: 'Resources', about: 'About Us', careers: 'Careers', contact: 'Contact', blog: 'Blog', cases: 'Case Studies', webinars: 'Webinars', privacy: 'Privacy Policy', terms: 'Terms of Service' },
           footerExtra: { copyright: '© 2025 UCYX Ltd. All rights reserved.', support: 'Support' },
