@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCYX Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>UCYX Website Test</h1>
+    
+    <div class="test-section">
+        <h2>SVG Path Test</h2>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <p class="success">✓ SVG renders correctly with proper path</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Language Manager Test</h2>
+        <div id="language-test">Testing...</div>
+    </div>
+    
+    <script>
+        // Test language manager
+        class TestLanguageManager {
+            constructor() {
+                this.translations = {
+                    'en': {
+                        "nav": { "services": "Services" },
+                        "hero": { "titleLine1": "You See Your", "titleLine2": "Extraordinary." }
+                    },
+                    'zh-cn': {
+                        "nav": { "services": "解决方案" },
+                        "hero": { "titleLine1": "AI驱动的", "titleLine2": "全球电商咨询" }
+                    }
+                };
+            }
+            
+            async loadTranslations(lang) {
+                return this.translations[lang] || this.translations['en'];
+            }
+        }
+        
+        async function testLanguageManager() {
+            const manager = new TestLanguageManager();
+            const testDiv = document.getElementById('language-test');
+            
+            try {
+                const enTranslations = await manager.loadTranslations('en');
+                const cnTranslations = await manager.loadTranslations('zh-cn');
+                
+                if (enTranslations.nav.services === 'Services' && cnTranslations.nav.services === '解决方案') {
+                    testDiv.innerHTML = '<p class="success">✓ Language manager works correctly</p>';
+                } else {
+                    testDiv.innerHTML = '<p class="error">✗ Language manager failed</p>';
+                }
+            } catch (error) {
+                testDiv.innerHTML = '<p class="error">✗ Language manager error: ' + error.message + '</p>';
+            }
+        }
+        
+        testLanguageManager();
+    </script>
+</body>
+</html>

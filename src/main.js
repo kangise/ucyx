@@ -17,18 +17,18 @@ const UCYXApp = {
           <!-- Desktop Navigation -->
           <nav class="main-nav">
             <div class="nav-item dropdown">
-              <a href="#" class="nav-link" @mouseenter="showMegaMenu = true" @mouseleave="clearMegaMenu">{{ t.nav.services }}</a>
+              <a href="#" class="nav-link" @mouseenter="showMegaMenu = true" @mouseleave="clearMegaMenu">{{ safeT.nav.services }}</a>
             </div>
-            <a href="#who-we-serve" class="nav-link">{{ t.nav.whoWeServe }}</a>
-            <a href="#success-stories" class="nav-link">{{ t.nav.successStories }}</a>
-            <a href="#methodology" class="nav-link">{{ t.nav.methodology }}</a>
-            <a href="/novochoice" class="nav-link">{{ t.megaMenu.novochoice }}</a>
+            <a href="#who-we-serve" class="nav-link">{{ safeT.nav.whoWeServe }}</a>
+            <a href="#success-stories" class="nav-link">{{ safeT.nav.successStories }}</a>
+            <a href="#methodology" class="nav-link">{{ safeT.nav.methodology }}</a>
+            <a href="/novochoice" class="nav-link">{{ safeT.megaMenu.novochoice }}</a>
           </nav>
           
           <!-- Desktop Actions -->
           <div class="nav-actions">
-            <a href="#login" class="login-link">{{ t.nav.login }}</a>
-            <a href="#contact" class="cta-button">{{ t.hero.cta }}</a>
+            <a href="#login" class="login-link">{{ safeT.nav.login }}</a>
+            <a href="#contact" class="cta-button">{{ safeT.hero.cta }}</a>
           </div>
 
           <!-- Mobile Menu Button -->
@@ -53,41 +53,41 @@ const UCYXApp = {
             <!-- Services Accordion -->
             <div class="mobile-menu-item">
               <button class="mobile-menu-link accordion-trigger" @click="toggleMobileServices">
-                <span>{{ t.nav.services }}</span>
+                <span>{{ safeT.nav.services }}</span>
                 <span class="accordion-arrow" :class="{ active: showMobileServices }">▼</span>
               </button>
               <div class="mobile-submenu" :class="{ active: showMobileServices }">
-                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ t.megaMenu.start }}</a>
-                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ t.megaMenu.choice }}</a>
-                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ t.megaMenu.sell }}</a>
-                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ t.megaMenu.manage }}</a>
+                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.start }}</a>
+                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.choice }}</a>
+                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.sell }}</a>
+                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.manage }}</a>
               </div>
             </div>
             
             <div class="mobile-menu-item">
-              <a href="#who-we-serve" class="mobile-menu-link" @click="closeMobileMenu">{{ t.nav.whoWeServe }}</a>
+              <a href="#who-we-serve" class="mobile-menu-link" @click="closeMobileMenu">{{ safeT.nav.whoWeServe }}</a>
             </div>
             
             <div class="mobile-menu-item">
-              <a href="#success-stories" class="mobile-menu-link" @click="closeMobileMenu">{{ t.nav.successStories }}</a>
+              <a href="#success-stories" class="mobile-menu-link" @click="closeMobileMenu">{{ safeT.nav.successStories }}</a>
             </div>
             
             <div class="mobile-menu-item">
-              <a href="#methodology" class="mobile-menu-link" @click="closeMobileMenu">{{ t.nav.methodology }}</a>
+              <a href="#methodology" class="mobile-menu-link" @click="closeMobileMenu">{{ safeT.nav.methodology }}</a>
             </div>
             
             <div class="mobile-menu-item">
-              <a href="/novochoice" class="mobile-menu-link" @click="closeMobileMenu">{{ t.megaMenu.novochoice }}</a>
+              <a href="/novochoice" class="mobile-menu-link" @click="closeMobileMenu">{{ safeT.megaMenu.novochoice }}</a>
             </div>
             
             <div class="mobile-menu-divider"></div>
             
             <div class="mobile-menu-item">
-              <a href="#login" class="mobile-menu-link" @click="closeMobileMenu">{{ t.nav.login }}</a>
+              <a href="#login" class="mobile-menu-link" @click="closeMobileMenu">{{ safeT.nav.login }}</a>
             </div>
             
             <div class="mobile-menu-item">
-              <a href="#contact" class="mobile-menu-cta" @click="closeMobileMenu">{{ t.hero.cta }}</a>
+              <a href="#contact" class="mobile-menu-cta" @click="closeMobileMenu">{{ safeT.hero.cta }}</a>
             </div>
           </div>
         </nav>
@@ -119,16 +119,16 @@ const UCYXApp = {
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
                 </div>
-                <h4>{{ t.megaMenu.start }}</h4>
+                <h4>{{ safeT.megaMenu.start }}</h4>
                 <div class="mega-divider"></div>
                 <div class="mega-links-full">
                   <a href="#sell-china" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.sellToChina }}</div>
-                    <div class="service-value">{{ t.megaMenu.reachConsumers }}</div>
+                    <div class="service-name">{{ safeT.megaMenu.sellToChina }}</div>
+                    <div class="service-value">{{ safeT.megaMenu.reachConsumers }}</div>
                   </a>
                   <a href="#sell-world" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.sellToWorld }}</div>
-                    <div class="service-value">{{ t.megaMenu.globalExpansion }}</div>
+                    <div class="service-name">{{ safeT.megaMenu.sellToWorld }}</div>
+                    <div class="service-value">{{ safeT.megaMenu.globalExpansion }}</div>
                   </a>
                 </div>
               </div>
@@ -142,16 +142,16 @@ const UCYXApp = {
                     <circle cx="11" cy="11" r="3"/>
                   </svg>
                 </div>
-                <h4>{{ t.megaMenu.choice }}</h4>
+                <h4>{{ safeT.megaMenu.choice }}</h4>
                 <div class="mega-divider"></div>
                 <div class="mega-links-full">
                   <a href="/novochoice" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.novochoice }}</div>
-                    <div class="service-value">{{ t.megaMenu.aiPoweredIntelligence }}</div>
+                    <div class="service-name">{{ safeT.megaMenu.novochoice }}</div>
+                    <div class="service-value">{{ safeT.megaMenu.aiPoweredIntelligence }}</div>
                   </a>
                   <a href="#customized" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.customizedSelection }}</div>
-                    <div class="service-value">{{ t.megaMenu.tailoredRecommendations }}</div>
+                    <div class="service-name">{{ safeT.megaMenu.customizedSelection }}</div>
+                    <div class="service-value">{{ safeT.megaMenu.tailoredRecommendations }}</div>
                   </a>
                 </div>
               </div>
@@ -164,16 +164,16 @@ const UCYXApp = {
                     <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
                   </svg>
                 </div>
-                <h4>{{ t.megaMenu.sell }}</h4>
+                <h4>{{ safeT.megaMenu.sell }}</h4>
                 <div class="mega-divider"></div>
                 <div class="mega-links-full">
                   <a href="#copilot" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.sellerCopilot }}</div>
-                    <div class="service-value">{{ t.megaMenu.aiDrivenOptimization }}</div>
+                    <div class="service-name">{{ safeT.megaMenu.sellerCopilot }}</div>
+                    <div class="service-value">{{ safeT.megaMenu.aiDrivenOptimization }}</div>
                   </a>
                   <a href="#marketing" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.marketingMix }}</div>
-                    <div class="service-value">{{ t.megaMenu.maximizeROI }}</div>
+                    <div class="service-name">{{ safeT.megaMenu.marketingMix }}</div>
+                    <div class="service-value">{{ safeT.megaMenu.maximizeROI }}</div>
                   </a>
                 </div>
               </div>
@@ -185,12 +185,12 @@ const UCYXApp = {
                     <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h4a2 2 0 0 1 2 2v1.28c.6.35 1 .98 1 1.72 0 .74-.4 1.38-1 1.72V15a2 2 0 0 1-2 2h-4v1.27c.6.35 1 .98 1 1.73a2 2 0 1 1-4 0c0-.75.4-1.38 1-1.73V17H7a2 2 0 0 1-2-2v-1.28c-.6-.35-1-.98-1-1.72 0-.74.4-1.37 1-1.72V9a2 2 0 0 1 2-2h4V5.73c-.6-.35-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
                   </svg>
                 </div>
-                <h4>{{ t.megaMenu.manage }}</h4>
+                <h4>{{ safeT.megaMenu.manage }}</h4>
                 <div class="mega-divider"></div>
                 <div class="mega-links-full">
                   <a href="#customer-management" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.manageCustomer }}</div>
-                    <div class="service-value">{{ t.megaMenu.buildRelationships }}</div>
+                    <div class="service-name">{{ safeT.megaMenu.manageCustomer }}</div>
+                    <div class="service-value">{{ safeT.megaMenu.buildRelationships }}</div>
                   </a>
                 </div>
               </div>
@@ -203,15 +203,15 @@ const UCYXApp = {
         <div class="mega-menu-footer">
           <div class="mega-footer-content">
             <a href="#contact" class="mega-footer-item">
-              <span>{{ t.megaMenu.startConsultation }}</span>
+              <span>{{ safeT.megaMenu.startConsultation }}</span>
             </a>
             <div class="mega-footer-divider"></div>
             <a href="#blog" class="mega-footer-item">
-              <span>{{ t.megaMenu.visitBlog }}</span>
+              <span>{{ safeT.megaMenu.visitBlog }}</span>
             </a>
             <div class="mega-footer-divider"></div>
             <a href="#methodology" class="mega-footer-item">
-              <span>{{ t.megaMenu.learnMethodology }}</span>
+              <span>{{ safeT.megaMenu.learnMethodology }}</span>
             </a>
           </div>
         </div>
@@ -223,13 +223,13 @@ const UCYXApp = {
           <div class="hero-overlay"></div>
           <div class="hero-content-center">
             <div class="hero-title-container">
-              <div class="hero-title-line1">{{ t.hero.titleLine1 }}</div>
-              <div class="hero-title-line2">{{ t.hero.titleLine2 }}</div>
+              <div class="hero-title-line1">{{ safeT.hero.titleLine1 }}</div>
+              <div class="hero-title-line2">{{ safeT.hero.titleLine2 }}</div>
             </div>
-            <p class="hero-subtitle-large">{{ t.hero.subtitle }}</p>
+            <p class="hero-subtitle-large">{{ safeT.hero.subtitle }}</p>
             <div class="hero-actions-center">
-              <a href="#contact" class="btn-primary-large">{{ t.hero.cta }}</a>
-              <a href="#methodology" class="btn-secondary-large">{{ t.hero.learnMore }}</a>
+              <a href="#contact" class="btn-primary-large">{{ safeT.hero.cta }}</a>
+              <a href="#methodology" class="btn-secondary-large">{{ safeT.hero.learnMore }}</a>
             </div>
           </div>
         </section>
@@ -239,20 +239,20 @@ const UCYXApp = {
           <div class="trust-container">
             <div class="trust-stats">
               <div class="stat-item">
-                <div class="stat-number">{{ t.dataPower.stat1.number }}{{ t.dataPower.stat1.suffix }}</div>
-                <div class="stat-label">{{ t.dataPower.stat1.label }}</div>
+                <div class="stat-number">{{ safeT.dataPower.stat1.number }}{{ safeT.dataPower.stat1.suffix }}</div>
+                <div class="stat-label">{{ safeT.dataPower.stat1.label }}</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">{{ t.dataPower.stat2.number }}{{ t.dataPower.stat2.suffix }}</div>
-                <div class="stat-label">{{ t.dataPower.stat2.label }}</div>
+                <div class="stat-number">{{ safeT.dataPower.stat2.number }}{{ safeT.dataPower.stat2.suffix }}</div>
+                <div class="stat-label">{{ safeT.dataPower.stat2.label }}</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">{{ t.dataPower.stat3.number }}{{ t.dataPower.stat3.suffix }}</div>
-                <div class="stat-label">{{ t.dataPower.stat3.label }}</div>
+                <div class="stat-number">{{ safeT.dataPower.stat3.number }}{{ safeT.dataPower.stat3.suffix }}</div>
+                <div class="stat-label">{{ safeT.dataPower.stat3.label }}</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">{{ t.dataPower.stat4.number }}{{ t.dataPower.stat4.suffix }}</div>
-                <div class="stat-label">{{ t.dataPower.stat4.label }}</div>
+                <div class="stat-number">{{ safeT.dataPower.stat4.number }}{{ safeT.dataPower.stat4.suffix }}</div>
+                <div class="stat-label">{{ safeT.dataPower.stat4.label }}</div>
               </div>
             </div>
           </div>
@@ -262,8 +262,8 @@ const UCYXApp = {
         <section id="solutions" class="solutions-section-spaced">
           <div class="section-container">
             <div class="section-header">
-              <h2>{{ t.services.title }}</h2>
-              <p class="section-subtitle">{{ t.services.subtitle }}</p>
+              <h2>{{ safeT.services.title }}</h2>
+              <p class="section-subtitle">{{ safeT.services.subtitle }}</p>
             </div>
             <div class="solutions-grid-large">
               <div class="solution-feature-card-large">
@@ -274,11 +274,11 @@ const UCYXApp = {
                     <circle cx="11" cy="11" r="3"/>
                   </svg>
                 </div>
-                <h3>{{ t.services.feature1.title }}</h3>
-                <p>{{ t.services.feature1.description }}</p>
+                <h3>{{ safeT.services.feature1.title }}</h3>
+                <p>{{ safeT.services.feature1.description }}</p>
                 <div class="feature-highlights">
-                  <span class="highlight-tag">{{ t.services.feature1.tag1 }}</span>
-                  <span class="highlight-tag">{{ t.services.feature1.tag2 }}</span>
+                  <span class="highlight-tag">{{ safeT.services.feature1.tag1 }}</span>
+                  <span class="highlight-tag">{{ safeT.services.feature1.tag2 }}</span>
                 </div>
               </div>
               <div class="solution-feature-card-large">
@@ -288,11 +288,11 @@ const UCYXApp = {
                     <circle cx="12" cy="12" r="3"/>
                   </svg>
                 </div>
-                <h3>{{ t.services.feature2.title }}</h3>
-                <p>{{ t.services.feature2.description }}</p>
+                <h3>{{ safeT.services.feature2.title }}</h3>
+                <p>{{ safeT.services.feature2.description }}</p>
                 <div class="feature-highlights">
-                  <span class="highlight-tag">{{ t.services.feature2.tag1 }}</span>
-                  <span class="highlight-tag">{{ t.services.feature2.tag2 }}</span>
+                  <span class="highlight-tag">{{ safeT.services.feature2.tag1 }}</span>
+                  <span class="highlight-tag">{{ safeT.services.feature2.tag2 }}</span>
                 </div>
               </div>
               <div class="solution-feature-card-large">
@@ -302,11 +302,11 @@ const UCYXApp = {
                     <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
                   </svg>
                 </div>
-                <h3>{{ t.services.feature3.title }}</h3>
-                <p>{{ t.services.feature3.description }}</p>
+                <h3>{{ safeT.services.feature3.title }}</h3>
+                <p>{{ safeT.services.feature3.description }}</p>
                 <div class="feature-highlights">
-                  <span class="highlight-tag">{{ t.services.feature3.tag1 }}</span>
-                  <span class="highlight-tag">{{ t.services.feature3.tag2 }}</span>
+                  <span class="highlight-tag">{{ safeT.services.feature3.tag1 }}</span>
+                  <span class="highlight-tag">{{ safeT.services.feature3.tag2 }}</span>
                 </div>
               </div>
               <div class="solution-feature-card-large">
@@ -315,11 +315,11 @@ const UCYXApp = {
                     <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h4a2 2 0 0 1 2 2v1.28c.6.35 1 .98 1 1.72 0 .74-.4 1.38-1 1.72V15a2 2 0 0 1-2 2h-4v1.27c.6.35 1 .98 1 1.73a2 2 0 1 1-4 0c0-.75.4-1.38 1-1.73V17H7a2 2 0 0 1-2-2v-1.28c-.6-.35-1-.98-1-1.72 0-.74.4-1.37 1-1.72V9a2 2 0 0 1 2-2h4V5.73c-.6-.35-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
                   </svg>
                 </div>
-                <h3>{{ t.services.feature4.title }}</h3>
-                <p>{{ t.services.feature4.description }}</p>
+                <h3>{{ safeT.services.feature4.title }}</h3>
+                <p>{{ safeT.services.feature4.description }}</p>
                 <div class="feature-highlights">
-                  <span class="highlight-tag">{{ t.services.feature4.tag1 }}</span>
-                  <span class="highlight-tag">{{ t.services.feature4.tag2 }}</span>
+                  <span class="highlight-tag">{{ safeT.services.feature4.tag1 }}</span>
+                  <span class="highlight-tag">{{ safeT.services.feature4.tag2 }}</span>
                 </div>
               </div>
             </div>
@@ -330,21 +330,21 @@ const UCYXApp = {
         <section id="who-we-serve" class="serve-section">
           <div class="section-container">
             <div class="section-header">
-              <h2>{{ t.whoWeServe.title }}</h2>
-              <p class="section-subtitle">{{ t.whoWeServe.subtitle }}</p>
+              <h2>{{ safeT.whoWeServe.title }}</h2>
+              <p class="section-subtitle">{{ safeT.whoWeServe.subtitle }}</p>
             </div>
             <div class="serve-grid">
               <div class="serve-card">
-                <h3>{{ t.whoWeServe.card1.title }}</h3>
-                <p>{{ t.whoWeServe.card1.description }}</p>
+                <h3>{{ safeT.whoWeServe.card1.title }}</h3>
+                <p>{{ safeT.whoWeServe.card1.description }}</p>
               </div>
               <div class="serve-card">
-                <h3>{{ t.whoWeServe.card2.title }}</h3>
-                <p>{{ t.whoWeServe.card2.description }}</p>
+                <h3>{{ safeT.whoWeServe.card2.title }}</h3>
+                <p>{{ safeT.whoWeServe.card2.description }}</p>
               </div>
               <div class="serve-card">
-                <h3>{{ t.whoWeServe.card3.title }}</h3>
-                <p>{{ t.whoWeServe.card3.description }}</p>
+                <h3>{{ safeT.whoWeServe.card3.title }}</h3>
+                <p>{{ safeT.whoWeServe.card3.description }}</p>
               </div>
             </div>
           </div>
@@ -354,8 +354,8 @@ const UCYXApp = {
         <section id="success-stories" class="stories-section">
           <div class="section-container">
             <div class="section-header">
-              <h2>{{ t.successStories.title }}</h2>
-              <p class="section-subtitle">{{ t.successStories.subtitle }}</p>
+              <h2>{{ safeT.successStories.title }}</h2>
+              <p class="section-subtitle">{{ safeT.successStories.subtitle }}</p>
             </div>
             <!-- First layer: outer positioning container -->
             <div class="stories-slider-dual-wide">
@@ -401,8 +401,8 @@ const UCYXApp = {
         <section id="methodology" class="methodology-section">
           <div class="section-container">
             <div class="section-header">
-              <h2>{{ t.methodology.title }}</h2>
-              <p class="section-subtitle">{{ t.methodology.subtitle }}</p>
+              <h2>{{ safeT.methodology.title }}</h2>
+              <p class="section-subtitle">{{ safeT.methodology.subtitle }}</p>
             </div>
             <div class="methodology-content">
               <div class="methodology-tabs">
@@ -412,7 +412,7 @@ const UCYXApp = {
                      :class="{ active: currentMethodologyTab === index }"
                      @click="setMethodologyTab(index)">
                   <h4>{{ step.title }}</h4>
-                  <p>{{ t.methodology.usingProprietaryModel }} <strong>{{ step.tool }}</strong> {{ t.methodology.model }}</p>
+                  <p>{{ safeT.methodology.usingProprietaryModel }} <strong>{{ step.tool }}</strong> {{ safeT.methodology.model }}</p>
                   <div class="progress-bar">
                     <div class="progress-fill" 
                          :style="{ width: currentMethodologyTab === index ? methodologyProgress + '%' : '0%' }">
@@ -441,12 +441,12 @@ const UCYXApp = {
           <div class="section-container">
             <div class="platform-showcase">
               <div class="platform-content">
-                <h2>{{ t.brands.title }}</h2>
-                <p>{{ t.brands.description }}</p>
-                <a href="/novochoice" class="btn-primary">{{ t.brands.cta }}</a>
+                <h2>{{ safeT.brands.title }}</h2>
+                <p>{{ safeT.brands.description }}</p>
+                <a href="/novochoice" class="btn-primary">{{ safeT.brands.cta }}</a>
               </div>
               <div class="platform-visual">
-                <div class="platform-logo">{{ t.brands.novochoiceTitle }}</div>
+                <div class="platform-logo">{{ safeT.brands.novochoiceTitle }}</div>
               </div>
             </div>
           </div>
@@ -456,23 +456,23 @@ const UCYXApp = {
         <section id="contact" class="contact-section">
           <div class="section-container">
             <div class="contact-header">
-              <h2>{{ t.contact.readyTitle }}</h2>
-              <p class="section-subtitle">{{ t.contact.readySubtitle }}</p>
+              <h2>{{ safeT.contact.readyTitle }}</h2>
+              <p class="section-subtitle">{{ safeT.contact.readySubtitle }}</p>
             </div>
             <div class="contact-form-container-wide">
               <form class="contact-form-wide" @submit.prevent="handleFormSubmit">
                 <div class="form-row-wide">
                   <div class="form-group">
-                    <label>{{ t.form.name }}</label>
+                    <label>{{ safeT.form.name }}</label>
                     <input type="text" v-model="form.name" :placeholder="t.form.namePlaceholder" required>
                   </div>
                   <div class="form-group">
-                    <label>{{ t.form.email }}</label>
+                    <label>{{ safeT.form.email }}</label>
                     <input type="email" v-model="form.email" :placeholder="t.form.emailPlaceholder" required>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>{{ t.form.message }}</label>
+                  <label>{{ safeT.form.message }}</label>
                   <textarea v-model="form.message" :placeholder="t.form.messagePlaceholder" required></textarea>
                 </div>
                 <button type="submit" class="btn-primary-wide" :disabled="isSubmitting">
@@ -489,64 +489,63 @@ const UCYXApp = {
         <div class="footer-container">
           <div class="footer-grid">
             <div class="footer-column">
-              <h4>{{ t.megaMenu.start }}</h4>
+              <h4>{{ safeT.megaMenu.start }}</h4>
               <ul>
-                <li><a href="#sell-china">{{ t.footerExtra.sellToChina }}</a></li>
-                <li><a href="#sell-world">{{ t.footerExtra.sellToWorld }}</a></li>
+                <li><a href="#sell-china">{{ safeT.footerExtra.sellToChina }}</a></li>
+                <li><a href="#sell-world">{{ safeT.footerExtra.sellToWorld }}</a></li>
               </ul>
-              <h4 style="margin-top: 24px;">{{ t.megaMenu.choice }}</h4>
+              <h4 style="margin-top: 24px;">{{ safeT.megaMenu.choice }}</h4>
               <ul>
-                <li><a href="/novochoice">{{ t.megaMenu.novochoice }}</a></li>
-                <li><a href="#customized">{{ t.megaMenu.customizedSelection }}</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>{{ t.megaMenu.sell }}</h4>
-              <ul>
-                <li><a href="#copilot">{{ t.footerExtra.sellerCopilot }}</a></li>
-                <li><a href="#marketing">{{ t.footerExtra.marketingMix }}</a></li>
-              </ul>
-              <h4 style="margin-top: 24px;">{{ t.megaMenu.manage }}</h4>
-              <ul>
-                <li><a href="#customer-management">{{ t.footerExtra.manageCustomer }}</a></li>
+                <li><a href="/novochoice">{{ safeT.megaMenu.novochoice }}</a></li>
+                <li><a href="#customized">{{ safeT.megaMenu.customizedSelection }}</a></li>
               </ul>
             </div>
             <div class="footer-column">
-              <h4>{{ t.footer.company }}</h4>
+              <h4>{{ safeT.megaMenu.sell }}</h4>
               <ul>
-                <li><a href="#about">{{ t.footerExtra.aboutUCYX }}</a></li>
-                <li><a href="#careers">{{ t.footer.careers }}</a></li>
-                <li><a href="#partners">{{ t.footerExtra.partners }}</a></li>
+                <li><a href="#copilot">{{ safeT.footerExtra.sellerCopilot }}</a></li>
+                <li><a href="#marketing">{{ safeT.footerExtra.marketingMix }}</a></li>
+              </ul>
+              <h4 style="margin-top: 24px;">{{ safeT.megaMenu.manage }}</h4>
+              <ul>
+                <li><a href="#customer-management">{{ safeT.footerExtra.manageCustomer }}</a></li>
               </ul>
             </div>
             <div class="footer-column">
-              <h4>{{ t.footer.resources }}</h4>
+              <h4>{{ safeT.footer.company }}</h4>
               <ul>
-                <li><a href="/novochoice">{{ t.footerExtra.novochoicePlatform }}</a></li>
-                <li><a href="#blog">{{ t.footer.blog }}</a></li>
-                <li><a href="#case-studies">{{ t.footer.cases }}</a></li>
-                <li><a href="#webinars">{{ t.footer.webinars }}</a></li>
+                <li><a href="#about">{{ safeT.footerExtra.aboutUCYX }}</a></li>
+                <li><a href="#careers">{{ safeT.footer.careers }}</a></li>
+                <li><a href="#partners">{{ safeT.footerExtra.partners }}</a></li>
               </ul>
-              <h4 style="margin-top: 24px;">{{ t.footerExtra.support }}</h4>
+            </div>
+            <div class="footer-column">
+              <h4>{{ safeT.footer.resources }}</h4>
               <ul>
-                <li><a href="#help">{{ t.footerExtra.helpCenter }}</a></li>
-                <li><a href="#contact">{{ t.footerExtra.contactUs }}</a></li>
+                <li><a href="/novochoice">{{ safeT.footerExtra.novochoicePlatform }}</a></li>
+                <li><a href="#blog">{{ safeT.footer.blog }}</a></li>
+                <li><a href="#case-studies">{{ safeT.footer.cases }}</a></li>
+                <li><a href="#webinars">{{ safeT.footer.webinars }}</a></li>
+              </ul>
+              <h4 style="margin-top: 24px;">{{ safeT.footerExtra.support }}</h4>
+              <ul>
+                <li><a href="#help">{{ safeT.footerExtra.helpCenter }}</a></li>
+                <li><a href="#contact">{{ safeT.footerExtra.contactUs }}</a></li>
               </ul>
             </div>
           </div>
           
           <div class="footer-bottom">
             <div class="footer-legal">
-              <p>{{ t.footerExtra.copyright }}</p>
+              <p>{{ safeT.footerExtra.copyright }}</p>
               <div class="legal-links">
-                <a href="#privacy">{{ t.footer.privacy }}</a>
-                <a href="#terms">{{ t.footer.terms }}</a>
+                <a href="#privacy">{{ safeT.footer.privacy }}</a>
+                <a href="#terms">{{ safeT.footer.terms }}</a>
               </div>
             </div>
             <div class="language-selector">
               <button class="language-toggle" @click="showLanguageMenu = !showLanguageMenu">
-                <span class="current-language-flag">{{ getCurrentLanguageFlag() }}</span>
-                <span class="current-language-name">{{ t.language.current }}</span>
+                <span class="current-language-name">{{ safeT.language.current }}</span>
                 <span class="language-arrow">{{ showLanguageMenu ? '▲' : '▼' }}</span>
               </button>
               <div class="language-menu" v-show="showLanguageMenu">
@@ -554,7 +553,6 @@ const UCYXApp = {
                      class="language-option" 
                      :class="{ active: currentLanguage === code }"
                      @click="changeLanguage(code)">
-                  <span class="language-flag">{{ lang.flag }}</span>
                   <span class="language-name">{{ lang.name }}</span>
                 </div>
               </div>
@@ -620,6 +618,45 @@ const UCYXApp = {
   },
 
   computed: {
+    // 安全的翻译对象访问
+    safeT() {
+      if (!this.t || Object.keys(this.t).length === 0) {
+        return {
+          nav: { services: '', whoWeServe: '', successStories: '', methodology: '', login: '' },
+          hero: { titleLine1: '', titleLine2: '', subtitle: '', cta: '', learnMore: '' },
+          megaMenu: { novochoice: '', start: '', choice: '', sell: '', manage: '' },
+          dataPower: { 
+            stat1: { number: '', suffix: '', label: '' },
+            stat2: { number: '', suffix: '', label: '' },
+            stat3: { number: '', suffix: '', label: '' },
+            stat4: { number: '', suffix: '', label: '' }
+          },
+          services: { 
+            title: '', subtitle: '', 
+            feature1: { title: '', description: '', tag1: '', tag2: '' },
+            feature2: { title: '', description: '', tag1: '', tag2: '' },
+            feature3: { title: '', description: '', tag1: '', tag2: '' },
+            feature4: { title: '', description: '', tag1: '', tag2: '' }
+          },
+          whoWeServe: { 
+            title: '', subtitle: '', 
+            card1: { title: '', description: '' },
+            card2: { title: '', description: '' },
+            card3: { title: '', description: '' }
+          },
+          successStories: { title: '', subtitle: '' },
+          methodology: { title: '', subtitle: '', usingProprietaryModel: '', model: '' },
+          brands: { title: '', description: '', cta: '', novochoiceTitle: '' },
+          contact: { readyTitle: '', readySubtitle: '' },
+          form: { name: '', namePlaceholder: '', email: '', emailPlaceholder: '', message: '', messagePlaceholder: '', submit: '' },
+          footer: { company: '', resources: '', about: '', careers: '', contact: '', blog: '', caseStudies: '', whitepapers: '', privacy: '', terms: '' },
+          footerExtra: { copyright: '' },
+          language: { current: '', switch: '' }
+        };
+      }
+      return this.t;
+    },
+
     storySlides() {
       // Group success cases into slides of 2
       const slides = []
@@ -652,10 +689,6 @@ const UCYXApp = {
       }
     },
 
-    getCurrentLanguageFlag() {
-      return this.supportedLanguages[this.currentLanguage]?.flag || '🇺🇸';
-    },
-
     updateDynamicData() {
       // 更新动态数据
       this.successCases = this.t.successStories?.cases || [];
@@ -670,7 +703,16 @@ const UCYXApp = {
         // 初始化语言（IP检测 + 浏览器检测）
         const detectedLanguage = await window.languageManager.initLanguage();
         this.currentLanguage = detectedLanguage;
-        this.t = window.languageManager.getCurrentTranslations();
+        
+        // 确保获取到翻译对象
+        const translations = window.languageManager.getCurrentTranslations();
+        if (translations && Object.keys(translations).length > 0) {
+          this.t = translations;
+        } else {
+          // 如果没有翻译对象，手动加载
+          const loadedTranslations = await window.languageManager.loadTranslations(detectedLanguage);
+          this.t = loadedTranslations;
+        }
         
         // 更新动态数据
         this.updateDynamicData();
@@ -680,14 +722,16 @@ const UCYXApp = {
           this.currentLanguage = event.detail.language;
           this.t = event.detail.translations;
           this.updateDynamicData();
+          console.log('Language changed to:', event.detail.language, event.detail.translations);
         });
         
-        console.log(`Language initialized: ${detectedLanguage}`);
+        console.log(`Language initialized: ${detectedLanguage}`, this.t);
       } catch (error) {
         console.error('Failed to initialize language:', error);
-        // 如果初始化失败，使用默认英语
+        // 如果初始化失败，使用默认英语和后备翻译
         this.currentLanguage = 'en';
-        this.t = {};
+        this.t = window.languageManager.getFallbackTranslations();
+        this.updateDynamicData();
       }
     },
 
@@ -834,11 +878,12 @@ const UCYXApp = {
     }
   },
 
-  mounted() {
+  async mounted() {
     console.log('UCYX App initialized!')
     
-    // 初始化多语言
-    this.initializeLanguage()
+    // 延迟初始化多语言，确保DOM准备就绪
+    await this.$nextTick();
+    await this.initializeLanguage();
     
     // 监听窗口大小变化，自动关闭移动端菜单
     window.addEventListener('resize', () => {

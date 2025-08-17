@@ -12,7 +12,9 @@
     "build": "vite build",
     "build:full": "vite build && node build/generate-pages.js",
     "preview": "vite preview",
-    "serve": "http-server dist -p 8080"
+    "serve": "http-server dist -p 8080",
+    "pre-deploy": "node scripts/pre-deploy-check.js",
+    "deploy": "npm run build && npm run pre-deploy"
   },
   "dependencies": {
     "vue": "^3.3.4",
