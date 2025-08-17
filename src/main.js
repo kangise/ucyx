@@ -437,16 +437,16 @@ const UCYXApp = {
                 <div class="form-row-wide">
                   <div class="form-group">
                     <label>{{ t.form.name }}</label>
-                    <input type="text" v-model="form.name" placeholder="{{ t.form.namePlaceholder }}" required>
+                    <input type="text" v-model="form.name" :placeholder="t.form.namePlaceholder" required>
                   </div>
                   <div class="form-group">
                     <label>{{ t.form.email }}</label>
-                    <input type="email" v-model="form.email" placeholder="{{ t.form.emailPlaceholder }}" required>
+                    <input type="email" v-model="form.email" :placeholder="t.form.emailPlaceholder" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label>{{ t.form.message }}</label>
-                  <textarea v-model="form.message" placeholder="{{ t.form.messagePlaceholder }}" required></textarea>
+                  <textarea v-model="form.message" :placeholder="t.form.messagePlaceholder" required></textarea>
                 </div>
                 <button type="submit" class="btn-primary-wide" :disabled="isSubmitting">
                   {{ isSubmitting ? t.contact.submitting : t.form.submit }}
