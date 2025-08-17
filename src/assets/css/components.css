@@ -83,7 +83,8 @@
   padding-top: var(--spacing-md);
 }
 
-/* 导航栏组件 */
+/* 导航栏组件 - 已注释避免与modern-style.css冲突 */
+/*
 .navbar {
   position: fixed;
   top: 0;
@@ -126,6 +127,7 @@
   align-items: center;
   gap: var(--spacing-sm);
 }
+*/
 
 .nav-menu {
   display: flex;
