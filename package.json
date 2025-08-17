@@ -1,6 +1,6 @@
 {
   "name": "ucyx-website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UCYX - AI-Driven Global E-commerce Consultancy Website",
   "main": "src/main.js",
   "engines": {
