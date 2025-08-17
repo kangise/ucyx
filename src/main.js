@@ -1,10 +1,8 @@
 import { createApp } from 'vue'
 import './assets/css/variables.css'
+import './assets/css/components.css'
 import './assets/css/modern-style.css'
-import './assets/css/language-selector.css'
-import './assets/css/mobile-navigation.css'
-import './assets/css/mobile-carousel.css'
-import './assets/css/mobile-responsive.css'
+import './assets/css/mobile-all.css'
 import './assets/js/language.js'
 
 const UCYXApp = {
