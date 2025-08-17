@@ -138,7 +138,7 @@ const UCYXApp = {
                 <div class="mega-icon-full">
                   <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="url(#greenBlackGradient)" strokeWidth="2">
                     <circle cx="11" cy="11" r="8"/>
-                    <path d="21 21l-4.35-4.35"/>
+                    <path d="M21 21l-4.35-4.35"/>
                     <circle cx="11" cy="11" r="3"/>
                   </svg>
                 </div>
@@ -270,7 +270,7 @@ const UCYXApp = {
                 <div class="feature-icon-large">
                   <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="11" cy="11" r="8"/>
-                    <path d="21 21l-4.35-4.35"/>
+                    <path d="M21 21l-4.35-4.35"/>
                     <circle cx="11" cy="11" r="3"/>
                   </svg>
                 </div>

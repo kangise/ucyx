@@ -96,16 +96,25 @@ class LanguageManager {
     }
 
     try {
-      // 在开发环境中使用正确的路径
-      const isDev = import.meta.env.DEV;
-      const basePath = isDev ? '/src/locales' : '/locales';
-      const response = await fetch(`${basePath}/${lang}.json`);
+      // 动态导入翻译文件
+      let translations;
       
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+      if (lang === 'en') {
+        const module = await import('../../locales/en.json');
+        translations = module.default;
+      } else if (lang === 'zh-cn') {
+        const module = await import('../../locales/zh-cn.json');
+        translations = module.default;
+      } else if (lang === 'zh-tw') {
+        const module = await import('../../locales/zh-tw.json');
+        translations = module.default;
+      } else if (lang === 'ja') {
+        const module = await import('../../locales/ja.json');
+        translations = module.default;
+      } else {
+        throw new Error(`Unsupported language: ${lang}`);
       }
       
-      const translations = await response.json();
       this.translations[lang] = translations;
       return translations;
     } catch (error) {
@@ -114,13 +123,105 @@ class LanguageManager {
       if (lang !== 'en') {
         return await this.loadTranslations('en');
       }
-      // 如果英语也加载失败，返回空对象
-      return {
-        nav: { services: 'Services', whoWeServe: 'Who We Serve', successStories: 'Success Stories', methodology: 'Methodology', login: 'Login' },
-        hero: { titleLine1: 'AI-Driven', titleLine2: 'Global E-commerce Consultancy', subtitle: 'Helping brands achieve success in global e-commerce markets through artificial intelligence and data insights', cta: 'Start Consultation', learnMore: 'Learn More' },
-        language: { current: 'English', switch: 'Switch Language' }
-      };
+      // 如果英语也加载失败，返回基础翻译
+      return this.getFallbackTranslations();
     }
+  }
+
+  // 获取后备翻译
+  getFallbackTranslations() {
+    return {
+      nav: { 
+        services: 'Services', 
+        whoWeServe: 'Who We Serve', 
+        successStories: 'Success Stories', 
+        methodology: 'Methodology', 
+        login: 'Login' 
+      },
+      hero: { 
+        titleLine1: 'AI-Driven', 
+        titleLine2: 'Global E-commerce Consultancy', 
+        subtitle: 'Helping brands achieve success in global e-commerce markets through artificial intelligence and data insights', 
+        cta: 'Start Consultation', 
+        learnMore: 'Learn More' 
+      },
+      megaMenu: {
+        start: 'Start',
+        choice: 'Choice',
+        sell: 'Sell',
+        manage: 'Manage',
+        novochoice: 'NovoChoice'
+      },
+      dataPower: {
+        stat1: { number: '500', suffix: '+', label: 'Success Cases' },
+        stat2: { number: '98', suffix: '%', label: 'Client Satisfaction' },
+        stat3: { number: '50', suffix: '+', label: 'Countries' },
+        stat4: { number: '24', suffix: '/7', label: 'Support' }
+      },
+      services: {
+        title: 'Our Solutions',
+        subtitle: 'Comprehensive support for your e-commerce success through AI-driven insights and expertise',
+        feature1: { title: 'Smart Product Selection', description: 'AI-powered market analysis to recommend the most promising products', tag1: 'Market Analysis', tag2: 'Trend Prediction' },
+        feature2: { title: 'Precision Marketing', description: 'Data-driven marketing strategies to improve conversion rates and ROI', tag1: 'Data-Driven', tag2: 'ROI Optimization' },
+        feature3: { title: 'Global Expansion', description: 'Help brands enter new markets and achieve sustainable global growth', tag1: 'Market Entry', tag2: 'Growth Strategy' },
+        feature4: { title: 'Customer Management', description: 'Build long-term customer relationships and increase customer lifetime value', tag1: 'Relationship Management', tag2: 'Value Enhancement' }
+      },
+      whoWeServe: {
+        title: 'Who We Serve',
+        subtitle: 'Customized solutions for businesses of different scales and stages',
+        card1: { title: 'Startups', description: 'Help emerging brands establish e-commerce foundations and quickly enter the market' },
+        card2: { title: 'Growth Companies', description: 'Support rapidly growing companies to expand market share and optimize operational efficiency' },
+        card3: { title: 'Large Enterprises', description: 'Provide innovative solutions for mature enterprises to maintain competitive advantages' }
+      },
+      successStories: {
+        title: 'Success Stories',
+        subtitle: 'See how we help clients achieve breakthrough growth'
+      },
+      methodology: {
+        title: 'Our Methodology',
+        subtitle: 'Data-driven systematic approach to ensure project success',
+        usingProprietaryModel: 'Using proprietary models',
+        model: 'for analysis and optimization'
+      },
+      brands: {
+        title: 'NovoChoice Platform',
+        description: 'Our AI-driven platform providing intelligent support for e-commerce decisions',
+        cta: 'Learn More',
+        novochoiceTitle: 'NovoChoice'
+      },
+      contact: {
+        readyTitle: 'Ready to Get Started?',
+        readySubtitle: 'Contact us to learn how AI-driven solutions can enhance your e-commerce business'
+      },
+      form: {
+        name: 'Name',
+        namePlaceholder: 'Enter your name',
+        email: 'Email',
+        emailPlaceholder: 'Enter your email',
+        message: 'Message',
+        messagePlaceholder: 'Describe your needs...',
+        submit: 'Send Message'
+      },
+      footer: {
+        company: 'Company',
+        resources: 'Resources',
+        about: 'About Us',
+        careers: 'Careers',
+        contact: 'Contact',
+        blog: 'Blog',
+        caseStudies: 'Case Studies',
+        whitepapers: 'Whitepapers',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service'
+      },
+      footerExtra: {
+        copyright: '© 2024 UCYX. All rights reserved.'
+      },
+      language: { 
+        current: 'English', 
+        switch: 'Switch Language' 
+      }
+    };
   }
 
   // 设置语言
