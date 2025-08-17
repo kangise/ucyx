@@ -293,28 +293,52 @@
     border-bottom: none !important;
   }
 
-  /* 2. 英雄区域移动端优化 - 修复字体显示问题 */
-  .hero-section {
+  /* 2. 英雄区域移动端优化 - 修复真正的字体截断问题 */
+  .hero-section,
+  .hero-section-fullscreen {
     padding: 60px 0 40px !important;
     text-align: center;
   }
 
-  .hero-container {
+  .hero-container,
+  .hero-content-center {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
     text-align: center;
-    padding: 0 !important;
+    padding: 0 16px !important;
   }
 
-  .hero-title {
-    font-size: clamp(24px, 6vw, 36px) !important; /* 适度减小字体 */
+  /* 修复实际使用的Hero标题类 */
+  .hero-title-line1 {
+    font-size: clamp(24px, 6vw, 32px) !important; /* 第一行适中 */
     line-height: 1.2 !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 8px !important;
+    word-break: break-word !important;
+    white-space: normal !important; /* 允许换行 */
+  }
+
+  .hero-title-line2 {
+    font-size: clamp(26px, 6.5vw, 36px) !important; /* 第二行稍大但不过分 */
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+    margin-left: 0 !important; /* 移除桌面端的偏移 */
+    word-break: break-word !important;
+    white-space: normal !important; /* 允许换行 */
+    hyphens: auto !important;
+  }
+
+  /* 修复其他可能的Hero标题类 */
+  .hero-title,
+  .hero-title-large {
+    font-size: clamp(24px, 6vw, 36px) !important;
+    line-height: 1.2 !important;
+    white-space: normal !important; /* 关键：允许换行 */
     word-break: break-word !important;
     hyphens: auto !important;
   }
 
-  .hero-subtitle {
+  .hero-subtitle,
+  .hero-subtitle-large {
     font-size: 16px !important;
     line-height: 1.5 !important;
     max-width: 100% !important;
@@ -322,13 +346,16 @@
     padding: 0 8px !important;
   }
 
-  .hero-actions {
+  .hero-actions,
+  .hero-actions-center {
     flex-direction: column !important;
     gap: 12px !important;
     padding: 0 8px !important;
   }
 
-  .hero-actions .btn {
+  .hero-actions .btn,
+  .hero-actions-center .btn-primary-large,
+  .hero-actions-center .btn-secondary-large {
     width: 100%;
     justify-content: center;
     padding: 14px 24px !important;
