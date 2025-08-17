@@ -46,8 +46,6 @@ const UCYXApp = {
           <div class="mobile-menu-header">
             <div class="mobile-logo">UCYX</div>
             <button class="mobile-menu-close" @click="closeMobileMenu">
-              <span class="close-line"></span>
-              <span class="close-line"></span>
             </button>
           </div>
           

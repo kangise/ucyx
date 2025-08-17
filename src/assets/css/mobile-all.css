@@ -205,6 +205,59 @@
     background: var(--primary-hover-color);
   }
 
+  /* 移动端导航下拉菜单样式 */
+  .accordion-trigger {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    background: none !important;
+    border: none !important;
+    text-align: left !important;
+    cursor: pointer !important;
+  }
+
+  .accordion-arrow {
+    font-size: 12px !important;
+    transition: transform 0.3s ease !important;
+    color: var(--text-secondary) !important;
+  }
+
+  .accordion-arrow.active {
+    transform: rotate(180deg) !important;
+  }
+
+  .mobile-submenu {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+    background-color: #f8fafc !important;
+  }
+
+  .mobile-submenu.active {
+    max-height: 300px !important;
+  }
+
+  .mobile-submenu-link {
+    display: block !important;
+    padding: 12px 40px !important;
+    color: var(--text-secondary) !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    transition: all 0.2s ease !important;
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+
+  .mobile-submenu-link:hover {
+    color: var(--primary-color) !important;
+    background-color: #f1f5f9 !important;
+  }
+
+  .mobile-submenu-link:last-child {
+    border-bottom: none !important;
+  }
+
   /* 2. 英雄区域移动端优化 */
   .hero-section {
     padding: 80px 0 60px !important;
@@ -298,6 +351,45 @@
   /* 6. 方法论区域修复 - 垂直布局 */
   .methodology-section {
     padding: 80px 0 !important;
+  }
+
+  .methodology-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .methodology-tabs {
+    order: 1;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .methodology-panel {
+    order: 2;
+    width: 100% !important;
+  }
+
+  .tab-item {
+    width: 100% !important;
+    padding: 20px !important;
+    text-align: left !important;
+  }
+
+  .panel-content {
+    text-align: center !important;
+    padding: 24px !important;
+  }
+
+  .tool-demo {
+    margin-top: 24px !important;
+  }
+
+  .tool-demo img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
 
   .methodology-grid {
