@@ -1259,13 +1259,14 @@ body {
   }
   
   .main-nav {
-    display: none; /* Will implement mobile menu later */
+    display: none;
   }
+}
   
-  .hero-container {
-    padding: 0 16px;
-    text-align: center;
-  }
+.hero-container {
+  padding: 0 16px;
+  text-align: center;
+}
   
   .hero-title {
     font-size: 36px;
