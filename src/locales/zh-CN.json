@@ -15,7 +15,7 @@
   "hero": {
     "titleLine1": "你看到你的",
     "titleLine2": "非凡。",
-    "subtitle": "UCYX是一家面向未来的、AI驱动的咨询公司，致力于帮助品牌在复杂的跨境电子商务市场中发现独特的"X-非凡"。",
+    "subtitle": "UCYX是一家面向未来的、AI驱动的咨询公司，致力于帮助品牌在复杂的跨境电子商务市场中发现独特的\"X-非凡\"。",
     "cta": "开始你的增长之旅",
     "learnMore": "发现我们的方法论"
   },
@@ -54,7 +54,7 @@
     },
     "feature2": {
       "title": "品牌智能",
-      "description": "通过UCselection™价值主张画布，共同创造一个具有引人注目的"X因子"的产品原型。",
+      "description": "通过UCselection™价值主张画布，共同创造一个具有引人注目的\"X因子\"的产品原型。",
       "tag1": "UCselection™",
       "tag2": "品牌策略"
     },
@@ -130,17 +130,17 @@
     "steps": [
       {
         "title": "市场扫描与机会解锁",
-        "description": "使用我们专有的Novochoice机会象限模型，结合AI数据分析，我们快速从数百个利基市场中为你识别高潜力的"价值盆地"。",
+        "description": "使用我们专有的Novochoice机会象限模型，结合AI数据分析，我们快速从数百个利基市场中为你识别高潜力的\"价值盆地\"。",
         "tool": "Novochoice™"
       },
       {
         "title": "深度洞察与产品定义",
-        "description": "通过UCselection™价值主张画布，我们逆向工程竞争对手评论和用户痛点，共同创造一个具有引人注目的"X因子"的产品原型。",
+        "description": "通过UCselection™价值主张画布，我们逆向工程竞争对手评论和用户痛点，共同创造一个具有引人注目的\"X因子\"的产品原型。",
         "tool": "UCopps™"
       },
       {
         "title": "可行性与增长路径",
-        "description": "利用UCforecast™销售预测模型使用机器学习进行损益情景规划，我们使用"品牌增长路径矩阵"为你的业务绘制清晰的1到N的旅程。",
+        "description": "利用UCforecast™销售预测模型使用机器学习进行损益情景规划，我们使用\"品牌增长路径矩阵\"为你的业务绘制清晰的1到N的旅程。",
         "tool": "UCforecast™"
       },
       {
@@ -201,7 +201,7 @@
   },
   "megaMenu": {
     "start": "开始",
-    "choice": "��择",
+    "choice": "选择",
     "sell": "销售",
     "manage": "管理",
     "sellToChina": "销往中国",

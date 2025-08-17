@@ -164,18 +164,41 @@ class LanguageManager {
 
   // 加载翻译文件
   async loadTranslations(lang) {
-    // 直接从内联数据返回翻译
     if (this.translations[lang]) {
       return this.translations[lang];
     }
 
-    // 如果请求的语言不存在，返回英语
-    if (lang !== 'en' && this.translations['en']) {
-      return this.translations['en'];
+    try {
+      // 动态导入翻译文件
+      let translations;
+      
+      if (lang === 'en') {
+        const module = await import('../../locales/en.json');
+        translations = module.default;
+      } else if (lang === 'zh-cn') {
+        const module = await import('../../locales/zh-cn.json');
+        translations = module.default;
+      } else if (lang === 'zh-tw') {
+        const module = await import('../../locales/zh-tw.json');
+        translations = module.default;
+      } else if (lang === 'ja') {
+        const module = await import('../../locales/ja.json');
+        translations = module.default;
+      } else {
+        throw new Error(`Unsupported language: ${lang}`);
+      }
+      
+      this.translations[lang] = translations;
+      return translations;
+    } catch (error) {
+      console.error(`Failed to load translations for ${lang}:`, error);
+      // 如果加载失败，加载英语作为后备
+      if (lang !== 'en') {
+        return await this.loadTranslations('en');
+      }
+      // 如果英语也加载失败，返回基础翻译
+      return this.getFallbackTranslations();
     }
-
-    // 最后的后备方案
-    return this.getFallbackTranslations();
   }
 
   // 获取后备翻译
