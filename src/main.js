@@ -567,41 +567,8 @@ const UCYXApp = {
   
   data() {
     return {
-      // 多语言相关数据 - 提供默认值避免渲染错误
-      t: {
-        nav: { services: 'Services', whoWeServe: 'Who We Serve', successStories: 'Success Stories', methodology: 'Methodology', login: 'Log in' },
-        hero: { titleLine1: 'You See Your', titleLine2: 'Extraordinary.', subtitle: 'UCYX is a future-focused, AI-driven consultancy dedicated to helping brands uncover unique "X-trodinary" in the complex cross-border e-commerce market.', cta: 'Start Your Growth Journey', learnMore: 'Discover Our Methodology' },
-        megaMenu: { novochoice: 'Novochoice', start: 'Start', choice: 'Choice', sell: 'Sell', manage: 'Manage', sellToChina: 'Sell to China', sellToWorld: 'Sell to The World', reachConsumers: 'Reach 1 billion consumers', globalExpansion: 'Global market expansion', aiPoweredIntelligence: 'AI-powered market intelligence', customizedSelection: 'UCselection Service', tailoredRecommendations: 'Tailored product recommendations', sellerCopilot: 'UCcopilot Services', aiDrivenOptimization: 'AI-driven sales optimization', marketingMix: 'UC-MMM', maximizeROI: 'Maximize marketing ROI', manageCustomer: 'Manage your Customer', buildRelationships: 'Build lasting relationships', startConsultation: 'Start Free Consultation', visitBlog: 'Visit Our Blog', learnMethodology: 'Learn More About Methodology' },
-        dataPower: { 
-          stat1: { number: '300', suffix: '+', label: 'Core E-commerce Categories Monitored' }, 
-          stat2: { number: '5', suffix: 'M+', label: 'Active Products Tracked' }, 
-          stat3: { number: '10', suffix: 'M+', label: 'Industry Keywords Analyzed' }, 
-          stat4: { number: '50', suffix: 'M+', label: 'Consumer Reviews Processed' } 
-        },
-        services: { 
-          title: 'Everything you need to achieve extraordinary growth', 
-          subtitle: 'Our comprehensive AI-driven methodology covers every aspect of your e-commerce journey.', 
-          feature1: { title: 'Novochoice', description: 'Discover high-potential niches with Novochoice™ Opportunity Quadrant, powered by AI analysis of massive datasets.', tag1: 'Novochoice™', tag2: 'AI analysis' }, 
-          feature2: { title: 'Brand Smart', description: 'Through the UCselection™ Value Proposition Canvas, co-create a product prototype with a compelling "X-factor".', tag1: 'UCselection™', tag2: 'Brand Strategy' }, 
-          feature3: { title: 'Launch to Win', description: 'Execute successful launches across global platforms with integrated marketing solutions.', tag1: 'UCforecast™', tag2: 'Growth Path' }, 
-          feature4: { title: 'Lasting Success', description: 'Achieve sustained growth with our UCcopilot™ AI-driven optimization system.', tag1: 'UCcopilot™', tag2: 'AI Optimization' } 
-        },
-        whoWeServe: { 
-          title: 'Who We Serve', 
-          subtitle: 'We partner with global market pioneers, whether you are an established brand seeking expansion or a startup with a great product.', 
-          card1: { title: 'Established Brands', description: 'You have successful products and a stable business but are eager to enter new markets to find your next growth curve.' }, 
-          card2: { title: 'Startups with Great Ideas', description: 'You have created an outstanding ideas but lack the approach to turn into product and brand.' }, 
-          card3: { title: 'Traditional Manufacture', description: 'You have a great product but lack the go-to-market strategy and brand marketing experience for platforms like Amazon or Shopify.' } 
-        },
-        successStories: { title: 'Our Success Stories', subtitle: 'We don\'t just deliver strategies, we deliver measurable results.' },
-        methodology: { title: 'The UCYX Value Growth Methodology™', subtitle: 'We don\'t offer scattered advice. We deliver a systematic, verifiable blueprint for success.', usingProprietaryModel: 'Using our proprietary', model: 'model' },
-        brands: { title: 'Advanced Market Intelligence Platform', description: 'Novochoice is UCYX\'s advanced market intelligence platform that combines artificial intelligence, big data analytics, and real-time monitoring to provide comprehensive insights into e-commerce opportunities worldwide.', cta: 'Learn More About Novochoice', novochoiceTitle: 'Novochoice' },
-        contact: { readyTitle: 'Ready to achieve extraordinary growth?', readySubtitle: 'Join hundreds of brands that have transformed their business with our methodology.', submitting: 'Submitting...', successMessage: 'Thank you! We will contact you within 24 hours.', errorMessage: 'Sorry, there was an error. Please try again.' },
-        form: { name: 'Name', email: 'Email', message: 'Your Needs', submit: 'Submit', namePlaceholder: 'Your Name', emailPlaceholder: 'your@email.com', messagePlaceholder: 'Tell us about your business goals...' },
-        footer: { company: 'Company', about: 'About Us', careers: 'Careers', services: 'Services', methodology: 'Methodology', cases: 'Case Studies', solutions: 'Solutions', resources: 'Resources', blog: 'Blog', webinars: 'Webinars', legal: 'Legal', privacy: 'Privacy Policy', terms: 'Terms of Service', rights: 'All Rights Reserved.' },
-        footerExtra: { sellToChina: 'Sell to China', sellToWorld: 'Sell to The World', sellerCopilot: 'UCcopilot Services', marketingMix: 'UC-MMM', manageCustomer: 'Manage your Customer', aboutUCYX: 'About UCYX', partners: 'Partners', novochoicePlatform: 'Novochoice Platform', helpCenter: 'Help Center', contactUs: 'Contact Us', copyright: '© 2025 UCYX Ltd. All rights reserved.', support: 'Support' },
-        language: { current: 'English', switch: 'Switch Language' }
-      },
+      // 多语言相关数据 - 初始为空，由languageManager填充
+      t: {},
       currentLanguage: 'en',
       supportedLanguages: {
         'en': { name: 'English' },
@@ -717,7 +684,11 @@ const UCYXApp = {
         
         // 更新Vue应用的状态
         this.currentLanguage = langCode;
-        this.t = window.languageManager.getCurrentTranslations();
+        const newTranslations = window.languageManager.getCurrentTranslations();
+        
+        // 清空现有翻译并重新赋值，确保响应式更新
+        Object.keys(this.t).forEach(key => delete this.t[key]);
+        Object.assign(this.t, newTranslations);
         
         // 更新动态数据
         this.updateDynamicData();
@@ -730,6 +701,8 @@ const UCYXApp = {
         
         // 更新页面标题
         document.title = this.t.meta?.title || 'UCYX - AI-Driven Global E-commerce Consultancy';
+        
+        console.log('Language changed successfully to:', langCode, this.t);
       } catch (error) {
         console.error('Failed to change language:', error);
       }
@@ -761,14 +734,18 @@ const UCYXApp = {
         // 确保获取到翻译对象
         const translations = window.languageManager.getCurrentTranslations();
         if (translations && Object.keys(translations).length > 0) {
-          this.t = translations;
+          // 使用Object.assign确保响应式更新
+          Object.assign(this.t, translations);
         } else {
           // 如果没有翻译对象，手动加载
           const loadedTranslations = await window.languageManager.loadTranslations(detectedLanguage);
-          this.t = loadedTranslations;
+          Object.assign(this.t, loadedTranslations);
         }
         
         console.log('Final translations loaded:', this.t);
+        
+        // 强制Vue重新渲染
+        this.$forceUpdate();
         
         // 更新动态数据
         this.updateDynamicData();
@@ -776,8 +753,11 @@ const UCYXApp = {
         // 监听语言变更事件
         window.addEventListener('languageChanged', (event) => {
           this.currentLanguage = event.detail.language;
-          this.t = event.detail.translations;
+          // 清空现有翻译并重新赋值
+          Object.keys(this.t).forEach(key => delete this.t[key]);
+          Object.assign(this.t, event.detail.translations);
           this.updateDynamicData();
+          this.$forceUpdate();
           console.log('Language changed to:', event.detail.language, event.detail.translations);
         });
         
@@ -786,8 +766,10 @@ const UCYXApp = {
         console.error('Failed to initialize language:', error);
         // 如果初始化失败，使用默认英语和后备翻译
         this.currentLanguage = 'en';
-        this.t = window.languageManager.getFallbackTranslations();
+        const fallbackTranslations = window.languageManager.getFallbackTranslations();
+        Object.assign(this.t, fallbackTranslations);
         this.updateDynamicData();
+        this.$forceUpdate();
       }
     },
 
