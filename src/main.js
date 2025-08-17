@@ -709,14 +709,24 @@ const UCYXApp = {
       }
 
       try {
-        const translations = await window.languageManager.setLanguage(langCode);
+        // 直接调用languageManager的setLanguage方法
+        await window.languageManager.setLanguage(langCode);
+        
+        // 更新Vue应用的状态
         this.currentLanguage = langCode;
-        this.t = translations;
+        this.t = window.languageManager.getCurrentTranslations();
+        
+        // 更新动态数据
         this.updateDynamicData();
+        
+        // 关闭语言菜单
         this.showLanguageMenu = false;
         
+        // 强制Vue重新渲染
+        this.$forceUpdate();
+        
         // 更新页面标题
-        document.title = translations.meta?.title || 'UCYX - AI-Driven Global E-commerce Consultancy';
+        document.title = this.t.meta?.title || 'UCYX - AI-Driven Global E-commerce Consultancy';
       } catch (error) {
         console.error('Failed to change language:', error);
       }
