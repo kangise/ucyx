@@ -308,9 +308,9 @@
     padding: 0 16px !important;
   }
 
-  /* 修复实际使用的Hero标题类 */
+  /* 修复实际使用的Hero标题类 - 与其他模块标题大小一致 */
   .hero-title-line1 {
-    font-size: clamp(24px, 6vw, 32px) !important; /* 第一行适中 */
+    font-size: clamp(24px, 6vw, 32px) !important; /* 与section-title一致 */
     line-height: 1.2 !important;
     margin-bottom: 8px !important;
     word-break: break-word !important;
@@ -318,7 +318,7 @@
   }
 
   .hero-title-line2 {
-    font-size: clamp(26px, 6.5vw, 36px) !important; /* 第二行稍大但不过分 */
+    font-size: clamp(24px, 6vw, 32px) !important; /* 与section-title一致 */
     line-height: 1.2 !important;
     margin-bottom: 20px !important;
     margin-left: 0 !important; /* 移除桌面端的偏移 */
@@ -407,13 +407,15 @@
   }
 
   .story-slide-dual .story-card-dual {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 130% !important; /* 增加到1.3倍宽度 */
+    max-width: 130% !important;
     margin: 0 !important;
-    padding: 28px 18px !important; /* 适度增加padding */
+    padding: 32px 24px !important; /* 增加padding以配合更大宽度 */
     background: white;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+    transform: scale(0.77); /* 缩放以适应容器，保持视觉平衡 */
+    transform-origin: center;
   }
 
   .story-slide-dual .story-card-dual:nth-child(2) {
@@ -577,30 +579,40 @@
     grid-template-columns: 1fr !important;
     gap: 36px !important; /* 适度增加间距 */
     align-items: center;
-    padding: 36px 20px !important; /* 适度增加padding */
+    padding: 48px 32px !important; /* 增加容器内边距 */
+    background: var(--text-primary);
+    border-radius: var(--radius-lg);
+    margin: 0 20px !important; /* 增加与屏幕边缘的间距 */
   }
 
   .platform-content,
   .brand-content {
     text-align: center;
+    padding: 0 20px !important; /* 增加内容区域内边距 */
   }
 
   .platform-content h2,
   .brand-title {
     font-size: 26px !important; /* 适度减小标题 */
-    margin-bottom: 24px;
+    margin-bottom: 28px !important; /* 增加标题下边距 */
+    line-height: 1.3 !important;
+    color: white;
   }
 
   .platform-content p,
   .brand-description {
     font-size: 16px !important;
     line-height: 1.6;
-    margin-bottom: 32px;
+    margin-bottom: 36px !important; /* 增加描述下边距 */
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0 12px !important; /* 文字内边距 */
   }
 
   .platform-visual,
   .brand-visual {
     order: -1;
+    padding: 0 20px !important; /* 增加视觉元素内边距 */
+    margin-bottom: 20px !important; /* 增加视觉元素下边距 */
   }
 
   .platform-logo,
@@ -611,6 +623,21 @@
     word-break: break-word !important;
     hyphens: auto !important;
     line-height: 1.2 !important;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 12px 0 !important; /* 增加logo上下间距 */
+  }
+
+  /* CTA按钮优化 */
+  .platform-showcase .btn-primary,
+  .platform-content .btn-primary {
+    padding: 18px 36px !important; /* 增加按钮内边距 */
+    font-size: 16px !important;
+    margin-top: 12px !important;
+    border-radius: 8px !important;
+    background: var(--primary-color) !important;
+    color: white !important;
+    font-weight: 600;
   }
 
   .brands-grid {
