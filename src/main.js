@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import './assets/css/variables.css'
 import './assets/css/modern-style.css'
 import './assets/css/language-selector.css'
 import './assets/css/mobile-navigation.css'
