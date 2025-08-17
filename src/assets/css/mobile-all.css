@@ -307,7 +307,7 @@
   }
 
   .hero-title {
-    font-size: clamp(28px, 7vw, 42px) !important;
+    font-size: clamp(24px, 6vw, 36px) !important; /* 适度减小字体 */
     line-height: 1.2 !important;
     margin-bottom: 16px !important;
     word-break: break-word !important;
@@ -383,7 +383,7 @@
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding: 24px 16px !important; /* 大幅减少padding */
+    padding: 28px 18px !important; /* 适度增加padding */
     background: white;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
@@ -548,9 +548,9 @@
 
   .platform-showcase {
     grid-template-columns: 1fr !important;
-    gap: 40px !important;
+    gap: 36px !important; /* 适度增加间距 */
     align-items: center;
-    padding: 32px 24px !important;
+    padding: 36px 20px !important; /* 适度增加padding */
   }
 
   .platform-content,
@@ -560,7 +560,7 @@
 
   .platform-content h2,
   .brand-title {
-    font-size: 32px !important;
+    font-size: 26px !important; /* 适度减小标题 */
     margin-bottom: 24px;
   }
 
