@@ -97,16 +97,16 @@ const UCYXApp = {
                     <circle cx="11" cy="11" r="3"/>
                   </svg>
                 </div>
-                <h4>{{ t.megaMenu.choice }}</h4>
+                <h4>${enTranslations.megaMenu.choice}</h4>
                 <div class="mega-divider"></div>
                 <div class="mega-links-full">
                   <a href="/novochoice" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.novochoice }}</div>
-                    <div class="service-value">{{ t.megaMenu.aiPoweredIntelligence }}</div>
+                    <div class="service-name">${enTranslations.megaMenu.novochoice}</div>
+                    <div class="service-value">${enTranslations.megaMenu.aiPoweredIntelligence}</div>
                   </a>
                   <a href="#customized" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.customizedSelection }}</div>
-                    <div class="service-value">{{ t.megaMenu.tailoredRecommendations }}</div>
+                    <div class="service-name">${enTranslations.megaMenu.customizedSelection}</div>
+                    <div class="service-value">${enTranslations.megaMenu.tailoredRecommendations}</div>
                   </a>
                 </div>
               </div>
@@ -119,16 +119,16 @@ const UCYXApp = {
                     <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
                   </svg>
                 </div>
-                <h4>{{ t.megaMenu.sell }}</h4>
+                <h4>${enTranslations.megaMenu.sell}</h4>
                 <div class="mega-divider"></div>
                 <div class="mega-links-full">
                   <a href="#copilot" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.sellerCopilot }}</div>
-                    <div class="service-value">{{ t.megaMenu.aiDrivenOptimization }}</div>
+                    <div class="service-name">${enTranslations.megaMenu.sellerCopilot}</div>
+                    <div class="service-value">${enTranslations.megaMenu.aiDrivenOptimization}</div>
                   </a>
                   <a href="#marketing" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.marketingMix }}</div>
-                    <div class="service-value">{{ t.megaMenu.maximizeROI }}</div>
+                    <div class="service-name">${enTranslations.megaMenu.marketingMix}</div>
+                    <div class="service-value">${enTranslations.megaMenu.maximizeROI}</div>
                   </a>
                 </div>
               </div>
@@ -140,12 +140,12 @@ const UCYXApp = {
                     <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h4a2 2 0 0 1 2 2v1.28c.6.35 1 .98 1 1.72 0 .74-.4 1.38-1 1.72V15a2 2 0 0 1-2 2h-4v1.27c.6.35 1 .98 1 1.73a2 2 0 1 1-4 0c0-.75.4-1.38 1-1.73V17H7a2 2 0 0 1-2-2v-1.28c-.6-.35-1-.98-1-1.72 0-.74.4-1.37 1-1.72V9a2 2 0 0 1 2-2h4V5.73c-.6-.35-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
                   </svg>
                 </div>
-                <h4>{{ t.megaMenu.manage }}</h4>
+                <h4>${enTranslations.megaMenu.manage}</h4>
                 <div class="mega-divider"></div>
                 <div class="mega-links-full">
                   <a href="#customer-management" class="mega-service-link">
-                    <div class="service-name">{{ t.megaMenu.manageCustomer }}</div>
-                    <div class="service-value">{{ t.megaMenu.buildRelationships }}</div>
+                    <div class="service-name">${enTranslations.megaMenu.manageCustomer}</div>
+                    <div class="service-value">${enTranslations.megaMenu.buildRelationships}</div>
                   </a>
                 </div>
               </div>
@@ -158,15 +158,15 @@ const UCYXApp = {
         <div class="mega-menu-footer">
           <div class="mega-footer-content">
             <a href="#contact" class="mega-footer-item">
-              <span>{{ t.megaMenu.startConsultation }}</span>
+              <span>${enTranslations.megaMenu.startConsultation}</span>
             </a>
             <div class="mega-footer-divider"></div>
             <a href="#blog" class="mega-footer-item">
-              <span>{{ t.megaMenu.visitBlog }}</span>
+              <span>${enTranslations.megaMenu.visitBlog}</span>
             </a>
             <div class="mega-footer-divider"></div>
             <a href="#methodology" class="mega-footer-item">
-              <span>{{ t.megaMenu.learnMethodology }}</span>
+              <span>${enTranslations.megaMenu.learnMethodology}</span>
             </a>
           </div>
         </div>
@@ -179,15 +179,15 @@ const UCYXApp = {
            @mouseleave="hideMegaMenu">
         <div class="mega-extension-content">
           <a href="#contact" class="mega-footer-item">
-            <span>{{ t.megaMenu.startConsultation }}</span>
+            <span>${enTranslations.megaMenu.startConsultation}</span>
           </a>
           <div class="mega-footer-divider"></div>
           <a href="#blog" class="mega-footer-item">
-            <span>{{ t.megaMenu.visitBlog }}</span>
+            <span>${enTranslations.megaMenu.visitBlog}</span>
           </a>
           <div class="mega-footer-divider"></div>
           <a href="#methodology" class="mega-footer-item">
-            <span>{{ t.megaMenu.learnMethodology }}</span>
+            <span>${enTranslations.megaMenu.learnMethodology}</span>
           </a>
         </div>
       </div>
@@ -198,13 +198,13 @@ const UCYXApp = {
           <div class="hero-overlay"></div>
           <div class="hero-content-center">
             <div class="hero-title-container">
-              <div class="hero-title-line1">{{ t.hero.titleLine1 }}</div>
-              <div class="hero-title-line2">{{ t.hero.titleLine2 }}</div>
+              <div class="hero-title-line1">${enTranslations.hero.titleLine1}</div>
+              <div class="hero-title-line2">${enTranslations.hero.titleLine2}</div>
             </div>
-            <p class="hero-subtitle-large">{{ t.hero.subtitle }}</p>
+            <p class="hero-subtitle-large">${enTranslations.hero.subtitle}</p>
             <div class="hero-actions-center">
-              <a href="#contact" class="btn-primary-large">{{ t.hero.cta }}</a>
-              <a href="#methodology" class="btn-secondary-large">{{ t.hero.learnMore }}</a>
+              <a href="#contact" class="btn-primary-large">${enTranslations.hero.cta}</a>
+              <a href="#methodology" class="btn-secondary-large">${enTranslations.hero.learnMore}</a>
             </div>
           </div>
         </section>
@@ -214,20 +214,20 @@ const UCYXApp = {
           <div class="trust-container">
             <div class="trust-stats">
               <div class="stat-item">
-                <div class="stat-number">{{ t.dataPower.stat1.number }}{{ t.dataPower.stat1.suffix }}</div>
-                <div class="stat-label">{{ t.dataPower.stat1.label }}</div>
+                <div class="stat-number">${enTranslations.dataPower.stat1.number}${enTranslations.dataPower.stat1.suffix}</div>
+                <div class="stat-label">${enTranslations.dataPower.stat1.label}</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">{{ t.dataPower.stat2.number }}{{ t.dataPower.stat2.suffix }}</div>
-                <div class="stat-label">{{ t.dataPower.stat2.label }}</div>
+                <div class="stat-number">${enTranslations.dataPower.stat2.number}${enTranslations.dataPower.stat2.suffix}</div>
+                <div class="stat-label">${enTranslations.dataPower.stat2.label}</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">{{ t.dataPower.stat3.number }}{{ t.dataPower.stat3.suffix }}</div>
-                <div class="stat-label">{{ t.dataPower.stat3.label }}</div>
+                <div class="stat-number">${enTranslations.dataPower.stat3.number}${enTranslations.dataPower.stat3.suffix}</div>
+                <div class="stat-label">${enTranslations.dataPower.stat3.label}</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">{{ t.dataPower.stat4.number }}{{ t.dataPower.stat4.suffix }}</div>
-                <div class="stat-label">{{ t.dataPower.stat4.label }}</div>
+                <div class="stat-number">${enTranslations.dataPower.stat4.number}${enTranslations.dataPower.stat4.suffix}</div>
+                <div class="stat-label">${enTranslations.dataPower.stat4.label}</div>
               </div>
             </div>
           </div>
@@ -237,8 +237,8 @@ const UCYXApp = {
         <section id="solutions" class="solutions-section-spaced">
           <div class="section-container">
             <div class="section-header">
-              <h2>{{ t.services.title }}</h2>
-              <p class="section-subtitle">{{ t.services.subtitle }}</p>
+              <h2>${enTranslations.services.title}</h2>
+              <p class="section-subtitle">${enTranslations.services.subtitle}</p>
             </div>
             <div class="solutions-grid-large">
               <div class="solution-feature-card-large">
@@ -249,11 +249,11 @@ const UCYXApp = {
                     <circle cx="11" cy="11" r="3"/>
                   </svg>
                 </div>
-                <h3>{{ t.services.feature1.title }}</h3>
-                <p>{{ t.services.feature1.description }}</p>
+                <h3>${enTranslations.services.feature1.title}</h3>
+                <p>${enTranslations.services.feature1.description}</p>
                 <div class="feature-highlights">
-                  <span class="highlight-tag">{{ t.services.feature1.tag1 }}</span>
-                  <span class="highlight-tag">{{ t.services.feature1.tag2 }}</span>
+                  <span class="highlight-tag">${enTranslations.services.feature1.tag1}</span>
+                  <span class="highlight-tag">${enTranslations.services.feature1.tag2}</span>
                 </div>
               </div>
               <div class="solution-feature-card-large">
@@ -263,11 +263,11 @@ const UCYXApp = {
                     <circle cx="12" cy="12" r="3"/>
                   </svg>
                 </div>
-                <h3>{{ t.services.feature2.title }}</h3>
-                <p>{{ t.services.feature2.description }}</p>
+                <h3>${enTranslations.services.feature2.title}</h3>
+                <p>${enTranslations.services.feature2.description}</p>
                 <div class="feature-highlights">
-                  <span class="highlight-tag">{{ t.services.feature2.tag1 }}</span>
-                  <span class="highlight-tag">{{ t.services.feature2.tag2 }}</span>
+                  <span class="highlight-tag">${enTranslations.services.feature2.tag1}</span>
+                  <span class="highlight-tag">${enTranslations.services.feature2.tag2}</span>
                 </div>
               </div>
               <div class="solution-feature-card-large">
@@ -277,11 +277,11 @@ const UCYXApp = {
                     <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
                   </svg>
                 </div>
-                <h3>{{ t.services.feature3.title }}</h3>
-                <p>{{ t.services.feature3.description }}</p>
+                <h3>${enTranslations.services.feature3.title}</h3>
+                <p>${enTranslations.services.feature3.description}</p>
                 <div class="feature-highlights">
-                  <span class="highlight-tag">{{ t.services.feature3.tag1 }}</span>
-                  <span class="highlight-tag">{{ t.services.feature3.tag2 }}</span>
+                  <span class="highlight-tag">${enTranslations.services.feature3.tag1}</span>
+                  <span class="highlight-tag">${enTranslations.services.feature3.tag2}</span>
                 </div>
               </div>
               <div class="solution-feature-card-large">
@@ -290,11 +290,11 @@ const UCYXApp = {
                     <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h4a2 2 0 0 1 2 2v1.28c.6.35 1 .98 1 1.72 0 .74-.4 1.38-1 1.72V15a2 2 0 0 1-2 2h-4v1.27c.6.35 1 .98 1 1.73a2 2 0 1 1-4 0c0-.75.4-1.38 1-1.73V17H7a2 2 0 0 1-2-2v-1.28c-.6-.35-1-.98-1-1.72 0-.74.4-1.37 1-1.72V9a2 2 0 0 1 2-2h4V5.73c-.6-.35-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
                   </svg>
                 </div>
-                <h3>{{ t.services.feature4.title }}</h3>
-                <p>{{ t.services.feature4.description }}</p>
+                <h3>${enTranslations.services.feature4.title}</h3>
+                <p>${enTranslations.services.feature4.description}</p>
                 <div class="feature-highlights">
-                  <span class="highlight-tag">{{ t.services.feature4.tag1 }}</span>
-                  <span class="highlight-tag">{{ t.services.feature4.tag2 }}</span>
+                  <span class="highlight-tag">${enTranslations.services.feature4.tag1}</span>
+                  <span class="highlight-tag">${enTranslations.services.feature4.tag2}</span>
                 </div>
               </div>
             </div>
@@ -305,21 +305,21 @@ const UCYXApp = {
         <section id="who-we-serve" class="serve-section">
           <div class="section-container">
             <div class="section-header">
-              <h2>{{ t.whoWeServe.title }}</h2>
-              <p class="section-subtitle">{{ t.whoWeServe.subtitle }}</p>
+              <h2>${enTranslations.whoWeServe.title}</h2>
+              <p class="section-subtitle">${enTranslations.whoWeServe.subtitle}</p>
             </div>
             <div class="serve-grid">
               <div class="serve-card">
-                <h3>{{ t.whoWeServe.card1.title }}</h3>
-                <p>{{ t.whoWeServe.card1.description }}</p>
+                <h3>${enTranslations.whoWeServe.card1.title}</h3>
+                <p>${enTranslations.whoWeServe.card1.description}</p>
               </div>
               <div class="serve-card">
-                <h3>{{ t.whoWeServe.card2.title }}</h3>
-                <p>{{ t.whoWeServe.card2.description }}</p>
+                <h3>${enTranslations.whoWeServe.card2.title}</h3>
+                <p>${enTranslations.whoWeServe.card2.description}</p>
               </div>
               <div class="serve-card">
-                <h3>{{ t.whoWeServe.card3.title }}</h3>
-                <p>{{ t.whoWeServe.card3.description }}</p>
+                <h3>${enTranslations.whoWeServe.card3.title}</h3>
+                <p>${enTranslations.whoWeServe.card3.description}</p>
               </div>
             </div>
           </div>
@@ -329,8 +329,8 @@ const UCYXApp = {
         <section id="success-stories" class="stories-section">
           <div class="section-container">
             <div class="section-header">
-              <h2>{{ t.successStories.title }}</h2>
-              <p class="section-subtitle">{{ t.successStories.subtitle }}</p>
+              <h2>${enTranslations.successStories.title}</h2>
+              <p class="section-subtitle">${enTranslations.successStories.subtitle}</p>
             </div>
             <!-- 第一层：外层定位容器 -->
             <div class="stories-slider-dual-wide">
@@ -374,8 +374,8 @@ const UCYXApp = {
         <section id="methodology" class="methodology-section">
           <div class="section-container">
             <div class="section-header">
-              <h2>{{ t.methodology.title }}</h2>
-              <p class="section-subtitle">{{ t.methodology.subtitle }}</p>
+              <h2>${enTranslations.methodology.title}</h2>
+              <p class="section-subtitle">${enTranslations.methodology.subtitle}</p>
             </div>
             <div class="methodology-content">
               <div class="methodology-tabs">
@@ -414,12 +414,12 @@ const UCYXApp = {
           <div class="section-container">
             <div class="platform-showcase">
               <div class="platform-content">
-                <h2>{{ t.brands.title }}</h2>
-                <p>{{ t.brands.description }}</p>
-                <a href="/novochoice" class="btn-primary">{{ t.brands.cta }}</a>
+                <h2>${enTranslations.brands.title}</h2>
+                <p>${enTranslations.brands.description}</p>
+                <a href="/novochoice" class="btn-primary">${enTranslations.brands.cta}</a>
               </div>
               <div class="platform-visual">
-                <div class="platform-logo">{{ t.brands.novochoiceTitle }}</div>
+                <div class="platform-logo">${enTranslations.brands.novochoiceTitle}</div>
               </div>
             </div>
           </div>
@@ -429,24 +429,24 @@ const UCYXApp = {
         <section id="contact" class="contact-section">
           <div class="section-container">
             <div class="contact-header">
-              <h2>{{ t.contact.readyTitle }}</h2>
-              <p class="section-subtitle">{{ t.contact.readySubtitle }}</p>
+              <h2>${enTranslations.contact.readyTitle}</h2>
+              <p class="section-subtitle">${enTranslations.contact.readySubtitle}</p>
             </div>
             <div class="contact-form-container-wide">
               <form class="contact-form-wide" @submit.prevent="handleFormSubmit">
                 <div class="form-row-wide">
                   <div class="form-group">
-                    <label>{{ t.form.name }}</label>
-                    <input type="text" v-model="form.name" placeholder="{{ t.form.namePlaceholder }}" required>
+                    <label>${enTranslations.form.name}</label>
+                    <input type="text" v-model="form.name" placeholder="${enTranslations.form.namePlaceholder}" required>
                   </div>
                   <div class="form-group">
-                    <label>{{ t.form.email }}</label>
-                    <input type="email" v-model="form.email" placeholder="{{ t.form.emailPlaceholder }}" required>
+                    <label>${enTranslations.form.email}</label>
+                    <input type="email" v-model="form.email" placeholder="${enTranslations.form.emailPlaceholder}" required>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>{{ t.form.message }}</label>
-                  <textarea v-model="form.message" placeholder="{{ t.form.messagePlaceholder }}" required></textarea>
+                  <label>${enTranslations.form.message}</label>
+                  <textarea v-model="form.message" placeholder="${enTranslations.form.messagePlaceholder}" required></textarea>
                 </div>
                 <button type="submit" class="btn-primary-wide" :disabled="isSubmitting">
                   {{ isSubmitting ? t.contact.submitting : t.form.submit }}
@@ -462,58 +462,58 @@ const UCYXApp = {
         <div class="footer-container">
           <div class="footer-grid">
             <div class="footer-column">
-              <h4>{{ t.megaMenu.start }}</h4>
+              <h4>${enTranslations.megaMenu.start}</h4>
               <ul>
-                <li><a href="#sell-china">{{ t.footerExtra.sellToChina }}</a></li>
-                <li><a href="#sell-world">{{ t.footerExtra.sellToWorld }}</a></li>
+                <li><a href="#sell-china">${enTranslations.footerExtra.sellToChina}</a></li>
+                <li><a href="#sell-world">${enTranslations.footerExtra.sellToWorld}</a></li>
               </ul>
-              <h4 style="margin-top: 24px;">{{ t.megaMenu.choice }}</h4>
+              <h4 style="margin-top: 24px;">${enTranslations.megaMenu.choice}</h4>
               <ul>
-                <li><a href="/novochoice">{{ t.megaMenu.novochoice }}</a></li>
-                <li><a href="#customized">{{ t.megaMenu.customizedSelection }}</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>{{ t.megaMenu.sell }}</h4>
-              <ul>
-                <li><a href="#copilot">{{ t.footerExtra.sellerCopilot }}</a></li>
-                <li><a href="#marketing">{{ t.footerExtra.marketingMix }}</a></li>
-              </ul>
-              <h4 style="margin-top: 24px;">{{ t.megaMenu.manage }}</h4>
-              <ul>
-                <li><a href="#customer-management">{{ t.footerExtra.manageCustomer }}</a></li>
+                <li><a href="/novochoice">${enTranslations.megaMenu.novochoice}</a></li>
+                <li><a href="#customized">${enTranslations.megaMenu.customizedSelection}</a></li>
               </ul>
             </div>
             <div class="footer-column">
-              <h4>{{ t.footer.company }}</h4>
+              <h4>${enTranslations.megaMenu.sell}</h4>
               <ul>
-                <li><a href="#about">{{ t.footerExtra.aboutUCYX }}</a></li>
-                <li><a href="#careers">{{ t.footer.careers }}</a></li>
-                <li><a href="#partners">{{ t.footerExtra.partners }}</a></li>
+                <li><a href="#copilot">${enTranslations.footerExtra.sellerCopilot}</a></li>
+                <li><a href="#marketing">${enTranslations.footerExtra.marketingMix}</a></li>
+              </ul>
+              <h4 style="margin-top: 24px;">${enTranslations.megaMenu.manage}</h4>
+              <ul>
+                <li><a href="#customer-management">${enTranslations.footerExtra.manageCustomer}</a></li>
               </ul>
             </div>
             <div class="footer-column">
-              <h4>{{ t.footer.resources }}</h4>
+              <h4>${enTranslations.footer.company}</h4>
               <ul>
-                <li><a href="/novochoice">{{ t.footerExtra.novochoicePlatform }}</a></li>
-                <li><a href="#blog">{{ t.footer.blog }}</a></li>
-                <li><a href="#case-studies">{{ t.footer.cases }}</a></li>
-                <li><a href="#webinars">{{ t.footer.webinars }}</a></li>
+                <li><a href="#about">${enTranslations.footerExtra.aboutUCYX}</a></li>
+                <li><a href="#careers">${enTranslations.footer.careers}</a></li>
+                <li><a href="#partners">${enTranslations.footerExtra.partners}</a></li>
               </ul>
-              <h4 style="margin-top: 24px;">{{ t.footerExtra.support }}</h4>
+            </div>
+            <div class="footer-column">
+              <h4>${enTranslations.footer.resources}</h4>
               <ul>
-                <li><a href="#help">{{ t.footerExtra.helpCenter }}</a></li>
-                <li><a href="#contact">{{ t.footerExtra.contactUs }}</a></li>
+                <li><a href="/novochoice">${enTranslations.footerExtra.novochoicePlatform}</a></li>
+                <li><a href="#blog">${enTranslations.footer.blog}</a></li>
+                <li><a href="#case-studies">${enTranslations.footer.cases}</a></li>
+                <li><a href="#webinars">${enTranslations.footer.webinars}</a></li>
+              </ul>
+              <h4 style="margin-top: 24px;">${enTranslations.footerExtra.support}</h4>
+              <ul>
+                <li><a href="#help">${enTranslations.footerExtra.helpCenter}</a></li>
+                <li><a href="#contact">${enTranslations.footerExtra.contactUs}</a></li>
               </ul>
             </div>
           </div>
           
           <div class="footer-bottom">
             <div class="footer-legal">
-              <p>{{ t.footerExtra.copyright }}</p>
+              <p>${enTranslations.footerExtra.copyright}</p>
               <div class="legal-links">
-                <a href="#privacy">{{ t.footer.privacy }}</a>
-                <a href="#terms">{{ t.footer.terms }}</a>
+                <a href="#privacy">${enTranslations.footer.privacy}</a>
+                <a href="#terms">${enTranslations.footer.terms}</a>
               </div>
             </div>
           </div>
