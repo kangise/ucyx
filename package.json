@@ -5,7 +5,8 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node build/generate-pages.js",
+    "build": "vite build",
+    "build:full": "vite build && node build/generate-pages.js",
     "preview": "vite preview",
     "serve": "http-server dist -p 8080"
   },
