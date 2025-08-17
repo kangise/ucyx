@@ -205,11 +205,11 @@ class LanguageManager {
         login: 'Login' 
       },
       hero: { 
-        titleLine1: 'AI-Driven', 
-        titleLine2: 'Global E-commerce Consultancy', 
-        subtitle: 'Helping brands achieve success in global e-commerce markets through artificial intelligence and data insights', 
-        cta: 'Start Consultation', 
-        learnMore: 'Learn More' 
+        titleLine1: 'You See Your', 
+        titleLine2: 'Extraordinary.', 
+        subtitle: 'UCYX is a future-focused, AI-driven consultancy dedicated to helping brands uncover unique "X-trodinary" in the complex cross-border e-commerce market.', 
+        cta: 'Start Your Growth Journey', 
+        learnMore: 'Discover Our Methodology' 
       },
       megaMenu: {
         start: 'Start',

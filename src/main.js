@@ -622,36 +622,36 @@ const UCYXApp = {
     safeT() {
       if (!this.t || Object.keys(this.t).length === 0) {
         return {
-          nav: { services: '', whoWeServe: '', successStories: '', methodology: '', login: '' },
-          hero: { titleLine1: '', titleLine2: '', subtitle: '', cta: '', learnMore: '' },
-          megaMenu: { novochoice: '', start: '', choice: '', sell: '', manage: '' },
+          nav: { services: 'Services', whoWeServe: 'Who We Serve', successStories: 'Success Stories', methodology: 'Methodology', login: 'Log in' },
+          hero: { titleLine1: 'You See Your', titleLine2: 'Extraordinary.', subtitle: 'UCYX is a future-focused, AI-driven consultancy dedicated to helping brands uncover unique "X-trodinary" in the complex cross-border e-commerce market.', cta: 'Start Your Growth Journey', learnMore: 'Discover Our Methodology' },
+          megaMenu: { novochoice: 'Novochoice', start: 'Start', choice: 'Choice', sell: 'Sell', manage: 'Manage' },
           dataPower: { 
-            stat1: { number: '', suffix: '', label: '' },
-            stat2: { number: '', suffix: '', label: '' },
-            stat3: { number: '', suffix: '', label: '' },
-            stat4: { number: '', suffix: '', label: '' }
+            stat1: { number: '300', suffix: '+', label: 'Core E-commerce Categories Monitored' },
+            stat2: { number: '5', suffix: 'M+', label: 'Active Products Tracked' },
+            stat3: { number: '10', suffix: 'M+', label: 'Industry Keywords Analyzed' },
+            stat4: { number: '50', suffix: 'M+', label: 'Consumer Reviews Processed' }
           },
           services: { 
-            title: '', subtitle: '', 
-            feature1: { title: '', description: '', tag1: '', tag2: '' },
-            feature2: { title: '', description: '', tag1: '', tag2: '' },
-            feature3: { title: '', description: '', tag1: '', tag2: '' },
-            feature4: { title: '', description: '', tag1: '', tag2: '' }
+            title: 'Everything you need to achieve extraordinary growth', subtitle: 'Our comprehensive AI-driven methodology covers every aspect of your e-commerce journey.', 
+            feature1: { title: 'Novochoice', description: 'Discover high-potential niches with Novochoice™ Opportunity Quadrant, powered by AI analysis of massive datasets.', tag1: 'Novochoice™', tag2: 'AI analysis' },
+            feature2: { title: 'Brand Smart', description: 'Through the UCselection™ Value Proposition Canvas, co-create a product prototype with a compelling "X-factor".', tag1: 'UCselection™', tag2: 'Brand Strategy' },
+            feature3: { title: 'Launch to Win', description: 'Execute successful launches across global platforms with integrated marketing solutions.', tag1: 'UCforecast™', tag2: 'Growth Path' },
+            feature4: { title: 'Lasting Success', description: 'Achieve sustained growth with our UCcopilot™ AI-driven optimization system.', tag1: 'UCcopilot™', tag2: 'AI Optimization' }
           },
           whoWeServe: { 
-            title: '', subtitle: '', 
-            card1: { title: '', description: '' },
-            card2: { title: '', description: '' },
-            card3: { title: '', description: '' }
+            title: 'Who We Serve', subtitle: 'We partner with global market pioneers, whether you are an established brand seeking expansion or a startup with a great product.', 
+            card1: { title: 'Established Brands', description: 'You have successful products and a stable business but are eager to enter new markets to find your next growth curve.' },
+            card2: { title: 'Startups with Great Ideas', description: 'You have created an outstanding ideas but lack the approach to turn into product and brand.' },
+            card3: { title: 'Traditional Manufacture', description: 'You have a great product but lack the go-to-market strategy and brand marketing experience for platforms like Amazon or Shopify.' }
           },
-          successStories: { title: '', subtitle: '' },
-          methodology: { title: '', subtitle: '', usingProprietaryModel: '', model: '' },
-          brands: { title: '', description: '', cta: '', novochoiceTitle: '' },
-          contact: { readyTitle: '', readySubtitle: '' },
-          form: { name: '', namePlaceholder: '', email: '', emailPlaceholder: '', message: '', messagePlaceholder: '', submit: '' },
-          footer: { company: '', resources: '', about: '', careers: '', contact: '', blog: '', caseStudies: '', whitepapers: '', privacy: '', terms: '' },
-          footerExtra: { copyright: '' },
-          language: { current: '', switch: '' }
+          successStories: { title: 'Our Success Stories', subtitle: 'We don\'t just deliver strategies, we deliver measurable results.' },
+          methodology: { title: 'The UCYX Value Growth Methodology™', subtitle: 'We don\'t offer scattered advice. We deliver a systematic, verifiable blueprint for success.', usingProprietaryModel: 'Using our proprietary', model: 'model' },
+          brands: { title: 'Advanced Market Intelligence Platform', description: 'Novochoice is UCYX\'s advanced market intelligence platform that combines artificial intelligence, big data analytics, and real-time monitoring to provide comprehensive insights into e-commerce opportunities worldwide.', cta: 'Learn More About Novochoice', novochoiceTitle: 'Novochoice' },
+          contact: { readyTitle: 'Ready to achieve extraordinary growth?', readySubtitle: 'Join hundreds of brands that have transformed their business with our methodology.' },
+          form: { name: 'Name', namePlaceholder: 'Your Name', email: 'Email', emailPlaceholder: 'your@email.com', message: 'Your Needs', messagePlaceholder: 'Tell us about your business goals...', submit: 'Submit' },
+          footer: { company: 'Company', resources: 'Resources', about: 'About Us', careers: 'Careers', contact: 'Contact', blog: 'Blog', cases: 'Case Studies', webinars: 'Webinars', privacy: 'Privacy Policy', terms: 'Terms of Service' },
+          footerExtra: { copyright: '© 2025 UCYX Ltd. All rights reserved.', support: 'Support' },
+          language: { current: 'English', switch: 'Switch Language' }
         };
       }
       return this.t;
