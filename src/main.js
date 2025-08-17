@@ -923,6 +923,16 @@ const UCYXApp = {
       if (e.key === 'Escape' && this.showMobileMenu) {
         this.closeMobileMenu()
       }
+      if (e.key === 'Escape' && this.showLanguageMenu) {
+        this.showLanguageMenu = false
+      }
+    })
+    
+    // 监听外部点击关闭语言菜单
+    document.addEventListener('click', (e) => {
+      if (this.showLanguageMenu && !e.target.closest('.language-selector')) {
+        this.showLanguageMenu = false
+      }
     })
     
     setTimeout(() => {
