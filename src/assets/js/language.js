@@ -169,20 +169,20 @@ class LanguageManager {
     }
 
     try {
-      // 动态导入翻译文件
+      // 动态导入翻译文件 - 使用绝对路径
       let translations;
       
       if (lang === 'en') {
-        const module = await import('../../locales/en.json');
+        const module = await import('/src/locales/en.json');
         translations = module.default;
       } else if (lang === 'zh-cn') {
-        const module = await import('../../locales/zh-cn.json');
+        const module = await import('/src/locales/zh-cn.json');
         translations = module.default;
       } else if (lang === 'zh-tw') {
-        const module = await import('../../locales/zh-tw.json');
+        const module = await import('/src/locales/zh-tw.json');
         translations = module.default;
       } else if (lang === 'ja') {
-        const module = await import('../../locales/ja.json');
+        const module = await import('/src/locales/ja.json');
         translations = module.default;
       } else {
         throw new Error(`Unsupported language: ${lang}`);

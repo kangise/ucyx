@@ -600,7 +600,12 @@ const UCYXApp = {
         language: { current: 'English', switch: 'Switch Language' }
       },
       currentLanguage: 'en',
-      supportedLanguages: {},
+      supportedLanguages: {
+        'en': { name: 'English' },
+        'zh-cn': { name: '中文简体' },
+        'zh-tw': { name: '中文繁體' },
+        'ja': { name: '日本語' }
+      },
       showLanguageMenu: false,
       
       // 现有数据保持不变
@@ -725,12 +730,20 @@ const UCYXApp = {
 
     async initializeLanguage() {
       try {
+        // 确保languageManager已经加载
+        if (!window.languageManager) {
+          console.error('LanguageManager not found, waiting...');
+          await new Promise(resolve => setTimeout(resolve, 100));
+        }
+        
         // 获取支持的语言列表
         this.supportedLanguages = window.languageManager.getSupportedLanguages();
+        console.log('Supported languages:', this.supportedLanguages);
         
         // 初始化语言（IP检测 + 浏览器检测）
         const detectedLanguage = await window.languageManager.initLanguage();
         this.currentLanguage = detectedLanguage;
+        console.log('Detected language:', detectedLanguage);
         
         // 确保获取到翻译对象
         const translations = window.languageManager.getCurrentTranslations();
@@ -741,6 +754,8 @@ const UCYXApp = {
           const loadedTranslations = await window.languageManager.loadTranslations(detectedLanguage);
           this.t = loadedTranslations;
         }
+        
+        console.log('Final translations loaded:', this.t);
         
         // 更新动态数据
         this.updateDynamicData();
