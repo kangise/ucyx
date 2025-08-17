@@ -6,15 +6,15 @@ export default defineConfig({
   plugins: [vue({
     template: {
       compilerOptions: {
-        // 启用模板编译
         isCustomElement: (tag) => false
       }
     }
   })],
-  base: '/', // 确保使用根路径
+  base: '/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: undefined
@@ -27,9 +27,7 @@ export default defineConfig({
       '@components': resolve(__dirname, 'src/components'),
       '@assets': resolve(__dirname, 'src/assets'),
       '@layouts': resolve(__dirname, 'src/layouts'),
-      '@locales': resolve(__dirname, 'src/locales'),
-      // 重要：添加Vue别名以支持模板编译
-      'vue': 'vue/dist/vue.esm-bundler.js'
+      '@locales': resolve(__dirname, 'src/locales')
     }
   },
   server: {
@@ -38,8 +36,8 @@ export default defineConfig({
     host: true
   },
   define: {
-    // 启用Vue模板编译
     __VUE_OPTIONS_API__: true,
-    __VUE_PROD_DEVTOOLS__: false
+    __VUE_PROD_DEVTOOLS__: false,
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
   }
 })
