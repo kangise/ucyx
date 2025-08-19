@@ -113,10 +113,12 @@ class LanguageManager {
           "learnMore": "发现我们的方法论"
         },
         "dataPower": {
-          "stat1": { "number": "300", "suffix": "+", "label": "监控的核心电子商务类别" },
-          "stat2": { "number": "5", "suffix": "M+", "label": "跟踪的活跃产品" },
-          "stat3": { "number": "10", "suffix": "M+", "label": "分析的行业关键词" },
-          "stat4": { "number": "50", "suffix": "M+", "label": "处理的消费者评论" }
+          "title": "数据驱动洞察",
+          "subtitle": "我们提出的每一个战略建议都根植于对大规模数据集的深度学习和分析。",
+          "stat1": { "number": "300", "suffix": "+", "label": "核心电子商务类别" },
+          "stat2": { "number": "5", "suffix": "M+", "label": "活跃产品" },
+          "stat3": { "number": "10", "suffix": "M+", "label": "行业关键词" },
+          "stat4": { "number": "50", "suffix": "M+", "label": "消费者评论" }
         },
         "services": {
           "title": "实现非凡增长所需的一切",
@@ -166,7 +168,14 @@ class LanguageManager {
       'zh-tw': {
         "nav": { "services": "服務", "whoWeServe": "我們服務誰", "successStories": "成功故事", "methodology": "方法論", "login": "登入" },
         "hero": { "titleLine1": "你看到你的", "titleLine2": "非凡。", "subtitle": "UCYX是一家面向未來的、AI驅動的諮詢公司，致力於幫助品牌在複雜的跨境電子商務市場中發現獨特的「X-非凡」。", "cta": "開始你的增長之旅", "learnMore": "發現我們的方法論" },
-        "dataPower": { "stat1": { "number": "300", "suffix": "+", "label": "監控的核心電子商務類別" }, "stat2": { "number": "5", "suffix": "M+", "label": "追蹤的活躍產品" }, "stat3": { "number": "10", "suffix": "M+", "label": "分析的行業關鍵詞" }, "stat4": { "number": "50", "suffix": "M+", "label": "處理的消費者評論" } },
+        "dataPower": { 
+          "title": "數據驅動洞察",
+          "subtitle": "我們提出的每一個戰略建議都根植於對大規模數據集的深度學習和分析。",
+          "stat1": { "number": "300", "suffix": "+", "label": "核心電子商務類別" }, 
+          "stat2": { "number": "5", "suffix": "M+", "label": "活躍產品" }, 
+          "stat3": { "number": "10", "suffix": "M+", "label": "行業關鍵詞" }, 
+          "stat4": { "number": "50", "suffix": "M+", "label": "消費者評論" } 
+        },
         "services": { "title": "實現非凡增長所需的一切", "subtitle": "我們全面的AI驅動方法論涵蓋你的電子商務旅程的每個方面。", "feature1": { "title": "Novochoice", "description": "通過Novochoice™機會象限發現高潛力利基市場，由大規模數據集的AI分析提供支持。", "tag1": "Novochoice™", "tag2": "AI分析" }, "feature2": { "title": "品牌智能", "description": "通過UCselection™價值主張畫布，共同創造一個具有引人注目的「X因子」的產品原型。", "tag1": "UCselection™", "tag2": "品牌策略" }, "feature3": { "title": "發布致勝", "description": "通過集成營銷解決方案在全球平台上執行成功的發布。", "tag1": "UCforecast™", "tag2": "增長路徑" }, "feature4": { "title": "持久成功", "description": "通過我們的UCcopilot™ AI驅動優化系統實現持續增長。", "tag1": "UCcopilot™", "tag2": "AI優化" } },
         "whoWeServe": { "title": "我們服務誰", "subtitle": "我們與全球市場先鋒合作，無論你是尋求擴張的成熟品牌還是擁有優秀產品的初創公司。", "card1": { "title": "成熟品牌", "description": "你擁有成功的產品和穩定的業務，但渴望進入新市場以找到你的下一個增長曲線。" }, "card2": { "title": "有好想法的初創公司", "description": "你創造了出色的想法，但缺乏將其轉化為產品和品牌的方法。" }, "card3": { "title": "傳統製造商", "description": "你擁有優秀的產品，但缺乏在Amazon或Shopify等平台上的市場進入策略和品牌營銷經驗。" } },
         "successStories": { "title": "我們的成功故事", "subtitle": "我們不僅提供策略，我們提供可衡量的結果。", "cases": [{ "brand": "北美護膚品牌", "title": "從零開始進入亞洲市場", "description": "使用Novochoice™數據平台，我們在中國電子商務平台上識別了一個高潛力利基市場，並通過UCselection™服務，我們幫助定義了針對亞洲消費者偏好的價值主張，在第一個月超出銷售預測300%。", "metric": "+300%", "metricLabel": "第一個月銷售目標" }, { "brand": "歐洲智能家居品牌", "title": "通過評論洞察重塑用戶忠誠度", "description": "我們分析了前10名熱銷商品中的5000條客戶評論，發現了核心產品改進機會並優化了銷售材料，在六個月內將重複購買率提高了50%。", "metric": "+50%", "metricLabel": "重複購買率" }, { "brand": "中國網絡存儲品牌", "title": "Amazon新產品發布優化", "description": "利用UCcopilot™進行智能廣告活動優化，我們將他們在Amazon美國的新產品的點擊轉化率提高了75%，並將ACoS降低了40%，而沒有增加廣告預算。", "metric": "-40%", "metricLabel": "廣告銷售成本(ACoS)" }, { "brand": "日本設計師文具品牌", "title": "Shopify DTC銷售預測", "description": "通過UCforecast™模型，我們為他們針對北美市場的新產品線提供了準確的銷售預測。這幫助優化了他們的庫存策略，實現了95%的初始庫存銷售率。", "metric": "95%", "metricLabel": "初始庫存銷售率" }] },
@@ -182,7 +191,14 @@ class LanguageManager {
       'ja': {
         "nav": { "services": "サービス", "whoWeServe": "私たちが支援する企業", "successStories": "成功事例", "methodology": "方法論", "login": "ログイン" },
         "hero": { "titleLine1": "あなたの", "titleLine2": "非凡を見つける。", "subtitle": "UCYXは未来志向のAI駆動コンサルティング会社で、複雑な越境ECマーケットでブランドが独自の「X-非凡」を発見することを支援します。", "cta": "成長の旅を始める", "learnMore": "私たちの方法論を発見" },
-        "dataPower": { "stat1": { "number": "300", "suffix": "+", "label": "監視するコアECカテゴリー" }, "stat2": { "number": "5", "suffix": "M+", "label": "追跡するアクティブ製品" }, "stat3": { "number": "10", "suffix": "M+", "label": "分析する業界キーワード" }, "stat4": { "number": "50", "suffix": "M+", "label": "処理する消費者レビュー" } },
+        "dataPower": { 
+          "title": "データ駆動インサイト",
+          "subtitle": "私たちが行うすべての戦略的推奨は、大規模データセットの深層学習と分析に根ざしています。",
+          "stat1": { "number": "300", "suffix": "+", "label": "コアEコマースカテゴリー" }, 
+          "stat2": { "number": "5", "suffix": "M+", "label": "アクティブ製品" }, 
+          "stat3": { "number": "10", "suffix": "M+", "label": "業界キーワード" }, 
+          "stat4": { "number": "50", "suffix": "M+", "label": "消費者レビュー" } 
+        },
         "services": { "title": "非凡な成長を実現するために必要なすべて", "subtitle": "私たちの包括的なAI駆動方法論は、あなたのECジャーニーのあらゆる側面をカバーします。", "feature1": { "title": "Novochoice", "description": "大規模データセットのAI分析により、Novochoice™機会象限で高ポテンシャルニッチを発見。", "tag1": "Novochoice™", "tag2": "AI分析" }, "feature2": { "title": "ブランドスマート", "description": "UCselection™価値提案キャンバスを通じて、魅力的な「Xファクター」を持つ製品プロトタイプを共創。", "tag1": "UCselection™", "tag2": "ブランド戦略" }, "feature3": { "title": "勝利のローンチ", "description": "統合マーケティングソリューションでグローバルプラットフォームでの成功ローンチを実行。", "tag1": "UCforecast™", "tag2": "成長パス" }, "feature4": { "title": "持続的成功", "description": "UCcopilot™ AI駆動最適化システムで持続的成長を実現。", "tag1": "UCcopilot™", "tag2": "AI最適化" } },
         "whoWeServe": { "title": "私たちが支援する企業", "subtitle": "私たちは、拡張を求める確立されたブランドでも、優れた製品を持つスタートアップでも、グローバル市場のパイオニアとパートナーシップを組みます。", "card1": { "title": "確立されたブランド", "description": "成功した製品と安定したビジネスを持っているが、次の成長曲線を見つけるために新しい市場に参入したいと考えている。" }, "card2": { "title": "素晴らしいアイデアを持つスタートアップ", "description": "優れたアイデアを創造したが、それを製品とブランドに変える方法が不足している。" }, "card3": { "title": "従来の製造業", "description": "優れた製品を持っているが、AmazonやShopifyなどのプラットフォームでの市場参入戦略とブランドマーケティング経験が不足している。" } },
         "successStories": { "title": "私たちの成功事例", "subtitle": "私たちは戦略を提供するだけでなく、測定可能な結果を提供します。", "cases": [{ "brand": "北米スキンケアブランド", "title": "ゼロからアジア市場参入", "description": "Novochoice™データプラットフォームを使用して、中国のECプラットフォームで高ポテンシャルニッチ市場を特定し、UCselection™サービスでアジア消費者の好みに合わせた価値提案を定義し、初月で売上予測を300%上回りました。", "metric": "+300%", "metricLabel": "初月売上目標" }, { "brand": "ヨーロッパスマートホームブランド", "title": "レビュー洞察でユーザーロイヤルティ再構築", "description": "トップ10ベストセラー商品の5000件の顧客レビューを分析し、コア製品改善機会を発見し、販売資料を最適化して、6ヶ月でリピート購入率を50%向上させました。", "metric": "+50%", "metricLabel": "リピート購入率" }, { "brand": "中国ネットワークストレージブランド", "title": "Amazon新製品ローンチ最適化", "description": "UCcopilot™を活用したインテリジェント広告キャンペーン最適化により、Amazon USでの新製品のクリック転換率を75%向上させ、広告予算を増やすことなくACoSを40%削減しました。", "metric": "-40%", "metricLabel": "広告売上コスト(ACoS)" }, { "brand": "日本デザイナー文具ブランド", "title": "Shopify DTC売上予測", "description": "UCforecast™モデルにより、北米市場向け新製品ラインの正確な売上予測を提供。これにより在庫戦略を最適化し、初期在庫の95%売上率を達成しました。", "metric": "95%", "metricLabel": "初期在庫売上率" }] },
