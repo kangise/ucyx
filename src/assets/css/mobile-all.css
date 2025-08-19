@@ -154,8 +154,8 @@
     color: var(--primary-color);
   }
 
-  /* 修复关闭按钮 - 简化样式 */
-  .mobile-menu .mobile-menu-header .mobile-menu-close {
+  /* 全新的关闭按钮样式 - 避免冲突 */
+  .mobile-close-btn {
     width: 32px !important;
     height: 32px !important;
     background: none !important;
@@ -164,10 +164,44 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 24px !important;
-    color: var(--text-primary) !important;
     padding: 0 !important;
     margin: 0 !important;
+    position: relative !important;
+  }
+
+  .mobile-close-btn .close-icon {
+    font-size: 24px !important;
+    color: var(--text-primary) !important;
+    line-height: 1 !important;
+    display: block !important;
+  }
+
+  /* 确保没有伪元素干扰 */
+  .mobile-close-btn::before,
+  .mobile-close-btn::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* 旧的关闭按钮样式 - 完全禁用 */
+  .mobile-menu .mobile-menu-header .mobile-menu-close {
+    display: none !important;
+  }
+
+  /* 强制清除所有可能的伪元素 */
+  .mobile-menu .mobile-menu-header .mobile-menu-close::before,
+  .mobile-menu .mobile-menu-header .mobile-menu-close::after {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  /* 强制清除所有子元素 */
+  .mobile-menu .mobile-menu-header .mobile-menu-close * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
   }
 
   .mobile-menu-content {
@@ -769,7 +803,7 @@
 
   /* 15. 确保移动端字体颜色正确 */
   .mobile-menu-link,
-  .mobile-menu-close,
+  .mobile-close-btn,
   .hamburger-line {
     color: var(--text-primary) !important;
   }

@@ -45,7 +45,9 @@ const UCYXApp = {
         <nav class="mobile-menu" :class="{ active: showMobileMenu }">
           <div class="mobile-menu-header">
             <div class="mobile-logo">UCYX</div>
-            <button class="mobile-menu-close" @click="closeMobileMenu">×</button>
+            <button class="mobile-close-btn" @click="closeMobileMenu">
+              <span class="close-icon">×</span>
+            </button>
           </div>
           
           <div class="mobile-menu-content">

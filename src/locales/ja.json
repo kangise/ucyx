@@ -25,22 +25,22 @@
     "stat1": {
       "number": "300",
       "suffix": "+",
-      "label": "監視されるコアEコマースカテゴリー"
+      "label": "コアEコマースカテゴリー"
     },
     "stat2": {
       "number": "5",
       "suffix": "M+",
-      "label": "追跡されるアクティブ製品"
+      "label": "アクティブ製品"
     },
     "stat3": {
       "number": "10",
       "suffix": "M+",
-      "label": "分析される業界キーワード"
+      "label": "業界キーワード"
     },
     "stat4": {
       "number": "50",
       "suffix": "M+",
-      "label": "処理される消費者レビュー"
+      "label": "消費者レビュー"
     }
   },
   "services": {
