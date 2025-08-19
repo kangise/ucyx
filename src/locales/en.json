@@ -25,22 +25,22 @@
     "stat1": {
       "number": "300",
       "suffix": "+",
-      "label": "Core E-commerce Categories Monitored"
+      "label": "Core E-commerce Categories"
     },
     "stat2": {
       "number": "5",
       "suffix": "M+",
-      "label": "Active Products Tracked"
+      "label": "Active Products"
     },
     "stat3": {
       "number": "10",
       "suffix": "M+",
-      "label": "Industry Keywords Analyzed"
+      "label": "Industry Keywords"
     },
     "stat4": {
       "number": "50",
       "suffix": "M+",
-      "label": "Consumer Reviews Processed"
+      "label": "Consumer Reviews"
     }
   },
   "services": {

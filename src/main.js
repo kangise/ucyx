@@ -45,8 +45,7 @@ const UCYXApp = {
         <nav class="mobile-menu" :class="{ active: showMobileMenu }">
           <div class="mobile-menu-header">
             <div class="mobile-logo">UCYX</div>
-            <button class="mobile-menu-close" @click="closeMobileMenu">
-            </button>
+            <button class="mobile-menu-close" @click="closeMobileMenu">×</button>
           </div>
           
           <div class="mobile-menu-content">
@@ -57,10 +56,53 @@ const UCYXApp = {
                 <span class="accordion-arrow" :class="{ active: showMobileServices }">▼</span>
               </button>
               <div class="mobile-submenu" :class="{ active: showMobileServices }">
-                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.start }}</a>
-                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.choice }}</a>
-                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.sell }}</a>
-                <a href="#services" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.manage }}</a>
+                <!-- Start 子菜单 -->
+                <div class="mobile-submenu-item">
+                  <button class="mobile-submenu-link accordion-trigger" @click="toggleMobileStart">
+                    <span>{{ safeT.megaMenu.start }}</span>
+                    <span class="accordion-arrow" :class="{ active: showMobileStart }">▼</span>
+                  </button>
+                  <div class="mobile-submenu mobile-submenu-level3" :class="{ active: showMobileStart }">
+                    <a href="#sell-china" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.sellToChina }}</a>
+                    <a href="#sell-world" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.sellToWorld }}</a>
+                  </div>
+                </div>
+                
+                <!-- Choice 子菜单 -->
+                <div class="mobile-submenu-item">
+                  <button class="mobile-submenu-link accordion-trigger" @click="toggleMobileChoice">
+                    <span>{{ safeT.megaMenu.choice }}</span>
+                    <span class="accordion-arrow" :class="{ active: showMobileChoice }">▼</span>
+                  </button>
+                  <div class="mobile-submenu mobile-submenu-level3" :class="{ active: showMobileChoice }">
+                    <a href="#platform-selection" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.platformSelection }}</a>
+                    <a href="#market-research" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.marketResearch }}</a>
+                  </div>
+                </div>
+                
+                <!-- Sell 子菜单 -->
+                <div class="mobile-submenu-item">
+                  <button class="mobile-submenu-link accordion-trigger" @click="toggleMobileSell">
+                    <span>{{ safeT.megaMenu.sell }}</span>
+                    <span class="accordion-arrow" :class="{ active: showMobileSell }">▼</span>
+                  </button>
+                  <div class="mobile-submenu mobile-submenu-level3" :class="{ active: showMobileSell }">
+                    <a href="#store-setup" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.storeSetup }}</a>
+                    <a href="#product-listing" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.productListing }}</a>
+                  </div>
+                </div>
+                
+                <!-- Manage 子菜单 -->
+                <div class="mobile-submenu-item">
+                  <button class="mobile-submenu-link accordion-trigger" @click="toggleMobileManage">
+                    <span>{{ safeT.megaMenu.manage }}</span>
+                    <span class="accordion-arrow" :class="{ active: showMobileManage }">▼</span>
+                  </button>
+                  <div class="mobile-submenu mobile-submenu-level3" :class="{ active: showMobileManage }">
+                    <a href="#order-management" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.orderManagement }}</a>
+                    <a href="#customer-service" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.customerService }}</a>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -583,6 +625,10 @@ const UCYXApp = {
       // 移动端菜单状态
       showMobileMenu: false,
       showMobileServices: false,
+      showMobileStart: false,
+      showMobileChoice: false,
+      showMobileSell: false,
+      showMobileManage: false,
       
       currentStoryIndex: 0,
       storyTimer: null,
@@ -770,11 +816,38 @@ const UCYXApp = {
     closeMobileMenu() {
       this.showMobileMenu = false;
       this.showMobileServices = false;
+      this.showMobileStart = false;
+      this.showMobileChoice = false;
+      this.showMobileSell = false;
+      this.showMobileManage = false;
       document.body.style.overflow = '';
     },
 
     toggleMobileServices() {
       this.showMobileServices = !this.showMobileServices;
+      // 关闭所有三级菜单
+      if (!this.showMobileServices) {
+        this.showMobileStart = false;
+        this.showMobileChoice = false;
+        this.showMobileSell = false;
+        this.showMobileManage = false;
+      }
+    },
+
+    toggleMobileStart() {
+      this.showMobileStart = !this.showMobileStart;
+    },
+
+    toggleMobileChoice() {
+      this.showMobileChoice = !this.showMobileChoice;
+    },
+
+    toggleMobileSell() {
+      this.showMobileSell = !this.showMobileSell;
+    },
+
+    toggleMobileManage() {
+      this.showMobileManage = !this.showMobileManage;
     },
 
     // 触摸滑动相关方法
