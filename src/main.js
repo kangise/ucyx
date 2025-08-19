@@ -664,10 +664,12 @@ const UCYXApp = {
           hero: { titleLine1: 'You See Your', titleLine2: 'Extraordinary.', subtitle: 'UCYX is a future-focused, AI-driven consultancy dedicated to helping brands uncover unique "X-trodinary" in the complex cross-border e-commerce market.', cta: 'Start Your Growth Journey', learnMore: 'Discover Our Methodology' },
           megaMenu: { novochoice: 'Novochoice', start: 'Start', choice: 'Choice', sell: 'Sell', manage: 'Manage' },
           dataPower: { 
-            stat1: { number: '300', suffix: '+', label: 'Core E-commerce Categories Monitored' },
-            stat2: { number: '5', suffix: 'M+', label: 'Active Products Tracked' },
-            stat3: { number: '10', suffix: 'M+', label: 'Industry Keywords Analyzed' },
-            stat4: { number: '50', suffix: 'M+', label: 'Consumer Reviews Processed' }
+            title: 'Data-Driven Insight',
+            subtitle: 'Every strategic recommendation we make is rooted in deep learning and analysis of massive datasets.',
+            stat1: { number: '300', suffix: '+', label: 'Core E-commerce Categories' },
+            stat2: { number: '5', suffix: 'M+', label: 'Active Products' },
+            stat3: { number: '10', suffix: 'M+', label: 'Industry Keywords' },
+            stat4: { number: '50', suffix: 'M+', label: 'Consumer Reviews' }
           },
           services: { 
             title: 'Everything you need to achieve extraordinary growth', subtitle: 'Our comprehensive AI-driven methodology covers every aspect of your e-commerce journey.', 

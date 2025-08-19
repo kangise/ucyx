@@ -45,10 +45,12 @@ class LanguageManager {
           "learnMore": "Discover Our Methodology"
         },
         "dataPower": {
-          "stat1": { "number": "300", "suffix": "+", "label": "Core E-commerce Categories Monitored" },
-          "stat2": { "number": "5", "suffix": "M+", "label": "Active Products Tracked" },
-          "stat3": { "number": "10", "suffix": "M+", "label": "Industry Keywords Analyzed" },
-          "stat4": { "number": "50", "suffix": "M+", "label": "Consumer Reviews Processed" }
+          "title": "Data-Driven Insight",
+          "subtitle": "Every strategic recommendation we make is rooted in deep learning and analysis of massive datasets.",
+          "stat1": { "number": "300", "suffix": "+", "label": "Core E-commerce Categories" },
+          "stat2": { "number": "5", "suffix": "M+", "label": "Active Products" },
+          "stat3": { "number": "10", "suffix": "M+", "label": "Industry Keywords" },
+          "stat4": { "number": "50", "suffix": "M+", "label": "Consumer Reviews" }
         },
         "services": {
           "title": "Everything you need to achieve extraordinary growth",
