@@ -211,14 +211,30 @@
     padding: 16px 20px;
     color: var(--text-primary) !important;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    font-family: inherit !important;
     transition: all 0.2s ease;
+    border: none !important;
+    background: none !important;
+    text-align: left !important;
+    width: 100% !important;
+    cursor: pointer !important;
   }
 
   .mobile-menu-link:hover {
     background-color: #f8fafc;
     color: var(--primary-color) !important;
+  }
+
+  /* 确保手风琴触发器样式一致 */
+  .mobile-menu-link.accordion-trigger {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    font-family: inherit !important;
   }
 
   .mobile-menu-cta {
@@ -254,6 +270,8 @@
     font-size: 12px !important;
     transition: transform 0.3s ease !important;
     color: var(--text-secondary) !important;
+    font-family: inherit !important;
+    flex-shrink: 0 !important;
   }
 
   .accordion-arrow.active {
@@ -268,9 +286,24 @@
   }
 
   .mobile-submenu.active {
-    max-height: 300px !important;
+    max-height: 500px !important;
   }
 
+  /* 三级菜单需要更大的空间 */
+  .mobile-submenu-level3 {
+    background-color: white !important;
+    padding-left: 20px;
+    border-left: 2px solid #f3f4f6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease !important;
+  }
+
+  .mobile-submenu-level3.active {
+    max-height: 200px !important;
+  }
+
+  /* 二级菜单链接样式 */
   .mobile-submenu-link {
     display: block !important;
     padding: 12px 40px !important;
@@ -278,8 +311,24 @@
     text-decoration: none !important;
     font-size: 14px !important;
     font-weight: 400 !important;
+    font-family: inherit !important;
     transition: all 0.2s ease !important;
     border-bottom: 1px solid #e5e7eb !important;
+    border: none !important;
+    background: none !important;
+    text-align: left !important;
+    width: 100% !important;
+    cursor: pointer !important;
+  }
+
+  /* 二级菜单手风琴触发器 */
+  .mobile-submenu-link.accordion-trigger {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: inherit !important;
   }
 
   .mobile-submenu-link:hover {
@@ -291,15 +340,9 @@
     border-bottom: none !important;
   }
 
-  /* 三级菜单样式 */
+  /* 三级菜单项容器 */
   .mobile-submenu-item {
     border-bottom: 1px solid #e5e7eb;
-  }
-
-  .mobile-submenu-level3 {
-    background-color: white !important;
-    padding-left: 20px;
-    border-left: 2px solid #f3f4f6;
   }
 
   .mobile-submenu-level3 .mobile-submenu-link {
