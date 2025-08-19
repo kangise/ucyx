@@ -297,19 +297,21 @@
   }
 
   .mobile-submenu-level3 {
-    background-color: #f3f4f6;
+    background-color: white !important;
     padding-left: 20px;
+    border-left: 2px solid #f3f4f6;
   }
 
   .mobile-submenu-level3 .mobile-submenu-link {
-    padding: 10px 20px;
-    font-size: 13px;
+    padding: 12px 20px;
+    font-size: 14px;
     color: #6b7280;
+    background-color: white !important;
   }
 
   .mobile-submenu-level3 .mobile-submenu-link:hover {
-    color: #374151;
-    background-color: #e5e7eb;
+    color: var(--primary-color) !important;
+    background-color: #f8fafc !important;
   }
 
   /* 2. 英雄区域移动端优化 - 修复真正的字体截断问题 */

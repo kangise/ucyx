@@ -75,8 +75,8 @@ const UCYXApp = {
                     <span class="accordion-arrow" :class="{ active: showMobileChoice }">▼</span>
                   </button>
                   <div class="mobile-submenu mobile-submenu-level3" :class="{ active: showMobileChoice }">
-                    <a href="#platform-selection" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.platformSelection }}</a>
-                    <a href="#market-research" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.marketResearch }}</a>
+                    <a href="/novochoice" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.novochoice }}</a>
+                    <a href="#customized" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.customizedSelection }}</a>
                   </div>
                 </div>
                 
@@ -87,8 +87,8 @@ const UCYXApp = {
                     <span class="accordion-arrow" :class="{ active: showMobileSell }">▼</span>
                   </button>
                   <div class="mobile-submenu mobile-submenu-level3" :class="{ active: showMobileSell }">
-                    <a href="#store-setup" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.storeSetup }}</a>
-                    <a href="#product-listing" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.productListing }}</a>
+                    <a href="#copilot" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.sellerCopilot }}</a>
+                    <a href="#marketing" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.marketingMix }}</a>
                   </div>
                 </div>
                 
@@ -99,8 +99,7 @@ const UCYXApp = {
                     <span class="accordion-arrow" :class="{ active: showMobileManage }">▼</span>
                   </button>
                   <div class="mobile-submenu mobile-submenu-level3" :class="{ active: showMobileManage }">
-                    <a href="#order-management" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.orderManagement }}</a>
-                    <a href="#customer-service" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.customerService }}</a>
+                    <a href="#customer-management" class="mobile-submenu-link" @click="closeMobileMenu">{{ safeT.megaMenu.manageCustomer }}</a>
                   </div>
                 </div>
               </div>
@@ -978,24 +977,6 @@ const UCYXApp = {
     // 延迟初始化多语言，确保DOM准备就绪
     await this.$nextTick();
     await this.initializeLanguage();
-    
-    // 调试：检查是否有重复的关闭按钮
-    setTimeout(() => {
-      const closeButtons = document.querySelectorAll('.close-x, .simple-close-btn, .mobile-close-btn, .mobile-menu-close');
-      console.log('🔍 Found close buttons:', closeButtons.length);
-      closeButtons.forEach((btn, index) => {
-        console.log(`Button ${index}:`, btn.className, btn.textContent, btn.innerHTML);
-      });
-      
-      // 检查移动菜单头部
-      const mobileHeader = document.querySelector('.mobile-menu-header');
-      if (mobileHeader) {
-        console.log('📱 Mobile menu header children:', mobileHeader.children.length);
-        Array.from(mobileHeader.children).forEach((child, index) => {
-          console.log(`Child ${index}:`, child.className, child.textContent);
-        });
-      }
-    }, 2000);
     
     // 监听窗口大小变化，自动关闭移动端菜单
     window.addEventListener('resize', () => {
