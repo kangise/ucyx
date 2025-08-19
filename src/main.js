@@ -45,9 +45,7 @@ const UCYXApp = {
         <nav class="mobile-menu" :class="{ active: showMobileMenu }">
           <div class="mobile-menu-header">
             <div class="mobile-logo">UCYX</div>
-            <div class="close-button-wrapper">
-              <button class="simple-close-btn" @click="closeMobileMenu">✕</button>
-            </div>
+            <span class="close-x" @click="closeMobileMenu">×</span>
           </div>
           
           <div class="mobile-menu-content">
@@ -980,6 +978,24 @@ const UCYXApp = {
     // 延迟初始化多语言，确保DOM准备就绪
     await this.$nextTick();
     await this.initializeLanguage();
+    
+    // 调试：检查是否有重复的关闭按钮
+    setTimeout(() => {
+      const closeButtons = document.querySelectorAll('.close-x, .simple-close-btn, .mobile-close-btn, .mobile-menu-close');
+      console.log('🔍 Found close buttons:', closeButtons.length);
+      closeButtons.forEach((btn, index) => {
+        console.log(`Button ${index}:`, btn.className, btn.textContent, btn.innerHTML);
+      });
+      
+      // 检查移动菜单头部
+      const mobileHeader = document.querySelector('.mobile-menu-header');
+      if (mobileHeader) {
+        console.log('📱 Mobile menu header children:', mobileHeader.children.length);
+        Array.from(mobileHeader.children).forEach((child, index) => {
+          console.log(`Child ${index}:`, child.className, child.textContent);
+        });
+      }
+    }, 2000);
     
     // 监听窗口大小变化，自动关闭移动端菜单
     window.addEventListener('resize', () => {

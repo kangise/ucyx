@@ -25,22 +25,22 @@
     "stat1": {
       "number": "300",
       "suffix": "+",
-      "label": "监控的核心电子商务类别"
+      "label": "核心电子商务类别"
     },
     "stat2": {
       "number": "5",
       "suffix": "M+",
-      "label": "跟踪的活跃产品"
+      "label": "活跃产品"
     },
     "stat3": {
       "number": "10",
       "suffix": "M+",
-      "label": "分析的行业关键词"
+      "label": "行业关键词"
     },
     "stat4": {
       "number": "50",
       "suffix": "M+",
-      "label": "处理的消费者评论"
+      "label": "消费者评论"
     }
   },
   "services": {

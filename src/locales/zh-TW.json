@@ -25,22 +25,22 @@
     "stat1": {
       "number": "300",
       "suffix": "+",
-      "label": "監控的核心電子商務類別"
+      "label": "核心電子商務類別"
     },
     "stat2": {
       "number": "5",
       "suffix": "M+",
-      "label": "追蹤的活躍產品"
+      "label": "活躍產品"
     },
     "stat3": {
       "number": "10",
       "suffix": "M+",
-      "label": "分析的行業關鍵詞"
+      "label": "行業關鍵詞"
     },
     "stat4": {
       "number": "50",
       "suffix": "M+",
-      "label": "處理的消費者評論"
+      "label": "消費者評論"
     }
   },
   "services": {

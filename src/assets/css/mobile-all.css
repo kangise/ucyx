@@ -169,55 +169,31 @@
     color: var(--primary-color);
   }
 
-  /* 超级简单的关闭按钮 - 第三次尝试 */
-  .close-button-wrapper {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+  /* 最简单的关闭按钮 - 使用span而不是button */
+  .close-x {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #374151;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1;
   }
 
-  .simple-close-btn {
-    width: 32px !important;
-    height: 32px !important;
-    background: transparent !important;
-    border: none !important;
-    cursor: pointer !important;
-    font-size: 20px !important;
-    color: #374151 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    line-height: 1 !important;
+  .close-x:hover {
+    background: #f3f4f6;
+    border-radius: 4px;
   }
 
-  .simple-close-btn:hover {
-    background: #f3f4f6 !important;
-    border-radius: 4px !important;
-  }
-
-  /* 彻底禁用所有旧的关闭按钮样式 */
+  /* 彻底禁用所有其他关闭按钮相关的样式 */
+  .simple-close-btn,
+  .close-button-wrapper,
   .mobile-close-btn,
   .mobile-menu-close {
     display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-
-  .mobile-close-btn *,
-  .mobile-menu-close * {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-
-  .mobile-close-btn::before,
-  .mobile-close-btn::after,
-  .mobile-menu-close::before,
-  .mobile-menu-close::after {
-    display: none !important;
-    content: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
   }
@@ -821,7 +797,7 @@
 
   /* 15. 确保移动端字体颜色正确 */
   .mobile-menu-link,
-  .simple-close-btn,
+  .close-x,
   .hamburger-line {
     color: var(--text-primary) !important;
   }
