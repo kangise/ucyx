@@ -1,855 +1,562 @@
-/* ========================================
-   MOBILE & RESPONSIVE STYLES - CONSOLIDATED
-   Version: 2025-08-17-14:14 - Force Refresh
-   ======================================== */
+@media (max-width: 1180px) {
+  h1 {
+    font-size: 58px;
+  }
 
-/* 强制重置所有可能的关闭按钮干扰 */
-[class*="close"]:not(.simple-close-btn):not(.close-button-wrapper) {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
+  h2 {
+    font-size: 40px;
+  }
+
+  .desktop-nav {
+    gap: 14px;
+  }
+
+  .hero-layout,
+  .feature-grid,
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .pain-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .entry-map-shell {
+    grid-template-columns: 1fr;
+  }
+
 }
 
-[class*="close"]:not(.simple-close-btn):not(.close-button-wrapper)::before,
-[class*="close"]:not(.simple-close-btn):not(.close-button-wrapper)::after {
-  display: none !important;
-  content: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* 移动端基础重置 */
-@media (max-width: 768px) {
-  /* 确保移动端占满全屏 */
-  html, body {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
+@media (max-width: 860px) {
+  :root {
+    --section-pad: 72px;
   }
 
-  /* 移动端容器全宽 */
-  .container,
-  .section-container,
-  .nav-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 16px !important;
-  }
-}
-
-/* 桌面端确保移动端元素隐藏 */
-@media (min-width: 769px) {
-  .mobile-menu-btn {
-    display: none !important;
-  }
-  
-  .mobile-menu {
-    display: none !important;
-  }
-  
-  .mobile-menu-overlay {
-    display: none !important;
-  }
-  
-  /* 确保桌面端导航元素显示 */
-  .main-nav {
-    display: flex !important;
-  }
-  
-  .nav-actions .login-link,
-  .nav-actions .cta-button {
-    display: block !important;
-  }
-}
-
-/* 移动端和平板端样式 */
-@media (max-width: 768px) {
-  /* 1. 导航栏修复 - 隐藏桌面端导航，显示移动端导航 */
-  .navbar {
-    padding: 0 16px !important;
-    height: 64px !important;
-  }
-  
-  .nav-container {
-    padding: 0 !important;
-  }
-  
-  /* 隐藏桌面端导航元素 */
-  .main-nav,
-  .nav-actions .login-link,
-  .nav-actions .cta-button {
-    display: none !important;
-  }
-  
-  /* 显示移动端汉堡菜单按钮 */
-  .mobile-menu-btn {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    position: relative;
-    z-index: 1001;
+  h1 {
+    font-size: 42px;
+    line-height: 1.04;
   }
 
-  .hamburger-line {
-    width: 24px;
-    height: 2px;
-    background-color: var(--text-primary);
-    margin: 3px 0;
-    transition: all 0.3s ease;
-    transform-origin: center;
+  h2 {
+    font-size: 32px;
+    line-height: 1.1;
   }
 
-  .mobile-menu-btn.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+  h3 {
+    font-size: 18px;
   }
 
-  .mobile-menu-btn.active .hamburger-line:nth-child(2) {
-    opacity: 0;
+  .site-header {
+    padding: 0 18px;
   }
 
-  .mobile-menu-btn.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+  .desktop-nav,
+  .header-actions .button {
+    display: none;
   }
 
-  /* 移动端菜单 */
-  .mobile-menu {
+  .header-actions {
+    gap: 8px;
+  }
+
+  .language-button {
+    min-height: 42px;
+    gap: 8px;
+    padding: 0 13px 0 8px;
+  }
+
+  .language-icon-stack {
+    width: 34px;
+    height: 31px;
+  }
+
+  .language-flag {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  .language-globe {
+    width: 21px;
+    height: 21px;
+  }
+
+  .language-code {
+    font-size: 15px;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .mobile-nav {
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: 300px;
-    height: 100vh;
-    background: white;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
-    z-index: 1000;
-    overflow-y: auto;
-  }
-
-  .mobile-menu.active {
-    right: 0;
-  }
-
-  .mobile-menu-overlay {
-    position: fixed;
-    top: 0;
+    z-index: 19;
+    top: var(--header-height);
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    right: 0;
+    display: grid;
+    gap: 4px;
+    border-bottom: 1px solid var(--color-gray-200);
+    background: var(--color-white);
+    padding: 18px;
+    transform: translateY(-120%);
+    transition: transform 180ms ease;
   }
 
-  .mobile-menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
+  .mobile-nav.open {
+    transform: translateY(0);
   }
 
-  .mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #e5e7eb;
+  .mobile-nav a {
+    border-radius: var(--radius);
+    color: var(--color-ink);
+    font-weight: 760;
+    padding: 13px 12px;
   }
 
-  .mobile-menu-logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-color);
+  .mobile-nav a:hover {
+    background: var(--color-gray-050);
+    color: var(--color-accent-dark);
   }
 
-  /* 最简单的关闭按钮 - 使用span而不是button */
-  .close-x {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #374151;
-    cursor: pointer;
-    user-select: none;
+  .mobile-nav-primary {
+    background: var(--color-ink);
+    color: var(--color-white) !important;
+  }
+
+  .mobile-services-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .mobile-services-list a {
+    display: grid;
+    gap: 5px;
+    border: 1px solid var(--color-gray-200);
+    background: var(--color-gray-050);
+    padding: 12px;
+  }
+
+  .mobile-services-list a span {
+    color: var(--color-accent-dark);
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 760;
     line-height: 1;
   }
 
-  .close-x:hover {
-    background: #f3f4f6;
-    border-radius: 4px;
-  }
-
-  /* 彻底禁用所有其他关闭按钮相关的样式 */
-  .simple-close-btn,
-  .close-button-wrapper,
-  .mobile-close-btn,
-  .mobile-menu-close {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-
-  .mobile-menu-content {
-    padding: 0;
-  }
-
-  .mobile-menu-item {
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .mobile-menu-link {
-    display: block;
-    padding: 16px 20px;
-    color: var(--text-primary) !important;
-    text-decoration: none;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    font-family: inherit !important;
-    transition: all 0.2s ease;
-    border: none !important;
-    background: none !important;
-    text-align: left !important;
-    width: 100% !important;
-    cursor: pointer !important;
-  }
-
-  .mobile-menu-link:hover {
-    background-color: #f8fafc;
-    color: var(--primary-color) !important;
-  }
-
-  /* 确保手风琴触发器样式一致 */
-  .mobile-menu-link.accordion-trigger {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    font-family: inherit !important;
-  }
-
-  .mobile-menu-cta {
-    display: block;
-    margin: 20px;
-    padding: 12px 24px;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: var(--radius-md);
-    text-align: center;
-    font-weight: 600;
-    transition: all 0.2s ease;
-  }
-
-  .mobile-menu-cta:hover {
-    background: var(--primary-hover-color);
-  }
-
-  /* 移动端导航下拉菜单样式 */
-  .accordion-trigger {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    background: none !important;
-    border: none !important;
-    text-align: left !important;
-    cursor: pointer !important;
-  }
-
-  .accordion-arrow {
-    font-size: 12px !important;
-    transition: transform 0.3s ease !important;
-    color: var(--text-secondary) !important;
-    font-family: inherit !important;
-    flex-shrink: 0 !important;
-  }
-
-  .accordion-arrow.active {
-    transform: rotate(180deg) !important;
-  }
-
-  .mobile-submenu {
-    max-height: 0 !important;
-    overflow: hidden !important;
-    transition: max-height 0.3s ease !important;
-    background-color: #f8fafc !important;
-  }
-
-  .mobile-submenu.active {
-    max-height: 500px !important;
-  }
-
-  /* 三级菜单需要更大的空间 */
-  .mobile-submenu-level3 {
-    background-color: white !important;
-    padding-left: 20px;
-    border-left: 2px solid #f3f4f6;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease !important;
-  }
-
-  .mobile-submenu-level3.active {
-    max-height: 200px !important;
-  }
-
-  /* 二级菜单链接样式 */
-  .mobile-submenu-link {
-    display: block !important;
-    padding: 12px 40px !important;
-    color: var(--text-secondary) !important;
-    text-decoration: none !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    font-family: inherit !important;
-    transition: all 0.2s ease !important;
-    border-bottom: 1px solid #e5e7eb !important;
-    border: none !important;
-    background: none !important;
-    text-align: left !important;
-    width: 100% !important;
-    cursor: pointer !important;
-  }
-
-  /* 二级菜单手风琴触发器 */
-  .mobile-submenu-link.accordion-trigger {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    font-family: inherit !important;
-  }
-
-  .mobile-submenu-link:hover {
-    color: var(--primary-color) !important;
-    background-color: #f1f5f9 !important;
-  }
-
-  .mobile-submenu-link:last-child {
-    border-bottom: none !important;
-  }
-
-  /* 三级菜单项容器 */
-  .mobile-submenu-item {
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .mobile-submenu-level3 .mobile-submenu-link {
-    padding: 12px 20px;
-    font-size: 14px;
-    color: #6b7280;
-    background-color: white !important;
-  }
-
-  .mobile-submenu-level3 .mobile-submenu-link:hover {
-    color: var(--primary-color) !important;
-    background-color: #f8fafc !important;
-  }
-
-  /* 2. 英雄区域移动端优化 - 修复真正的字体截断问题 */
-  .hero-section,
-  .hero-section-fullscreen {
-    padding: 60px 0 40px !important;
-    text-align: center;
-  }
-
-  .hero-container,
-  .hero-content-center {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-    text-align: center;
-    padding: 0 16px !important;
-  }
-
-  /* 修复实际使用的Hero标题类 - 与其他模块标题大小一致 */
-  .hero-title-line1 {
-    font-size: clamp(24px, 6vw, 32px) !important; /* 与section-title一致 */
-    line-height: 1.2 !important;
-    margin-bottom: 8px !important;
-    margin-left: 0 !important; /* 覆盖桌面端偏移 */
-    word-break: break-word !important;
-    white-space: normal !important; /* 允许换行 */
-    letter-spacing: normal !important; /* 覆盖桌面端letter-spacing */
-  }
-
-  .hero-title-line2 {
-    font-size: clamp(24px, 6vw, 32px) !important; /* 与section-title一致 */
-    line-height: 1.2 !important;
-    margin-bottom: 20px !important;
-    margin-left: 0 !important; /* 移除桌面端的偏移 */
-    word-break: break-word !important;
-    white-space: normal !important; /* 允许换行 */
-    hyphens: auto !important;
-    letter-spacing: normal !important; /* 覆盖桌面端letter-spacing */
-  }
-
-  /* 修复其他可能的Hero标题类 */
-  .hero-title,
-  .hero-title-large {
-    font-size: clamp(24px, 6vw, 36px) !important;
-    line-height: 1.2 !important;
-    white-space: normal !important; /* 关键：允许换行 */
-    word-break: break-word !important;
-    hyphens: auto !important;
-  }
-
-  .hero-subtitle,
-  .hero-subtitle-large {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
-    max-width: 100% !important;
-    margin-bottom: 24px !important;
-    padding: 0 8px !important;
-  }
-
-  .hero-actions,
-  .hero-actions-center {
-    flex-direction: column !important;
-    gap: 12px !important;
-    padding: 0 8px !important;
-  }
-
-  .hero-actions .btn,
-  .hero-actions-center .btn-primary-large,
-  .hero-actions-center .btn-secondary-large {
-    width: 100%;
-    justify-content: center;
-    padding: 14px 24px !important;
-    font-size: 16px !important;
-  }
-
-  .product-showcase {
-    order: -1;
-    padding: 0 8px !important;
-  }
-
-  .product-showcase img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 3. 数据统计区域 */
-  .trust-stats {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 24px !important;
-  }
-
-  .trust-stat {
-    text-align: center;
-  }
-
-  /* 4. 服务网格 */
-  .solutions-grid-large {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  /* 5. 成功故事轮播修复 - 优化移动端padding和布局 */
-  .success-stories-carousel {
-    overflow: hidden;
-    padding: 0 !important;
-  }
-
-  .story-slides-container {
-    display: flex;
-    transition: transform 0.3s ease;
-  }
-
-  .story-slide-dual {
-    min-width: 100% !important;
-    display: flex !important;
-    justify-content: center;
-    padding: 0 !important;
-  }
-
-  .story-slide-dual .story-card-dual {
-    width: 130% !important; /* 增加到1.3倍宽度 */
-    max-width: 130% !important;
-    margin: 0 !important;
-    padding: 32px 24px !important; /* 增加padding以配合更大宽度 */
-    background: white;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    transform: scale(0.77); /* 缩放以适应容器，保持视觉平衡 */
-    transform-origin: center;
-  }
-
-  .story-slide-dual .story-card-dual:nth-child(2) {
-    display: none !important; /* 移动端隐藏第二个案例 */
-  }
-
-  /* Success Story内容优化 */
-  .story-content-dual h3 {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
-    margin-bottom: 12px !important;
-    word-break: break-word !important;
-  }
-
-  .story-content-dual p {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 16px !important;
-  }
-
-  .story-brand {
-    font-size: 12px !important;
-    margin-bottom: 8px !important;
-  }
-
-  .story-metric {
-    font-size: 24px !important;
-    margin-top: 16px !important;
-  }
-
-  .story-metric-label {
-    font-size: 12px !important;
-  }
-
-  .carousel-nav {
-    margin-top: 24px;
-    padding: 0 16px !important;
-  }
-
-  .carousel-btn {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* 6. 方法论区域修复 - 优化移动端padding和布局 */
-  .methodology-section {
-    padding: 60px 0 !important;
-  }
-
-  .methodology-content {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 24px !important;
-    padding: 0 !important;
-  }
-
-  .methodology-tabs {
-    order: 1;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-  }
-
-  .methodology-panel {
-    order: 2;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
-  .tab-item {
-    width: 100% !important;
-    padding: 16px 12px !important; /* 大幅减少padding */
-    text-align: left !important;
-    margin: 0 !important;
-  }
-
-  .tab-item h4 {
-    font-size: 16px !important;
-    margin-bottom: 6px !important;
-    line-height: 1.3 !important;
-  }
-
-  .tab-item p {
-    font-size: 13px !important;
-    line-height: 1.4 !important;
-    margin-bottom: 8px !important;
-  }
-
-  .panel-content {
-    text-align: center !important;
-    padding: 20px 12px !important; /* 大幅减少padding */
-  }
-
-  .panel-content h3 {
-    font-size: 22px !important;
-    margin-bottom: 16px !important;
-    line-height: 1.3 !important;
-  }
-
-  .panel-content p {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 20px !important;
-  }
-
-  .tool-demo {
-    margin-top: 20px !important;
-    padding: 0 !important;
-  }
-
-  .tool-demo img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: var(--radius-md) !important;
-  }
-
-  .methodology-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  .methodology-step {
-    text-align: center;
-    padding: 24px 16px !important; /* 减少padding */
-  }
-
-  .step-number {
-    font-size: 36px !important;
-    margin-bottom: 12px;
-  }
-
-  .step-title {
-    font-size: 18px !important;
-    margin-bottom: 12px;
-    line-height: 1.3 !important;
-  }
-
-  .step-description {
-    font-size: 14px !important;
-    line-height: 1.5;
-  }
-
-  .step-tool {
-    font-size: 12px !important;
-    margin-top: 12px;
-  }
-
-  /* 7. Novochoice/Platform区域修复 */
-  .platform-section,
-  .brands-section {
-    padding: 80px 0 !important;
-  }
-
-  .platform-showcase,
-  .brands-container {
-    text-align: center;
-  }
-
-  .platform-showcase {
-    grid-template-columns: 1fr !important;
-    gap: 36px !important; /* 适度增加间距 */
-    align-items: center;
-    padding: 48px 32px !important; /* 增加容器内边距 */
-    background: var(--text-primary);
-    border-radius: var(--radius-lg);
-    margin: 0 20px !important; /* 增加与屏幕边缘的间距 */
-  }
-
-  .platform-content,
-  .brand-content {
-    text-align: center;
-    padding: 0 20px !important; /* 增加内容区域内边距 */
-  }
-
-  .platform-content h2,
-  .brand-title {
-    font-size: 26px !important; /* 适度减小标题 */
-    margin-bottom: 28px !important; /* 增加标题下边距 */
-    line-height: 1.3 !important;
-    color: white;
-  }
-
-  .platform-content p,
-  .brand-description {
-    font-size: 16px !important;
-    line-height: 1.6;
-    margin-bottom: 36px !important; /* 增加描述下边距 */
-    color: rgba(255, 255, 255, 0.9);
-    padding: 0 12px !important; /* 文字内边距 */
-  }
-
-  .platform-visual,
-  .brand-visual {
-    order: -1;
-    padding: 0 20px !important; /* 增加视觉元素内边距 */
-    margin-bottom: 20px !important; /* 增加视觉元素下边距 */
-  }
-
-  .platform-logo,
-  .brand-logo {
-    font-size: 28px !important;
-    max-width: 200px !important;
-    margin: 0 auto;
-    word-break: break-word !important;
-    hyphens: auto !important;
-    line-height: 1.2 !important;
-    color: var(--primary-color);
-    font-weight: 600;
-    padding: 12px 0 !important; /* 增加logo上下间距 */
-  }
-
-  /* CTA按钮优化 */
-  .platform-showcase .btn-primary,
-  .platform-content .btn-primary {
-    padding: 18px 36px !important; /* 增加按钮内边距 */
-    font-size: 16px !important;
-    margin-top: 12px !important;
-    border-radius: 8px !important;
-    background: var(--primary-color) !important;
-    color: white !important;
-    font-weight: 600;
-  }
-
-  .brands-grid {
-    grid-template-columns: 1fr !important;
-    gap: 40px !important;
-    align-items: center;
-  }
-
-  /* 8. 联系表单 */
-  .contact-form-container,
-  .contact-form-container-wide {
-    max-width: 100% !important;
-    margin: 0 16px !important;
-    padding: 32px 24px !important;
-  }
-
-  .form-row {
-    flex-direction: column !important;
-    gap: 16px !important;
-  }
-
-  .form-group {
-    width: 100% !important;
-  }
-
-  /* 9. 页脚 */
-  .footer-grid {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-    text-align: center;
-  }
-
-  .footer-bottom {
-    flex-direction: column !important;
-    gap: 16px !important;
-    text-align: center;
-  }
-
-  .footer-legal {
-    flex-direction: column !important;
-    gap: 16px !important;
-  }
-
-  /* 10. 语言选择器移动端优化 */
-  .language-selector {
-    margin-top: 16px;
-  }
-
-  .language-toggle {
-    width: 100% !important;
-    justify-content: space-between;
+  .mobile-services-list a strong {
+    color: var(--color-ink);
+    font-size: 12px;
+    font-weight: 760;
+    line-height: 1.2;
   }
 
   .language-menu {
-    position: static !important;
-    width: 100% !important;
-    margin: 8px 0 0 0 !important;
-    box-shadow: none !important;
-    border: 1px solid var(--border-color) !important;
+    right: -50px;
+    width: min(330px, calc(100vw - 28px));
   }
 
-  /* 11. 通用容器和间距 - 优化移动端体验 */
-  .section-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 12px !important; /* 减少左右padding */
-    margin: 0 !important;
+  .hero-section {
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100svh - var(--header-height));
+    background-image:
+      linear-gradient(90deg, rgb(var(--rgb-black) / 0.68) 0%, rgb(var(--rgb-black) / 0.42) 58%, rgb(var(--rgb-black) / 0.22) 100%),
+      url("../images/hero-global-market-entry-v3.webp");
+    background-position: center, 62% center;
+    background-size: cover, cover;
+    padding-top: 44px;
+    padding-bottom: 44px;
   }
 
-  /* 特殊容器全宽处理 */
-  .hero-container,
-  .trust-container,
-  .methodology-content,
-  .platform-showcase,
-  .footer-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 12px !important; /* 统一减少padding */
+  .hero-section::before {
+    background:
+      linear-gradient(90deg, rgb(var(--rgb-black) / 0.66) 0%, rgb(var(--rgb-black) / 0.48) 56%, rgb(var(--rgb-black) / 0.26) 100%),
+      linear-gradient(180deg, rgb(var(--rgb-black) / 0.3) 0%, transparent 40%, rgb(var(--rgb-black) / 0.4) 100%);
   }
 
-  /* 确保所有section占满宽度 */
-  section {
-    width: 100% !important;
-    max-width: 100% !important;
+  .hero-section::after {
+    background:
+      radial-gradient(ellipse at 62% 46%, transparent 0%, rgb(var(--rgb-black) / 0.08) 44%, rgb(var(--rgb-black) / 0.44) 100%),
+      linear-gradient(180deg, rgb(var(--rgb-black) / 0.18) 0%, transparent 24%, transparent 74%, rgb(var(--rgb-black) / 0.34) 100%);
+    box-shadow: inset 0 0 150px rgb(var(--rgb-black) / 0.24);
   }
 
-  .section-header {
-    text-align: center;
-    margin-bottom: 40px !important;
-    padding: 0 8px !important;
+  .hero-video-background video {
+    object-position: 58% center;
   }
 
-  .section-title {
-    font-size: clamp(24px, 6vw, 32px) !important;
-    margin-bottom: 12px !important;
-    line-height: 1.3 !important;
-    word-break: break-word !important;
+  .customer-wall-section {
+    padding: 22px 0 27px;
   }
 
-  .section-subtitle {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    max-width: 100% !important;
-    padding: 0 8px !important;
+  .customer-wall-heading {
+    margin-bottom: 14px;
+    padding: 0 18px;
+    text-align: left;
   }
 
-  /* 12. 按钮和交互元素 */
-  .btn {
-    padding: 12px 24px !important;
-    font-size: 16px !important;
+  .customer-marquee {
+    gap: 8px;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
   }
 
-  .btn-primary {
-    background: var(--primary-color) !important;
-    color: white !important;
+  .customer-marquee-track {
+    gap: 24px;
+    animation-duration: 68s;
   }
 
-  .btn-secondary {
-    background: transparent !important;
-    color: var(--primary-color) !important;
-    border: 2px solid var(--primary-color) !important;
+  .customer-marquee-track span {
+    font-size: 20px;
   }
 
-  /* 13. 隐藏桌面端特定元素 */
-  .desktop-only {
-    display: none !important;
+  .customer-wall-cta {
+    position: relative;
+    top: auto;
+    left: auto;
+    justify-content: center;
+    width: calc(100% - 36px);
+    min-height: 48px;
+    margin: 18px 18px 0;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
   }
 
-  /* 14. Mega Menu 移动端隐藏 */
-  .mega-menu,
-  .mega-menu-fullwidth {
-    display: none !important;
+  .customer-wall-section:hover .customer-marquee-track,
+  .customer-wall-section:focus-within .customer-marquee-track,
+  .customer-wall-stage:hover .customer-marquee-track,
+  .customer-wall-stage:focus-within .customer-marquee-track {
+    filter: none;
+    opacity: 1;
   }
 
-  /* 15. 确保移动端字体颜色正确 */
-  .mobile-menu-link,
-  .close-x,
-  .hamburger-line {
-    color: var(--text-primary) !important;
+  .customer-wall-section:hover .customer-wall-cta,
+  .customer-wall-section:focus-within .customer-wall-cta,
+  .customer-wall-stage:hover .customer-wall-cta,
+  .customer-wall-stage:focus-within .customer-wall-cta {
+    transform: none;
   }
 
-  /* 16. 移动端导航栏logo颜色 - 改为和桌面版一致的绿色 */
-  .navbar .logo,
-  .nav-container .logo {
-    color: var(--shopify-green) !important;
+  .section-band {
+    padding-left: 18px;
+    padding-right: 18px;
   }
+
+  .hero-subtitle,
+  .lead {
+    font-size: 18px;
+  }
+
+  .success-story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-hero-grid,
+  .service-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .content-hero-copy h1 {
+    font-size: 40px;
+  }
+
+  .content-hero-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content-hero-panel span {
+    min-height: 80px;
+    font-size: 20px;
+  }
+
+  .services-overview-grid,
+  .service-block-grid,
+  .company-grid,
+  .company-principles .line-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-overview-card {
+    min-height: 0;
+  }
+
+  .service-side-panel {
+    position: static;
+  }
+
+  .service-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: calc(100vw - 36px);
+  }
+
+  .hero-actions,
+  .contact-actions,
+  .section-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .novochoice-compact {
+    grid-template-columns: 1fr;
+    align-items: start;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .novochoice-compact .section-actions {
+    justify-content: flex-start;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-list {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-card {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: 0;
+  }
+
+  .audience-card-copy {
+    padding: 20px;
+  }
+
+  .audience-card-copy h3 {
+    font-size: 21px;
+  }
+
+  .audience-card-copy p {
+    max-width: 100%;
+    max-height: none;
+    overflow-wrap: break-word;
+    opacity: 1;
+    transform: none;
+  }
+
+  .pain-typewriter {
+    min-height: 240px;
+    padding: 22px;
+  }
+
+  .pain-typewriter p {
+    min-height: 126px;
+    font-size: 25px;
+  }
+
+  .entry-path-section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .entry-path-section .section-heading {
+    margin-bottom: 14px;
+  }
+
+  .entry-map-shell {
+    gap: 10px;
+  }
+
+  .entry-map-route {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .entry-map-step {
+    grid-template-columns: 30px minmax(0, 1fr);
+    min-height: auto;
+    border: 1px solid rgb(var(--rgb-white) / 0.08);
+    padding: 10px 11px;
+  }
+
+  .entry-step-index {
+    width: 22px;
+    height: 22px;
+  }
+
+  .entry-step-copy strong {
+    font-size: 21px;
+  }
+
+  .entry-step-copy small {
+    font-size: 12px;
+  }
+
+  .entry-map-preview,
+  .entry-visual-card {
+    min-height: 500px;
+  }
+
+  .entry-visual-shade {
+    background:
+      linear-gradient(180deg, rgb(var(--rgb-black) / 0.22) 0%, rgb(var(--rgb-black) / 0.24) 42%, rgb(var(--rgb-black) / 0.82) 100%);
+  }
+
+  .entry-visual-topline {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .entry-demo-thumb {
+    width: 76px;
+  }
+
+  .entry-demo-thumb--open {
+    width: calc(100vw - 64px);
+  }
+
+  .entry-question {
+    font-size: 23px;
+    min-height: auto;
+    white-space: normal;
+    overflow: visible;
+  }
+
+  .entry-visual-copy {
+    left: 20px;
+    bottom: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .entry-visual-copy p {
+    font-size: 18px;
+  }
+
+  .entry-deliverables {
+    gap: 7px;
+    margin-top: 14px;
+  }
+  .entry-deliverables strong,
+  .entry-deliverable-button {
+    font-size: 12px;
+    padding: 7px 8px;
+  }
+
+  .about-facts article {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .ecosystem-section .section-heading {
+    text-align: left;
+  }
+
+  .ecosystem-panel {
+    min-height: 300px;
+    border-radius: 18px;
+  }
+
+  .ecosystem-track {
+    transform: translateX(calc(var(--ecosystem-index) * -100%));
+  }
+
+  .ecosystem-item {
+    flex-basis: 100%;
+    min-height: 300px;
+    padding: 26px;
+  }
+
+  .ecosystem-item:not(:last-child) {
+    border-right: 1px solid rgb(var(--rgb-white) / 0.1);
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .ecosystem-item p {
+    max-width: none;
+  }
+
+  .partner-cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .faq-heading h2 {
+    max-width: 320px;
+    font-size: 32px;
+    line-height: 1.08;
+  }
+
+  .faq-item summary {
+    gap: 16px;
+    padding: 18px 0;
+    font-size: 18px;
+    line-height: 1.22;
+  }
+
+  .faq-item summary::after {
+    font-size: 24px;
+  }
+
+  .faq-item p {
+    padding: 0 32px 22px 0;
+    font-size: 15px;
+  }
+
+  .cta-panel {
+    padding: 36px 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .brand-mark {
+    max-width: 138px;
+  }
+
+  .brand-mark img {
+    height: 26px;
+    max-width: 100%;
+  }
+
+  .mobile-services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-layout,
+  .feature-grid,
+  .two-column {
+    gap: 38px;
+  }
+
 }

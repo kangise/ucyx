@@ -1,4 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/market-entry-services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/company-profile.html",
+      "destination": "/company",
+      "permanent": true
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/#faq",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

@@ -3,33 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">UCYX - AI-Driven Global E-commerce Consultancy</title>
-    <meta name="description" id="page-description" content="UCYX is a future-focused, AI-driven consultancy helping global brands achieve exponential growth in cross-border e-commerce with our data-driven methodology.">
+    <title id="page-title">UCYX | Market Entry Support for Chinese Brands</title>
+    <meta name="description" id="page-description" content="UCYX helps Chinese brands choose target markets, design pre-entry tests, coordinate media and local operations, and review market entry ROI.">
     
     <!-- SEO Meta Tags -->
-    <meta name="keywords" id="page-keywords" content="e-commerce, AI, consultancy, cross-border, global expansion, market intelligence">
+    <meta name="keywords" id="page-keywords" content="market entry support, Chinese brands overseas, cross-border growth, overseas media, media measurement, NovoChoice, global operations">
     <meta name="author" content="UCYX">
-    <meta name="robots" content="index, follow">
+    <meta name="application-name" content="UCYX">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#00a651">
+    <link rel="canonical" href="https://ucyx.com/">
+    <link rel="alternate" hreflang="en" href="https://ucyx.com/">
+    <link rel="alternate" hreflang="zh-CN" href="https://ucyx.com/?lang=zh-CN">
+    <link rel="alternate" hreflang="zh-TW" href="https://ucyx.com/?lang=zh-TW">
+    <link rel="alternate" hreflang="x-default" href="https://ucyx.com/">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" id="og-title" content="UCYX - AI-Driven Global E-commerce Consultancy">
-    <meta property="og:description" id="og-description" content="We help global brands achieve exponential growth in cross-border e-commerce through data-driven insights and proven methodologies.">
+    <meta property="og:site_name" content="UCYX">
+    <meta property="og:title" id="og-title" content="UCYX | Market Entry Support for Chinese Brands">
+    <meta property="og:description" id="og-description" content="Decide where to enter, design the first test, coordinate delivery, and evaluate return before scaling.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ucyx.com">
-    <meta property="og:image" content="https://ucyx.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://ucyx.com/">
+    <meta property="og:image" content="https://ucyx.com/og-ucyx-market-entry.svg">
+    <meta property="og:image:alt" content="UCYX market entry support for Chinese brands">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" id="twitter-title" content="UCYX - AI-Driven Global E-commerce Consultancy">
-    <meta name="twitter:description" id="twitter-description" content="We help global brands achieve exponential growth in cross-border e-commerce through data-driven insights and proven methodologies.">
-    <meta name="twitter:image" content="https://ucyx.com/assets/images/twitter-card.jpg">
+    <meta name="twitter:title" id="twitter-title" content="UCYX | Market Entry Support for Chinese Brands">
+    <meta name="twitter:description" id="twitter-description" content="Full-stack market entry support for Chinese brands: strategy, entry design, delivery coordination, and ROI review.">
+    <meta name="twitter:image" content="https://ucyx.com/og-ucyx-market-entry.svg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=ucyx-bars-v2">
+    <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg?v=ucyx-bars-v2">
+    <link rel="manifest" href="/site.webmanifest?v=ucyx-bars-v2">
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,13 +65,14 @@
             display: flex; 
             align-items: center; 
             justify-content: center; 
+            pointer-events: none;
             z-index: 9999;
         }
         .loading-spinner {
             width: 40px;
             height: 40px;
             border: 4px solid #f3f3f3;
-            border-top: 4px solid #4f46e5;
+            border-top: 4px solid #00a651;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -79,6 +90,19 @@
     
     <!-- Vue App Mount Point -->
     <div id="app"></div>
+    <noscript>
+        <main>
+            <h1>UCYX market entry support for Chinese brands</h1>
+            <p>UCYX helps Chinese brands decide where to enter, design the first test, coordinate entry delivery, and evaluate ROI before scaling.</p>
+            <ul>
+                <li>Market Entry Strategy: target market, category, subcategory, and entry priority.</li>
+                <li>Entry Design: product concept, offer, positioning, survey, and creative testing.</li>
+                <li>Entry Delivery: media, creators, channel partners, and local operations coordination.</li>
+                <li>Entry Evaluation & ROI: attribution, channel quality, market feedback, and optimization roadmap.</li>
+            </ul>
+            <p>Contact UCYX at services@ucyx.com.</p>
+        </main>
+    </noscript>
     
     <!-- Vue.js Application Script -->
     <script type="module" src="/src/main.js"></script>
@@ -96,29 +120,147 @@
         });
     </script>
     
-    <!-- Schema.org structured data -->
+    <!-- Schema.org structured data for SEO and generative search retrieval -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "UCYX",
-        "description": "AI-Driven Global E-commerce Consultancy",
-        "url": "https://ucyx.com",
-        "logo": "https://ucyx.com/assets/images/logo.png",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-XXX-XXX-XXXX",
-            "contactType": "customer service",
-            "email": "partnership@ucyx.com"
-        },
-        "sameAs": [
-            "https://linkedin.com/company/ucyx",
-            "https://twitter.com/ucyx"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "US"
-        }
+        "@graph": [
+            {
+                "@type": ["Organization", "ProfessionalService"],
+                "@id": "https://ucyx.com/#organization",
+                "name": "UCYX",
+                "url": "https://ucyx.com/",
+                "logo": "https://ucyx.com/ucyx-logo.png",
+                "description": "UCYX is a full-stack market entry support partner for Chinese brands going overseas.",
+                "areaServed": ["North America", "Europe", "Southeast Asia", "Global markets"],
+                "knowsAbout": [
+                    "market entry strategy",
+                    "cross-border growth",
+                    "media channel testing",
+                    "synthetic consumer testing",
+                    "marketing measurement",
+                    "local operations setup"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "business development",
+                    "email": "services@ucyx.com",
+                    "availableLanguage": ["English", "Chinese"]
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "China Greater Bay Area"
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "UCYX market entry support services",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "@id": "https://ucyx.com/services/market-entry-strategy",
+                                "url": "https://ucyx.com/services/market-entry-strategy",
+                                "name": "Market Entry Strategy",
+                                "description": "Target market, category, subcategory, and entry priority assessment for Chinese brands."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "@id": "https://ucyx.com/services/entry-design",
+                                "url": "https://ucyx.com/services/entry-design",
+                                "name": "Entry Design",
+                                "description": "Product concept, offer, positioning, survey, and creative testing before larger market entry spend."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "@id": "https://ucyx.com/services/entry-delivery",
+                                "url": "https://ucyx.com/services/entry-delivery",
+                                "name": "Entry Delivery",
+                                "description": "Coordination across media, creators, channel service providers, and local operations."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "@id": "https://ucyx.com/services/entry-evaluation-roi",
+                                "url": "https://ucyx.com/services/entry-evaluation-roi",
+                                "name": "Entry Evaluation & ROI",
+                                "description": "Attribution, channel quality, market feedback, ROI review, and optimization roadmap."
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://ucyx.com/#website",
+                "name": "UCYX",
+                "url": "https://ucyx.com/",
+                "publisher": {
+                    "@id": "https://ucyx.com/#organization"
+                },
+                "inLanguage": ["en", "zh-CN", "zh-TW"]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://ucyx.com/#webpage",
+                "url": "https://ucyx.com/",
+                "name": "UCYX | Market Entry Support for Chinese Brands",
+                "description": "UCYX helps Chinese brands choose target markets, design pre-entry tests, coordinate media and local operations, and review market entry ROI.",
+                "isPartOf": {
+                    "@id": "https://ucyx.com/#website"
+                },
+                "about": {
+                    "@id": "https://ucyx.com/#organization"
+                },
+                "inLanguage": "en"
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://ucyx.com/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What does UCYX actually do?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "UCYX is a full-stack market entry support partner for Chinese brands. It helps teams decide where to enter, design the first test, coordinate delivery, and review whether the return is worth scaling."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which brands are a good fit for UCYX?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "UCYX fits Chinese brands with real products, supply chain capability, or cross-border sales momentum that want a clearer market entry path before committing larger overseas budgets."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is UCYX a media agency, consultancy, or software product?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "UCYX is best understood as a market entry support partner. Strategy, entry design, delivery coordination, and ROI review are connected into one path; NovoChoice and ecosystem resources support that path where relevant."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Where does NovoChoice fit?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NovoChoice supports pre-entry concept, offer, positioning, and marketing message testing through synthetic consumer AI. Product details live at NovoChoice.com."
+                        }
+                    }
+                ]
+            }
+        ]
     }
     </script>
 </body>

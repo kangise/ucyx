@@ -1,0 +1,42 @@
+# UCYX
+
+> UCYX is a full-stack market entry support partner for Chinese brands going overseas.
+
+UCYX helps Chinese brands decide where to enter, design the first market entry test, coordinate entry delivery, and evaluate ROI before scaling.
+
+## Primary audience
+
+- Chinese brands with real products, supply chain capability, or cross-border sales momentum.
+- Factory-backed brands preparing their first systematic overseas market entry.
+- Cross-border sellers moving from marketplace sales into brand-led growth.
+- Teams already spending on media, creators, or agencies that need clearer ROI review.
+
+## Service path
+
+1. Market Entry Strategy: target market, category, subcategory, and entry priority assessment.
+2. Entry Design: product concept, offer, positioning, survey, and creative testing before larger spend.
+3. Entry Delivery: coordination across media, creators, channel service providers, and local operations.
+4. Entry Evaluation & ROI: attribution, channel quality, market feedback, ROI review, and optimization roadmap.
+
+## NovoChoice
+
+NovoChoice is a UCYX-built synthetic consumer AI capability in private beta. It supports product concept, offer, positioning, and marketing message tests before larger market entry spend. Product details are available at https://novochoice.com.
+
+## Ecosystem language
+
+UCYX may work around media, commerce, operations, AI, research, and measurement ecosystems when a market entry path needs those capabilities. Ecosystem references describe capability areas; specific collaboration models vary by market, channel, and client need.
+
+## Contact
+
+Business development email: services@ucyx.com
+
+## Useful URLs
+
+- Website: https://ucyx.com/
+- Services overview: https://ucyx.com/services
+- Market Entry Strategy: https://ucyx.com/services/market-entry-strategy
+- Entry Design: https://ucyx.com/services/entry-design
+- Entry Delivery: https://ucyx.com/services/entry-delivery
+- Entry Evaluation & ROI: https://ucyx.com/services/entry-evaluation-roi
+- Company: https://ucyx.com/company
+- FAQ: https://ucyx.com/#faq

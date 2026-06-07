@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="NovoChoice logo">
+  <rect width="100" height="100" rx="22" fill="#f8faf2"/>
+  <path
+    d="M20 69V26C20 14 29 11 38 20L72 56C80 64 86 59 86 47V28"
+    fill="none"
+    stroke="#111827"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="20" cy="78" r="10" fill="#f8faf2" stroke="#111827" stroke-width="6"/>
+  <circle cx="86" cy="19" r="10" fill="#f8faf2" stroke="#111827" stroke-width="6"/>
+</svg>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="UCYX realistic workflow demo">
+  <defs>
+    <linearGradient id="softBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f6f3"/>
+      <stop offset="1" stop-color="#ebe9e4"/>
+    </linearGradient>
+    <linearGradient id="photoWarm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4dfc8"/>
+      <stop offset="0.52" stop-color="#d8dfd3"/>
+      <stop offset="1" stop-color="#5d7167"/>
+    </linearGradient>
+    <linearGradient id="photoCool" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dce8ef"/>
+      <stop offset="0.56" stop-color="#e8ebe5"/>
+      <stop offset="1" stop-color="#7e9489"/>
+    </linearGradient>
+    <linearGradient id="photoShelf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f0e8"/>
+      <stop offset="0.5" stop-color="#d9d5c9"/>
+      <stop offset="1" stop-color="#79887f"/>
+    </linearGradient>
+    <filter id="realShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#141817" flood-opacity="0.10"/>
+    </filter>
+    <filter id="smallShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="11" flood-color="#141817" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#343a38"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" fill="url(#softBg)"/>
+  
+    <g filter="url(#realShadow)">
+    <rect x="96" y="112" width="310" height="374" rx="28" fill="#fff" stroke="#e2e0db"/>
+    <text x="130" y="152" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="760" fill="#9a9d99" text-anchor="start">LOCAL SETUP</text><g>
+    <circle cx="130" cy="213" r="7" fill="#00A651"/>
+    <text x="152" y="218" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="680" fill="#111716" text-anchor="start">Hiring</text>
+    <g>
+    <rect x="308" y="194" width="79" height="32" rx="16" fill="#dff5e8"/>
+    <text x="325" y="216" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="680" fill="#007a3d" text-anchor="start">Ready</text>
+  </g>
+  </g><g>
+    <circle cx="130" cy="273" r="7" fill="#00A651"/>
+    <text x="152" y="278" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="680" fill="#111716" text-anchor="start">Payroll</text>
+    <g>
+    <rect x="308" y="254" width="79" height="32" rx="16" fill="#dff5e8"/>
+    <text x="325" y="276" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="680" fill="#007a3d" text-anchor="start">Ready</text>
+  </g>
+  </g><g>
+    <circle cx="130" cy="333" r="7" fill="#ffcc00"/>
+    <text x="152" y="338" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="680" fill="#111716" text-anchor="start">Support</text>
+    <g>
+    <rect x="308" y="314" width="70" height="32" rx="16" fill="#f5ead5"/>
+    <text x="325" y="336" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="680" fill="#7a5a00" text-anchor="start">Plan</text>
+  </g>
+  </g><g>
+    <circle cx="130" cy="393" r="7" fill="#ffcc00"/>
+    <text x="152" y="398" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="680" fill="#111716" text-anchor="start">Contractor</text>
+    <g>
+    <rect x="308" y="374" width="70" height="32" rx="16" fill="#f5ead5"/>
+    <text x="325" y="396" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="680" fill="#7a5a00" text-anchor="start">Plan</text>
+  </g>
+  </g>
+  </g>
+    <path d="M406 300H474" fill="none" stroke="#343a38" stroke-width="3" marker-end="url(#arrowHead)"/>
+    <g filter="url(#realShadow)">
+    <rect x="474" y="132" width="294" height="332" rx="28" fill="#fff" stroke="#e2e0db"/>
+    <text x="508" y="172" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="760" fill="#9a9d99" text-anchor="start">WORKFORCE FLOW</text><g>
+    <circle cx="516" cy="232" r="24" fill="#e5f4ee" stroke="#fff" stroke-width="3"/>
+    <circle cx="516" cy="227" r="8" fill="#cf9b79"/>
+    <path d="M506 223c5-12 22-8 20 5c-8-5-15-4-20-1z" fill="#221d1b"/>
+    <path d="M501 249c6-20 24-20 30 0z" fill="#cf9b79"/>
+  </g><g>
+    <circle cx="550" cy="232" r="24" fill="#f5ead5" stroke="#fff" stroke-width="3"/>
+    <circle cx="550" cy="227" r="8" fill="#9f6e50"/>
+    <path d="M540 223c5-12 22-8 20 5c-8-5-15-4-20-1z" fill="#3a2018"/>
+    <path d="M535 249c6-20 24-20 30 0z" fill="#9f6e50"/>
+  </g><g>
+    <circle cx="584" cy="232" r="24" fill="#e8edf4" stroke="#fff" stroke-width="3"/>
+    <circle cx="584" cy="227" r="8" fill="#e0b38f"/>
+    <path d="M574 223c5-12 22-8 20 5c-8-5-15-4-20-1z" fill="#62402d"/>
+    <path d="M569 249c6-20 24-20 30 0z" fill="#e0b38f"/>
+  </g><g>
+    <circle cx="618" cy="232" r="24" fill="#eeeaf8" stroke="#fff" stroke-width="3"/>
+    <circle cx="618" cy="227" r="8" fill="#c18d6b"/>
+    <path d="M608 223c5-12 22-8 20 5c-8-5-15-4-20-1z" fill="#171717"/>
+    <path d="M603 249c6-20 24-20 30 0z" fill="#c18d6b"/>
+  </g><rect x="508" y="302" width="202" height="8" rx="4" fill="#d6dad6"/><rect x="508" y="324" width="140" height="8" rx="4" fill="#d6dad6"/><g>
+    <rect x="508" y="366" width="196" height="32" rx="16" fill="#efefec"/>
+    <text x="525" y="388" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="680" fill="#3d4541" text-anchor="start">Ops owner assigned</text>
+  </g>
+  </g>
+    <path d="M768 300H836" fill="none" stroke="#343a38" stroke-width="3" marker-end="url(#arrowHead)"/>
+    <g filter="url(#realShadow)">
+    <rect x="836" y="158" width="276" height="280" rx="28" fill="#fff" stroke="#e2e0db"/>
+    <text x="870" y="198" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="760" fill="#9a9d99" text-anchor="start">ENTRY READY</text><text x="870" y="244" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="520" fill="#2f3432" text-anchor="start">Local operations can support test demand</text><g transform="translate(1040 348)"><circle cx="0" cy="0" r="15" fill="#00A651"/><path d="M-7 0l5 5 10-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+  
+</svg>

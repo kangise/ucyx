@@ -365,7 +365,7 @@ const CompleteApp = {
               <h2>{{ $t('contact.title') }}</h2>
               <p class="section-subtitle">{{ $t('contact.subtitle') }}</p>
               <p style="font-size: 1.5rem; font-weight: 700;">
-                <a href="mailto:partnership@ucyx.com">{{ $t('contact.email') }}</a>
+                <a href="mailto:services@ucyx.com">{{ $t('contact.email') }}</a>
               </p>
               <p style="margin-top: 3rem; color: var(--medium-gray-color);" v-html="$t('contact.address')">
               </p>

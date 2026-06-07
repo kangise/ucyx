@@ -1,260 +1,750 @@
 {
-  "nav": {
-    "services": "服務",
-    "whoWeServe": "我們服務誰",
-    "successStories": "成功故事",
-    "methodology": "方法論",
-    "channels": "渠道",
-    "blog": "部落格",
-    "chinaMarket": "進入中國市場",
-    "globalMarket": "進入全球市場",
-    "caseStudies": "客戶案例研究",
-    "knowledgeBase": "電子商務知識庫",
-    "login": "登入"
-  },
-  "hero": {
-    "titleLine1": "你看到你的",
-    "titleLine2": "非凡。",
-    "subtitle": "UCYX是一家面向未來的、AI驅動的諮詢公司，致力於幫助品牌在複雜的跨境電子商務市場中發現獨特的「X-非凡」。",
-    "cta": "開始你的增長之旅",
-    "learnMore": "發現我們的方法論"
-  },
-  "dataPower": {
-    "title": "數據驅動洞察",
-    "subtitle": "我們提出的每一個戰略建議都根植於對大規模數據集的深度學習和分析。",
-    "stat1": {
-      "number": "300",
-      "suffix": "+",
-      "label": "核心電子商務類別"
-    },
-    "stat2": {
-      "number": "5",
-      "suffix": "M+",
-      "label": "活躍產品"
-    },
-    "stat3": {
-      "number": "10",
-      "suffix": "M+",
-      "label": "行業關鍵詞"
-    },
-    "stat4": {
-      "number": "50",
-      "suffix": "M+",
-      "label": "消費者評論"
-    }
-  },
-  "services": {
-    "title": "實現非凡增長所需的一切",
-    "subtitle": "我們全面的AI驅動方法論涵蓋你的電子商務旅程的每個方面。",
-    "feature1": {
-      "title": "Novochoice",
-      "description": "通過Novochoice™機會象限發現高潛力利基市場，由大規模數據集的AI分析提供支持。",
-      "tag1": "Novochoice™",
-      "tag2": "AI分析"
-    },
-    "feature2": {
-      "title": "品牌智能",
-      "description": "通過UCselection™價值主張畫布，共同創造一個具有引人注目的「X因子」的產品原型。",
-      "tag1": "UCselection™",
-      "tag2": "品牌策略"
-    },
-    "feature3": {
-      "title": "發布致勝",
-      "description": "通過整合行銷解決方案在全球平台上執行成功的發布。",
-      "tag1": "UCforecast™",
-      "tag2": "增長路徑"
-    },
-    "feature4": {
-      "title": "持久成功",
-      "description": "通過我們的UCcopilot™ AI驅動優化系統實現持續增長。",
-      "tag1": "UCcopilot™",
-      "tag2": "AI優化"
-    }
-  },
-  "whoWeServe": {
-    "title": "我們服務誰",
-    "subtitle": "我們與全球市場先鋒合作，無論你是尋求擴張的成熟品牌還是擁有優秀產品的初創公司。",
-    "card1": {
-      "title": "成熟品牌",
-      "description": "你擁有成功的產品和穩定的業務，但渴望進入新市場以找到你的下一個增長曲線。"
-    },
-    "card2": {
-      "title": "有好想法的初創公司",
-      "description": "你創造了出色的想法，但缺乏將其轉化為產品和品牌的方法。"
-    },
-    "card3": {
-      "title": "傳統製造商",
-      "description": "你擁有優秀的產品，但缺乏在Amazon或Shopify等平台上的市場進入策略和品牌行銷經驗。"
-    },
-    "seeCasesLink": "我們如何用數據證明我們的價值？查看我們的成功故事 ↓"
-  },
-  "successStories": {
-    "title": "我們的成功故事",
-    "subtitle": "我們不僅提供策略，我們提供可衡量的結果。",
-    "cases": [
-      {
-        "brand": "北美護膚品牌",
-        "title": "從零開始進入亞洲市場",
-        "description": "使用Novochoice™數據平台，我們在中國電子商務平台上識別了一個高潛力利基市場，並通過UCselection™服務，我們幫助定義了針對亞洲消費者偏好的價值主張，在第一個月超出銷售預測300%。",
-        "metric": "+300%",
-        "metricLabel": "第一個月銷售目標"
-      },
-      {
-        "brand": "歐洲智能家居品牌",
-        "title": "通過評論洞察重塑用戶忠誠度",
-        "description": "我們分析了前10名熱銷商品中的5000條客戶評論，發現了核心產品改進機會並優化了銷售材料，在六個月內將重複購買率提高了50%。",
-        "metric": "+50%",
-        "metricLabel": "重複購買率"
-      },
-      {
-        "brand": "中國網路存儲品牌",
-        "title": "Amazon新產品發布優化",
-        "description": "利用UCcopilot™進行智能廣告活動優化，我們將他們在Amazon美國的新產品的點擊轉化率提高了75%，並將ACoS降低了40%，而沒有增加廣告預算。",
-        "metric": "-40%",
-        "metricLabel": "廣告銷售成本(ACoS)"
-      },
-      {
-        "brand": "日本設計師文具品牌",
-        "title": "Shopify DTC銷售預測",
-        "description": "通過UCforecast™模型，我們為他們針對北美市場的新產品線提供了準確的銷售預測。這幫助優化了他們的庫存策略，實現了95%的初始庫存銷售率。",
-        "metric": "95%",
-        "metricLabel": "初始庫存銷售率"
-      }
-    ]
-  },
-  "methodology": {
-    "title": "UCYX價值增長方法論™",
-    "subtitle": "我們不提供零散的建議。我們提供系統性的、可驗證的成功藍圖。",
-    "usingProprietaryModel": "使用我們專有的",
-    "model": "模型",
-    "steps": [
-      {
-        "title": "市場掃描與機會解鎖",
-        "description": "使用我們專有的Novochoice機會象限模型，結合AI數據分析，我們快速從數百個利基市場中為你識別高潛力的「價值盆地」。",
-        "tool": "Novochoice™"
-      },
-      {
-        "title": "深度洞察與產品定義",
-        "description": "通過UCselection™價值主張畫布，我們逆向工程競爭對手評論和用戶痛點，共同創造一個具有引人注目的「X因子」的產品原型。",
-        "tool": "UCopps™"
-      },
-      {
-        "title": "可行性與增長路徑",
-        "description": "利用UCforecast™銷售預測模型使用機器學習進行損益情境規劃，我們使用「品牌增長路徑矩陣」為你的業務繪製清晰的1到N的旅程。",
-        "tool": "UCforecast™"
-      },
-      {
-        "title": "平台成功與持續優化",
-        "description": "通過UCcopilot™ AI助手，我們持續優化你的平台營運、廣告和客戶體驗，確保你的品牌不僅成功發布而且蓬勃發展。",
-        "tool": "UCcopilot™"
-      }
-    ]
-  },
-  "brands": {
-    "title": "先進市場情報平台",
-    "novochoiceTitle": "Novochoice",
-    "description": "Novochoice是UCYX的先進市場情報平台，結合人工智慧、大數據分析和即時監控，為全球電子商務機會提供全面洞察。",
-    "cta": "了解更多關於Novochoice"
-  },
-  "form": {
-    "title": "開始你的增長之旅",
-    "subtitle": "留下你的資訊，我們的專家將在24小時內聯繫你討論你的品牌潛力。",
-    "name": "姓名",
-    "email": "信箱",
-    "message": "你的需求",
-    "submit": "提交",
-    "namePlaceholder": "你的姓名",
-    "emailPlaceholder": "your@email.com",
-    "messagePlaceholder": "告訴我們你的業務目標..."
-  },
-  "contact": {
-    "title": "與我們共創未來",
-    "subtitle": "我們期待與有遠見的品牌、投資者和合作夥伴建立聯繫。如果我們的理念與你產生共鳴，請隨時聯繫。",
-    "email": "partnership@ucyx.com",
-    "address": "UCYX Ltd.<br>香港尖沙咀漆咸道南61-65號首都大廈2樓S068室",
-    "readyTitle": "準備實現非凡增長？",
-    "readySubtitle": "加入數百個通過我們的方法論轉變業務的品牌。",
-    "submitting": "提交中...",
-    "successMessage": "謝謝！我們將在24小時內聯繫你。",
-    "errorMessage": "抱歉，出現了錯誤。請重試。"
-  },
-  "footer": {
-    "company": "公司",
-    "about": "關於我們",
-    "careers": "招聘",
-    "services": "服務",
-    "methodology": "方法論",
-    "cases": "案例研究",
-    "solutions": "解決方案",
-    "resources": "資源",
-    "blog": "部落格",
-    "webinars": "網路研討會",
-    "legal": "法律",
-    "privacy": "隱私政策",
-    "terms": "服務條款",
-    "rights": "保留所有權利。"
-  },
-  "aria": {
-    "openMenu": "打開導航選單",
-    "closeMenu": "關閉導航選單",
-    "languageSelector": "選擇語言"
-  },
-  "megaMenu": {
-    "start": "開始",
-    "choice": "選擇",
-    "sell": "銷售",
-    "manage": "管理",
-    "sellToChina": "銷往中國",
-    "sellToWorld": "銷往世界",
-    "reachConsumers": "觸達10億消費者",
-    "globalExpansion": "全球市場擴張",
-    "novochoice": "Novochoice",
-    "aiPoweredIntelligence": "AI驅動的市場情報",
-    "customizedSelection": "UCselection服務",
-    "tailoredRecommendations": "客製化產品推薦",
-    "sellerCopilot": "UCcopilot服務",
-    "aiDrivenOptimization": "AI驅動的銷售優化",
-    "marketingMix": "UC-MMM",
-    "maximizeROI": "最大化行銷投資回報率",
-    "manageCustomer": "管理你的客戶",
-    "buildRelationships": "建立持久關係",
-    "startConsultation": "開始免費諮詢",
-    "visitBlog": "訪問我們的部落格",
-    "learnMethodology": "了解更多關於方法論"
-  },
-  "footerExtra": {
-    "sellToChina": "銷往中國",
-    "sellToWorld": "銷往世界",
-    "sellerCopilot": "UCcopilot服務",
-    "marketingMix": "UC-MMM",
-    "manageCustomer": "管理你的客戶",
-    "aboutUCYX": "關於UCYX",
-    "partners": "合作夥伴",
-    "novochoicePlatform": "Novochoice平台",
-    "helpCenter": "幫助中心",
-    "contactUs": "聯繫我們",
-    "copyright": "© 2025 UCYX Ltd. 保留所有權利。",
-    "support": "支援"
-  },
   "meta": {
-    "title": "UCYX - AI驅動的全球電子商務諮詢",
-    "description": "UCYX是一家面向未來的、AI驅動的諮詢公司，通過我們的數據驅動方法論幫助全球品牌在跨境電子商務中實現指數級增長。",
-    "keywords": "電子商務, AI, 諮詢, 跨境, 全球擴張, 市場情報",
-    "author": "UCYX",
-    "ogTitle": "UCYX - AI驅動的全球電子商務諮詢",
-    "ogDescription": "我們通過數據驅動洞察和經過驗證的方法論幫助全球品牌在跨境電子商務中實現指數級增長。",
-    "twitterTitle": "UCYX - AI驅動的全球電子商務諮詢",
-    "twitterDescription": "我們通過數據驅動洞察和經過驗證的方法論幫助全球品牌在跨境電子商務中實現指數級增長。"
+    "title": "UCYX | 中國品牌出海市場進入支持",
+    "description": "UCYX 幫助中國品牌判斷目標市場，設計進入前測試，協調媒體與本地營運，並復盤市場進入投入回報。"
   },
-  "blog": {
-    "title": "部落格 - UCYX",
-    "metaDescription": "全球電子商務的最新洞察和趨勢",
-    "latestInsights": "最新洞察",
-    "subtitle": "通過我們對電子商務趨勢、市場分析和增長策略的最新思考保持領先。",
-    "readMore": "閱讀更多"
+  "nav": {
+    "primary": "主導航",
+    "solutions": "服務路徑",
+    "novochoice": "NovoChoice",
+    "partnerNetwork": "生態網絡",
+    "about": "關於",
+    "faq": "FAQ",
+    "contact": "聯絡",
+    "menu": "打開導航選單",
+    "company": "公司"
   },
   "language": {
-    "current": "中文繁體",
     "switch": "切換語言"
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "讓每一次市場進入，都有更清楚的理由。",
+    "subtitle": "UCYX 是中國品牌出海的市場進入全棧支持夥伴。我們幫你判斷先去哪裡、怎麼測試、由誰落地，以及投入是否值得繼續加碼。",
+    "intelligenceLine": "",
+    "primaryCta": "預約一次市場進入診斷",
+    "secondaryCta": "查看服務路徑"
+  },
+  "customerWall": {
+    "label": "客戶畫像示例",
+    "kicker": "適合已經有產品、供應鏈和出海計劃的團隊",
+    "successBadge": "案例",
+    "successCta": "查看成功故事",
+    "successHref": "/success-stories",
+    "rows": [
+      [
+        "深圳消費電子公司",
+        "杭州 DTC 護膚品牌",
+        "廣州寵物用品品牌",
+        "寧波小家電製造商",
+        "廈門戶外裝備團隊",
+        "東莞工廠型品牌",
+        "上海健康消費品公司",
+        "佛山家具出口商"
+      ],
+      [
+        "跨境 Amazon 賣家",
+        "準備進入北美的 Shopify 品牌",
+        "正在做品牌化的 Alibaba.com 供應商",
+        "Creator-led 產品團隊",
+        "準備測試歐洲市場的品類品牌",
+        "供應鏈驅動的消費品牌",
+        "投放前的新產品團隊",
+        "正在選擇首個市場的品牌團隊"
+      ],
+      [
+        "美容儀器公司",
+        "智能家居產品公司",
+        "運動健身品牌",
+        "母嬰用品公司",
+        "膳食補充劑品牌",
+        "旅行用品製造商",
+        "生活方式配飾品牌",
+        "從 B2B 走向消費者市場的製造商"
+      ]
+    ]
+  },
+  "audience": {
+    "title": "我們更適合這三類真實出海場景。",
+    "body": "如果你已經有產品、供應鏈或跨境銷售基礎，只是缺一條更清楚的海外進入路徑，UCYX 會更適合。",
+    "label": "UCYX 服務客戶畫像",
+    "profiles": [
+      {
+        "kicker": "01",
+        "title": "工廠型品牌第一次系統出海",
+        "body": "例如深圳消費電子、寧波小家電或佛山家居團隊：產品和供應鏈已經穩定，但還需要判斷美國、歐洲或東南亞哪個市場先測。"
+      },
+      {
+        "kicker": "02",
+        "title": "跨境賣家開始做品牌化增長",
+        "body": "例如已有 Amazon 或 Shopify 銷售基礎的賣家：銷量證明了產品，但價值主張、獨立站內容和渠道組合還需要面向目標市場重做。"
+      },
+      {
+        "kicker": "03",
+        "title": "已經投放但想看清回報的團隊",
+        "body": "例如正在加大海外預算的新消費團隊：媒體、達人和代理都在跑，但需要有人把測試、交付和投入回報復盤連起來。"
+      }
+    ]
+  },
+  "problem": {
+    "title": "很多產品不是不夠好，而是卡在了市場進入這一步。",
+    "body": "難點往往不只是找渠道，而是誰來把測試、落地和投入回報復盤連成一條路。",
+    "label": "市場進入痛點輪播",
+    "kicker": "常見卡點",
+    "dotLabel": "查看痛點",
+    "painPoints": [
+      "產品不錯，但到底先去哪個市場、哪個細分類目？",
+      "廣告可以投，但價值主張、定位和內容真的準備好了嗎？",
+      "供應商和代理都能找，但誰對從測試到投入回報這條路負責？"
+    ]
+  },
+  "growthSystem": {
+    "title": "市場進入不是一堆服務，而是一條路。",
+    "body": "UCYX 把出海市場進入拆成四步：先判斷機會，再設計測試，接着落地進入，最後看回報。",
+    "workflowLabel": "UCYX 市場進入路徑",
+    "briefLabel": "市場進入簡報",
+    "servicesLabel": "可以做甚麼",
+    "sourceLabel": "能力來源",
+    "visualLabel": "路徑",
+    "questionLabel": "當前要回答的問題",
+    "deliverableLabel": "交付樣例 Demo",
+    "demoLabel": "UCYX Demo",
+    "demoRows": {
+      "service": "服務項",
+      "question": "回答的問題",
+      "decision": "如何使用"
+    },
+    "workflow": [
+      {
+        "title": "市場進入策略",
+        "verb": "判斷",
+        "body": "先判斷目標市場、品類和細分類目，是否值得進入測試。",
+        "brand": "Demo",
+        "brandMark": "D",
+        "brandAlt": "Demo",
+        "questions": [
+          "先進入哪個市場，勝算更高？",
+          "這個品類在當地有沒有真實需求？",
+          "哪個細分類目最適合作為第一輪測試？"
+        ],
+        "services": [
+          "市場機會感知",
+          "品類機會掃描",
+          "進入優先級圖"
+        ],
+        "deliverables": [
+          "市場機會簡報",
+          "品類優先級圖",
+          "第一市場建議"
+        ],
+        "demoUses": [
+          "把需求信號整理成一頁判斷，決定這個市場是否值得先測。",
+          "比較品類和細分類目路徑，避免一開始就把資源鋪太散。",
+          "用更清楚的理由選出第一個市場和第一輪測試邊界。"
+        ],
+        "demoAlt": "用於目標市場、品類、細分類目和進入標準判斷的 market opportunity evaluator demo。",
+        "primaryService": "市場機會感知",
+        "secondaryService": "品類機會掃描、市場假設和進入優先級圖。",
+        "source": "UCYX + NovoChoice",
+        "visualAlt": "市場進入策略桌面，包含產品樣品、全球市場地圖、品類機會板和綠色路線標記。"
+      },
+      {
+        "title": "進入前測試",
+        "verb": "設計",
+        "body": "在花大預算之前，先測試產品概念、價值主張、定位和內容方向。",
+        "brand": "Demo",
+        "brandMark": "D",
+        "brandAlt": "Demo",
+        "questions": [
+          "哪套價值主張最容易被目標用戶理解？",
+          "這套定位在當地講得通嗎？",
+          "哪套創意更值得拿去做第一輪測試？"
+        ],
+        "services": [
+          "合成消費者測試",
+          "問卷設計",
+          "賣點定位測試"
+        ],
+        "deliverables": [
+          "概念測試簡報",
+          "價值主張對比",
+          "第一輪創意建議"
+        ],
+        "demoUses": [
+          "把產品假設變成可測試的概念，再決定是否進入投放。",
+          "比較 offer、定位和表達方式，先選出更適合目標市場的一版。",
+          "在正式花錢之前，確定更值得進入第一輪測試的創意方向。"
+        ],
+        "demoAlt": "用於概念測試、價值主張、定位和內容方向判斷的 AI consumer lab demo。",
+        "primaryService": "合成消費者測試",
+        "secondaryService": "價值主張、定位、創意和問卷設計。",
+        "source": "NovoChoice + 精選研究夥伴",
+        "visualAlt": "進入設計桌面，包含產品原型、移動端頁面、調研問卷和營銷創意板。"
+      },
+      {
+        "title": "進入執行",
+        "verb": "進入",
+        "body": "用合適的媒體、達人、渠道服務商和本地營運，把第一輪進入動作跑起來。",
+        "brand": "Demo",
+        "brandMark": "D",
+        "brandAlt": "Demo",
+        "questions": [
+          "先用哪些渠道打開市場？",
+          "媒體、達人和本地營運怎麼配合？",
+          "第一輪進入動作由誰協調到底？"
+        ],
+        "services": [
+          "渠道測試衝刺",
+          "媒體達人協同",
+          "本地營運支持"
+        ],
+        "deliverables": [
+          "渠道測試計劃",
+          "媒體達人簡報",
+          "本地營運清單"
+        ],
+        "demoUses": [
+          "把第一輪渠道測試排清楚，讓媒體、達人和服務商按同一節奏推進。",
+          "把進入策略翻譯成 agency、達人和內容團隊能執行的 brief。",
+          "在進入動作開始前，先看清本地營運、招聘和服務承接事項。"
+        ],
+        "demoAlt": "用於媒體、達人、渠道服務商和本地營運協同的日本市場進入 demo。",
+        "primaryService": "渠道測試衝刺",
+        "secondaryService": "媒體、達人與本地營運進入支持。",
+        "source": "UCYX + media agencies + Deel/本地夥伴",
+        "visualAlt": "進入交付桌面，包含產品包裹、媒體渠道卡片、達人內容板和夥伴交付路線。"
+      },
+      {
+        "title": "投入回報評估",
+        "verb": "復盤",
+        "body": "看清歸因、渠道質量、市場反饋和投入回報，再決定優化、加碼還是停止。",
+        "brand": "Demo",
+        "brandMark": "D",
+        "brandAlt": "Demo",
+        "questions": [
+          "這條進入路徑值得繼續加碼嗎？",
+          "哪個渠道帶來了真實增長信號？",
+          "下一步應該優化、放量，還是停下來？"
+        ],
+        "services": [
+          "多渠道歸因",
+          "投入回報復盤",
+          "優化路線圖"
+        ],
+        "deliverables": [],
+        "demoUses": [
+          "把渠道信號接到第一版 ROI 判斷，不假裝每個觸點都能完全確定。",
+          "從噪音流量裏分辨哪些信號值得繼續投入預算和營運資源。",
+          "把進入復盤轉成下一步動作：優化、放量，或者停下來。"
+        ],
+        "demoAlt": "用於進入 ROI 復盤的 marketing mix modeling dashboard demo。",
+        "primaryService": "投入回報復盤",
+        "secondaryService": "多渠道歸因、投入回報復盤和下一步優化路線圖。",
+        "source": "UCYX + measurement partners",
+        "visualAlt": "進入評估桌面，包含歸因地圖、渠道質量報告和下一階段優化路線圖。"
+      }
+    ]
+  },
+  "novochoice": {
+    "title": "NovoChoice",
+    "body": "NovoChoice 用消費者合成 AI，幫助品牌在正式投放或進入市場前，快速測試產品概念、價值主張、定位、廣告創意和營銷內容。更多產品細節，可以直接訪問 NovoChoice.com。",
+    "externalCta": "訪問 NovoChoice.com",
+    "externalUrl": "https://novochoice.com"
+  },
+  "partnerNetwork": {
+    "title": "服務生態覆蓋。",
+    "body": "當一條市場進入路徑需要媒體、commerce、營運、AI、研究或成效衡量能力時，UCYX 會圍繞這些服務生態來組織討論和交付。以下內容用於說明能力範圍，具體協作方式會因項目而異。",
+    "label": "UCYX 服務生態覆蓋",
+    "controlsLabel": "選擇生態項目",
+    "groupLabel": "查看生態項目",
+    "items": [
+      {
+        "token": "AI",
+        "name": "AAAI China GBA Chapter",
+        "description": "AI 社群與大灣區知識網絡。"
+      },
+      {
+        "token": "NC",
+        "name": "NovoChoice",
+        "description": "UCYX 自研的消費者合成 AI，用於產品、價值主張、定位和概念測試。"
+      },
+      {
+        "token": "HR",
+        "name": "Deel",
+        "description": "海外招聘、contractor、payroll 和用工基礎設施語境。"
+      },
+      {
+        "token": "ME",
+        "name": "Analyticedge",
+        "description": "歸因、營銷成效和投入回報衡量能力語境。"
+      },
+      {
+        "token": "B2B",
+        "name": "Alibaba.com",
+        "description": "連接中國供應鏈與全球買家的跨境 commerce 生態。"
+      },
+      {
+        "token": "AC",
+        "name": "Accio Work",
+        "description": "面向採購、營運、市場研究和跨境業務任務的 AI agent 工作流語境。"
+      },
+      {
+        "token": "AA",
+        "name": "Apple Ads",
+        "description": "Apple 廣告和 App 發現渠道語境。"
+      },
+      {
+        "token": "SP",
+        "name": "Shopify",
+        "description": "DTC 獨立站、品牌店舖和 commerce 營運語境。"
+      },
+      {
+        "token": "AW",
+        "name": "Airwallex",
+        "description": "跨境收款、支付和全球賬戶基礎設施語境。"
+      }
+    ],
+    "cta": "加入 UCYX 生態網絡",
+    "note": "這個生態圖用於說明服務覆蓋面，也會隨着客戶需求、目標市場和渠道語境持續更新。"
+  },
+  "about": {
+    "title": "UCYX 讓市場進入真正落地。",
+    "body": "我們不是只賣一次投放，也不是只交一份報告。UCYX 會把策略、設計、交付和回報復盤連起來，先判斷該測哪條路，再決定怎麼調、要不要加碼。",
+    "factsLabel": "UCYX 公司與能力事實",
+    "facts": [
+      {
+        "label": "公司位置",
+        "value": "香港公司，服務大灣區與中國出海品牌。"
+      },
+      {
+        "label": "自研能力",
+        "value": "NovoChoice 內測中，支持產品概念與營銷內容測試。"
+      },
+      {
+        "label": "服務方式",
+        "value": "按市場進入任務，組合自有能力與生態資源。"
+      }
+    ],
+    "principles": [
+      "先把目標市場、品類機會和進入假設說清楚。",
+      "進入前，測試產品概念、價值主張、定位和內容方向。",
+      "進入後，復盤渠道質量、營運負擔和投入回報，再決定優化或放量。"
+    ]
+  },
+  "faq": {
+    "title": "常見問題",
+    "label": "UCYX 常見問題",
+    "items": [
+      {
+        "question": "UCYX 到底做甚麼？",
+        "answer": "UCYX 是中國品牌出海的市場進入全棧支持夥伴。我們不只是幫你找渠道，也會一起判斷先去哪裡、怎麼測試、如何落地，以及投入回報是否值得繼續加碼。"
+      },
+      {
+        "question": "甚麼樣的品牌適合找 UCYX？",
+        "answer": "更適合已經有產品、供應鏈或跨境銷售基礎的團隊。你可能已經開始出海，也可能正準備選擇第一個市場，但需要一條更清楚、更能落地的進入路徑。"
+      },
+      {
+        "question": "UCYX 是媒體代理、顧問公司，還是軟件？",
+        "answer": "更準確地說，UCYX 是市場進入支持夥伴。策略、設計、交付和復盤是一條完整路徑；NovoChoice 是其中的自研測試能力，生態資源則用於補齊媒體、營運和衡量等環節。"
+      },
+      {
+        "question": "NovoChoice 在這裡扮演甚麼角色？",
+        "answer": "NovoChoice 用於進入前的產品概念、價值主張、定位和營銷內容測試，幫助品牌在正式投放前先看清哪套方案更值得測。更多產品資訊可以訪問 NovoChoice.com。"
+      },
+      {
+        "question": "你們會負責實際投放和落地嗎？",
+        "answer": "會。UCYX 可以根據項目需要，協調媒體、達人、渠道服務商和本地營運支持。具體交付邊界會按目標市場、渠道、預算和客戶需求來確認。"
+      },
+      {
+        "question": "生態網絡裡的名字代表正式合作夥伴嗎？",
+        "answer": "生態網絡用於說明 UCYX 會涉及的能力範圍，不代表所有項目都有同一種合作關係、可用方式或交付角色。具體協作方式會根據項目來定。"
+      },
+      {
+        "question": "第一次診斷需要準備甚麼？",
+        "answer": "準備好你的品類、產品階段、目標或候選市場、已有渠道，以及當前最想做的決定。UCYX 會幫你把這些資訊整理成第一批值得回答的市場進入問題。"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "準備認真規劃下一步出海了嗎？",
+    "body": "告訴我們你的品類、目標市場和現在最卡的問題。UCYX 會幫你整理第一批值得回答的策略、設計、交付和投入回報問題。",
+    "primaryCta": "預約一次市場進入診斷",
+    "secondaryCta": "了解生態網絡",
+    "email": "services@ucyx.com",
+    "subject": "UCYX 市場進入診斷"
+  },
+  "footer": {
+    "description": "中國品牌出海的市場進入全棧支持。",
+    "navigation": "導航",
+    "resources": "資源",
+    "contact": "聯絡",
+    "location": "中國大灣區",
+    "servicesOverview": "服務總覽",
+    "company": "公司",
+    "faq": "首頁 FAQ"
+  },
+  "successStories": {
+    "title": "成功故事",
+    "body": "客戶案例會在獲得授權後發布。這裡將整理 UCYX 在市場進入策略、進入前測試、進入執行和投入回報復盤中的真實合作故事。",
+    "primaryCta": "聊聊你的市場進入案例",
+    "secondaryCta": "返回 UCYX",
+    "cards": [
+      {
+        "label": "市場進入策略",
+        "title": "先把第一個市場選得更清楚",
+        "body": "品牌在投入預算前，如何比較目標市場、品類和細分類目的機會信號。"
+      },
+      {
+        "label": "進入前測試",
+        "title": "先測試價值主張和定位，再做投放",
+        "body": "通過產品概念、價值主張、信息和創意測試，減少第一輪進入的不確定性。"
+      },
+      {
+        "label": "回報復盤",
+        "title": "把渠道結果轉成下一步決策",
+        "body": "通過歸因、渠道質量和市場反饋，判斷下一步應該優化、加碼還是停止。"
+      }
+    ]
+  },
+  "servicesMega": {
+    "label": "服務菜單",
+    "eyebrow": "UCYX 服務體系",
+    "title": "圍繞市場進入的四類服務。",
+    "body": "從判斷機會，到設計進入前測試，再到執行進入和回報復盤，UCYX 把原本分散的服務組織成一條可推進的路徑。",
+    "servicesLabel": "包含服務",
+    "serviceCta": "查看服務",
+    "overviewCta": "查看全部服務",
+    "diagnosticCta": "預約診斷",
+    "items": [
+      {
+        "href": "/services/market-entry-strategy",
+        "verb": "判斷",
+        "title": "市場進入策略",
+        "previewTitle": "先用更清楚的理由，選擇第一輪市場。",
+        "body": "用 NovoChoice 和市場信號，判斷先進入哪個市場、哪個品類、哪個細分類目。",
+        "brand": "NovoChoice",
+        "points": [
+          "Market Sensing",
+          "品類機會掃描",
+          "第一市場建議"
+        ]
+      },
+      {
+        "href": "/services/entry-design",
+        "verb": "設計",
+        "title": "進入前測試",
+        "previewTitle": "在預算真正投入前，先測試賣點和表達。",
+        "body": "用 NovoChoice 測試產品概念、價值主張、定位、問卷邏輯和第一輪創意方向。",
+        "brand": "NovoChoice",
+        "points": [
+          "合成消費者測試",
+          "問卷設計",
+          "賣點定位測試"
+        ]
+      },
+      {
+        "href": "/services/entry-delivery",
+        "verb": "進入",
+        "title": "進入執行",
+        "previewTitle": "把進入計劃變成可協同執行的市場動作。",
+        "body": "把第一輪進入動作組織起來，覆蓋媒體規劃、渠道開發和本地組織。",
+        "token": "Media + Ops",
+        "points": [
+          "Media Planning",
+          "Channel Development",
+          "Local Organization"
+        ]
+      },
+      {
+        "href": "/services/entry-evaluation-roi",
+        "verb": "復盤",
+        "title": "投入回報評估",
+        "previewTitle": "在繼續加碼前，看清哪些動作真的有效。",
+        "body": "用 Marketing Mix Modeling 和歸因復盤，看清哪些信號值得繼續投入。",
+        "token": "MMM",
+        "points": [
+          "Marketing Mix Modeling",
+          "歸因復盤",
+          "ROI 優化"
+        ]
+      }
+    ]
+  },
+  "servicesOverview": {
+    "meta": {
+      "title": "UCYX 服務 | 中國品牌出海市場進入支持",
+      "description": "了解 UCYX 為中國品牌提供的市場進入策略、進入前測試、進入執行和投入回報評估服務。"
+    },
+    "kicker": "服務",
+    "title": "把市場進入拆成更清楚的四步。",
+    "intro": "UCYX 不把服務做成一張散亂菜單，而是圍繞品牌真實的進入決策，拆成判斷、設計、進入和復盤四個連續動作。",
+    "primaryCta": "預約一次市場進入診斷",
+    "secondaryCta": "回到首頁服務路徑"
+  },
+  "servicePages": {
+    "marketEntryStrategy": {
+      "meta": {
+        "title": "市場進入策略 | UCYX",
+        "description": "UCYX 市場進入策略幫助中國品牌在第一輪測試前，比較目標市場、品類和細分類目的機會。"
+      },
+      "kicker": "服務 01",
+      "verb": "判斷",
+      "shortTitle": "市場進入策略",
+      "title": "先判斷第一輪市場進入，應該從哪裡開始。",
+      "intro": "UCYX 幫助品牌在投入資源前，比較目標市場、品類和細分類目的機會，避免一開始就把資源鋪散。",
+      "cardBody": "判斷哪個市場、品類和第一輪測試更值得優先做。",
+      "highlights": [
+        "市場機會感知",
+        "品類機會掃描",
+        "第一市場建議"
+      ],
+      "summaryLabel": "這項服務回答甚麼",
+      "answerTitle": "先有理由，再進入市場。",
+      "answerBody": "這項服務幫助團隊避免在假設不清的時候直接大範圍出海。UCYX 會把市場、品類、競爭、需求和進入可行性信號，整理成更適合第一輪測試的建議。",
+      "blocks": [
+        {
+          "title": "適合甚麼時候用",
+          "body": "產品已經比較明確，但進入選擇還不夠清楚。",
+          "items": [
+            "幾個候選市場都在討論中",
+            "品類需求和競爭格局還沒看清",
+            "團隊需要確定第一輪測試邊界"
+          ]
+        },
+        {
+          "title": "UCYX 可以做甚麼",
+          "body": "先把市場進入問題定義清楚，再把信號整理成可決策的資訊。",
+          "items": [
+            "結合 NovoChoice 做市場機會感知",
+            "掃描品類和細分類目機會",
+            "形成進入優先級和第一輪測試假設"
+          ]
+        },
+        {
+          "title": "通常需要甚麼資訊",
+          "body": "越清楚地描述現狀，診斷越有價值。",
+          "items": [
+            "產品品類和當前銷售情況",
+            "候選市場或目標地區",
+            "已知競品、渠道和預算範圍"
+          ]
+        }
+      ],
+      "deliverablesTitle": "交付樣例",
+      "deliverables": [
+        "市場機會簡報",
+        "品類優先級圖",
+        "第一市場測試建議"
+      ],
+      "primaryCta": "討論市場進入策略",
+      "relatedTitle": "繼續看其他服務"
+    },
+    "entryDesign": {
+      "meta": {
+        "title": "進入前測試 | UCYX NovoChoice",
+        "description": "UCYX 進入前測試使用 NovoChoice 測試產品概念、價值主張、定位、問卷和第一輪創意方向。"
+      },
+      "kicker": "服務 02",
+      "verb": "設計",
+      "shortTitle": "進入前測試",
+      "title": "在花大預算之前，先測試方案。",
+      "intro": "UCYX 幫助品牌把進入假設變成可測試的產品概念、價值主張、定位、信息和創意方向。",
+      "cardBody": "用 NovoChoice 和研究設計，先測試甚麼更適合進入市場。",
+      "highlights": [
+        "合成消費者測試",
+        "問卷設計",
+        "賣點定位測試"
+      ],
+      "summaryLabel": "這項服務回答甚麼",
+      "answerTitle": "先讓方案經得起測試，再讓市場檢驗。",
+      "answerBody": "這項服務對應進入前的關鍵階段：在第一筆嚴肅投放預算之前，UCYX 幫助你比較概念、offer、定位和內容方向，選出更有理由進入測試的一版。",
+      "blocks": [
+        {
+          "title": "適合甚麼時候用",
+          "body": "市場看起來有機會，但第一版表達還沒定。",
+          "items": [
+            "有多個產品原型或 offer",
+            "定位還帶有明顯國內市場語境",
+            "需要確定第一輪內容和創意方向"
+          ]
+        },
+        {
+          "title": "UCYX 可以做甚麼",
+          "body": "用 NovoChoice 做測試層，必要時再結合真實消費者問卷夥伴。",
+          "items": [
+            "合成消費者概念測試",
+            "價值主張和 offer 對比",
+            "問卷設計和第一輪創意建議"
+          ]
+        },
+        {
+          "title": "通常需要甚麼資訊",
+          "body": "進入假設越具體，測試越容易產出判斷。",
+          "items": [
+            "產品圖、原型或 mockup",
+            "候選 offer 和定位表達",
+            "目標用戶或市場假設"
+          ]
+        }
+      ],
+      "deliverablesTitle": "交付樣例",
+      "deliverables": [
+        "概念測試簡報",
+        "價值主張對比",
+        "第一輪創意建議"
+      ],
+      "primaryCta": "規劃進入前測試",
+      "relatedTitle": "繼續看其他服務"
+    },
+    "entryDelivery": {
+      "meta": {
+        "title": "進入執行 | 媒體規劃、渠道開發、本地組織 | UCYX",
+        "description": "UCYX 進入執行幫助中國品牌協調媒體規劃、渠道開發、本地組織和第一輪市場進入動作。"
+      },
+      "kicker": "服務 03",
+      "verb": "進入",
+      "shortTitle": "進入執行",
+      "title": "把進入計劃變成真正跑起來的動作。",
+      "intro": "UCYX 幫助品牌協調媒體規劃、渠道開發、達人或代理資源，以及本地組織，讓第一輪市場進入有人承接。",
+      "cardBody": "把媒體、渠道和本地營運組織成一輪進入衝刺。",
+      "highlights": [
+        "Media Planning",
+        "Channel Development",
+        "Local Organization"
+      ],
+      "summaryLabel": "這項服務回答甚麼",
+      "answerTitle": "讓第一輪進入動作真的可執行。",
+      "answerBody": "進入執行是策略變成實際操作的階段。UCYX 會幫助明確誰來做、先用哪些渠道、本地營運需要準備甚麼，避免品牌在多個服務商之間失去主線。",
+      "blocks": [
+        {
+          "title": "Media Planning",
+          "body": "圍繞發現、轉化意圖和學習價值，設計第一輪測試組合。",
+          "items": [
+            "Apple Ads 和其他相關媒體渠道",
+            "媒體代理和達人 brief 結構",
+            "預算、節奏和測試 sprint 排布"
+          ]
+        },
+        {
+          "title": "Channel Development",
+          "body": "為目標市場匹配合適的渠道和服務商資源。",
+          "items": [
+            "媒體 agency 與渠道服務商匹配",
+            "KOL、creator、affiliate 或社群路徑",
+            "渠道對接和第一輪測試協調"
+          ]
+        },
+        {
+          "title": "Local Organization",
+          "body": "把當地市場需要的營運支撐提前準備好。",
+          "items": [
+            "圍繞 Deel 的招聘、contractor 和 payroll 討論",
+            "本地服務商協調",
+            "客服、localization 和營運清單"
+          ]
+        }
+      ],
+      "deliverablesTitle": "交付樣例",
+      "deliverables": [
+        "媒體規劃",
+        "渠道測試衝刺",
+        "本地組織清單"
+      ],
+      "primaryCta": "討論進入執行",
+      "relatedTitle": "繼續看其他服務"
+    },
+    "entryEvaluation": {
+      "meta": {
+        "title": "投入回報評估 | Marketing Mix Modeling | UCYX",
+        "description": "UCYX 投入回報評估通過 Marketing Mix Modeling、歸因復盤和渠道質量判斷，幫助品牌優化市場進入。"
+      },
+      "kicker": "服務 04",
+      "verb": "復盤",
+      "shortTitle": "投入回報評估",
+      "title": "在繼續加碼之前，先看清回報。",
+      "intro": "UCYX 幫助品牌復盤歸因、渠道質量、市場反饋和投入回報，讓下一步優化、放量或停止更有依據。",
+      "cardBody": "用 Marketing Mix Modeling 和 ROI 復盤，判斷下一步怎麼走。",
+      "highlights": [
+        "Marketing Mix Modeling",
+        "歸因復盤",
+        "ROI 優化"
+      ],
+      "summaryLabel": "這項服務回答甚麼",
+      "answerTitle": "把真實增長信號和熱鬧數據分開。",
+      "answerBody": "這項服務幫助團隊看懂第一輪進入到底學到了甚麼。UCYX 會把渠道數據、市場反饋和營運負擔連起來，形成更實際的預算和下一步動作判斷。",
+      "blocks": [
+        {
+          "title": "適合甚麼時候用",
+          "body": "已經開始花錢，但下一步還不清楚。",
+          "items": [
+            "渠道有數據，但業務信號不明確",
+            "團隊對該加碼哪個方向有分歧",
+            "第一輪測試需要一次嚴肅復盤"
+          ]
+        },
+        {
+          "title": "UCYX 可以做甚麼",
+          "body": "圍繞決策質量做復盤，而不是只堆報表。",
+          "items": [
+            "Marketing Mix Modeling 討論和設置",
+            "多渠道歸因復盤",
+            "渠道質量、市場反饋和 ROI 讀數"
+          ]
+        },
+        {
+          "title": "通常需要甚麼資訊",
+          "body": "媒體數據和銷售語境連起來，復盤才更有意義。",
+          "items": [
+            "渠道花費和 campaign 時間線",
+            "流量、轉化、銷售和市場反饋數據",
+            "營運成本、毛利和放量假設"
+          ]
+        }
+      ],
+      "deliverablesTitle": "交付樣例",
+      "deliverables": [
+        "MMM 復盤簡報",
+        "渠道質量判斷",
+        "下一步優化路線圖"
+      ],
+      "primaryCta": "復盤市場進入 ROI",
+      "relatedTitle": "繼續看其他服務"
+    }
+  },
+  "companyPage": {
+    "meta": {
+      "title": "公司 | UCYX",
+      "description": "UCYX 是立足大灣區、服務中國品牌出海的市場進入全棧支持夥伴。"
+    },
+    "kicker": "公司",
+    "title": "立足大灣區，服務中國品牌進入全球市場。",
+    "intro": "UCYX 把策略、設計、交付和回報復盤連成一條市場進入路徑，讓品牌知道為甚麼進入、怎麼進入、是否值得繼續。",
+    "logoLine": "來自中國大灣區的市場進入支持服務。",
+    "primaryCta": "聯絡 UCYX",
+    "secondaryCta": "查看服務",
+    "cards": [
+      {
+        "label": "01",
+        "title": "我們是誰",
+        "body": "UCYX 是市場進入全棧支持夥伴，不是單一媒體代理，也不是只交付軟件工具。"
+      },
+      {
+        "label": "02",
+        "title": "我們組織甚麼",
+        "body": "我們把 NovoChoice 自研能力、精選生態資源和客戶具體進入決策組織在一起。"
+      },
+      {
+        "label": "03",
+        "title": "我們重視甚麼",
+        "body": "更清楚的進入理由、更可靠的第一輪測試、更能落地的執行，以及更克制的 ROI 復盤。"
+      }
+    ],
+    "principlesTitle": "UCYX 的工作方式",
+    "principles": [
+      "先圍繞市場進入決策，而不是先賣一堆服務。",
+      "在早期不確定性高的地方，用 NovoChoice 降低判斷成本。",
+      "只有當媒體、渠道、本地營運或衡量資源服務於進入路徑時，才把它們納入。",
+      "生態相關表達保持克制，具體合作方式以項目為準。"
+    ]
   }
 }

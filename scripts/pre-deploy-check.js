@@ -75,5 +75,29 @@ try {
     process.exit(1);
 }
 
+// Check 6: Verify SEO/GEO support files
+const publicPath = path.join(__dirname, '../public');
+const requiredSeoFiles = [
+    'robots.txt',
+    'sitemap.xml',
+    'llms.txt',
+    'og-ucyx-market-entry.svg'
+];
+
+for (const file of requiredSeoFiles) {
+    const filePath = path.join(publicPath, file);
+    if (!fs.existsSync(filePath)) {
+        console.error(`❌ Missing SEO/GEO file: public/${file}`);
+        process.exit(1);
+    }
+
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    if (!fileContent.toLowerCase().includes('ucyx')) {
+        console.error(`❌ SEO/GEO file does not mention UCYX: public/${file}`);
+        process.exit(1);
+    }
+}
+console.log('✅ SEO/GEO support files exist');
+
 console.log('\n🎉 All pre-deployment checks passed!');
 console.log('📦 Ready for deployment to Vercel');

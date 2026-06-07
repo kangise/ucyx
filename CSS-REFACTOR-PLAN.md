@@ -40,7 +40,7 @@ src/assets/css/
 │   ├── navigation.css      # 导航栏组件
 │   ├── hero.css           # Hero区域组件
 │   ├── carousel.css       # 轮播组件
-│   ├── platform.css       # Novochoice平台组件
+│   ├── platform.css       # NovoChoice平台组件
 │   ├── methodology.css    # 方法论组件
 │   ├── forms.css          # 表单组件
 │   └── footer.css         # 页脚组件
@@ -138,7 +138,7 @@ import './assets/css/4-utilities/animations.css'
 - [ ] 优化移动端显示效果
 - [ ] 测试轮播控制功能
 
-#### 3.4 Novochoice平台组件重构 (45分钟)
+#### 3.4 NovoChoice平台组件重构 (45分钟)
 - [ ] 创建 `platform.css`
 - [ ] 迁移平台展示样式
 - [ ] 优化间距和留白

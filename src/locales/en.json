@@ -1,266 +1,750 @@
 {
-  "nav": {
-    "services": "Services",
-    "whoWeServe": "Who We Serve",
-    "successStories": "Success Stories",
-    "methodology": "Methodology",
-    "channels": "Channels",
-    "blog": "Blog",
-    "chinaMarket": "Enter China Market",
-    "globalMarket": "Enter Global Market",
-    "caseStudies": "Customer Case Studies",
-    "knowledgeBase": "E-commerce Knowledge Base",
-    "login": "Log in"
-  },
-  "hero": {
-    "titleLine1": "You See Your",
-    "titleLine2": "Extraordinary.",
-    "subtitle": "UCYX is a future-focused, AI-driven consultancy dedicated to helping brands uncover unique \"X-trodinary\" in the complex cross-border e-commerce market.",
-    "cta": "Start Your Growth Journey",
-    "learnMore": "Discover Our Methodology"
-  },
-  "dataPower": {
-    "title": "Data-Driven Insight",
-    "subtitle": "Every strategic recommendation we make is rooted in deep learning and analysis of massive datasets.",
-    "stat1": {
-      "number": "300",
-      "suffix": "+",
-      "label": "Core E-commerce Categories"
-    },
-    "stat2": {
-      "number": "5",
-      "suffix": "M+",
-      "label": "Active Products"
-    },
-    "stat3": {
-      "number": "10",
-      "suffix": "M+",
-      "label": "Industry Keywords"
-    },
-    "stat4": {
-      "number": "50",
-      "suffix": "M+",
-      "label": "Consumer Reviews"
-    }
-  },
-  "services": {
-    "title": "Everything you need to achieve extraordinary growth",
-    "subtitle": "Our comprehensive AI-driven methodology covers every aspect of your e-commerce journey.",
-    "feature1": {
-      "title": "Novochoice",
-      "description": "Discover high-potential niches with Novochoice™ Opportunity Quadrant, powered by AI analysis of massive datasets.",
-      "tag1": "Novochoice™",
-      "tag2": "AI analysis"
-    },
-    "feature2": {
-      "title": "Brand Smart", 
-      "description": "Through the UCselection™ Value Proposition Canvas, co-create a product prototype with a compelling \"X-factor\".",
-      "tag1": "UCselection™",
-      "tag2": "Brand Strategy"
-    },
-    "feature3": {
-      "title": "Launch to Win",
-      "description": "Execute successful launches across global platforms with integrated marketing solutions.",
-      "tag1": "UCforecast™",
-      "tag2": "Growth Path"
-    },
-    "feature4": {
-      "title": "Lasting Success",
-      "description": "Achieve sustained growth with our UCcopilot™ AI-driven optimization system.",
-      "tag1": "UCcopilot™",
-      "tag2": "AI Optimization"
-    }
-  },
-  "whoWeServe": {
-    "title": "Who We Serve",
-    "subtitle": "We partner with global market pioneers, whether you are an established brand seeking expansion or a startup with a great product.",
-    "card1": {
-      "title": "Established Brands",
-      "description": "You have successful products and a stable business but are eager to enter new markets to find your next growth curve."
-    },
-    "card2": {
-      "title": "Startups with Great Ideas",
-      "description": "You have created an outstanding ideas but lack the approach to turn into product and brand."
-    },
-    "card3": {
-      "title": "Traditional Manufacture",
-      "description": "You have a great product but lack the go-to-market strategy and brand marketing experience for platforms like Amazon or Shopify. "
-    },
-    "seeCasesLink": "How do we prove our value with data? See our success stories ↓"
-  },
-  "successStories": {
-    "title": "Our Success Stories",
-    "subtitle": "We don't just deliver strategies, we deliver measurable results.",
-    "cases": [
-      {
-        "brand": "North American Skincare Brand",
-        "title": "Entering the Asian Market from Scratch",
-        "description": "Using the Novochoice™ data platform, we identified a high-potential niche market on China e-commerce platforms and with UCselection™ service, we helped defining a value proposition tailored to Asian consumer preferences, exceeding sales forecasts by 300% in the first month.",
-        "metric": "+300%",
-        "metricLabel": "First-Month Sales Target"
-      },
-      {
-        "brand": "European Smart Home Brand",
-        "title": "Reshaping User Loyalty with Review Insights",
-        "description": "We analyze 5k customer reviews amongst the top 10 hot selling items, and uncovered core produce improvement opportunities and optimized selling material which increased the repeat purchase rate by 50% within six months.",
-        "metric": "+50%",
-        "metricLabel": "Repeat Purchase Rate"
-      },
-      {
-        "brand": "China-based Network Storage Brand",
-        "title": "Amazon New Product Launch Optimization",
-        "description": "Leveraging UCcopilot™ for intelligent ad campaign optimization, we increased the click-through conversion rate for their new product on Amazon US by 75% and reduced ACoS by 40%, without increasing the ad budget.",
-        "metric": "-40%",
-        "metricLabel": "Advertising Cost of Sales (ACoS)"
-      },
-      {
-        "brand": "Japanese Designer Stationery Brand",
-        "title": "Shopify DTC Sales Forecasting",
-        "description": "With the UCforecast™ model, we provided an accurate sales forecast for their new product line targeting the North American market. This helped optimize their inventory strategy, achieving a 95% sell-through rate for the initial stock.",
-        "metric": "95%",
-        "metricLabel": "Initial Stock Sell-Through Rate"
-      }
-    ]
-  },
-  "methodology": {
-    "title": "The UCYX Value Growth Methodology™",
-    "subtitle": "We don't offer scattered advice. We deliver a systematic, verifiable blueprint for success.",
-    "usingProprietaryModel": "Using our proprietary",
-    "model": "model",
-    "steps": [
-      {
-        "title": "Market Scanning & Opportunity Unlocking",
-        "description": "Using our proprietary Novochoice Opportunity Quadrant Model, combined with AI data analysis, we quickly identify high-potential \"value basins\" from hundreds of niche markets for you.",
-        "tool": "Novochoice™"
-      },
-      {
-        "title": "Deep Insight & Product Definition",
-        "description": "Through the UCselection™ Value Proposition Canvas, we reverse-engineer competitor reviews and user pain points to co-create a product prototype with a compelling \"X-factor\".",
-        "tool": "UCopps™"
-      },
-      {
-        "title": "Viability & Growth Path",
-        "description": "Leveraging the UCforecast™ sales prediction model using ML for P&L scenario planning, we use the \"Brand Growth Path Matrix\" to map out a clear 1-to-N journey for your business.",
-        "tool": "UCforecast™"
-      },
-      {
-        "title": "Platform Success & Continuous Optimization",
-        "description": "With the UCcopilot™ AI assistant, we continuously optimize your platform operations, advertising, and customer experience to ensure your brand not only launches successfully but thrives.",
-        "tool": "UCcopilot™"
-      }
-    ]
-  },
-  "brands": {
-    "title": "Advanced Market Intelligence Platform",
-    "novochoiceTitle": "Novochoice",
-    "description": "Novochoice is UCYX's advanced market intelligence platform that combines artificial intelligence, big data analytics, and real-time monitoring to provide comprehensive insights into e-commerce opportunities worldwide.",
-    "cta": "Learn More About Novochoice"
-  },
-  "form": {
-    "title": "Start Your Growth Journey",
-    "subtitle": "Leave your information, and our experts will contact you within 24 hours to discuss your brand's potential.",
-    "name": "Name",
-    "email": "Email",
-    "message": "Your Needs",
-    "submit": "Submit",
-    "namePlaceholder": "Your Name",
-    "emailPlaceholder": "your@email.com",
-    "messagePlaceholder": "Tell us about your business goals..."
-  },
-  "contact": {
-    "title": "Create the Future with Us",
-    "subtitle": "We look forward to connecting with visionary brands, investors, and partners. If our philosophy resonates with you, feel free to reach out.",
-    "email": "partnership@ucyx.com",
-    "address": "UCYX Ltd.<br>Shop S068, 2/F, Capital Building, 61-65 Chatham Road South, Tsim Sha Tsui, Hong Kong"
-  },
-  "footer": {
-    "company": "Company",
-    "about": "About Us",
-    "careers": "Careers",
-    "services": "Services",
-    "methodology": "Methodology",
-    "cases": "Case Studies",
-    "solutions": "Solutions",
-    "resources": "Resources",
-    "blog": "Blog",
-    "webinars": "Webinars",
-    "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "rights": "All Rights Reserved."
-  },
-  "aria": {
-    "openMenu": "Open navigation menu",
-    "closeMenu": "Close navigation menu",
-    "languageSelector": "Select language"
-  },
-  "megaMenu": {
-    "start": "Start",
-    "choice": "Choice", 
-    "sell": "Sell",
-    "manage": "Manage",
-    "sellToChina": "Sell to China",
-    "sellToWorld": "Sell to The World",
-    "reachConsumers": "Reach 1 billion consumers",
-    "globalExpansion": "Global market expansion",
-    "novochoice": "Novochoice",
-    "aiPoweredIntelligence": "AI-powered market intelligence",
-    "customizedSelection": "UCselection Service",
-    "tailoredRecommendations": "Tailored product recommendations",
-    "sellerCopilot": "UCcopilot Services",
-    "aiDrivenOptimization": "AI-driven sales optimization",
-    "marketingMix": "UC-MMM",
-    "maximizeROI": "Maximize marketing ROI",
-    "manageCustomer": "Manage your Customer",
-    "buildRelationships": "Build lasting relationships",
-    "startConsultation": "Start Free Consultation",
-    "visitBlog": "Visit Our Blog",
-    "learnMethodology": "Learn More About Methodology"
-  },
-  "contact": {
-    "title": "Create the Future with Us",
-    "subtitle": "We look forward to connecting with visionary brands, investors, and partners. If our philosophy resonates with you, feel free to reach out.",
-    "email": "partnership@ucyx.com",
-    "address": "UCYX Ltd.<br>Shop S068, 2/F, Capital Building, 61-65 Chatham Road South, Tsim Sha Tsui, Hong Kong",
-    "readyTitle": "Ready to achieve extraordinary growth?",
-    "readySubtitle": "Join hundreds of brands that have transformed their business with our methodology.",
-    "submitting": "Submitting...",
-    "successMessage": "Thank you! We will contact you within 24 hours.",
-    "errorMessage": "Sorry, there was an error. Please try again."
-  },
-  "footerExtra": {
-    "sellToChina": "Sell to China",
-    "sellToWorld": "Sell to The World",
-    "sellerCopilot": "UCcopilot Services",
-    "marketingMix": "UC-MMM",
-    "manageCustomer": "Manage your Customer",
-    "aboutUCYX": "About UCYX",
-    "partners": "Partners",
-    "novochoicePlatform": "Novochoice Platform",
-    "helpCenter": "Help Center",
-    "contactUs": "Contact Us",
-    "copyright": "© 2025 UCYX Ltd. All rights reserved.",
-    "support": "Support"
-  },
   "meta": {
-    "title": "UCYX - AI-Driven Global E-commerce Consultancy",
-    "description": "UCYX is a future-focused, AI-driven consultancy helping global brands achieve exponential growth in cross-border e-commerce with our data-driven methodology.",
-    "keywords": "e-commerce, AI, consultancy, cross-border, global expansion, market intelligence",
-    "author": "UCYX",
-    "ogTitle": "UCYX - AI-Driven Global E-commerce Consultancy",
-    "ogDescription": "We help global brands achieve exponential growth in cross-border e-commerce through data-driven insights and proven methodologies.",
-    "twitterTitle": "UCYX - AI-Driven Global E-commerce Consultancy",
-    "twitterDescription": "We help global brands achieve exponential growth in cross-border e-commerce through data-driven insights and proven methodologies."
+    "title": "UCYX | Market Entry Support for Chinese Brands",
+    "description": "UCYX helps Chinese brands choose target markets, design pre-entry tests, coordinate media and local operations, and review market entry ROI."
   },
-  "blog": {
-    "title": "Blog - UCYX",
-    "metaDescription": "Latest insights and trends in global e-commerce",
-    "latestInsights": "Latest Insights",
-    "subtitle": "Stay ahead with our latest thoughts on e-commerce trends, market analysis, and growth strategies.",
-    "readMore": "Read More"
+  "nav": {
+    "primary": "Primary navigation",
+    "solutions": "Services",
+    "novochoice": "NovoChoice",
+    "partnerNetwork": "Ecosystem",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "menu": "Open navigation menu",
+    "company": "Company"
   },
   "language": {
-    "current": "English",
-    "switch": "Switch Language"
+    "switch": "Switch language"
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "See where your brand can excel.",
+    "subtitle": "UCYX is a full-stack market entry support partner for Chinese brands going overseas, helping teams decide where to enter, design the entry path, coordinate delivery, and evaluate return.",
+    "intelligenceLine": "",
+    "primaryCta": "Book a Market Entry Diagnostic",
+    "secondaryCta": "View the service stack"
+  },
+  "customerWall": {
+    "label": "Customer profile examples",
+    "kicker": "Built for market entry teams with real products and overseas ambition",
+    "successBadge": "Stories",
+    "successCta": "Read success stories",
+    "successHref": "/success-stories",
+    "rows": [
+      [
+        "A Shenzhen consumer electronics company",
+        "A Hangzhou DTC skincare company",
+        "A Guangzhou pet products brand",
+        "A Ningbo home appliance manufacturer",
+        "A Xiamen outdoor gear company",
+        "A Dongguan factory-backed brand",
+        "A Shanghai wellness products company",
+        "A Foshan furniture exporter"
+      ],
+      [
+        "A cross-border Amazon seller",
+        "A Shopify DTC brand entering North America",
+        "An Alibaba.com supplier building a brand",
+        "A creator-led product team",
+        "A category leader testing Europe",
+        "A supply-chain-first consumer brand",
+        "A new product team before launch spend",
+        "A brand team choosing its first market"
+      ],
+      [
+        "A beauty device company",
+        "A smart home products company",
+        "A sports and fitness brand",
+        "A baby and maternity products company",
+        "A food supplement brand",
+        "A travel goods manufacturer",
+        "A lifestyle accessories company",
+        "A B2B manufacturer going consumer-facing"
+      ]
+    ]
+  },
+  "audience": {
+    "title": "Real entry situations UCYX is built for.",
+    "body": "UCYX is built for Chinese brands with real products, supply chain capability, or cross-border sales momentum that are ready to enter overseas markets more deliberately.",
+    "label": "UCYX customer profiles",
+    "profiles": [
+      {
+        "kicker": "01",
+        "title": "Factory-backed brands entering systematically",
+        "body": "For example, electronics, home appliance, or furniture teams with stable products and supply chains, but still deciding whether North America, Europe, or Southeast Asia should be tested first."
+      },
+      {
+        "kicker": "02",
+        "title": "Cross-border sellers moving into brand growth",
+        "body": "For sellers with Amazon or Shopify traction: sales have proven the product, but the offer, storefront content, and channel mix still need to be rebuilt for the target market."
+      },
+      {
+        "kicker": "03",
+        "title": "Teams spending more but needing clearer return",
+        "body": "For teams already running media, creators, or agencies: the missing piece is one accountable path that connects testing, delivery, and ROI review."
+      }
+    ]
+  },
+  "problem": {
+    "title": "Market entry is where strong products often get stuck.",
+    "body": "The product may be ready, but the route into the market is rarely owned end to end.",
+    "label": "Rotating market entry pain points",
+    "kicker": "Common entry friction",
+    "dotLabel": "Show pain point",
+    "painPoints": [
+      "You know the product is strong, but not which market to enter first.",
+      "You can run ads, but not whether the offer and positioning are ready.",
+      "You can find vendors, but not one accountable entry path from testing to ROI."
+    ]
+  },
+  "growthSystem": {
+    "title": "A market entry map, not a menu of disconnected services.",
+    "body": "UCYX turns overseas entry into four connected moves: sense the opportunity, design the test, enter the market, and evaluate ROI.",
+    "workflowLabel": "UCYX market entry service stack",
+    "briefLabel": "Market entry brief",
+    "servicesLabel": "Service items",
+    "sourceLabel": "Delivered through",
+    "visualLabel": "Path",
+    "questionLabel": "Current path questions",
+    "deliverableLabel": "Delivery demo",
+    "demoLabel": "UCYX Demo",
+    "demoRows": {
+      "service": "Service line",
+      "question": "Question answered",
+      "decision": "How it is used"
+    },
+    "workflow": [
+      {
+        "title": "Market Entry Strategy",
+        "verb": "Sense",
+        "body": "Find where the market, category, and subcategory opportunity is strong enough to test.",
+        "brand": "Demo",
+        "brandMark": "D",
+        "brandAlt": "Demo",
+        "questions": [
+          "Which market should we enter first?",
+          "Is there real demand for this category locally?",
+          "Which subcategory should we test first?"
+        ],
+        "services": [
+          "Market sensing",
+          "Category scan",
+          "Priority map"
+        ],
+        "deliverables": [
+          "Market entry memo",
+          "Category priority map",
+          "First-market recommendation"
+        ],
+        "demoUses": [
+          "Summarize demand signals and decide whether the market deserves a first test.",
+          "Compare category and subcategory routes before committing launch resources.",
+          "Choose the first market with a clearer reason and a narrower test scope."
+        ],
+        "demoAlt": "Market opportunity evaluator demo for target markets, categories, subcategories, and entry criteria.",
+        "primaryService": "Market Sensing",
+        "secondaryService": "Category opportunity scan and entry priority map.",
+        "source": "UCYX + NovoChoice",
+        "visualAlt": "A strategy desk with product samples, market maps, category opportunity boards, and tech-green route markers."
+      },
+      {
+        "title": "Entry Design",
+        "verb": "Design",
+        "body": "Test the product concept, offer, positioning, and message before larger market spend.",
+        "brand": "Demo",
+        "brandMark": "D",
+        "brandAlt": "Demo",
+        "questions": [
+          "Which offer is clearest?",
+          "Does this positioning work locally?",
+          "Which creative should we test first?"
+        ],
+        "services": [
+          "Consumer test",
+          "Survey design",
+          "Positioning test"
+        ],
+        "deliverables": [
+          "Concept test brief",
+          "Offer comparison",
+          "First creative recommendation"
+        ],
+        "demoUses": [
+          "Turn product assumptions into a testable concept before media spend.",
+          "Compare offer and positioning options before choosing the first market message.",
+          "Select the creative direction most suitable for an entry sprint."
+        ],
+        "demoAlt": "AI consumer lab demo for concept testing, value proposition, positioning, and content direction.",
+        "primaryService": "Synthetic Consumer Test",
+        "secondaryService": "Offer, positioning, creative, and survey design.",
+        "source": "NovoChoice + research partners",
+        "visualAlt": "A product and marketing concept testing desk with prototypes, mobile mockups, survey sheets, and creative boards."
+      },
+      {
+        "title": "Entry Delivery",
+        "verb": "Enter",
+        "body": "Run the first entry motion through media, creators, agencies, and local operations.",
+        "brand": "Demo",
+        "brandMark": "D",
+        "brandAlt": "Demo",
+        "questions": [
+          "Which channels should open the market first?",
+          "How should media and creators connect?",
+          "Who coordinates the first entry sprint?"
+        ],
+        "services": [
+          "Channel sprint",
+          "Media coordination",
+          "Local setup"
+        ],
+        "deliverables": [
+          "Channel test plan",
+          "Media creator brief",
+          "Local setup checklist"
+        ],
+        "demoUses": [
+          "Map the first channel sprint so media, creators, and partners move together.",
+          "Translate the entry strategy into briefs that agencies and creators can execute.",
+          "Clarify local operating tasks before the first market entry motion starts."
+        ],
+        "demoAlt": "Japan market launch workflow demo for media, creators, channel partners, and local operations.",
+        "primaryService": "Channel Test Sprint",
+        "secondaryService": "Media, KOL agency, and operational entry setup.",
+        "source": "UCYX + agencies + Deel/local partners",
+        "visualAlt": "An overseas launch operations desk with product boxes, media channel cards, creator panels, and partner handoff routes."
+      },
+      {
+        "title": "Entry Evaluation & ROI",
+        "verb": "Evaluate",
+        "body": "Read attribution, channel quality, market response, and ROI before scaling or stopping.",
+        "brand": "Demo",
+        "brandMark": "D",
+        "brandAlt": "Demo",
+        "questions": [
+          "Is this path worth more budget?",
+          "Which channel created real growth signals?",
+          "Optimize, scale, or stop?"
+        ],
+        "services": [
+          "Attribution",
+          "ROI review",
+          "Roadmap"
+        ],
+        "deliverables": [],
+        "demoUses": [
+          "Connect channel signals to the first ROI view without pretending every touchpoint is certain.",
+          "Separate noisy traffic from signals that deserve more budget or operational effort.",
+          "Turn the entry review into the next set of actions: optimize, scale, or stop."
+        ],
+        "demoAlt": "Marketing mix modeling dashboard demo for entry ROI review.",
+        "primaryService": "Entry ROI Review",
+        "secondaryService": "Multi-channel attribution and optimization roadmap.",
+        "source": "UCYX + measurement partners",
+        "visualAlt": "A measurement review desk with attribution maps, channel quality reports, and optimization roadmap notes."
+      }
+    ]
+  },
+  "novochoice": {
+    "title": "NovoChoice",
+    "body": "NovoChoice uses synthetic consumer AI to help brands quickly test product concepts, offers, positioning, ad creative, and marketing messages before market entry. Visit NovoChoice.com for product details.",
+    "externalCta": "Visit NovoChoice.com",
+    "externalUrl": "https://novochoice.com"
+  },
+  "partnerNetwork": {
+    "title": "Service ecosystem coverage.",
+    "body": "UCYX works around media, commerce, operations, AI, research, and measurement ecosystems when a market entry path needs them. These references frame capability areas; specific collaboration models vary by project.",
+    "label": "UCYX service ecosystem coverage",
+    "controlsLabel": "Choose ecosystem item",
+    "groupLabel": "Show ecosystem item",
+    "items": [
+      {
+        "token": "AI",
+        "name": "AAAI China GBA Chapter",
+        "description": "AI community and Greater Bay Area knowledge network."
+      },
+      {
+        "token": "NC",
+        "name": "NovoChoice",
+        "description": "UCYX-built synthetic consumer AI for product, offer, positioning, and concept testing."
+      },
+      {
+        "token": "HR",
+        "name": "Deel",
+        "description": "Global hiring, contractor, payroll, and workforce infrastructure context."
+      },
+      {
+        "token": "ME",
+        "name": "Analyticedge",
+        "description": "Analytics, attribution, and marketing effectiveness measurement context."
+      },
+      {
+        "token": "B2B",
+        "name": "Alibaba.com",
+        "description": "Cross-border commerce ecosystem connecting China supply with global buyers."
+      },
+      {
+        "token": "AC",
+        "name": "Accio Work",
+        "description": "AI agent workflow context for sourcing, operations, market research, and cross-border business tasks."
+      },
+      {
+        "token": "AA",
+        "name": "Apple Ads",
+        "description": "Apple advertising and app discovery channel context."
+      },
+      {
+        "token": "SP",
+        "name": "Shopify",
+        "description": "DTC commerce stack and branded storefront operations context."
+      },
+      {
+        "token": "AW",
+        "name": "Airwallex",
+        "description": "Cross-border payments, collections, and global account infrastructure context."
+      }
+    ],
+    "cta": "Join the UCYX ecosystem network",
+    "note": "This map is illustrative and evolves with client needs, market priorities, and channel context."
+  },
+  "about": {
+    "title": "What UCYX is accountable for.",
+    "body": "We do not sell isolated media buys or one-off research decks. We connect strategy, entry design, delivery, and ROI review so the brand knows what to test, what to change, and when to scale.",
+    "factsLabel": "UCYX company and capability facts",
+    "facts": [
+      {
+        "label": "Company base",
+        "value": "A Hong Kong company serving Greater Bay Area and Chinese brand teams going overseas."
+      },
+      {
+        "label": "Owned capability",
+        "value": "NovoChoice synthetic consumer AI is in private beta for product concept and marketing tests."
+      },
+      {
+        "label": "Working model",
+        "value": "UCYX combines owned services with available ecosystem resources around a specific market entry brief."
+      }
+    ],
+    "principles": [
+      "Clarify the target market, category, and entry hypothesis.",
+      "Test the product concept, offer, positioning, and message before entry.",
+      "Review channel quality, operating load, and ROI before optimizing or scaling."
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "label": "UCYX frequently asked questions",
+    "items": [
+      {
+        "question": "What does UCYX actually do?",
+        "answer": "UCYX is a full-stack market entry support partner for Chinese brands. We help teams decide where to enter, design the first test, coordinate delivery, and review whether the return is worth scaling."
+      },
+      {
+        "question": "Which brands are a good fit for UCYX?",
+        "answer": "UCYX fits teams with real products, supply chain capability, or cross-border sales momentum that want a clearer entry path before committing larger overseas budgets."
+      },
+      {
+        "question": "Is UCYX a media agency, consultancy, or software product?",
+        "answer": "UCYX is best understood as a market entry support partner. Strategy, entry design, delivery, and ROI review are connected into one path; NovoChoice and ecosystem resources support that path where relevant."
+      },
+      {
+        "question": "Where does NovoChoice fit?",
+        "answer": "NovoChoice supports pre-entry concept, offer, positioning, and marketing message testing through synthetic consumer AI. Product details live at NovoChoice.com."
+      },
+      {
+        "question": "Can UCYX help with actual delivery?",
+        "answer": "Yes. Depending on the project, UCYX can coordinate media, creators, channel service providers, and local operations support. The exact delivery scope is defined by market, channel, budget, and client need."
+      },
+      {
+        "question": "Are ecosystem names official partnerships?",
+        "answer": "The ecosystem section is used to describe capability areas UCYX may work around. It does not mean every item has the same collaboration model, availability, or project role."
+      },
+      {
+        "question": "What should we prepare for the first diagnostic?",
+        "answer": "Bring your category, product stage, target or candidate markets, current channels, and the decision you are trying to make. UCYX will help turn that into the first set of entry questions."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to plan your next overseas market entry?",
+    "body": "Tell us your category, target market, and current entry questions. UCYX will help define the first strategy, design, delivery, and ROI questions worth answering.",
+    "primaryCta": "Book a Market Entry Diagnostic",
+    "secondaryCta": "Explore the ecosystem network",
+    "email": "services@ucyx.com",
+    "subject": "UCYX Market Entry Diagnostic"
+  },
+  "footer": {
+    "description": "Global market entry all-stack services for Chinese brands going overseas.",
+    "navigation": "Navigation",
+    "resources": "Resources",
+    "contact": "Contact",
+    "location": "China Greater Bay Area",
+    "servicesOverview": "Services overview",
+    "company": "Company",
+    "faq": "Homepage FAQ"
+  },
+  "successStories": {
+    "title": "Success stories",
+    "body": "We publish client stories only after approval. This page will collect market entry cases across strategy, pre-entry testing, delivery, and ROI review.",
+    "primaryCta": "Discuss your market entry case",
+    "secondaryCta": "Back to UCYX",
+    "cards": [
+      {
+        "label": "Market Entry Strategy",
+        "title": "Choosing the first market with clearer evidence",
+        "body": "How a brand can compare market, category, and subcategory signals before committing launch budget."
+      },
+      {
+        "label": "Entry Design",
+        "title": "Testing offer and positioning before media spend",
+        "body": "How concept, offer, message, and creative tests can reduce uncertainty before the first entry sprint."
+      },
+      {
+        "label": "Entry ROI Review",
+        "title": "Turning channel results into the next decision",
+        "body": "How attribution, channel quality, and market feedback can guide whether to optimize, scale, or stop."
+      }
+    ]
+  },
+  "servicesMega": {
+    "label": "Services menu",
+    "eyebrow": "UCYX service stack",
+    "title": "Four connected services for market entry.",
+    "body": "Move from opportunity sensing to entry design, coordinated delivery, and ROI review without losing ownership between vendors.",
+    "servicesLabel": "What sits inside",
+    "serviceCta": "Open service",
+    "overviewCta": "View all services",
+    "diagnosticCta": "Book a diagnostic",
+    "items": [
+      {
+        "href": "/services/market-entry-strategy",
+        "verb": "Sense",
+        "title": "Market Entry Strategy",
+        "previewTitle": "Choose the first market with a sharper reason.",
+        "body": "Use NovoChoice and market signals to decide which market, category, and subcategory should be tested first.",
+        "brand": "NovoChoice",
+        "points": [
+          "Market Sensing",
+          "Category Opportunity Scan",
+          "First-Market Recommendation"
+        ]
+      },
+      {
+        "href": "/services/entry-design",
+        "verb": "Design",
+        "title": "Entry Design",
+        "previewTitle": "Test the offer and message before the spend gets real.",
+        "body": "Use NovoChoice to test product concepts, offers, positioning, survey logic, and first creative directions before spend.",
+        "brand": "NovoChoice",
+        "points": [
+          "Synthetic Consumer Test",
+          "Survey Design",
+          "Offer & Positioning Test"
+        ]
+      },
+      {
+        "href": "/services/entry-delivery",
+        "verb": "Enter",
+        "title": "Entry Delivery",
+        "previewTitle": "Turn the entry plan into coordinated market motion.",
+        "body": "Coordinate the first market motion across media planning, channel development, and local organization.",
+        "token": "Media + Ops",
+        "points": [
+          "Media Planning",
+          "Channel Development",
+          "Local Organization"
+        ]
+      },
+      {
+        "href": "/services/entry-evaluation-roi",
+        "verb": "Evaluate",
+        "title": "Entry Evaluation & ROI",
+        "previewTitle": "Review what worked before scaling the next move.",
+        "body": "Use Marketing Mix Modeling and attribution review to understand which signals deserve more budget.",
+        "token": "MMM",
+        "points": [
+          "Marketing Mix Modeling",
+          "Attribution Review",
+          "ROI Optimization"
+        ]
+      }
+    ]
+  },
+  "servicesOverview": {
+    "meta": {
+      "title": "UCYX Services | Full-stack Market Entry Support",
+      "description": "Explore UCYX services for Chinese brands entering global markets: market entry strategy, entry design, delivery, and ROI evaluation."
+    },
+    "kicker": "Services",
+    "title": "A service stack for clearer market entry decisions.",
+    "intro": "UCYX organizes market entry as four connected moves. Each service page explains what the module answers, what UCYX can do, and what a brand team can expect to receive.",
+    "primaryCta": "Book a Market Entry Diagnostic",
+    "secondaryCta": "Back to the homepage path"
+  },
+  "servicePages": {
+    "marketEntryStrategy": {
+      "meta": {
+        "title": "Market Entry Strategy | UCYX",
+        "description": "UCYX market entry strategy helps Chinese brands compare target markets, categories, and subcategories before the first entry test."
+      },
+      "kicker": "Service 01",
+      "verb": "Sense",
+      "shortTitle": "Market Entry Strategy",
+      "title": "Decide where the first market entry test should happen.",
+      "intro": "UCYX helps brand teams compare target markets, categories, and subcategories before committing launch resources.",
+      "cardBody": "Clarify which market, category, and first test deserves attention.",
+      "highlights": [
+        "Market sensing",
+        "Category opportunity scan",
+        "First-market recommendation"
+      ],
+      "summaryLabel": "What this service answers",
+      "answerTitle": "Before spending, choose the market with a reason.",
+      "answerBody": "This service helps teams avoid a broad overseas launch with weak assumptions. UCYX turns market, category, competitor, demand, and entry feasibility signals into a first test recommendation.",
+      "blocks": [
+        {
+          "title": "Use when",
+          "body": "You have a real product but need a sharper entry choice.",
+          "items": [
+            "Several possible markets are on the table",
+            "Category demand is uncertain",
+            "The team needs a first test scope"
+          ]
+        },
+        {
+          "title": "What UCYX can do",
+          "body": "Frame the market entry question and organize signals into a practical decision.",
+          "items": [
+            "Market sensing with NovoChoice support",
+            "Category and subcategory opportunity scan",
+            "Entry priority map and test hypothesis"
+          ]
+        },
+        {
+          "title": "Typical inputs",
+          "body": "A useful diagnostic starts from what the brand already knows.",
+          "items": [
+            "Product category and current sales context",
+            "Candidate markets or regions",
+            "Known competitors, channels, and budget range"
+          ]
+        }
+      ],
+      "deliverablesTitle": "Example outputs",
+      "deliverables": [
+        "Market opportunity memo",
+        "Category priority map",
+        "First-market test recommendation"
+      ],
+      "primaryCta": "Discuss market entry strategy",
+      "relatedTitle": "Other services in the entry path"
+    },
+    "entryDesign": {
+      "meta": {
+        "title": "Entry Design | UCYX NovoChoice Testing",
+        "description": "UCYX entry design uses NovoChoice to test concepts, offers, positioning, survey logic, and first creative directions before market entry spend."
+      },
+      "kicker": "Service 02",
+      "verb": "Design",
+      "shortTitle": "Entry Design",
+      "title": "Test the offer before larger media spend.",
+      "intro": "UCYX helps brands turn entry assumptions into testable product concepts, offers, positioning, messages, and creative directions.",
+      "cardBody": "Use NovoChoice and research design to test what should enter the market.",
+      "highlights": [
+        "Synthetic consumer test",
+        "Survey design",
+        "Offer and positioning test"
+      ],
+      "summaryLabel": "What this service answers",
+      "answerTitle": "Design the first test before the market judges it for you.",
+      "answerBody": "This service supports the pre-entry moment: before the first serious media budget, UCYX helps compare concepts and messages so the brand can choose a more credible entry route.",
+      "blocks": [
+        {
+          "title": "Use when",
+          "body": "The market looks interesting, but the first expression is not ready.",
+          "items": [
+            "Multiple product prototypes or offers exist",
+            "Positioning is still too domestic-market driven",
+            "The team needs a content and creative test direction"
+          ]
+        },
+        {
+          "title": "What UCYX can do",
+          "body": "Use NovoChoice as the testing layer, then add research partners where real survey delivery is needed.",
+          "items": [
+            "Synthetic consumer concept test",
+            "Offer and value proposition comparison",
+            "Survey design and first creative recommendation"
+          ]
+        },
+        {
+          "title": "Typical inputs",
+          "body": "The clearer the assumptions, the more useful the pre-entry test.",
+          "items": [
+            "Product photos, prototypes, or mockups",
+            "Candidate offers and positioning lines",
+            "Target user or market assumptions"
+          ]
+        }
+      ],
+      "deliverablesTitle": "Example outputs",
+      "deliverables": [
+        "Concept test brief",
+        "Offer comparison",
+        "First creative recommendation"
+      ],
+      "primaryCta": "Plan an entry design test",
+      "relatedTitle": "Other services in the entry path"
+    },
+    "entryDelivery": {
+      "meta": {
+        "title": "Entry Delivery | Media Planning, Channel Development, Local Organization | UCYX",
+        "description": "UCYX entry delivery coordinates media planning, channel development, and local organization for Chinese brands entering overseas markets."
+      },
+      "kicker": "Service 03",
+      "verb": "Enter",
+      "shortTitle": "Entry Delivery",
+      "title": "Turn the entry plan into a coordinated market launch.",
+      "intro": "UCYX helps brands coordinate the first market motion across media planning, channel development, creator or agency resources, and local organization.",
+      "cardBody": "Coordinate media, channels, and local operations into one entry sprint.",
+      "highlights": [
+        "Media planning",
+        "Channel development",
+        "Local organization"
+      ],
+      "summaryLabel": "What this service answers",
+      "answerTitle": "Make the first entry motion executable.",
+      "answerBody": "Entry delivery is where strategy becomes a real operating path. UCYX helps define who does what, which channels matter first, and what local support must be in place before scaling.",
+      "blocks": [
+        {
+          "title": "Media Planning",
+          "body": "Plan the first test mix around discovery, conversion intent, and learning value.",
+          "items": [
+            "Apple Ads and other relevant media channels",
+            "Briefing structure for media agencies and creators",
+            "Budget and test sprint sequencing"
+          ]
+        },
+        {
+          "title": "Channel Development",
+          "body": "Build access to channels and service providers that fit the target market.",
+          "items": [
+            "Media agency and channel service matching",
+            "KOL, creator, affiliate, or community routes",
+            "Channel handoff and first-test coordination"
+          ]
+        },
+        {
+          "title": "Local Organization",
+          "body": "Prepare the operating support needed for local market entry.",
+          "items": [
+            "Deel-related hiring, contractor, and payroll context",
+            "Local service provider coordination",
+            "Customer support, localization, and operational checklist"
+          ]
+        }
+      ],
+      "deliverablesTitle": "Example outputs",
+      "deliverables": [
+        "Media plan",
+        "Channel test sprint",
+        "Local organization checklist"
+      ],
+      "primaryCta": "Discuss entry delivery",
+      "relatedTitle": "Other services in the entry path"
+    },
+    "entryEvaluation": {
+      "meta": {
+        "title": "Entry Evaluation & ROI | Marketing Mix Modeling | UCYX",
+        "description": "UCYX entry evaluation and ROI review uses marketing mix modeling, attribution review, and channel quality analysis to guide market entry optimization."
+      },
+      "kicker": "Service 04",
+      "verb": "Evaluate",
+      "shortTitle": "Entry Evaluation & ROI",
+      "title": "Read ROI before scaling the next move.",
+      "intro": "UCYX helps brands review attribution, channel quality, market feedback, and return so the next entry decision is clearer.",
+      "cardBody": "Use Marketing Mix Modeling and ROI review to decide what to optimize, scale, or stop.",
+      "highlights": [
+        "Marketing Mix Modeling",
+        "Attribution review",
+        "ROI optimization"
+      ],
+      "summaryLabel": "What this service answers",
+      "answerTitle": "Separate growth signals from noisy activity.",
+      "answerBody": "This service helps teams understand what the first entry sprint actually learned. UCYX connects channel data, market response, and operating load to practical decisions about budget and next steps.",
+      "blocks": [
+        {
+          "title": "Use when",
+          "body": "You are already spending, but the next decision is still unclear.",
+          "items": [
+            "Channels report activity but not a clear business signal",
+            "Teams disagree on which route deserves more budget",
+            "The entry test needs a disciplined review"
+          ]
+        },
+        {
+          "title": "What UCYX can do",
+          "body": "Frame the evaluation around decision quality, not just reporting volume.",
+          "items": [
+            "Marketing Mix Modeling discussion and setup",
+            "Multi-channel attribution review",
+            "Channel quality, market feedback, and ROI readout"
+          ]
+        },
+        {
+          "title": "Typical inputs",
+          "body": "Measurement becomes stronger when media and sales context are connected.",
+          "items": [
+            "Channel spend and campaign timeline",
+            "Traffic, conversion, sales, and market feedback data",
+            "Operational cost, margin, and scaling assumptions"
+          ]
+        }
+      ],
+      "deliverablesTitle": "Example outputs",
+      "deliverables": [
+        "MMM review brief",
+        "Channel quality readout",
+        "Optimization roadmap"
+      ],
+      "primaryCta": "Review market entry ROI",
+      "relatedTitle": "Other services in the entry path"
+    }
+  },
+  "companyPage": {
+    "meta": {
+      "title": "Company | UCYX",
+      "description": "UCYX is a Greater Bay Area-based full-stack market entry support partner for Chinese brands going overseas."
+    },
+    "kicker": "Company",
+    "title": "A Greater Bay Area growth desk for Chinese brands entering global markets.",
+    "intro": "UCYX is built to connect strategy, design, delivery, and ROI review into one accountable market entry path.",
+    "logoLine": "Market entry support from the Greater Bay Area.",
+    "primaryCta": "Contact UCYX",
+    "secondaryCta": "View services",
+    "cards": [
+      {
+        "label": "01",
+        "title": "What we are",
+        "body": "A full-stack market entry support partner, not a single media vendor or standalone software tool."
+      },
+      {
+        "label": "02",
+        "title": "What we organize",
+        "body": "Owned capabilities such as NovoChoice, selected ecosystem resources, and a service path built around the client decision."
+      },
+      {
+        "label": "03",
+        "title": "What we care about",
+        "body": "Clearer entry reasons, better first tests, practical delivery, and a more disciplined ROI review before scaling."
+      }
+    ],
+    "principlesTitle": "How UCYX works",
+    "principles": [
+      "Start with the market entry decision, not a service menu.",
+      "Use NovoChoice where synthetic consumer testing can reduce early uncertainty.",
+      "Bring in media, channel, local operations, or measurement resources only when they serve the entry path.",
+      "Keep ecosystem language conservative until a specific collaboration model is confirmed."
+    ]
   }
 }

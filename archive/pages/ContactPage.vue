@@ -27,7 +27,7 @@
                 </div>
                 <div class="method-content">
                   <h3>Email</h3>
-                  <a href="mailto:partnership@ucyx.com">partnership@ucyx.com</a>
+                  <a href="mailto:services@ucyx.com">services@ucyx.com</a>
                 </div>
               </div>
               
